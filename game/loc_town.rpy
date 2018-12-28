@@ -1,6 +1,7 @@
 ## LOCATIONS
 label lbl_city_street_1st:
     scene loc_city_street_1st
+
     if v_day == 1:
         jump lbl_city_home_marcus_day1
 
@@ -27,6 +28,7 @@ label lbl_city_home_marcus_day1:
     marcus "Ok bye Mom."
     me "Bye Sarah."
     sarah "Goodbye."
+
     menu:
         "Go to college":
-            "bla"
+            jump lbl_college_yard

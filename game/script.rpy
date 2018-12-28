@@ -33,9 +33,6 @@
     clr_blueviolet = "#8a2be2"
 
     ### IMAGES
-    ## MC
-
-
     ## NPC
     # Lisa
     for i in range(1,5):
@@ -45,12 +42,14 @@
     for i in range(1,6):
         renpy.image("npc_portrait_mia_" + str(i).zfill(2), "images/people/mia_malkova/mia_portrait_" + str(i).zfill(2) + ".jpg")
 
-    # Marcus
-    renpy.image("npc_portrait_marcus", "images/people/others/portrait_marcus.jpg")
-
     # Sarah
     for i in range(1,5):
         renpy.image("npc_portrait_sarah_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_portrait_" + str(i).zfill(2) + ".jpg")
+
+    ## NPC OTHERS
+    renpy.image("npc_portrait_jason", "images/people/others/portrait_jason.jpg")
+    renpy.image("npc_portrait_marcus", "images/people/others/portrait_marcus.jpg")
+    renpy.image("npc_portrait_mr_smith", "images/people/others/portrait_mr_smith.jpg")
 
 ## NAMES & PORTRAITS
 # Player
@@ -61,13 +60,22 @@ image side portrait_mc = "images/portrait/portrait_mc1.jpg"
 # NPC
 define mia = Character("Mia", image = "portrait_mia", color = clr_palegold)
 define lisa = Character("Lisa", image = "portrait_lisa", color = clr_gold)
-define marcus = Character("Marcus", image = "portrait_marcus", color = clr_dark_gray)
 define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut_brown)
 
 image side portrait_mia = "images/portrait/portrait_mia.jpg"
 image side portrait_lisa = "images/portrait/portrait_lisa.jpg"
-image side portrait_marcus = "images/portrait/portrait_marcus.jpg"
 image side portrait_sarah = "images/portrait/portrait_sarah.jpg"
+
+# NPC OTHERS
+define jason = Character("Jason", image = "portrait_jason", color = clr_dark_gray)
+define kyle = Character("Kyle", image = "portrait_kyle", color = clr_dark_gray)
+define marcus = Character("Marcus", image = "portrait_marcus", color = clr_dark_gray)
+define mr_smith = Character("Mr Smith", image = "portrait_mr_smith", color = clr_dark_gray)
+
+image side portrait_kyle = "images/portrait/portrait_kyle.jpg"
+image side portrait_jason = "images/portrait/portrait_jason.jpg"
+image side portrait_marcus = "images/portrait/portrait_marcus.jpg"
+image side portrait_mr_smith = "images/portrait/portrait_mr_smith.jpg"
 
 ## Effects
 define d1 = Dissolve(0.2)
@@ -90,6 +98,10 @@ image loc_home_room_mc = "images/location/loc_home_room_mc.jpg"
 
 # City
 image loc_city_street_1st = "images/location/loc_city_street_1st.jpg"
+
+# College
+image loc_college_class = "images/location/loc_college_class.jpg"
+image loc_college_yard = "images/location/loc_college_yard.jpg"
 
 ## VIDEOS
 image vid_lisa_bathroom_incident = Movie(play="images/people/brandi_love/lisa_bathroom_incident.webm",size=(590,590))
