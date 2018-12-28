@@ -42,8 +42,15 @@
         renpy.image("npc_portrait_lisa_" + str(i).zfill(2), "images/people/brandi_love/lisa_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Lisa
-    for i in range(1,5):
+    for i in range(1,6):
         renpy.image("npc_portrait_mia_" + str(i).zfill(2), "images/people/mia_malkova/mia_portrait_" + str(i).zfill(2) + ".jpg")
+
+    # Marcus
+    renpy.image("npc_portrait_marcus", "images/people/others/portrait_marcus.jpg")
+
+    # Sarah
+    for i in range(1,5):
+        renpy.image("npc_portrait_sarah_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_portrait_" + str(i).zfill(2) + ".jpg")
 
 ## NAMES & PORTRAITS
 # Player
@@ -53,9 +60,21 @@ image side portrait_mc = "images/portrait/portrait_mc1.jpg"
 
 # NPC
 define mia = Character("Mia", image = "portrait_mia", color = clr_palegold)
-define lisa = Character("Lisa", color = clr_gold)
+define lisa = Character("Lisa", image = "portrait_lisa", color = clr_gold)
+define marcus = Character("Marcus", image = "portrait_marcus", color = clr_dark_gray)
+define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut_brown)
 
 image side portrait_mia = "images/portrait/portrait_mia.jpg"
+image side portrait_lisa = "images/portrait/portrait_lisa.jpg"
+image side portrait_marcus = "images/portrait/portrait_marcus.jpg"
+image side portrait_sarah = "images/portrait/portrait_sarah.jpg"
+
+## Effects
+define d1 = Dissolve(0.2)
+define d2 = Dissolve(0.2)
+define d3 = Dissolve(0.3)
+define d5 = Dissolve(0.5)
+define sr3 = CropMove(0.3, "slideright")
 
 ## INTERFACE
 image img_black = Solid(clr_black)
@@ -63,9 +82,14 @@ image img_white = Solid(clr_white)
 image img_warning = "images/interface/warning.png"
 
 ## LOCATIONS
+# Home
 image loc_home_bathroom1 = "images/location/loc_home_bathroom1.jpg"
 image loc_home_bathroom2 = "images/location/loc_home_bathroom2.jpg"
+image loc_home_kitchen = "images/location/loc_home_kitchen.jpg"
 image loc_home_room_mc = "images/location/loc_home_room_mc.jpg"
+
+# City
+image loc_city_street_1st = "images/location/loc_city_street_1st.jpg"
 
 ## VIDEOS
 image vid_lisa_bathroom_incident = Movie(play="images/people/brandi_love/lisa_bathroom_incident.webm",size=(590,590))
@@ -79,6 +103,7 @@ label start:
     # Flags
     $ f_name_prompt = True
     $ f_bypass = False
+    $ f_day1_lisa_bathroom_incident = False
 
     # Variables
     $ v_day = 1
