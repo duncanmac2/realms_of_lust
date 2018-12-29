@@ -1,15 +1,19 @@
-## LOCATIONS
+#### LOCATIONS ####
 label lbl_home_bathroom:
     scene loc_home_bathroom1
 
     if v_day == 1:
         jump lbl_home_bathroom_day1
+    elif v_day == 2:
+        jump lbl_home_bathroom_day2
 
 label lbl_home_kitchen:
     scene loc_home_kitchen
 
     if v_day == 1:
         jump lbl_home_kitchen_day1
+    elif v_day == 2:
+        jump lbl_home_kitchen_day2
 
 label lbl_home_living_room:
     scene loc_home_living_room
@@ -17,13 +21,22 @@ label lbl_home_living_room:
     if v_day == 1:
         jump lbl_home_living_room_day1
 
+label lbl_home_room_lisa:
+    scene loc_home_room_lisa_bed
+
+    if v_day == 2:
+        jump lbl_home_room_lisa_day2
+
 label lbl_home_room_mc:
     scene loc_home_room_mc
 
     if v_day == 1:
         jump lbl_home_room_mc_day1
+    elif v_day == 2:
+        jump lbl_home_room_mc_day2
 
-## EVENTS
+#### EVENTS ####
+### ROOM MC ###
 label lbl_home_room_mc_day1:
     if v_time == 1140:
         "Entering my room my computer is on."
@@ -90,6 +103,63 @@ label lbl_home_room_mc_day1:
 
         jump lbl_home_bathroom
 
+label lbl_home_room_mc_day2:
+    show mc_sleep at truecenter with d3
+    "You wake up for another day."
+    hide mc_sleep with d3
+    me "What time is it... It's morning already? Shit hope I'm not late again. But what a strange dream, and I didn't even get to see some boobs, that's my luck for you... Why I'm naked?"
+    "In that moment between me noticing I'm completely nude and before I can put any clothes, Lisa comes through the door and sees me in all my glorious nakedness."
+    show npc_portrait_lisa_03 at top with d3
+    lisa "[me] are you u... Why are you naked?"
+    "A lot of scenarios go through my head, is she going to freak out, faint, beat me to a pulp? But no what happens next no one could predict. She is only mildly embarrassed!"
+    lisa "You should put some clothes sweetie."
+    hide npc_portrait_lisa_03
+    show npc_portrait_lisa_04
+    "But before I can recover from the shock I realise that I'm not the only one that's not properly dressed."
+    hide npc_portrait_lisa_04 with d3
+    show vid_mc_erection at truecenter
+    "That is a bit too much for a man to take."
+    "I try to hide it before she can see it. To no avail it seems."
+    hide vid_mc_erection
+    show npc_portrait_lisa_04 with d3
+    me "Please, put some clothes Lisa."
+    lisa "Did you just get an... erection?"
+    "She blushes, but no signs of getting angry."
+    lisa "Looks sweetie it's perfectly normal for a man to have those \"reactions\" to a woman's body, I should have put some more clothes. But you have nothing to be ashamed of."
+    me "O-Ok... Can I put some clothes now?"
+    lisa "Ah sure, sorry."
+    hide npc_portrait_lisa_04 with d3
+    "Before she leaves I think I saw her trying to take another look at my manhood. Has the world gone crazy? The Lisa I know would never just leave her room before putting clothes."
+    "Could that dream... no that's crazy talk, maybe she is drunk for some reason, she acts completely out of character when she drinks. I should take a cold shower. Or maybe I should take care of this bad boy the fun way."
+
+    menu:
+        "Shower":
+            jump lbl_home_bathroom
+        "My PC":
+            jump lbl_home_room_mc_day2_pc
+
+label lbl_home_room_mc_day2_pc:
+    "I boot the laptop on my desk ready for some action, let's see..."
+    show vid_pc_porn_01 at top
+    "There."
+    hide vid_pc_porn_01 with d1
+    show vid_pc_porn_02 at top with d1
+    pause
+    hide vid_pc_porn_02 with d1
+    show vid_pc_porn_03 at top with d1
+    pause
+    hide vid_pc_porn_03 with d1
+    show vid_pc_porn_04 at top with d1
+    pause
+    hide vid_pc_porn_04 with d1
+    "I spend a few minutes masturbating looking at my favorite videos but all I can think of is Lisa and her gorgeous body."
+    "I climax still thinking about it, now I'm feeling guilty, time to take a cold shower."
+
+    menu:
+        "Breakfast":
+            jump lbl_home_room_lisa
+
+### BATHROOM ###
 label lbl_home_bathroom_day1:
     "When I'm about to enter the bathroom, I hear a loud scream."
     show npc_portrait_mia_01
@@ -120,19 +190,21 @@ label lbl_home_bathroom_day1:
 
             menu:
                 "Open the door":
-                    scene loc_home_bathroom2
-                    show vid_lisa_bathroom_incident at truecenter
-                    "My head is in the clouds, thinking about why she didn't woke me up today. I'm so distracted that I find the answer the worst way possible."
-                    lisa "MAX! DON'T YOU KNOW HOW TO KNOCK?"
-                    me "SHIT, sorry, I thought you were already finished..."
-                    "Why is she here now? But whoa... she is in great shape foor her age... What the fuck am I thinking?"
-                    me "I'm..."
-                    lisa "GET OUT!!!"
-                    "I close the door before doing any more damage by getting hard down there. I'm in soo much trouble as is, I think I will no be getting that money I asked yesterday. God damn it."
+                    pass
 
-                    $ f_day1_lisa_bathroom_incident = True
+            scene loc_home_bathroom2
+            show vid_lisa_bathroom_incident at truecenter
+            "My head is in the clouds, thinking about why she didn't woke me up today. I'm so distracted that I find the answer the worst way possible."
+            lisa "MAX! DON'T YOU KNOW HOW TO KNOCK?"
+            me "SHIT, sorry, I thought you were already finished..."
+            "Why is she here now? But whoa... she is in great shape foor her age... What the fuck am I thinking?"
+            me "I'm..."
+            lisa "GET OUT!!!"
+            "I close the door before doing any more damage by getting hard down there. I'm in soo much trouble as is, I think I will no be getting that money I asked yesterday. God damn it."
 
-                    jump lbl_home_kitchen
+            $ f_day1_lisa_bathroom_incident = True
+
+            jump lbl_home_kitchen
 
         "Play scissors":
             me "It's a tie."
@@ -161,6 +233,72 @@ label lbl_home_bathroom_day1:
                 "Take a shower in a hurry":
                     jump lbl_home_kitchen
 
+label lbl_home_bathroom_day2:
+    mia "WAIT BROOOO!!!"
+    show npc_portrait_mia_01 with d3
+    me "Oh no."
+    me "I'm sorry sis but I'm really in desperate need of a shower."
+    mia "Well so am I, so let's play for it!"
+    me "Why? We have more than enough time for both of us to take a shower. Just go eat breakfast and come back in a few minutes."
+    mia "Please, let me take it first, I dropped cholacolate in my... my... underwear and now it's sticky."
+    me "I thought Lisa had told you to stop eating candy before breakfast. Also how did you manage to... you know what, never mind."
+    mia "That's why you need to let me shower before she finds out."
+    me "Ok, let's do this, the same as yesterday."
+    mia "Okay."
+    "As I'm about to play scissors I catch a glimpse of her nipple and I forget to open my hand..."
+    mia "Yeah. Paper beats rock, I win. But if you are so desperate you could come in and take a shower with me."
+    "This again? She is way too shy to bathe together she just likes to keep teasing me, but let's see how far she is willing to go."
+    me "I will take you up on that offer."
+    mia "Well come in then."
+    "She stands at the door holding the door open for me."
+    mia "What are you waiting for?"
+    "She thinks she can win against me in the bluffing game, not today."
+
+    menu:
+        "Go inside":
+            hide npc_portrait_mia_01 with d3
+            pass
+
+    "We are both inside, she is red as a tomato, but no signs of backing down. Time to take it to the next level."
+    me "What are you waiting for? We don't have all morning."
+    "I start to take my clothes off, with a smirk on my face she will never..."
+    show img_mia_shower_01 at top with d3
+    mia "No need to push it."
+    "She just started to take her clothes off, and in a moment she is naked in front of me while I have only my underwear."
+    mia "I know it's been a while since we took a shower together, but it's all right, we are family after all."
+    "It's clear she is trying to convince herself. As for me im trying to hide my massive erection from her... Should I go in or just give up?"
+    hide img_mia_shower_01 with d3
+    show img_mia_shower_02 with d3
+    "Her body is incredible, I always knew she was beautiful but this! Can you get a hard on on top of a hard on?"
+    "That's when she see my \"situation\"."
+    mia "What is... ooh that's why you were so desperate to come in... it's, it's ok bro. You are a man after all, cold showers are good to keep you awake."
+    "I can't believe this is happening, who is this, this is not Mia, the dream! No that's crazy..."
+    me "Are you sure you don't want to do this?"
+    mia "It's all right, bro. We are family."
+    me "Yeah, you already said that."
+    "It's obvious she is not as cool with this situation as she makes herself to be. But I don't have the time to just give up now, so I step inside the shower."
+    "Mia does the same and soon we are in this awkward situation, back to back, washing ourselves in silence. That is until she bumps into me. The only thing I can think off is that her ass is soft and smooth, if the water wasn't so cold I would be hard again."
+    hide img_mia_shower_02 with d3
+    show img_mia_shower_03 with d3
+    mia "Sorry bro. Are you... you know... less excited?"
+    me "I think so, yes."
+    mia "Ok, you can turn around then, can you wash my back?"
+    hide img_mia_shower_03 with d3
+    show img_mia_ass_01 with d3
+    "That sight is too much, I can feel my blood flowing to my dick again."
+    me "Sorry, I'm done here, need to go see you downstairs."
+    mia "But..."
+    hide img_mia_ass_01
+    "I don't give her time to say anything else, as I put a towel around my waist and run of to put some clothes in my room."
+    "Time for breakfast then."
+
+    $ f_day2_shower = True
+
+    menu:
+        "Kitchen":
+            jump lbl_home_kitchen
+
+### KITCHEN ###
 label lbl_home_kitchen_day1:
     if f_day1_lisa_bathroom_incident and v_time == 0:
         me "Well... I will be late, smelly, broke and probably grounded for the rest of the week. But I will not be hungry. There is always a bright side (I feel dead inside)."
@@ -233,21 +371,85 @@ label lbl_home_kitchen_day1:
             "Leave":
                 jump lbl_city_street_1st
 
-label lbl_home_living_room_day1:
-        "She is here, and waiting for me, it was a good life..."
-        lisa "[me], sit down."
-        "That's not a request, it's best to do as the lady says."
-        lisa "So, don't you know how to knock? What did you have in your mind to open MY bathroom door when I was showering?"
-        me "I'm so sorry, Mia told me that you were done, and I was running late so I didn't think..."
-        lisa "Well you should have, you are not a kid anymore. You know you are in trouble right?"
-        me "Yes."
-        lisa "Good, you will be not be getting any money from me this month, if you want you will be getting a job or taking it from your savings."
-        me "I understand."
-        lisa "Look I was very angry most of the day, it's a good thing I had the time to cool down or you would be getting a much harsher punishment. Let's just leave it that and forget this ever happened okay. Now go to your room you left your computer on."
-        me "I did? Okay I will go."
-
-        $ v_time = 1140
+label lbl_home_kitchen_day2:
+    if f_day2_shower:
+        "What a strange day."
+        show npc_portrait_lisa_05 with d3
+        "Lisa is here already, properly dressed."
+        me "Hey, Lisa can I ask you something? Are you feeling any different?"
+        lisa "Where did that come from? I don't think so why?"
+        me "You were always shy with nudity an all that, why then you entered my room only on your underwear today?"
+        hide npc_portrait_lisa_05 with d1
+        show npc_portrait_lisa_06 with d1
+        lisa "I think you are exaggerating a bit [me], I don't usually walk around like that, but it's not like you have never seen me in a bikini right, its almost the same thing. I just forgot to put clothes for some reason."
+        "A bikini? Lisa only owns one pieces, she would never wear a bikini, even in our pool. What the fuck."
+        hide npc_portrait_lisa_06 with d1
+        show npc_portrait_mia_01 with d1
+        mia "Morning, bro, mom."
+        lisa "Good morning Mia."
+        "The rest of our time goes as usual, but it's clear that something is not right..."
+        "After we eat, Mia and I finish getting ready and leave the house."
 
         menu:
-            "My room":
-                jump lbl_home_room_mc
+            "To Marcus":
+                jump lbl_city_home_marcus
+
+    else:
+        "What a strange day."
+        show npc_portrait_mia_08 with d1
+        "Mia is already here, but what is she wearing?"
+        me "Mia, what are you doing go put some clothes."
+        hide npc_portrait_mia_08 with d3
+        show npc_portrait_mia_09 with d3
+        mia "Why, it's still too early to leave."
+        me "If Lisa..."
+        "That's when I remember what she was wearing when she came to wake me up...I know I asked this before but, what is going on???"
+        mia "Bro?"
+        me "Never mind, let's just eat."
+        hide npc_portrait_mia_09 with d3
+        show npc_portrait_mia_10 with d3
+        mia "Are you ok?"
+        me "I'm fine sis, just a little tired."
+        "I try to eat some food, but I feel a bit sick. Also my mind starts to wonder when did Mia became so hot, I never saw her that way before, but now..."
+        hide npc_portrait_mia_10
+        show npc_portrait_lisa_06
+        lisa "Good morning."
+        "I almost jump out of the chair."
+        me "Oh... Good morning."
+        mia "Morning mom."
+        "The rest of our time goes as usual, but it's clear that something is not right..."
+        "After we eat, Mia and I finish getting ready and leave the house."
+
+        menu:
+            "To Marcus":
+                jump lbl_city_home_marcus
+
+### LIVING ROOM ###
+label lbl_home_living_room_day1:
+    "She is here, and waiting for me, it was a good life..."
+    lisa "[me], sit down."
+    "That's not a request, it's best to do as the lady says."
+    lisa "So, don't you know how to knock? What did you have in your mind to open MY bathroom door when I was showering?"
+    me "I'm so sorry, Mia told me that you were done, and I was running late so I didn't think..."
+    lisa "Well you should have, you are not a kid anymore. You know you are in trouble right?"
+    me "Yes."
+    lisa "Good, you will be not be getting any money from me this month, if you want you will be getting a job or taking it from your savings."
+    me "I understand."
+    lisa "Look I was very angry most of the day, it's a good thing I had the time to cool down or you would be getting a much harsher punishment. Let's just leave it that and forget this ever happened okay. Now go to your room you left your computer on."
+    me "I did? Okay I will go."
+
+    $ v_time = 1140
+
+    menu:
+        "My room":
+            jump lbl_home_room_mc
+
+label lbl_home_room_lisa_day2:
+    "I'm on my way to the kitchen when I hear some noises from Lisa's room, the door is not closed so i decide to take a look."
+    show vid_lisa_room_masturbate at truecenter with d3
+    "Ohhh... [me]..."
+    "What the fuck! Is she...? But... Why am I still looking? It's best to leave if she catches me I'm a dead man."
+
+    menu:
+        "Kitchen":
+            jump lbl_home_kitchen

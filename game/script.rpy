@@ -33,6 +33,9 @@
     clr_blueviolet = "#8a2be2"
 
     ### IMAGES
+    ## MC
+    renpy.image("mc_sleep", "images/people/MC/mc_sleep.jpg")
+
     ## NPC
     # Bonnie
     for i in range(1,5):
@@ -43,7 +46,7 @@
         renpy.image("npc_portrait_karen_" + str(i).zfill(2), "images/people/jayden_jaymes/karen_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Lisa
-    for i in range(1,3):
+    for i in range(1,7):
         renpy.image("npc_portrait_lisa_" + str(i).zfill(2), "images/people/brandi_love/lisa_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Lily
@@ -55,13 +58,18 @@
         renpy.image("npc_portrait_maria_" + str(i).zfill(2), "images/people/ariana_marie/maria_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Mia
-    for i in range(1,8):
+    for i in range(1,2):
+        renpy.image("img_mia_ass_" + str(i).zfill(2), "images/people/mia_malkova/mia_ass_" + str(i).zfill(2) + ".jpg")
+
+    for i in range(1,11):
         renpy.image("npc_portrait_mia_" + str(i).zfill(2), "images/people/mia_malkova/mia_portrait_" + str(i).zfill(2) + ".jpg")
+
+    for i in range(1,4):
+        renpy.image("img_mia_shower_" + str(i).zfill(2), "images/people/mia_malkova/mia_shower_" + str(i).zfill(2) + ".jpg")
 
     # Nina
     for i in range(1,4):
         renpy.image("npc_portrait_nina_" + str(i).zfill(2), "images/people/alexis_texas/nina_portrait_" + str(i).zfill(2) + ".jpg")
-
 
     # Sarah
     for i in range(1,5):
@@ -129,6 +137,7 @@ image loc_home_bathroom1 = "images/location/loc_home_bathroom1.jpg"
 image loc_home_bathroom2 = "images/location/loc_home_bathroom2.jpg"
 image loc_home_kitchen = "images/location/loc_home_kitchen.jpg"
 image loc_home_living_room = "images/location/loc_home_living_room.jpg"
+image loc_home_room_lisa_bed = "images/location/loc_home_room_lisa_bed.jpg"
 image loc_home_room_mc = "images/location/loc_home_room_mc.jpg"
 image loc_home_room_mc_bed = "images/location/loc_home_room_mc_bed.jpg"
 
@@ -146,11 +155,19 @@ image loc_college_shower_men = "images/location/loc_college_shower_men.jpg"
 image loc_college_yard = "images/location/loc_college_yard.jpg"
 
 ## VIDEOS
+# MC
+image vid_mc_erection = Movie(play="images/people/MC/MC_erection.webm")
+
 # College
 image vid_college_shower = Movie(play="images/events/college_shower.webm",size=(620,612))
 
 # Home
+image vid_pc_porn_01 = Movie(play="images/events/pc_porn_01.webm",size=(1000,522))
+image vid_pc_porn_02 = Movie(play="images/events/pc_porn_02.webm",size=(1000,514))
+image vid_pc_porn_03 = Movie(play="images/events/pc_porn_03.webm",size=(570,848))
+image vid_pc_porn_04 = Movie(play="images/events/pc_porn_04.webm",size=(1000,560))
 image vid_lisa_bathroom_incident = Movie(play="images/people/brandi_love/lisa_bathroom_incident.webm",size=(590,590))
+image vid_lisa_room_masturbate = Movie(play="images/people/brandi_love/lisa_masturbation.webm")
 
 ## START
 label splashscreen:
@@ -162,6 +179,7 @@ label start:
     $ f_name_prompt = True
     $ f_bypass = False
     $ f_day1_lisa_bathroom_incident = False
+    $ f_day2_shower = False
 
     # Variables
     $ v_day = 1
