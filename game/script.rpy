@@ -39,12 +39,16 @@
         renpy.image("npc_portrait_lisa_" + str(i).zfill(2), "images/people/brandi_love/lisa_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Lisa
-    for i in range(1,6):
+    for i in range(1,7):
         renpy.image("npc_portrait_mia_" + str(i).zfill(2), "images/people/mia_malkova/mia_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Sarah
     for i in range(1,5):
         renpy.image("npc_portrait_sarah_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_portrait_" + str(i).zfill(2) + ".jpg")
+
+    # Veronica
+    for i in range(1,5):
+        renpy.image("npc_portrait_veronica_" + str(i).zfill(2), "images/people/angela_white/veronica_portrait_" + str(i).zfill(2) + ".jpg")
 
     ## NPC OTHERS
     renpy.image("npc_portrait_jason", "images/people/others/portrait_jason.jpg")
@@ -61,10 +65,12 @@ image side portrait_mc = "images/portrait/portrait_mc1.jpg"
 define mia = Character("Mia", image = "portrait_mia", color = clr_palegold)
 define lisa = Character("Lisa", image = "portrait_lisa", color = clr_gold)
 define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut_brown)
+define veronica = Character("Veronica", image = "portrait_veronica", color = clr_gray)
 
 image side portrait_mia = "images/portrait/portrait_mia.jpg"
 image side portrait_lisa = "images/portrait/portrait_lisa.jpg"
 image side portrait_sarah = "images/portrait/portrait_sarah.jpg"
+image side portrait_veronica = "images/portrait/portrait_veronica.jpg"
 
 # NPC OTHERS
 define jason = Character("Jason", image = "portrait_jason", color = clr_dark_gray)
@@ -101,6 +107,7 @@ image loc_city_street_1st = "images/location/loc_city_street_1st.jpg"
 
 # College
 image loc_college_class = "images/location/loc_college_class.jpg"
+image loc_college_garden = "images/location/loc_college_garden.jpg"
 image loc_college_yard = "images/location/loc_college_yard.jpg"
 
 ## VIDEOS

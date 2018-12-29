@@ -5,6 +5,12 @@ label lbl_college_class:
     if v_day == 1:
         jump lbl_college_class_day1
 
+label lbl_college_garden:
+    scene loc_college_garden
+
+    if v_day == 1:
+        jump lbl_college_garden_day1
+
 label lbl_college_yard:
     scene loc_college_yard
 
@@ -58,4 +64,41 @@ label lbl_college_class_day1:
 
     menu:
         "Lunch":
+            jump lbl_college_garden
+
+label lbl_college_garden_day1:
+    "I approach the girls"
+    show npc_portrait_veronica_01
+    "This is Veronica, Mia's best friend. I now what you are thinking, he must have a crush on her... No I'm not some cliche main character, also she is kind of a slut, she beded the whole football tem acording to some rumors."
+    "She is not that bad but she knows her way around a cock... not mine though, she has this strange respect for me, never ever flirted with me, don't know if that's good or bad."
+    hide npc_portrait_veronica_01
+    show npc_portrait_mia_06 at top with d3
+    mia "Hey bro..."
+    veronica "Hey [me], how was you class?"
+    me "Boring, yours?"
+    mia "Same, hahaha, where is Marcus?"
+    me "Don't know, said he had a business meeting."
+    "(Both of them) Ewwww!"
+    me "No I don't think it was a code for faping, he must have bought something from someone he does that sometimes."
+    mia "What he usually buy?"
+    me "Awwww... ahhh... things..."
+    "(Again both of them) Ewwww..."
+    hide npc_portrait_mia_06 with d3
+    show npc_portrait_veronica_01 with d3
+    veronica "Why do we go out with him?"
+    mia "Because he is bro best friend..."
+    veronica "Yeahhh..."
+    hide npc_portrait_veronica_01
+    show npc_portrait_marcus at top
+    "While we talk about him, Marcus appears out of nowhere."
+    me "Speaking of the devil."
+    marcus "Hey girls, Veronica beautiful as ever..."
+    veronica "You would be almost charming if you didn't had that problem with being too pervy."
+    marcus "I'm hurt hahaha, but I came to talk to [me], come with me dude."
+    me "But I didn't eat yet..."
+    marcus "Trust me this is better than food."
+    me "Okay..."
+
+    menu:
+        "Go with him":
             jump lbl_college_garden
