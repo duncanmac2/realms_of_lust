@@ -63,9 +63,9 @@ label lbl_city_home_marcus_day1b:
         hide npc_portrait_sarah_02 with d3
         "*Ring* *ring*"
         "It's my phone, Lisa is calling..."
-        lisa "[me], were are you? Doens't matter, come back home right now! You own me an explanation for what happend this morning."
+        lisa "{i}[me], were are you? Doens't matter, come back home right now! You own me an explanation for what happend this morning.{/i}"
         me "Lisa, I will be right there."
-        lisa "You have 20 minutes."
+        lisa "{i}You have 20 minutes.{/i}"
         "She hung up."
         marcus "Looks like you are in trouble my friend, we will do this some other time."
         me "Sorry man, we will talk later."
@@ -91,9 +91,9 @@ label lbl_city_home_marcus_day1b:
         hide npc_portrait_sarah_02 with d3
         "*Ring* *ring*"
         "It's my phone, Lisa is calling..."
-        lisa "[me], is Mia with you? She isn't aswering her phone."
+        lisa "{i}[me], is Mia with you? She isn't aswering her phone.{/i}"
         me "Lisa, no she is with Veronica I think. Do you have her number?"
-        lisa "Yes, I will call her right now, she is in so much trouble..."
+        lisa "{i}Yes, I will call her right now, she is in so much trouble...{/i}"
         "Poor Mia."
         "After the call Marcus and I spend some hour play some of his old games."
         me "It's getting late man, I will..."
@@ -106,6 +106,8 @@ label lbl_city_home_marcus_day1b:
         show npc_portrait_maria_03 with d3
         me "She is very hot, that's cheerleader for you, but it's time for me to go, see you tomorrow Marcus."
         "He's in a trance, better leave, he has business to attend to."
+
+        $ v_time = 1140
 
         menu:
             "Go home":

@@ -43,16 +43,25 @@
         renpy.image("npc_portrait_karen_" + str(i).zfill(2), "images/people/jayden_jaymes/karen_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Lisa
-    for i in range(1,5):
+    for i in range(1,3):
         renpy.image("npc_portrait_lisa_" + str(i).zfill(2), "images/people/brandi_love/lisa_portrait_" + str(i).zfill(2) + ".jpg")
+
+    # Lily
+    for i in range(1,2):
+        renpy.image("npc_portrait_lily_" + str(i).zfill(2), "images/people/lilith/lily_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Maria
     for i in range(1,4):
         renpy.image("npc_portrait_maria_" + str(i).zfill(2), "images/people/ariana_marie/maria_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Mia
-    for i in range(1,7):
+    for i in range(1,8):
         renpy.image("npc_portrait_mia_" + str(i).zfill(2), "images/people/mia_malkova/mia_portrait_" + str(i).zfill(2) + ".jpg")
+
+    # Nina
+    for i in range(1,4):
+        renpy.image("npc_portrait_nina_" + str(i).zfill(2), "images/people/alexis_texas/nina_portrait_" + str(i).zfill(2) + ".jpg")
+
 
     # Sarah
     for i in range(1,5):
@@ -76,15 +85,17 @@ image side portrait_mc = "images/portrait/portrait_mc1.jpg"
 # NPC
 define bonnie = Character("Bonnie", image = "portrait_bonnie", color = clr_sand)
 define karen = Character("Karen", image = "portrait_karen", color = clr_gray)
-define mia = Character("Mia", image = "portrait_mia", color = clr_palegold)
 define lisa = Character("Lisa", image = "portrait_lisa", color = clr_gold)
+define mia = Character("Mia", image = "portrait_mia", color = clr_palegold)
+define nina = Character("Nina", image = "portrait_nina", color = clr_sand)
 define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut_brown)
 define veronica = Character("Veronica", image = "portrait_veronica", color = clr_gray)
 
 image side portrait_bonnie = "images/portrait/portrait_bonnie.jpg"
 image side portrait_karen = "images/portrait/portrait_karen.jpg"
-image side portrait_mia = "images/portrait/portrait_mia.jpg"
 image side portrait_lisa = "images/portrait/portrait_lisa.jpg"
+image side portrait_mia = "images/portrait/portrait_mia.jpg"
+image side portrait_nina = "images/portrait/portrait_nina.jpg"
 image side portrait_sarah = "images/portrait/portrait_sarah.jpg"
 image side portrait_veronica = "images/portrait/portrait_veronica.jpg"
 
@@ -119,6 +130,7 @@ image loc_home_bathroom2 = "images/location/loc_home_bathroom2.jpg"
 image loc_home_kitchen = "images/location/loc_home_kitchen.jpg"
 image loc_home_living_room = "images/location/loc_home_living_room.jpg"
 image loc_home_room_mc = "images/location/loc_home_room_mc.jpg"
+image loc_home_room_mc_bed = "images/location/loc_home_room_mc_bed.jpg"
 
 # City
 image loc_city_home_marcus = "images/location/loc_city_home_marcus.jpg"
@@ -153,6 +165,7 @@ label start:
 
     # Variables
     $ v_day = 1
+    $ v_time = 0
 
     # Start
     hide screen main_menu

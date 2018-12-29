@@ -25,12 +25,70 @@ label lbl_home_room_mc:
 
 ## EVENTS
 label lbl_home_room_mc_day1:
-    "The sun is shining through the window."
-    me "It's already morning already? Why is it so bright?"
-    "What time is it? Shit, it's late, very, very late. The alarm didn't go off. I'll be late if I don't hurry, Mr. Smith doesn't take kindly to people who are late for his classes."
-    "Shit, I have to take a shower, better hurry."
+    if v_time == 1140:
+        "Entering my room my computer is on."
+        "There is a e-mail notification, let's see what it is about."
+        "{i}\"Would you like to change your whole life?\"{/i}"
+        "I hate spam, next."
+        "\"Hello [me],"
+        "It's aunt Lily here, how are you? I have great news I got a job on the PGP Corporation, right there in Libidine town, so I'm moving back there tomorrow."
+        "I already got a house and everything, it's on Second Street 458, you absolutely must come visit me tomorrow, no excuses. Also tell Lisa and Mia aunt Lily is back in town."
+        "Love you.\""
+        "Lily is back in town? That's great, she is dad's younger sister, after grandma got sick she came to live with mom and dad she was way younger than my father so she could not live alone I think she was just 10 when Grandma Kat was sent to the hospital."
+        "She is still there by the way, she had a mysterious disease that has kept her there I go visit her sometimes but she is rarely lucid."
+        "After the accident she also came to live with Lisa and Mia, but after two years she decided to travel around the world to find herself."
+        "She always kept in contact but I sometimes forget to send her news. She is also aunt Lily to Mia since she is my step sister, they are very close. But enough exposition let's... wait I got a new message."
+        show npc_portrait_lily_01 with d1
+        "PS: we haven't seen eachother in a long time here is a picture to see how I've changed. Not so chubby anymore."
+        "Whoa, she really has changed she used to be... well chubby is very generous. She is actualy pretty hot now... what no she is my aunt can't think of her this way."
+        "Time to eat some dinner."
 
-    jump lbl_home_bathroom
+        menu:
+            "Go eating":
+                jump lbl_home_kitchen
+
+    elif v_time == 1200:
+        show loc_home_room_mc_bed at top
+        "I feel extremely tired all of a sudden. As soon as my head hits the pillow everything goes dark. That is until..."
+        nina "Wake uuup..."
+        me "What?"
+        nina "Wake uupp..."
+        hide loc_home_room_mc_bed
+        show npc_portrait_nina_01 with d3
+        "When I open my eyes a beautiful woman is at the side of my bed, what is she doing in my room..."
+        me "Who are you? What are you doing in my room??"
+        nina "Calm down [me], let me explain everything to you... My name is Nina, Queen of the Realm of Lust, and I have come with an offer."
+        me "What? What kind of offer?"
+        hide npc_portrait_nina_01 with d3
+        show npc_portrait_nina_02 with d3
+        nina "You see every four-hundred years our world align and lust can be free in this world for a day... that's today. But unlike my predecessors I want more, and I have the perfect opportunity to reach these goals. And you are the key."
+        me "Me?"
+        nina "Yes you my friend, your family is special, long ago my great grandfather impregnated a human, that was your ancestor, the blood of gods run in your veins."
+        nina "It's been diluted however but there is still some power there, so if you join me we together can bring this earth in a state of paradise. What say you friend?"
+        me "I say this is the strangest dream I've ever had. I mean god, lust... this is weirder than that time I ate those strange brownies. But wait a second if this story is true doesn't that make us cousins or something."
+        nina "I think so, but 30 generations removed I think... but that is not important what matter is that you can finally have a better life than the one you have now, in this new world you will be like royalty, you would be second only to me. So what say you... cousin?"
+        hide npc_portrait_nina_02 with d3
+        show npc_portrait_nina_03 at top with d3
+        "It's the strangest dream I've ever had, but why not, it would be a shame if I woke up without banging someone, in my dreams... this sounds so pathetic."
+        me "I accept."
+        nina "Cool... I mean you have chosen wisely now hold still."
+        "She jumps me and plants a kiss in my lips. I can feel the power rushing through me but I feel tired at the same time."
+        nina "Before you pass out, know that the corruption of this world will take time, but thanks to you I can came help you so if you need me just..."
+
+        $ v_time = 0
+        $ v_day = 2
+
+        menu:
+            "Pass out":
+                jump lbl_home_room_mc
+
+    else:
+        "The sun is shining through the window."
+        me "It's already morning already? Why is it so bright?"
+        "What time is it? Shit, it's late, very, very late. The alarm didn't go off. I'll be late if I don't hurry, Mr. Smith doesn't take kindly to people who are late for his classes."
+        "Shit, I have to take a shower, better hurry."
+
+        jump lbl_home_bathroom
 
 label lbl_home_bathroom_day1:
     "When I'm about to enter the bathroom, I hear a loud scream."
@@ -62,7 +120,6 @@ label lbl_home_bathroom_day1:
 
             menu:
                 "Open the door":
-                    $ f_day1_lisa_bathroom_incident = True
                     scene loc_home_bathroom2
                     show vid_lisa_bathroom_incident at truecenter
                     "My head is in the clouds, thinking about why she didn't woke me up today. I'm so distracted that I find the answer the worst way possible."
@@ -72,6 +129,8 @@ label lbl_home_bathroom_day1:
                     me "I'm..."
                     lisa "GET OUT!!!"
                     "I close the door before doing any more damage by getting hard down there. I'm in soo much trouble as is, I think I will no be getting that money I asked yesterday. God damn it."
+
+                    $ f_day1_lisa_bathroom_incident = True
 
                     jump lbl_home_kitchen
 
@@ -103,11 +162,11 @@ label lbl_home_bathroom_day1:
                     jump lbl_home_kitchen
 
 label lbl_home_kitchen_day1:
-    if f_day1_lisa_bathroom_incident:
+    if f_day1_lisa_bathroom_incident and v_time == 0:
         me "Well... I will be late, smelly, broke and probably grounded for the rest of the week. But I will not be hungry. There is always a bright side (I feel dead inside)."
         show npc_portrait_mia_02 at top
         "After a few minutes pondering if I should eat all of Mia's food for sending me to my figurative demise, she comes down the stair."
-        mia "Sooooo... I-I'm sorryyyyy ???"
+        mia "Sooooo... I-I'm sorryyyyy???"
         hide npc_portrait_mia_02
         show npc_portrait_mia_03 at top with d3
         me "Sorry doesn't cut it Mia, Lisa will eat me alive when we are back from college, you know how she is she doens't even own a bikini because it shows too much skin... And I saw her naked !!!"
@@ -123,6 +182,35 @@ label lbl_home_kitchen_day1:
         menu:
             "To Marcus":
                 jump lbl_city_street_1st
+
+    elif v_time == 1140:
+        show npc_portrait_lisa_02 with d3
+        "Time to have dinner with my family, they are already on the table waiting for me."
+        me "Hey guys I have great news, aunt Lily is moving into town tomorrow."
+        hide npc_portrait_lisa_02 with d3
+        show npc_portrait_mia_07 at top with d3
+        mia "Really!!! Awesome, then we can go see her right it's been ages since we last saw her."
+        lisa "Yes it has, did she find a job here?"
+        me "On the PGP Corporation, don't know what she does there tough."
+        hide npc_portrait_mia_07 with d3
+        show npc_portrait_lisa_01 with d3
+        lisa "That's great, I will call her for the barbecue on Sunday, but since you brought the subject of family, I had some good news about grandma Emma."
+        lisa "It looks like there was a new development in her treatment, the doctor says she is much better now and she may even be able to talk to us on a more regular basis now."
+        me "That's great, it's the best news I've had all year."
+        lisa "I will visit her tomorrow, but you will have to wait some time to visit her yourself the doctor says it's better to go one at a time, for now."
+        hide npc_portrait_lisa_01 with d3
+        "The dinner goes as always after that, I make a bad joke, Mia laughs, Lisa goes on to wash the dishes. I decide to go to my room early today, I feel spleepy for some reason."
+        me "I'm going to bed, good night sis."
+        mia "Good night bro."
+        me "Good night Lisa."
+        lisa "Night sweetie."
+        "She gives me a kiss on the cheek."
+
+        $ v_time = 1200
+
+        menu:
+            "Go to my room":
+                jump lbl_home_room_mc
 
     else:
         "During my shower I heard some screaming, Lisa was probably in the shower when Mia opened the door... she will be pissed. Both of them will actually. Lisa is very shy she hates to show skin, even to Mia."
@@ -157,6 +245,8 @@ label lbl_home_living_room_day1:
         me "I understand."
         lisa "Look I was very angry most of the day, it's a good thing I had the time to cool down or you would be getting a much harsher punishment. Let's just leave it that and forget this ever happened okay. Now go to your room you left your computer on."
         me "I did? Okay I will go."
+
+        $ v_time = 1140
 
         menu:
             "My room":
