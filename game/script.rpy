@@ -46,7 +46,11 @@
     for i in range(1,5):
         renpy.image("npc_portrait_lisa_" + str(i).zfill(2), "images/people/brandi_love/lisa_portrait_" + str(i).zfill(2) + ".jpg")
 
-    # Lisa
+    # Maria
+    for i in range(1,4):
+        renpy.image("npc_portrait_maria_" + str(i).zfill(2), "images/people/ariana_marie/maria_portrait_" + str(i).zfill(2) + ".jpg")
+
+    # Mia
     for i in range(1,7):
         renpy.image("npc_portrait_mia_" + str(i).zfill(2), "images/people/mia_malkova/mia_portrait_" + str(i).zfill(2) + ".jpg")
 

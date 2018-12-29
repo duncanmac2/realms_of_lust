@@ -185,7 +185,7 @@ label lbl_college_locker_room_day1:
 
     menu:
         "Go to Marcus's":
-            jump lbl_college_locker_room
+            jump lbl_city_home_marcus
 
 label lbl_college_shower_men_day1:
     "It's empty just as Kyle said, luckyly I have a shirt on my backpack, let's take a quick shower."

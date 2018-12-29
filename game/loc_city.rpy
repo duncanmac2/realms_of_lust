@@ -59,7 +59,7 @@ label lbl_city_home_marcus_day1b:
         marcus "Yes, the new edition is out today."
         sarah "I don't know why I buy those for you."
         "The usual is their codeword for naughty magazines, Marcus is a collector. Sara buys them for him because his father used to give them to him as a gift every month, so after he passed away she kept the tradition, not that she is happy about it."
-        marcus "Let's go play some p..."
+        marcus "Let's go play some g..."
         hide npc_portrait_sarah_02 with d3
         "*Ring* *ring*"
         "It's my phone, Lisa is calling..."
@@ -76,6 +76,7 @@ label lbl_city_home_marcus_day1b:
 
     else:
         marcus "Hi mom, [me] came to visit."
+        show npc_portrait_sarah_02 with d3
         sarah "Hello boys, how was your day?"
         marcus "Great, I found some great treasure in the campus, but that's a secret between [me] and I, so sorry Mom can't tell you."
         sarah "It's not drugs is it, I swear to god Marcus P. Willians if you are doing drugs you are finding a new place to live."
@@ -86,23 +87,29 @@ label lbl_city_home_marcus_day1b:
         marcus "Yes, the new edition is out today."
         sarah "I don't know why I buy those for you."
         "The usual is their codeword for naughty magazines, Marcus is a collector. Sara buys them for him because his father used to give them to him as a gift every month, so after he passed away she kept the tradition, not that she is happy about it."
-        marcus "Let's go play some p..."
+        marcus "Let's go play some g..."
+        hide npc_portrait_sarah_02 with d3
         "*Ring* *ring*"
         "It's my phone, Lisa is calling..."
-        "[me], is Mia with you? She isn't aswering her phone."
-        "Lisa, no she is with Veronica I think.Do you have her number?"
-        "Yes, I will call her right now, she is in so much truble..."
+        lisa "[me], is Mia with you? She isn't aswering her phone."
+        me "Lisa, no she is with Veronica I think. Do you have her number?"
+        lisa "Yes, I will call her right now, she is in so much trouble..."
         "Poor Mia."
         "After the call Marcus and I spend some hour play some of his old games."
-        "Its getting late man, I will..."
+        me "It's getting late man, I will..."
+        show npc_portrait_maria_01 with d3
         "Just as I start to stand to go home something catches my eyes."
-        "Ohhh, Max we are soo lucky, she rarely changes in her room.Lets enjoy this gift from the pervert god."
-        "She is very hot, that's cheerleader for you, but its time for me to go, see you tomorrow Marcus."
-        "He is in a trance, better leave, he has business to attend to."
+        hide npc_portrait_maria_01 with d3
+        show npc_portrait_maria_02 with d3
+        marcus "Ohhh, [me] we are soo lucky, she rarely changes in her room. Let's enjoy this gift from the pervert god."
+        hide npc_portrait_maria_02 with d3
+        show npc_portrait_maria_03 with d3
+        me "She is very hot, that's cheerleader for you, but it's time for me to go, see you tomorrow Marcus."
+        "He's in a trance, better leave, he has business to attend to."
 
         menu:
             "Go home":
-                jump lbl_home_living_room
+                jump lbl_home_room_mc
 
 label lbl_city_mall_day1:
     me "Sorry man, I have some others plans."
