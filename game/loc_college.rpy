@@ -1,9 +1,11 @@
-## LOCATIONS
+#### LOCATIONS ####
 label lbl_college_class:
     scene loc_college_class
 
     if v_day == 1:
         jump lbl_college_class_day1
+    elif v_day == 2:
+        jump lbl_college_class_day2
 
 label lbl_college_garden:
     scene loc_college_garden
@@ -17,6 +19,12 @@ label lbl_college_locker_room:
     if v_day == 1:
         jump lbl_college_locker_room_day1
 
+label lbl_college_nurse:
+    scene loc_college_nurse
+
+    if v_day == 2:
+        jump lbl_college_nurse_day2
+
 label lbl_college_shower_men:
     scene loc_college_shower_men
 
@@ -28,8 +36,11 @@ label lbl_college_yard:
 
     if v_day == 1:
         jump lbl_college_yard_day1
+    elif v_day == 2:
+        jump lbl_college_yard_day2
 
-## EVENTS
+#### EVENTS ####
+### YARD ###
 label lbl_college_yard_day1:
     "We reach the campus several minute too late."
     mia "See you guys later."
@@ -45,6 +56,30 @@ label lbl_college_yard_day1:
         "Go to class":
             jump lbl_college_class
 
+label lbl_college_yard_day2:
+    "We are on time today, first time in the year."
+    marcy "[me] you have been ogling me all the way here."
+    me "Oh sorry, I didn't mean to..."
+    marcy "I know I'm beautiful but come on man at least buy me dinner first, hahaha."
+    "I can't help but to see my old friend now, even if \"he\" is a \"she\" now it's the same person on the inside... But with some big tits attached..."
+    mia "I'm going to meet Veronica, see you guys later."
+    "Mia always gives me a kiss on the cheek before we go to our classes so I approach her..."
+    show img_mia_kiss_01 at top with d3
+    "That's not what I thought would happen... It's strangely pleasant"
+    hide img_mia_kiss_01 with d3
+    me "W-what... bye Mia..."
+    "Mia goes on her way, she just kissed me... what..."
+    marcy "[me], are we going?"
+    me "Oh right. Wait do you think I should go see the nurse? I'm feeling a bit off today?"
+    marcy "It's your call, If you want to I will warn Mr. Smith, you can take my notes later."
+
+    menu:
+        "Class":
+            jump lbl_college_class
+        "Nurse":
+            jump lbl_college_nurse
+
+### CLASS ###
 label lbl_college_class_day1:
     "As fast as we could run we were not fast enough, we are 10 minutes late, waiting for the worst we enter the classroom ready to have our heads chopped off, but..."
     marcus "Where is he? You don't think that he is also late right?"
@@ -88,6 +123,7 @@ label lbl_college_class_day1:
             "Lunch":
                 jump lbl_college_garden
 
+### GARDEN ###
 label lbl_college_garden_day1:
     if f_day1_lisa_bathroom_incident:
         mia "[me] why took you so long?"
@@ -159,6 +195,7 @@ label lbl_college_garden_day1:
             "Go with him":
                 jump lbl_college_locker_room
 
+### LOCKER ROOM ###
 label lbl_college_locker_room_day1:
     show loc_college_locker_room_men at top
     "He brings me to mens locker room, I have a bad feeling about this..."
@@ -187,6 +224,7 @@ label lbl_college_locker_room_day1:
         "Go to Marcus's":
             jump lbl_city_home_marcus
 
+### SHOWER ###
 label lbl_college_shower_men_day1:
     "It's empty just as Kyle said, luckyly I have a shirt on my backpack, let's take a quick shower."
     "I take my clothes off an enter the cold, cold water... better this than nothing I guess."

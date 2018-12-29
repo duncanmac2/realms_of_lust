@@ -392,7 +392,7 @@ label lbl_home_kitchen_day2:
 
         menu:
             "To Marcus":
-                jump lbl_city_home_marcus
+                jump lbl_city_street_1st
 
     else:
         "What a strange day."
@@ -422,7 +422,7 @@ label lbl_home_kitchen_day2:
 
         menu:
             "To Marcus":
-                jump lbl_city_home_marcus
+                jump lbl_city_street_1st
 
 ### LIVING ROOM ###
 label lbl_home_living_room_day1:

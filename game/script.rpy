@@ -53,15 +53,19 @@
     for i in range(1,2):
         renpy.image("npc_portrait_lily_" + str(i).zfill(2), "images/people/lilith/lily_portrait_" + str(i).zfill(2) + ".jpg")
 
+    # Marcy
+    for i in range(1,2):
+        renpy.image("npc_portrait_marcy_" + str(i).zfill(2), "images/people/brittney_white/marcy_portrait_" + str(i).zfill(2) + ".jpg")
+
     # Maria
     for i in range(1,4):
         renpy.image("npc_portrait_maria_" + str(i).zfill(2), "images/people/ariana_marie/maria_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Mia
-    for i in range(1,2):
-        renpy.image("img_mia_ass_" + str(i).zfill(2), "images/people/mia_malkova/mia_ass_" + str(i).zfill(2) + ".jpg")
+    renpy.image("img_mia_ass_01", "images/people/mia_malkova/mia_ass_01.jpg")
+    renpy.image("img_mia_kiss_01", "images/people/mia_malkova/mia_kiss_01.jpg")
 
-    for i in range(1,11):
+    for i in range(1,13):
         renpy.image("npc_portrait_mia_" + str(i).zfill(2), "images/people/mia_malkova/mia_portrait_" + str(i).zfill(2) + ".jpg")
 
     for i in range(1,4):
@@ -72,7 +76,7 @@
         renpy.image("npc_portrait_nina_" + str(i).zfill(2), "images/people/alexis_texas/nina_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Sarah
-    for i in range(1,5):
+    for i in range(1,4):
         renpy.image("npc_portrait_sarah_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Veronica
@@ -94,6 +98,7 @@ image side portrait_mc = "images/portrait/portrait_mc1.jpg"
 define bonnie = Character("Bonnie", image = "portrait_bonnie", color = clr_sand)
 define karen = Character("Karen", image = "portrait_karen", color = clr_gray)
 define lisa = Character("Lisa", image = "portrait_lisa", color = clr_gold)
+define marcy = Character("Marcy", image = "portrait_marcy", color = clr_chestnut_brown)
 define mia = Character("Mia", image = "portrait_mia", color = clr_palegold)
 define nina = Character("Nina", image = "portrait_nina", color = clr_sand)
 define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut_brown)
@@ -102,6 +107,7 @@ define veronica = Character("Veronica", image = "portrait_veronica", color = clr
 image side portrait_bonnie = "images/portrait/portrait_bonnie.jpg"
 image side portrait_karen = "images/portrait/portrait_karen.jpg"
 image side portrait_lisa = "images/portrait/portrait_lisa.jpg"
+image side portrait_marcy = "images/portrait/portrait_marcy.jpg"
 image side portrait_mia = "images/portrait/portrait_mia.jpg"
 image side portrait_nina = "images/portrait/portrait_nina.jpg"
 image side portrait_sarah = "images/portrait/portrait_sarah.jpg"

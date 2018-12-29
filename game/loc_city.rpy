@@ -1,9 +1,11 @@
-## LOCATIONS
+#### LOCATIONS ####
 label lbl_city_home_marcus:
     scene loc_city_home_marcus
 
     if v_day == 1:
         jump lbl_city_home_marcus_day1b
+    elif v_day == 2:
+        jump lbl_city_home_marcus_day2b
 
 label lbl_city_mall:
     scene loc_city_mall
@@ -16,8 +18,11 @@ label lbl_city_street_1st:
 
     if v_day == 1:
         jump lbl_city_home_marcus_day1a
+    elif v_day == 2:
+        jump lbl_city_home_marcus_day2a
 
-## EVENTS
+#### EVENTS ####
+### MARCUS HOME ###
 label lbl_city_home_marcus_day1a:
     "We leave the house a few minutes later than usual, but still within a safe margin, the college is close enough that we can go on foot so we can take on the scenery while on the way."
     "My best friend Marcus lives on the house across the street, we usually go together the three of us so we have to go by his house to pick him up."
@@ -113,6 +118,51 @@ label lbl_city_home_marcus_day1b:
             "Go home":
                 jump lbl_home_room_mc
 
+label lbl_city_home_marcus_day2a:
+    show npc_portrait_mia_11
+    mia "Bro are you ok, you have been acting strange today."
+    me "I'm fine Mia."
+    mia "Are you sure? You are acting weird, you looked like you never seen me in my undies before, hell you already saw me naked, but you were giving me this strange looks."
+    me "Sorry sis, it's just... I don't know."
+    hide npc_portrait_mia_11
+    show npc_portrait_mia_12 at top
+    mia "Maybe you should go see the nurse, I'm sure Marcy will go tell you teacher that you are not feeling well."
+    me "I don't know... wait who is Marcy?"
+    hide npc_portrait_mia_12
+    show npc_portrait_mia_11
+    mia "What do you mean who is Marcy? She is your best friend, our neighbour, ring any bells?"
+    "That can't be... there must be some mistake, it wasn't a dream, couldn't have been, I don't know any Marcy. But she never said this would happen... Nina, it was all real!"
+    mia "[me]?"
+    me "Oh sorry sis, I'm fine, let's go."
+
+    menu:
+        "Marcy's house":
+            jump lbl_city_home_marcus
+
+label lbl_city_home_marcus_day2b:
+    "I have been here hundreds of times, but now I feel like I don't know this place at all, something isn't right, is Marcus really... Only one way to find out."
+    show npc_portrait_sarah_03 with d3
+    "Sarah answers the doorbell soon."
+    "Shit I can almost see her nipples, I always had the hots for Sarah but now isn't the time for looking at her huge and beautiful... no focus."
+    me "Hi Sarah, is Marc...y ready?"
+    sarah "Oh good morning guys, I will call her, she is just changing."
+    hide npc_portrait_sarah_03
+    show npc_portrait_marcy_01 with d3
+    "After a few minutes of waiting my worst fears become real."
+    marcy "Hey [me]."
+    me "I-I... hey... Marcy!?"
+    marcy "Yes, that's my name... are you ok?"
+    me "Why does everyone keep asking me that it's fine, ok!"
+    marcy "Okaayyy... We should go then..."
+    me "Yes, sure goodbye Sarah."
+    sarah "Bye guys, and don't forget to visit."
+    "Mia and Marcu...y keep looking at me like I'm crazy. Whatever is going on I have to keep calm, worrying them will not help me, let me try to keep my cool..."
+
+    menu:
+        "College":
+            jump lbl_college_yard
+
+### MALL ###
 label lbl_city_mall_day1:
     me "Sorry man, I have some others plans."
     marcus "It's cool [me], come see us when you have some time. I have this new game and it's pretty good."
