@@ -187,9 +187,14 @@ init python:
 
     build.classify('**~', None)
     build.classify('**.bak', None)
+    build.classify('**.lnk', None)
+    build.classify('**.txt', None)
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
+    build.classify('game/source/', None)
+    build.classify('**/*.rpy', None)
+    build.classify('**/patch.*', None)
 
     ## To archive files, classify them as 'archive'.
 
