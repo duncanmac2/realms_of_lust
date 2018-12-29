@@ -61,6 +61,10 @@
     for i in range(1,4):
         renpy.image("npc_portrait_maria_" + str(i).zfill(2), "images/people/ariana_marie/maria_portrait_" + str(i).zfill(2) + ".jpg")
 
+    # Megan
+    for i in range(1,4):
+        renpy.image("npc_portrait_megan_" + str(i).zfill(2), "images/people/nikki_benz/megan_portrait_" + str(i).zfill(2) + ".jpg")
+
     # Mia
     renpy.image("img_mia_ass_01", "images/people/mia_malkova/mia_ass_01.jpg")
     renpy.image("img_mia_kiss_01", "images/people/mia_malkova/mia_kiss_01.jpg")
@@ -99,6 +103,7 @@ define bonnie = Character("Bonnie", image = "portrait_bonnie", color = clr_sand)
 define karen = Character("Karen", image = "portrait_karen", color = clr_gray)
 define lisa = Character("Lisa", image = "portrait_lisa", color = clr_gold)
 define marcy = Character("Marcy", image = "portrait_marcy", color = clr_chestnut_brown)
+define megan = Character("Megan", image = "portrait_megan", color = clr_sand)
 define mia = Character("Mia", image = "portrait_mia", color = clr_palegold)
 define nina = Character("Nina", image = "portrait_nina", color = clr_sand)
 define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut_brown)
@@ -108,6 +113,7 @@ image side portrait_bonnie = "images/portrait/portrait_bonnie.jpg"
 image side portrait_karen = "images/portrait/portrait_karen.jpg"
 image side portrait_lisa = "images/portrait/portrait_lisa.jpg"
 image side portrait_marcy = "images/portrait/portrait_marcy.jpg"
+image side portrait_megan = "images/portrait/portrait_megan.jpg"
 image side portrait_mia = "images/portrait/portrait_mia.jpg"
 image side portrait_nina = "images/portrait/portrait_nina.jpg"
 image side portrait_sarah = "images/portrait/portrait_sarah.jpg"
@@ -157,6 +163,7 @@ image loc_city_street_1st = "images/location/loc_city_street_1st.jpg"
 image loc_college_class = "images/location/loc_college_class.jpg"
 image loc_college_garden = "images/location/loc_college_garden.jpg"
 image loc_college_locker_room = "images/location/loc_college_locker_room.jpg"
+image loc_college_nurse = "images/location/loc_college_nurse.jpg"
 image loc_college_shower_men = "images/location/loc_college_shower_men.jpg"
 image loc_college_yard = "images/location/loc_college_yard.jpg"
 

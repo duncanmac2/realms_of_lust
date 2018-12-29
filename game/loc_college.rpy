@@ -254,3 +254,41 @@ label lbl_college_shower_men_day1:
     menu:
         "Leave this place":
             jump lbl_college_garden
+
+### NURSE ###
+label lbl_college_nurse_day2:
+    "Just in case I'm sick it's best to talk to Megan the nurse."
+    show npc_portrait_megan_01 with d3
+    megan "Hello [me], what's your problem?"
+    me "I don't know to be honest, maybe I'm going crazy, but people are acting strange today."
+    megan "What do you mean?"
+    me "Like, I don't know, like if the world has changed and now everyone is... I don't know, different? Like I don't know them anymore."
+    megan "[me], it's normal to feel lost, like the world has been flipped upside down. College is a stressful experience."
+    "Just as I thought... she is going to blame stress. I can't blame say that a magic goddess of lust is changing the world is not an option."
+    megan "How long has it been?"
+    me "What? How long since..."
+    megan "Since you had sex?"
+    me "Where did that came from?"
+    megan "Like I said sexual frustration can lead to high level of stress."
+    me "Well... I-I'm... a virgin."
+    megan "Oh! I see... well the best advice I can give you is to masturbate frequently and maybe ask a friend for help with finding a girlfriend... or a professional."
+    me "Are you really telling me to go look for a prostitute?"
+    megan "If it help you what is the problem... I mean you clearly need it."
+    "She looks at my crotch, and I realize there is a bulge... When did this happened?"
+    megan "I don't have any magazines here... But if you need some help..."
+    me "Help, with what exactly?"
+    megan "Well you can just leave it like this young man, it could be really bad for your health. Also I could use a sperm sample to see the effects of stress on your body."
+    me "You want a-a sample?"
+    megan "Yes, and like I said no magazines so if you need some help..."
+    hide npc_portrait_megan_01 with d3
+    show npc_portrait_megan_02 at top with d3
+    "She starts taking her top off, I'm mesmerized I can't believe what im about to see. She hands me a cup and..."
+    megan "Go on ahead."
+    "You know what, FUCK IT, a hot nurse is telling me to masturbate while showing me her tits, I'm not wasting this opportunity."
+    "It doesn't take long for my climax... then comes the guilt."
+    me "I should go..."
+    megan "Wait [me]..."
+
+    menu:
+        "Leave":
+            jump lbl_college_garden
