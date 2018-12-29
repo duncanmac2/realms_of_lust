@@ -39,8 +39,8 @@ define gui.about = _p("""
 ## or semicolons.
 
 define build.name = "Realms_of_Lust"
-define build.directory_name = "Realms_of_Lust-0.4"
-define build.executable_name = "Realms_of_Lust"
+define build.directory_name = "Realms_of_Lust"
+define build.executable_name = "Realms_of_Lust-0.4"
 define build.include_update = False
 
 ## Sounds and music ############################################################
