@@ -118,7 +118,7 @@ label lbl_college_garden_day1:
 
         menu:
             "Mall with Mia":
-                jump lbl_college_locker_room
+                jump lbl_city_mall
             "Marcus's house":
                 jump lbl_city_home_marcus
 

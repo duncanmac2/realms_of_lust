@@ -38,6 +38,10 @@
     for i in range(1,5):
         renpy.image("img_bonnie_shower_" + str(i).zfill(2), "images/people/kennedy_leigh/bonnie_shower_" + str(i).zfill(2) + ".jpg")
 
+    # Karen
+    for i in range(1,4):
+        renpy.image("npc_portrait_karen_" + str(i).zfill(2), "images/people/jayden_jaymes/karen_portrait_" + str(i).zfill(2) + ".jpg")
+
     # Lisa
     for i in range(1,5):
         renpy.image("npc_portrait_lisa_" + str(i).zfill(2), "images/people/brandi_love/lisa_portrait_" + str(i).zfill(2) + ".jpg")
@@ -67,12 +71,14 @@ image side portrait_mc = "images/portrait/portrait_mc1.jpg"
 
 # NPC
 define bonnie = Character("Bonnie", image = "portrait_bonnie", color = clr_sand)
+define karen = Character("Karen", image = "portrait_karen", color = clr_gray)
 define mia = Character("Mia", image = "portrait_mia", color = clr_palegold)
 define lisa = Character("Lisa", image = "portrait_lisa", color = clr_gold)
 define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut_brown)
 define veronica = Character("Veronica", image = "portrait_veronica", color = clr_gray)
 
 image side portrait_bonnie = "images/portrait/portrait_bonnie.jpg"
+image side portrait_karen = "images/portrait/portrait_karen.jpg"
 image side portrait_mia = "images/portrait/portrait_mia.jpg"
 image side portrait_lisa = "images/portrait/portrait_lisa.jpg"
 image side portrait_sarah = "images/portrait/portrait_sarah.jpg"
@@ -107,9 +113,13 @@ image img_warning = "images/interface/warning.png"
 image loc_home_bathroom1 = "images/location/loc_home_bathroom1.jpg"
 image loc_home_bathroom2 = "images/location/loc_home_bathroom2.jpg"
 image loc_home_kitchen = "images/location/loc_home_kitchen.jpg"
+image loc_home_living_room = "images/location/loc_home_living_room.jpg"
 image loc_home_room_mc = "images/location/loc_home_room_mc.jpg"
 
 # City
+image loc_city_home_marcus = "images/location/loc_city_home_marcus.jpg"
+image loc_city_mall = "images/location/loc_city_mall.jpg"
+image loc_city_mall_store = "images/location/loc_city_mall_store.jpg"
 image loc_city_street_1st = "images/location/loc_city_street_1st.jpg"
 
 # College

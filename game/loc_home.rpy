@@ -3,23 +3,28 @@ label lbl_home_bathroom:
     scene loc_home_bathroom1
 
     if v_day == 1:
-        jump lbl_day1_home_bathroom
+        jump lbl_home_bathroom_day1
 
 label lbl_home_kitchen:
     scene loc_home_kitchen
 
-    if v_day == 1 and f_day1_lisa_bathroom_incident:
-        jump lbl_day1_home_kitchen1
-    elif v_day == 1 and not f_day1_lisa_bathroom_incident:
-        jump lbl_day1_home_kitchen2
+    if v_day == 1:
+        jump lbl_home_kitchen_day1
+
+label lbl_home_living_room:
+    scene loc_home_living_room
+
+    if v_day == 1:
+        jump lbl_home_living_room_day1
 
 label lbl_home_room_mc:
     scene loc_home_room_mc
 
     if v_day == 1:
-        jump lbl_day1_home_room_mc
+        jump lbl_home_room_mc_day1
 
-label lbl_day1_home_room_mc:
+## EVENTS
+label lbl_home_room_mc_day1:
     "The sun is shining through the window."
     me "It's already morning already? Why is it so bright?"
     "What time is it? Shit, it's late, very, very late. The alarm didn't go off. I'll be late if I don't hurry, Mr. Smith doesn't take kindly to people who are late for his classes."
@@ -27,8 +32,7 @@ label lbl_day1_home_room_mc:
 
     jump lbl_home_bathroom
 
-## EVENTS
-label lbl_day1_home_bathroom:
+label lbl_home_bathroom_day1:
     "When I'm about to enter the bathroom, I hear a loud scream."
     show npc_portrait_mia_01
     mia "Waitttt..."
@@ -98,44 +102,62 @@ label lbl_day1_home_bathroom:
                 "Take a shower in a hurry":
                     jump lbl_home_kitchen
 
-label lbl_day1_home_kitchen1:
-    me "Well... I will be late, smelly, broke and probably grounded for the rest of the week. But I will not be hungry. There is always a bright side (I feel dead inside)."
-    show npc_portrait_mia_02 at top
-    "After a few minutes pondering if I should eat all of Mia's food for sending me to my figurative demise, she comes down the stair."
-    mia "Sooooo... I-I'm sorryyyyy ???"
-    hide npc_portrait_mia_02
-    show npc_portrait_mia_03 at top with d3
-    me "Sorry doesn't cut it Mia, Lisa will eat me alive when we are back from college, you know how she is she doens't even own a bikini because it shows too much skin... And I saw her naked !!!"
-    mia "I didn't know, I thought she was down here and just forgot to wake us. Please forgive me Max, I-I will... talk to Hikari, I know you have a crush on her so I will set you up on a date, how about that?"
-    me "That would be great, except last month I tried to ask her out. All she said is she does not go out with losers and perverts. A pervert. ME?"
-    mia "Well, you do hang around Markus a lot."
-    me "I know. Let's do this then, you will owe me a favor, whatever I ask, whenever I ask. Deal?"
-    hide npc_portrait_mia_03
-    show npc_portrait_mia_04 at top with d3
-    mia "Uhhhh... ok deal!"
-    me "Good now let's go, we are already late as it is."
+label lbl_home_kitchen_day1:
+    if f_day1_lisa_bathroom_incident:
+        me "Well... I will be late, smelly, broke and probably grounded for the rest of the week. But I will not be hungry. There is always a bright side (I feel dead inside)."
+        show npc_portrait_mia_02 at top
+        "After a few minutes pondering if I should eat all of Mia's food for sending me to my figurative demise, she comes down the stair."
+        mia "Sooooo... I-I'm sorryyyyy ???"
+        hide npc_portrait_mia_02
+        show npc_portrait_mia_03 at top with d3
+        me "Sorry doesn't cut it Mia, Lisa will eat me alive when we are back from college, you know how she is she doens't even own a bikini because it shows too much skin... And I saw her naked !!!"
+        mia "I didn't know, I thought she was down here and just forgot to wake us. Please forgive me Max, I-I will... talk to Hikari, I know you have a crush on her so I will set you up on a date, how about that?"
+        me "That would be great, except last month I tried to ask her out. All she said is she does not go out with losers and perverts. A pervert. ME?"
+        mia "Well, you do hang around Markus a lot."
+        me "I know. Let's do this then, you will owe me a favor, whatever I ask, whenever I ask. Deal?"
+        hide npc_portrait_mia_03
+        show npc_portrait_mia_04 at top with d3
+        mia "Uhhhh... ok deal!"
+        me "Good now let's go, we are already late as it is."
 
-    menu:
-        "To Marcus":
-            jump lbl_city_street_1st
+        menu:
+            "To Marcus":
+                jump lbl_city_street_1st
 
-label lbl_day1_home_kitchen2:
-    "During my shower I heard some screaming, Lisa was probably in the shower when Mia opened the door... she will be pissed. Both of them will actually. Lisa is very shy she hates to show skin, even to Mia."
-    show npc_portrait_mia_05 at top
-    "When I step in the kitchen Mia is looking upset, she gives me a look that screams \"you own me one\"."
-    hide npc_portrait_mia_05
-    show npc_portrait_lisa_01 at top with d3
-    me "Good morning Lisa."
-    lisa "Good morning [me], didn't you set the alarm for the right time today?"
-    me "I did, but it didn't go off, strange right?"
-    lisa "Yes, now that you mentioned, mine didn't either, neither did Mia's clock and hers is and old mechanical one."
-    me "So... the screaming..."
-    lisa "It's nothing, Mia just forgot her manner that's all, here a sandwich eat it on the way you have to go now."
-    me "Shit you are right."
-    lisa "Language! Now go."
-    me "Bye Lisa."
-    mia "Bye Mom..."
+    else:
+        "During my shower I heard some screaming, Lisa was probably in the shower when Mia opened the door... she will be pissed. Both of them will actually. Lisa is very shy she hates to show skin, even to Mia."
+        show npc_portrait_mia_05 at top
+        "When I step in the kitchen Mia is looking upset, she gives me a look that screams \"you own me one\"."
+        hide npc_portrait_mia_05
+        show npc_portrait_lisa_01 at top with d3
+        me "Good morning Lisa."
+        lisa "Good morning [me], didn't you set the alarm for the right time today?"
+        me "I did, but it didn't go off, strange right?"
+        lisa "Yes, now that you mentioned, mine didn't either, neither did Mia's clock and hers is and old mechanical one."
+        me "So... the screaming..."
+        lisa "It's nothing, Mia just forgot her manner that's all, here a sandwich eat it on the way you have to go now."
+        me "Shit you are right."
+        lisa "Language! Now go."
+        me "Bye Lisa."
+        mia "Bye Mom..."
 
-    menu:
-        "Leave":
-            jump lbl_city_street_1st
+        menu:
+            "Leave":
+                jump lbl_city_street_1st
+
+label lbl_home_living_room_day1:
+        "She is here, and waiting for me, it was a good life..."
+        lisa "[me], sit down."
+        "That's not a request, it's best to do as the lady says."
+        lisa "So, don't you know how to knock? What did you have in your mind to open MY bathroom door when I was showering?"
+        me "I'm so sorry, Mia told me that you were done, and I was running late so I didn't think..."
+        lisa "Well you should have, you are not a kid anymore. You know you are in trouble right?"
+        me "Yes."
+        lisa "Good, you will be not be getting any money from me this month, if you want you will be getting a job or taking it from your savings."
+        me "I understand."
+        lisa "Look I was very angry most of the day, it's a good thing I had the time to cool down or you would be getting a much harsher punishment. Let's just leave it that and forget this ever happened okay. Now go to your room you left your computer on."
+        me "I did? Okay I will go."
+
+        menu:
+            "My room":
+                jump lbl_home_room_mc
