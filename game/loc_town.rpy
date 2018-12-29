@@ -1,12 +1,18 @@
 ## LOCATIONS
+label lbl_city_home_marcus:
+    scene loc_city_home_marcus
+
+    if v_day == 1:
+        jump lbl_city_home_marcus_day1b
+
 label lbl_city_street_1st:
     scene loc_city_street_1st
 
     if v_day == 1:
-        jump lbl_city_home_marcus_day1
+        jump lbl_city_home_marcus_day1a
 
 ## EVENTS
-label lbl_city_home_marcus_day1:
+label lbl_city_home_marcus_day1a:
     "We leave the house a few minutes later than usual, but still within a safe margin, the college is close enough that we can go on foot so we can take on the scenery while on the way."
     "My best friend Marcus lives on the house across the street, we usually go together the three of us so we have to go by his house to pick him up."
     show npc_portrait_sarah_01
@@ -32,3 +38,60 @@ label lbl_city_home_marcus_day1:
     menu:
         "Go to college":
             jump lbl_college_yard
+
+label lbl_city_home_marcus_day1b:
+    if f_day1_lisa_bathroom_incident:
+        "Hi mom, [me] came to visit."
+        "Hello boys, how was your day?"
+        "Great, I found some great treasure in the campus, but that's a secret between max and I, so sorry Mom cant tell you."
+        "Its not drugs is it, I swear to god Marcus P. Willians if you are doing drugs you are finding a new place to live."
+        "What? No its not drugs mom, its something completely legal."
+        "I somehow doubt it."
+        "Anyway, we are going to some games, are you going to the market today mom?"
+        "Yes, do you want me to bring you the usual?"
+        "Yes, the new edition is out today."
+        "I don't know why I buy those for you."
+        "The usual is their codeword for naughty magazines, Marcus is a collector. Sara buys them for him because his father used to give them to him as a gift every month, so after he passed away she kept the tradition, not that she is happy about it."
+        "Lets go play some p..."
+        "RING... RING..."
+        "It's my phone, Lisa is calling..."
+        "Max, were are you? Doens't matter, come back home right now! You own me an explanation for what happend this morning."
+        "Lisa, I will be right there."
+        "You have 20 minutes."
+        "She hung up."
+        "Looks like you are in trouble my friend, we will do this some other time."
+        "Sorry Man, we will talk later."
+
+        menu:
+            "Run home":
+                jump lbl_college_yard
+
+    else:
+        "Hi mom, [me] came to visit."
+        "Hello boys, how was your day?"
+        "Great, I found some great treasure in the campus, but that's a secret between max and I, so sorry Mom cant tell you."
+        "Its not drugs is it, I swear to god Marcus P. Willians if you are doing drugs you are finding a new place to live."
+        "What? No its not drugs mom, its something completely legal."
+        "No it isn't."
+        "Anyway, we are going to some games, are you going to the market today mom?"
+        "Yes, do you want me to bring you the usual?"
+        "Yes, the new edition is out today."
+        "I don't know why I buy those for you."
+        "The usual is their codeword for naughty magazines, Marcus is a collector. Sara buys them for him because his father used to give them to him as a gift every month, so after he passed away she kept the tradition, not that she is happy about it."
+        "Lets go play some p..."
+        "RING... RING..."
+        "Its my phone, Lisa is calling..."
+        "Max, is Mia with you?She is not aswering her phone."
+        "Lisa, no she is with Veronica I think.Do you have her number?"
+        "Yes, I will call her right now, she is in so much truble..."
+        "Poor Mia."
+        "After the call Marcus and I spend some hour play some of his old games."
+        "Its getting late man, I will..."
+        "Just as I start to stand to go home something catches my eyes."
+        "Ohhh, Max we are soo lucky, she rarely changes in her room.Lets enjoy this gift from the pervert god."
+        "She is very hot, that's cheerleader for you, but its time for me to go, see you tomorrow Marcus."
+        "He is in a trance, better leave, he has business to attend to."
+
+        menu:
+            "Go home":
+                jump lbl_college_yard

@@ -11,6 +11,18 @@ label lbl_college_garden:
     if v_day == 1:
         jump lbl_college_garden_day1
 
+label lbl_college_locker_room:
+    scene loc_college_locker_room
+
+    if v_day == 1:
+        jump lbl_college_locker_room_day1
+
+label lbl_college_shower_men:
+    scene loc_college_shower_men
+
+    if v_day == 1:
+        jump lbl_college_shower_men_day1
+
 label lbl_college_yard:
     scene loc_college_yard
 
@@ -57,48 +69,150 @@ label lbl_college_class_day1:
     "I knew him in fifth grade he was the fat kid everyone made fun of, except Marcus and I, so when we met again in college he started watching our back. Doesn't mean Jason is not picking on me when he is not looking but other guys have it much worse."
     jason "As you wish \"captain\", see you later nerd."
     hide npc_portrait_jason with d3
-    kyle "He is such a pain in the ass. Your sister is wise not to go out with him. See you later guys I will see to it that he does not shove people in their locker."
-    "If I was a chick I would be in love, but since I'm a dude I just thank him and go meet Mia and Veronica at the garden."
-    marcus "[me], go on ahead I have business to attend."
-    me "Sure see you later man."
 
-    menu:
-        "Lunch":
-            jump lbl_college_garden
+    if f_day1_lisa_bathroom_incident:
+        kyle "Hey [me], here is the key to the men's shower, should be empty now. Don't worry man we all have woken up too late to take a shower before."
+        "If I was a chick I would be in love, but since I'm a dude I just thank him and go there to take the shower that was denied to me today."
+
+        menu:
+            "Men's shower":
+                jump lbl_college_shower_men
+
+    else:
+        kyle "He is such a pain in the ass. Your sister is wise not to go out with him. See you later guys I will see to it that he does not shove people in their locker."
+        "If I was a chick I would be in love, but since I'm a dude I just thank him and go meet Mia and Veronica at the garden."
+        marcus "[me], go on ahead I have business to attend."
+        me "Sure see you later man."
+
+        menu:
+            "Lunch":
+                jump lbl_college_garden
 
 label lbl_college_garden_day1:
-    "I approach the girls"
-    show npc_portrait_veronica_01
-    "This is Veronica, Mia's best friend. I now what you are thinking, he must have a crush on her... No I'm not some cliche main character, also she is kind of a slut, she beded the whole football tem acording to some rumors."
-    "She is not that bad but she knows her way around a cock... not mine though, she has this strange respect for me, never ever flirted with me, don't know if that's good or bad."
-    hide npc_portrait_veronica_01
-    show npc_portrait_mia_06 at top with d3
-    mia "Hey bro..."
-    veronica "Hey [me], how was you class?"
-    me "Boring, yours?"
-    mia "Same, hahaha, where is Marcus?"
-    me "Don't know, said he had a business meeting."
-    "(Both of them) Ewwww!"
-    me "No I don't think it was a code for faping, he must have bought something from someone he does that sometimes."
-    mia "What he usually buy?"
-    me "Awwww... ahhh... things..."
-    "(Again both of them) Ewwww..."
-    hide npc_portrait_mia_06 with d3
-    show npc_portrait_veronica_01 with d3
-    veronica "Why do we go out with him?"
-    mia "Because he is bro best friend..."
-    veronica "Yeahhh..."
-    hide npc_portrait_veronica_01
-    show npc_portrait_marcus at top
-    "While we talk about him, Marcus appears out of nowhere."
-    me "Speaking of the devil."
-    marcus "Hey girls, Veronica beautiful as ever..."
-    veronica "You would be almost charming if you didn't had that problem with being too pervy."
-    marcus "I'm hurt hahaha, but I came to talk to [me], come with me dude."
-    me "But I didn't eat yet..."
-    marcus "Trust me this is better than food."
-    me "Okay..."
+    if f_day1_lisa_bathroom_incident:
+        mia "[me] why took you so long?"
+        me "Kyle gave me a key to go take a shower."
+        show npc_portrait_veronica_01
+        veronica "He is always nice, and handsome, a shame he is gay."
+        "This is Veronica, Mia's best friend, she is kind of a slut, she bedded the whole football team acording to some rumors."
+        "She is not a bad person, she just can't control her urges, also she has this strange respect for me, never ever flirted with me, don't know if that's good or bad."
+        me "He's what now?"
+        veronica "Gay, he has to be, I hit on him more times then I can count and he never even blinked."
+        hide npc_portrait_veronica_01
+        show npc_portrait_mia_06 at top with d3
+        mia "V, not all guys that don't want to be with you are gay."
+        veronica "You're so naive Mia, please never change."
+        me "He is? I never knew, does anyone else knows? Doens't matter even if he is gay it's none of my business. Where is Marcus?"
+        veronica "He came by a while ago, asked us to tell you to meet him..."
+        mia "Wait he is coming back here."
+        marcus "Hello guys, I'm back."
+        veronica "That's terrible news. What with that smile on your face?"
+        marcus "It's a secret between men only."
+        hide npc_portrait_mia_06 with d3
+        show npc_portrait_veronica_01 with d3
+        veronica "Fine no need to tell us, by the way Mia come here, let me tell you about the incident in the girl's shower last week."
+        marcus "What incident?"
+        veronica "Sorry, Marcus it's a secret between women only."
+        "The curiosity is going to eat him alive now, it's almost too cruel."
+        "After we eat Marcus call me to his house, but I was thinking of going to the mall with Mia, it's been some time since we went there to eat some ice cream. Where do I go?"
+
+        menu:
+            "Mall with Mia":
+                jump lbl_college_locker_room
+            "Marcus's house":
+                jump lbl_city_home_marcus
+
+    else:
+        "I approach the girls"
+        show npc_portrait_veronica_01
+        "This is Veronica, Mia's best friend. I now what you are thinking, he must have a crush on her... No I'm not some cliche main character, also she is kind of a slut, she beded the whole football tem acording to some rumors."
+        "She is not that bad but she knows her way around a cock... not mine though, she has this strange respect for me, never ever flirted with me, don't know if that's good or bad."
+        hide npc_portrait_veronica_01
+        show npc_portrait_mia_06 at top with d3
+        mia "Hey bro..."
+        veronica "Hey [me], how was you class?"
+        me "Boring, yours?"
+        mia "Same, hahaha, where is Marcus?"
+        me "Don't know, said he had a business meeting."
+        "(Both of them) Ewwww!"
+        me "No I don't think it was a code for faping, he must have bought something from someone he does that sometimes."
+        mia "What he usually buy?"
+        me "Awwww... ahhh... things..."
+        "(Again both of them) Ewwww..."
+        hide npc_portrait_mia_06 with d3
+        show npc_portrait_veronica_01 with d3
+        veronica "Why do we go out with him?"
+        mia "Because he is bro best friend..."
+        veronica "Yeahhh..."
+        hide npc_portrait_veronica_01
+        show npc_portrait_marcus at top
+        "While we talk about him, Marcus appears out of nowhere."
+        me "Speaking of the devil."
+        marcus "Hey girls, Veronica beautiful as ever..."
+        veronica "You would be almost charming if you didn't had that problem with being too pervy."
+        marcus "I'm hurt hahaha, but I came to talk to [me], come with me dude."
+        me "But I didn't eat yet..."
+        marcus "Trust me this is better than food."
+        me "Okay..."
+
+        menu:
+            "Go with him":
+                jump lbl_college_locker_room
+
+label lbl_college_locker_room_day1:
+    show loc_college_locker_room_men at top
+    "He brings me to mens locker room, I have a bad feeling about this..."
+    marcus "Did you know that some jocks can be reasonable and no assholes? For a price that is."
+    me "What are you talking about?"
+    marcus "You see they have a very well guarded secret between themselves, but for the low price of 50 dollar they gave me access to this amazing artifact."
+    me "What???"
+    marcus "Behold!!!"
+    "He points at a hole in the wall, wait a minute..."
+    me "Is that...?"
+    marcus "Yes, it the legendary girls shower spy hole!"
+    me "My god dude, that's amazing let's take a look!"
+    marcus "Wait, tere must be some kind of ritual of ritual or speach for this kind of occasion and..."
+    me "I'm already looking through the hole."
+    hide loc_college_locker_room_men
+    show vid_college_shower at truecenter
+    "This is heaven, we take turns looking at the girls in the shower."
+    hide vid_college_shower
+    figgs "Who is there?"
+    marcus "Shit is old figgs the janitor, we can't let him find us... quickly the windows, jump."
+    "We land on the bushes outside the windows, I think he didn't see us."
+    marcus "That sucks man, but hey wanna go play some games on my house?"
+    me "Sure, why not?"
 
     menu:
-        "Go with him":
+        "Go to Marcus's":
+            jump lbl_college_locker_room
+
+label lbl_college_shower_men_day1:
+    "It's empty just as Kyle said, luckyly I have a shirt on my backpack, let's take a quick shower."
+    "I take my clothes off an enter the cold, cold water... better this than nothing I guess."
+    "Not even a minute in I hear someone enter the shower."
+    show img_bonnie_shower_01 with d3
+    bonnie "Shit, what are you doing here, this place is supposed to be empty."
+    me "What am I doing? What are YOU doing in the men's shower!"
+    bonnie "Sure that why I'm here, those fucking cheerleaders think they own the girls washroom, so now I have to shower here after the training. All because I said their ponpon's were ridiculous."
+    me "DO YOU MIND, I'm still naked here."
+    bonnie "What's the big deal, you shy or something. Look I have no time, I have to get home in half an hour and I smell like shit, so I will use the last on right over there. You can leave if you want."
+    hide img_bonnie_shower_01 with d3
+    show img_bonnie_shower_02 at top with d3
+    "Before I can say a word she finishes taking off her clothes and walks in, I'm kind of speechlees now so I just continue to shower without looking at her... it's not as easy as I thought... maybe just a peek."
+    hide img_bonnie_shower_02 with d3
+    show img_bonnie_shower_03 with d3
+    "Shit, I get hard almost instantly, hope she doesn't notice."
+    bonnie "Woah... you're not bad at all."
+    me "What?"
+    bonnie "Your dick, I thought you were hidding it because it was small, but its not bad at all."
+    me "I'm leaving now."
+    hide img_bonnie_shower_03 with d3
+    show img_bonnie_shower_04 with d3
+    bonnie "Suit yourself, I'm Bonnie by the way."
+    me "[me]."
+    "I leave as fast as I can, after that awkward exchange, best to forget it. There is still time to eat lunch with everyone."
+
+    menu:
+        "Leave this place":
             jump lbl_college_garden

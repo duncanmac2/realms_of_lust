@@ -34,6 +34,10 @@
 
     ### IMAGES
     ## NPC
+    # Bonnie
+    for i in range(1,5):
+        renpy.image("img_bonnie_shower_" + str(i).zfill(2), "images/people/kennedy_leigh/bonnie_shower_" + str(i).zfill(2) + ".jpg")
+
     # Lisa
     for i in range(1,5):
         renpy.image("npc_portrait_lisa_" + str(i).zfill(2), "images/people/brandi_love/lisa_portrait_" + str(i).zfill(2) + ".jpg")
@@ -62,17 +66,20 @@ define me = DynamicCharacter("your_name", image = "portrait_mc", color = clr_dar
 image side portrait_mc = "images/portrait/portrait_mc1.jpg"
 
 # NPC
+define bonnie = Character("Bonnie", image = "portrait_bonnie", color = clr_sand)
 define mia = Character("Mia", image = "portrait_mia", color = clr_palegold)
 define lisa = Character("Lisa", image = "portrait_lisa", color = clr_gold)
 define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut_brown)
 define veronica = Character("Veronica", image = "portrait_veronica", color = clr_gray)
 
+image side portrait_bonnie = "images/portrait/portrait_bonnie.jpg"
 image side portrait_mia = "images/portrait/portrait_mia.jpg"
 image side portrait_lisa = "images/portrait/portrait_lisa.jpg"
 image side portrait_sarah = "images/portrait/portrait_sarah.jpg"
 image side portrait_veronica = "images/portrait/portrait_veronica.jpg"
 
 # NPC OTHERS
+define figgs = Character("Figgs", color = clr_dark_gray)
 define jason = Character("Jason", image = "portrait_jason", color = clr_dark_gray)
 define kyle = Character("Kyle", image = "portrait_kyle", color = clr_dark_gray)
 define marcus = Character("Marcus", image = "portrait_marcus", color = clr_dark_gray)
@@ -108,9 +115,15 @@ image loc_city_street_1st = "images/location/loc_city_street_1st.jpg"
 # College
 image loc_college_class = "images/location/loc_college_class.jpg"
 image loc_college_garden = "images/location/loc_college_garden.jpg"
+image loc_college_locker_room = "images/location/loc_college_locker_room.jpg"
+image loc_college_shower_men = "images/location/loc_college_shower_men.jpg"
 image loc_college_yard = "images/location/loc_college_yard.jpg"
 
 ## VIDEOS
+# College
+image vid_college_shower = Movie(play="images/events/college_shower.webm",size=(620,612))
+
+# Home
 image vid_lisa_bathroom_incident = Movie(play="images/people/brandi_love/lisa_bathroom_incident.webm",size=(590,590))
 
 ## START
