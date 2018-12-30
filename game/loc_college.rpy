@@ -87,7 +87,7 @@ label lbl_college_class_day1:
     marcus "Man, we caught a break for once, how lucky are we? He is never late."
     me "Right!?"
     "As I start to ponder why is everyone late today, he come through the door out of breath."
-    show npc_portrait_mr_smith at top with d3
+    show npc_portrait_mr_smith_01 at top with d3
     mr_smith "I'm sorry class, I had a problem at home today and could not get here on time, let's start right away then."
     "The class goes at the usual pace, a very boring and slow, but no one is even thinking about sleeping, that would be a very bad idea. Mr Smith is not only ponctual but also very strict."
     "Once he caught a poor guy sleeping, he made him try to solve a extremely complex equation, and when he couldn't he failed him. We never saw him again."
@@ -122,6 +122,33 @@ label lbl_college_class_day1:
         menu:
             "Lunch":
                 jump lbl_college_garden
+
+label lbl_college_class_day2:
+    "Once inside I notice that there are some new faces, girl faces in class, and we are missing a few guys... shit I hoped Marcy was an isolated case."
+    me "So... do you remember why you were late yesterday?"
+    marcy "Oh right my neighbor, sorry about that, it's just rare for her to change in her room and then I..."
+    me "Ok, never mind, let's just sit."
+    "We chat a bit, it seems that most of what made Marcus, well Marcus is the same with Marcy, that's good, she doesn't feel like a complete stranger."
+    show npc_portrait_mr_smith_02 at top with d3
+    "A few minutes later Mr. Smith arrived, he looks a little younger... Well that's the least strange thing I saw today."
+    hide npc_portrait_mr_smith_02 with d1
+    "Jason on the other hand looks smaller than normal, less muscular, he is still a beast however. That's the first good change of the day."
+    "The class goes on as usual until a late student comes to class."
+    unknown "I'm sorry Mr. Smith, the bus was late and..."
+    mr_smith younger "Well I sorry to hear that, but you know the rules miss."
+    "He points to his lap."
+    unknown "Yes."
+    mr_smith "Well then?"
+    show vid_college_spanking at top with d1
+    "What the fuck. Why is he? He never... god damn it, I just can't go for five minutes without something strange happening."
+    marcy "Nice ass huh?"
+    me "Yes... I mean... Oh fuck it."
+    hide vid_college_spanking with d1
+    "After the class end I decide to see Aunt Lily. She might know something about what is happening, Nina said it was something in my blood, our blood.I have to go there."
+
+    menu:
+        "Aunt Lily":
+            jump lbl_city_home_lily
 
 ### GARDEN ###
 label lbl_college_garden_day1:
@@ -291,4 +318,11 @@ label lbl_college_nurse_day2:
 
     menu:
         "Leave":
-            jump lbl_college_garden
+            scene loc_college_yard
+            pass
+
+    "What did I do? WHAT did I do??? I need to clear my head... Aunt Lily! She might know something about what is happening. Nina said it was something in my blood, our blood. I have to go there."
+
+    menu:
+        "Aunt Lily":
+            jump lbl_city_home_lily

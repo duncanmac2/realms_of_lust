@@ -1,4 +1,10 @@
 #### LOCATIONS ####
+label lbl_city_home_lily:
+    scene loc_city_home_lily
+
+    if v_day == 2:
+        jump lbl_city_home_lily_day2
+
 label lbl_city_home_marcus:
     scene loc_city_home_marcus
 
@@ -208,4 +214,74 @@ label lbl_city_mall_day1:
 
     menu:
         "Go home":
+            jump lbl_home_living_room
+
+### LILY HOME ###
+label lbl_city_home_lily_day2:
+    "That's her house, hope she is home."
+    "I ring the doorbell."
+    lily "One second!"
+    show npc_portrait_lily_02 with d1
+    lily "[me]!"
+    "She hugs me and holds me tight... too tight."
+    me "Aunt Lily I can't breathe."
+    lily "Oh sorry, it's just, I haven't seen you in years, you never send pictures I didn't realise you had grown so much."
+    me "Thanks, but can we talk inside, it's important?"
+    lily "Come in let me make you some tea or coffee."
+    me "Just water is fine."
+    hide npc_portrait_lily_02 with d3
+    show img_lily_couch at top with d3
+    "She smiles at me and we head inside the house."
+    lily "So, what did you want to talk about?"
+    me "Do you know something about our family history, something about having the blood of a god or demon or..."
+    hide img_lily_couch
+    show npc_portrait_lily_03 at top
+    "Her expression changes instantly from happy to nervous."
+    lily "Why do you ask? Did something happened?"
+    me "So you know something!"
+    lily "I-I... There is a legend, told by my grandmother, about the time when a god would come back to this world and ascend his descendants, some people took it serious, but your my mother always thought it was bullshit, so your father and I stoped talking about it..."
+    me "Well, what if it was true?"
+    hide npc_portrait_lily_03
+    show npc_portrait_lily_04 at top
+    lily "[me], those are just fairy tales."
+    "She was always terrible at lying."
+    me "Really, well then I guess it was just a dream."
+    lily "WHAT DREAM?"
+    me "Well you see I had a dream were a woman named Nina offered me a way to change this world and I accepted."
+    hide npc_portrait_lily_04
+    show npc_portrait_lily_05 at top
+    lily "You did!!! Awesome, it finally happened, this horrible world will finally be gone, life has sucked for so long but now we can finally be happy."
+    me "So... something you want to tell me dear aunt."
+    hide npc_portrait_lily_05 with d1
+    show npc_portrait_lily_06 with d1
+    lily "Oh... I... I... Ok look, I always knew we were different, I could fell when people were... ehhh... excited. And men always flocked to me even when I was fat as a pig. And those stories grandma told us. I just knew this day would come."
+    me "It did, do you know what kind of world she wants to make? Sex, sex everywhere, today has been the most strange day in the history of strange days aunt. First Lisa entered my room only on her lingerie..."
+    lily "Oh! That is strange, for some reason a part of me thinks that's normal for her, and the other part is incredulous."
+    me "And then Marcus became Marcy..."
+    lily "WHAT? The name Marcy rings a bell, but I remember your friend Marcus..."
+    me "That's good because we are the only ones, and then nurse Megan, forget about that."
+    hide npc_portrait_lily_06
+    show npc_portrait_lily_03 at top
+    lily "I can't believe it, so this is what they were talking about? That's AMAZING!!!"
+    me "It's what now???"
+    lily "[me] this is great, I always had these urges, I wanted to go out and fuck the first cock in front of me..."
+    me "Ok, I don't want to listen to this."
+    lily "...I always masturbated a lot..."
+    me "Why am I still listening."
+    lily "...But everyone told me those were bad things so I suppressed then, but now..."
+    me "OK, that's ENOUGH. Are you even listening to what you are saying? That's crazy."
+    hide npc_portrait_lily_03
+    show npc_portrait_lily_05 at top
+    lily "Really? So you are not enjoying this at all?"
+    me "I..."
+    lily "Ha, I know deep inside you have the hearth of a pervert. Look I have to leave now, but Lisa invited me for dinner, we can talk about that later okay, just think about it."
+    me "I-I will, I will be leaving now then, bye Lily."
+    hide npc_portrait_lily_05 with d1
+    show vid_lily_kiss at top with d1
+    "She kisses me with passion."
+    hide vid_lily_kiss with d3
+    lily "See? Not bad at all."
+
+    menu:
+        "Back to college":
             jump lbl_home_living_room

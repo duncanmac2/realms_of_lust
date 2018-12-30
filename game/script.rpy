@@ -50,7 +50,9 @@
         renpy.image("npc_portrait_lisa_" + str(i).zfill(2), "images/people/brandi_love/lisa_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Lily
-    for i in range(1,2):
+    renpy.image("img_lily_couch", "images/people/lilith/lily_couch.jpg")
+
+    for i in range(1,7):
         renpy.image("npc_portrait_lily_" + str(i).zfill(2), "images/people/lilith/lily_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Marcy
@@ -90,7 +92,8 @@
     ## NPC OTHERS
     renpy.image("npc_portrait_jason", "images/people/others/portrait_jason.jpg")
     renpy.image("npc_portrait_marcus", "images/people/others/portrait_marcus.jpg")
-    renpy.image("npc_portrait_mr_smith", "images/people/others/portrait_mr_smith.jpg")
+    renpy.image("npc_portrait_mr_smith_01", "images/people/others/portrait_mr_smith_01.jpg")
+    renpy.image("npc_portrait_mr_smith_02", "images/people/others/portrait_mr_smith_02.jpg")
 
 ## NAMES & PORTRAITS
 # Player
@@ -101,6 +104,7 @@ image side portrait_mc = "images/portrait/portrait_mc1.jpg"
 # NPC
 define bonnie = Character("Bonnie", image = "portrait_bonnie", color = clr_sand)
 define karen = Character("Karen", image = "portrait_karen", color = clr_gray)
+define lily = Character("Lily", image = "portrait_lily", color = clr_auburn)
 define lisa = Character("Lisa", image = "portrait_lisa", color = clr_gold)
 define marcy = Character("Marcy", image = "portrait_marcy", color = clr_chestnut_brown)
 define megan = Character("Megan", image = "portrait_megan", color = clr_sand)
@@ -111,6 +115,7 @@ define veronica = Character("Veronica", image = "portrait_veronica", color = clr
 
 image side portrait_bonnie = "images/portrait/portrait_bonnie.jpg"
 image side portrait_karen = "images/portrait/portrait_karen.jpg"
+image side portrait_lily = "images/portrait/portrait_lily.jpg"
 image side portrait_lisa = "images/portrait/portrait_lisa.jpg"
 image side portrait_marcy = "images/portrait/portrait_marcy.jpg"
 image side portrait_megan = "images/portrait/portrait_megan.jpg"
@@ -125,11 +130,13 @@ define jason = Character("Jason", image = "portrait_jason", color = clr_dark_gra
 define kyle = Character("Kyle", image = "portrait_kyle", color = clr_dark_gray)
 define marcus = Character("Marcus", image = "portrait_marcus", color = clr_dark_gray)
 define mr_smith = Character("Mr Smith", image = "portrait_mr_smith", color = clr_dark_gray)
+define unknown = Character("???", color = clr_dark_gray)
 
 image side portrait_kyle = "images/portrait/portrait_kyle.jpg"
 image side portrait_jason = "images/portrait/portrait_jason.jpg"
 image side portrait_marcus = "images/portrait/portrait_marcus.jpg"
-image side portrait_mr_smith = "images/portrait/portrait_mr_smith.jpg"
+image side portrait_mr_smith = "images/portrait/portrait_mr_smith_01.jpg"
+image side portrait_mr_smith younger = "images/portrait/portrait_mr_smith_02.jpg"
 
 ## Effects
 define d1 = Dissolve(0.2)
@@ -171,15 +178,19 @@ image loc_college_yard = "images/location/loc_college_yard.jpg"
 # MC
 image vid_mc_erection = Movie(play="images/people/MC/MC_erection.webm")
 
+# City
+image vid_lily_kiss = Movie(play="images/people/lilith/lily_kiss.webm", size=(960,544))
+
 # College
-image vid_college_shower = Movie(play="images/events/college_shower.webm",size=(620,612))
+image vid_college_shower = Movie(play="images/events/college_shower.webm", size=(620,612))
+image vid_college_spanking = Movie(play="images/events/college_spanking.webm", size=(534,800))
 
 # Home
-image vid_pc_porn_01 = Movie(play="images/events/pc_porn_01.webm",size=(1000,522))
-image vid_pc_porn_02 = Movie(play="images/events/pc_porn_02.webm",size=(1000,514))
-image vid_pc_porn_03 = Movie(play="images/events/pc_porn_03.webm",size=(570,848))
-image vid_pc_porn_04 = Movie(play="images/events/pc_porn_04.webm",size=(1000,560))
-image vid_lisa_bathroom_incident = Movie(play="images/people/brandi_love/lisa_bathroom_incident.webm",size=(590,590))
+image vid_pc_porn_01 = Movie(play="images/events/pc_porn_01.webm", size=(1000,522))
+image vid_pc_porn_02 = Movie(play="images/events/pc_porn_02.webm", size=(1000,514))
+image vid_pc_porn_03 = Movie(play="images/events/pc_porn_03.webm", size=(570,848))
+image vid_pc_porn_04 = Movie(play="images/events/pc_porn_04.webm", size=(1000,560))
+image vid_lisa_bathroom_incident = Movie(play="images/people/brandi_love/lisa_bathroom_incident.webm", size=(590,590))
 image vid_lisa_room_masturbate = Movie(play="images/people/brandi_love/lisa_masturbation.webm")
 
 ## START
