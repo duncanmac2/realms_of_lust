@@ -20,6 +20,8 @@ label lbl_home_living_room:
 
     if v_day == 1:
         jump lbl_home_living_room_day1
+    elif v_day == 2:
+        jump lbl_home_living_room_day2
 
 label lbl_home_room_lisa:
     scene loc_home_room_lisa_bed
@@ -313,69 +315,94 @@ label lbl_home_bathroom_day1:
 
 ## DAY 2 ##
 label lbl_home_bathroom_day2:
-    mia "WAIT BROOOO!!!"
-    show npc_portrait_mia_01 with d3
-    me "Oh no."
-    me "I'm sorry sis but I'm really in desperate need of a shower."
-    mia "Well so am I, so let's play for it!"
-    me "Why? We have more than enough time for both of us to take a shower. Just go eat breakfast and come back in a few minutes."
-    mia "Please, let me take it first, I dropped cholacolate in my... my... underwear and now it's sticky."
-    me "I thought Lisa had told you to stop eating candy before breakfast. Also how did you manage to... you know what, never mind."
-    mia "That's why you need to let me shower before she finds out."
-    me "Ok, let's do this, the same as yesterday."
-    mia "Okay."
-    "As I'm about to play scissors I catch a glimpse of her nipple and I forget to open my hand..."
-    mia "Yeah. Paper beats rock, I win. But if you are so desperate you could come in and take a shower with me."
-    "This again? She is way too shy to bathe together she just likes to keep teasing me, but let's see how far she is willing to go."
-    me "I will take you up on that offer."
-    mia "Well come in then."
-    "She stands at the door holding the door open for me."
-    mia "What are you waiting for?"
-    "She thinks she can win against me in the bluffing game, not today."
+    if v_time == 840:
+        "Let's see where is Lisa."
+        "I hear someone on her shower, I shouldn't... but I can't stop thinking about it. Fuck! One look, just one look."
+        show img_lisa_shower_01 with d1
+        me "Whoa..."
+        hide img_lisa_shower_01 with d1
+        show img_lisa_shower_02 at top with d1
+        pause
+        hide img_lisa_shower_02 with d1
+        show img_lisa_shower_03 at top with d1
+        pause
+        hide img_lisa_shower_03 with d1
+        show img_lisa_shower_04 with d1
+        pause
+        hide img_lisa_shower_04 with d1
+        show img_lisa_shower_05 with d1
+        "Dammit. I did it again."
 
-    menu:
-        "Go inside":
-            hide npc_portrait_mia_01 with d3
-            pass
+        $ v_time = 900
 
-    "We are both inside, she is red as a tomato, but no signs of backing down. Time to take it to the next level."
-    me "What are you waiting for? We don't have all morning."
-    "I start to take my clothes off, with a smirk on my face she will never..."
-    show img_mia_shower_01 at top with d3
-    mia "No need to push it."
-    "She just started to take her clothes off, and in a moment she is naked in front of me while I have only my underwear."
-    mia "I know it's been a while since we took a shower together, but it's all right, we are family after all."
-    "It's clear she is trying to convince herself. As for me im trying to hide my massive erection from her... Should I go in or just give up?"
-    hide img_mia_shower_01 with d3
-    show img_mia_shower_02 with d3
-    "Her body is incredible, I always knew she was beautiful but this! Can you get a hard on on top of a hard on?"
-    "That's when she see my \"situation\"."
-    mia "What is... ooh that's why you were so desperate to come in... it's, it's ok bro. You are a man after all, cold showers are good to keep you awake."
-    "I can't believe this is happening, who is this, this is not Mia, the dream! No that's crazy..."
-    me "Are you sure you don't want to do this?"
-    mia "It's all right, bro. We are family."
-    me "Yeah, you already said that."
-    "It's obvious she is not as cool with this situation as she makes herself to be. But I don't have the time to just give up now, so I step inside the shower."
-    "Mia does the same and soon we are in this awkward situation, back to back, washing ourselves in silence. That is until she bumps into me. The only thing I can think off is that her ass is soft and smooth, if the water wasn't so cold I would be hard again."
-    hide img_mia_shower_02 with d3
-    show img_mia_shower_03 with d3
-    mia "Sorry bro. Are you... you know... less excited?"
-    me "I think so, yes."
-    mia "Ok, you can turn around then, can you wash my back?"
-    hide img_mia_shower_03 with d3
-    show img_mia_ass_01 with d3
-    "That sight is too much, I can feel my blood flowing to my dick again."
-    me "Sorry, I'm done here, need to go see you downstairs."
-    mia "But..."
-    hide img_mia_ass_01
-    "I don't give her time to say anything else, as I put a towel around my waist and run of to put some clothes in my room."
-    "Time for breakfast then."
+        menu:
+            "Time to go":
+                jump lbl_home_room_mc
 
-    $ f_day2_shower = True
+    else:
+        mia "WAIT BROOOO!!!"
+        show npc_portrait_mia_01 with d3
+        me "Oh no."
+        me "I'm sorry sis but I'm really in desperate need of a shower."
+        mia "Well so am I, so let's play for it!"
+        me "Why? We have more than enough time for both of us to take a shower. Just go eat breakfast and come back in a few minutes."
+        mia "Please, let me take it first, I dropped cholacolate in my... my... underwear and now it's sticky."
+        me "I thought Lisa had told you to stop eating candy before breakfast. Also how did you manage to... you know what, never mind."
+        mia "That's why you need to let me shower before she finds out."
+        me "Ok, let's do this, the same as yesterday."
+        mia "Okay."
+        "As I'm about to play scissors I catch a glimpse of her nipple and I forget to open my hand..."
+        mia "Yeah. Paper beats rock, I win. But if you are so desperate you could come in and take a shower with me."
+        "This again? She is way too shy to bathe together she just likes to keep teasing me, but let's see how far she is willing to go."
+        me "I will take you up on that offer."
+        mia "Well come in then."
+        "She stands at the door holding the door open for me."
+        mia "What are you waiting for?"
+        "She thinks she can win against me in the bluffing game, not today."
 
-    menu:
-        "Kitchen":
-            jump lbl_home_kitchen
+        menu:
+            "Go inside":
+                hide npc_portrait_mia_01 with d3
+                pass
+
+        "We are both inside, she is red as a tomato, but no signs of backing down. Time to take it to the next level."
+        me "What are you waiting for? We don't have all morning."
+        "I start to take my clothes off, with a smirk on my face she will never..."
+        show img_mia_shower_01 at top with d3
+        mia "No need to push it."
+        "She just started to take her clothes off, and in a moment she is naked in front of me while I have only my underwear."
+        mia "I know it's been a while since we took a shower together, but it's all right, we are family after all."
+        "It's clear she is trying to convince herself. As for me im trying to hide my massive erection from her... Should I go in or just give up?"
+        hide img_mia_shower_01 with d3
+        show img_mia_shower_02 with d3
+        "Her body is incredible, I always knew she was beautiful but this! Can you get a hard on on top of a hard on?"
+        "That's when she see my \"situation\"."
+        mia "What is... ooh that's why you were so desperate to come in... it's, it's ok bro. You are a man after all, cold showers are good to keep you awake."
+        "I can't believe this is happening, who is this, this is not Mia, the dream! No that's crazy..."
+        me "Are you sure you don't want to do this?"
+        mia "It's all right, bro. We are family."
+        me "Yeah, you already said that."
+        "It's obvious she is not as cool with this situation as she makes herself to be. But I don't have the time to just give up now, so I step inside the shower."
+        "Mia does the same and soon we are in this awkward situation, back to back, washing ourselves in silence. That is until she bumps into me. The only thing I can think off is that her ass is soft and smooth, if the water wasn't so cold I would be hard again."
+        hide img_mia_shower_02 with d3
+        show img_mia_shower_03 with d3
+        mia "Sorry bro. Are you... you know... less excited?"
+        me "I think so, yes."
+        mia "Ok, you can turn around then, can you wash my back?"
+        hide img_mia_shower_03 with d3
+        show img_mia_ass_01 with d3
+        "That sight is too much, I can feel my blood flowing to my dick again."
+        me "Sorry, I'm done here, need to go see you downstairs."
+        mia "But..."
+        hide img_mia_ass_01
+        "I don't give her time to say anything else, as I put a towel around my waist and run of to put some clothes in my room."
+        "Time for breakfast then."
+
+        $ f_day2_shower = True
+
+        menu:
+            "Kitchen":
+                jump lbl_home_kitchen
 
 ### KITCHEN ###
 ## DAY 1 ##
@@ -547,6 +574,65 @@ label lbl_home_living_room_day1:
         "My room":
             jump lbl_home_room_mc
 
+## DAY 2 ##
+label lbl_home_living_room_day2:
+    if v_time == 720:
+        me "Lisa I went to see the nurse and she told me to come home earlier."
+        "That's a lie, but it's better than saying that the nurse showed me her tits and asked me to jack off to them."
+        lisa "Really? Are you not feeling well?"
+        me "No, I'm fine, she said it was just stress, can I have lunch with you?"
+        lisa "Sure, sit down I will bring you a plate."
+        "We talk for a bit while eating. After lunch I decide to help her wash the dishes."
+        lisa "So I've been thinking, have you ever kissed a girls."
+        me "Whoooa... where is this coming from?"
+        lisa "It's just, I never see you with any girls besides Mia, and no, her kisses do not count. Those are sister kisses."
+        "That's one messed up sentence."
+        me "Well I can't say I have?"
+        lisa "Well I have been thinking, are you scared that you no good at it?"
+        me "Well maybe, experience is important to get good at, well everything."
+        lisa "My thoughts exactly, so I think you should train with me."
+        me "Are you serious? But you are like a mother to me."
+        lisa "Oh sweetie, that's really nice of you. But that's even more reason to teach you. So that you can be more confident."
+        "What is this? My mind is going numb just thinking about it. What aunt Lily said should I just enjoy it or fight it? Maybe just a kiss is not a bad idea..."
+        me "O-Ok... then when do we start?"
+        lisa "Right now, if that's what you want to."
+        me "Okay then how..."
+        lisa "Sit here."
+        "She sits close to me and starts telling me what to do."
+        lisa "Put your hand on my back lower back... yes just like that, no come close. Look in my eyes a come closer."
+        "Her scent is intoxicating, and she is coming closer."
+        show img_lisa_kiss_01 at top with d3
+        "Her lips are so soft and moist I'm losing myself in the moment."
+        "My hands start to move on their on and I find myself caressing her ass. She then stops when she feel my hands lifting her shirt a bit."
+        hide img_lisa_kiss_01 with d3
+        lisa "Ok, *pant* that's enough for today [me] *pant*, you did good..."
+        me "Yes... uhh thanks?"
+        lisa "I have to leave now, take care, ok."
+        "I decide to spend some time playing games."
+        "Where will I go now?"
+
+        $ v_time = 840
+
+        menu:
+            "Outside":
+                jump lbl_city_street_1st
+            "I think Mia is home":
+                $ v_time = 900
+                jump lbl_home_room_mia
+
+    elif v_time == 840:
+        "Lisa and Mia should be home by now, it looks like Lisa is in the bathroom and Mia on her room."
+        "Where should I go?"
+
+        menu:
+            "See what Lisa is doing":
+                jump lbl_home_bathroom
+            "Look for Mia":
+                jump lbl_home_room_mia
+            "Go play a videogame":
+                $ v_time = 900
+                jump lbl_home_room_mc
+
 ### LISA ROOM ###
 ## DAY 2 ##
 label lbl_home_room_lisa_day2:
@@ -562,34 +648,46 @@ label lbl_home_room_lisa_day2:
 ### MIA ROOM ###
 ## DAY 2 ##
 label lbl_home_room_mia_day2:
-    show npc_portrait_mia_06 at top with d1
-    mia "Hey bro, what's up?"
-    me "Nothing much, what are you doing?"
-    mia "I'm reading this book."
-    me "What is it called?"
-    mia "\"Grey's Shades of Red\", I'm loving it."
-    me "Oh whoa, isn't that a erotic novel?"
-    mia "It is, yeah, why?"
-    me "Oh nothing, nothing."
-    mia "Listen, it looks like mom thinks you could use some help on interacting with girls. She is planning on teaching you how to kiss I think."
-    me "What, are you serious?"
-    mia "Yes. But it's no fair she does it alone, so I'm teaching you too what do you think?"
-    me "Can we maybe talk about this some other time?"
-    mia "Sure, but..."
-    me "Sorry sis I just can't think about it right now."
-    mia "Okay, okay... so want to talk about something else?"
-    hide npc_portrait_mia_06 with d3
-    "We talk for a time, but when I'm about to leave I knock her book off the bed."
-    me "Shit, sorry."
-    mia "It's okay let me get it."
-    show img_mia_ass_02 with d1
-    "Then she turns around..."
-    "Shit... No don't look, just leave."
-    me "Sorry sis, bye!"
-    hide img_mia_ass_02
+    if v_time == 840:
+        "I decide to look at what sis is doing."
+        "It's looks like she is reading a novel and..."
+        show vid_mia_masturbate at top
+        "Whoa, better get out of here before she sees me."
+        hide vid_mia_masturbate with d3
 
-    $ v_time = 900
+        $ v_time = 900
 
-    menu:
-        "My room":
-            jump lbl_home_room_mc
+        menu:
+            "Go away":
+                jump lbl_home_room_mc
+
+    elif v_time == 900:
+        show npc_portrait_mia_06 at top with d1
+        mia "Hey bro, what's up?"
+        me "Nothing much, what are you doing?"
+        mia "I'm reading this book."
+        me "What is it called?"
+        mia "\"Grey's Shades of Red\", I'm loving it."
+        me "Oh whoa, isn't that a erotic novel?"
+        mia "It is, yeah, why?"
+        me "Oh nothing, nothing."
+        mia "Listen, it looks like mom thinks you could use some help on interacting with girls. She is planning on teaching you how to kiss I think."
+        me "What, are you serious?"
+        mia "Yes. But it's no fair she does it alone, so I'm teaching you too what do you think?"
+        me "Can we maybe talk about this some other time?"
+        mia "Sure, but..."
+        me "Sorry sis, I just can't think about it right now."
+        mia "Okay, okay... so want to talk about something else?"
+        hide npc_portrait_mia_06 with d3
+        "We talk for a time, but when I'm about to leave I knock her book off the bed."
+        me "Shit, sorry."
+        mia "It's okay let me get it."
+        show img_mia_ass_02 with d1
+        "Then she turns around..."
+        "Shit... No don't look, just leave."
+        me "Sorry sis, bye!"
+        hide img_mia_ass_02
+
+        menu:
+            "My room":
+                jump lbl_home_room_mc

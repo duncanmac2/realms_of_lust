@@ -11,12 +11,14 @@ label lbl_city_church:
     if v_day == 2:
         jump lbl_city_church_day2
 
+### LILY HOME ###
 label lbl_city_home_lily:
     scene loc_city_home_lily
 
     if v_day == 2:
         jump lbl_city_home_lily_day2
 
+### MARCY HOME ###
 label lbl_city_home_marcy:
     scene loc_city_home_marcy
 
@@ -25,12 +27,19 @@ label lbl_city_home_marcy:
     elif v_day == 2:
         jump lbl_city_home_marcy_day2b
 
+label lbl_city_home_marcy_bathroom:
+    scene loc_city_home_marcy_bathroom
+
+    if v_day == 2:
+        jump lbl_city_home_marcy_bathroom_day2
+
 label lbl_city_home_marcy_room:
     scene loc_city_home_marcy_room
 
     if v_day == 2:
         jump lbl_city_home_marcy_room_day2
 
+### MALL ###
 label lbl_city_mall:
     scene loc_city_mall
 
@@ -39,6 +48,7 @@ label lbl_city_mall:
     elif v_day == 2:
         jump lbl_city_mall_day2
 
+### STREETS ###
 label lbl_city_street_1st:
     scene loc_city_street_1st
 
@@ -170,27 +180,69 @@ label lbl_city_home_marcy_day2a:
             jump lbl_city_home_marcy
 
 label lbl_city_home_marcy_day2b:
-    "I have been here hundreds of times, but now I feel like I don't know this place at all, something isn't right, is Marcus really... Only one way to find out."
-    show npc_portrait_sarah_03 with d3
-    "Sarah answers the doorbell soon."
-    "Shit I can almost see her nipples, I always had the hots for Sarah but now isn't the time for looking at her huge and beautiful... no focus."
-    me "Hi Sarah, is Marc...y ready?"
-    sarah "Oh good morning guys, I will call her, she is just changing."
-    hide npc_portrait_sarah_03
-    show npc_portrait_marcy_01 with d3
-    "After a few minutes of waiting my worst fears become real."
-    marcy "Hey [me]."
-    me "I-I... hey... Marcy!?"
-    marcy "Yes, that's my name... are you ok?"
-    me "Why does everyone keep asking me that it's fine, ok!"
-    marcy "Okaayyy... We should go then..."
-    me "Yes, sure goodbye Sarah."
-    sarah "Bye guys, and don't forget to visit."
-    "Mia and Marcu...y keep looking at me like I'm crazy. Whatever is going on I have to keep calm, worrying them will not help me, let me try to keep my cool..."
+    if v_time == 720:
+        show npc_portrait_sarah_03 with d1
+        "Sarah is here, and still using the same shirt..."
+        sarah "Oh hello [me], Marcy is not here right now but please come in."
+        "I enter the house and make myself comfortable."
+        sarah "Do you want some tea or a water?"
+        me "No thanks I just wanted to ask a question. Do you know anyone named Marcus?"
+        sarah "Marcus? Sorry I don't know anyone by that name, why?"
+        me "Oh nothing just, asking."
+        sarah "You know if Marcy was a boy I would have called him Marcus, hahaha."
+        me "You don't say...."
+        "We talk for a few minutes, but it's clear she is oblivious to what's happened."
+        me "Thanks for the tea Sarah, I'll go home now, so..."
+        sarah "Wait, Marcy will be home soon, just sit and have some more tea. I have to take a shower, but she should be here soon."
+
+        menu:
+            "Okay":
+                jump lbl_city_home_marcy_bathroom
+
+    else:
+        "I have been here hundreds of times, but now I feel like I don't know this place at all, something isn't right, is Marcus really... Only one way to find out."
+        show npc_portrait_sarah_03 with d3
+        "Sarah answers the doorbell soon."
+        "Shit I can almost see her nipples, I always had the hots for Sarah but now isn't the time for looking at her huge and beautiful... no focus."
+        me "Hi Sarah, is Marc...y ready?"
+        sarah "Oh good morning guys, I will call her, she is just changing."
+        hide npc_portrait_sarah_03
+        show npc_portrait_marcy_01 with d3
+        "After a few minutes of waiting my worst fears become real."
+        marcy "Hey [me]."
+        me "I-I... hey... Marcy!?"
+        marcy "Yes, that's my name... are you ok?"
+        me "Why does everyone keep asking me that it's fine, ok!"
+        marcy "Okaayyy... We should go then..."
+        me "Yes, sure goodbye Sarah."
+        sarah "Bye guys, and don't forget to visit."
+        "Mia and Marcu...y keep looking at me like I'm crazy. Whatever is going on I have to keep calm, worrying them will not help me, let me try to keep my cool..."
+
+        menu:
+            "College":
+                jump lbl_college_yard
+
+### MARCY BATHROOM ###
+## DAY 2 ##
+label lbl_city_home_marcy_bathroom_day2:
+    "I decide to go wait in Marcy's room, I can also see if the place has changed much since... why is the bathroom door open?"
+    show img_sarah_shower_01 with d3
+    "My curiosity gets the best of me and I take a look."
+    hide img_sarah_shower_01 with d1
+    show img_sarah_shower_02 with d1
+    pause
+    hide img_sarah_shower_02 with d1
+    show img_sarah_shower_03 at top with d1
+    pause
+    hide img_sarah_shower_03 with d1
+    show img_sarah_shower_04 with d1
+    "Sara's naked body is amazing, I never got this hard... Ok, change of plans, time to leave. But did she left the door open on purpose?"
+
+    $ v_time = 840
 
     menu:
-        "College":
-            jump lbl_college_yard
+        "Out of here":
+            jump lbl_city_street_1st
 
 ### MARCY ROOM ###
 ## DAY 2 ##
@@ -231,7 +283,7 @@ label lbl_city_home_marcy_room_day2:
 
     menu:
         "Go home":
-            jump lbl_city_street_1st
+            jump lbl_home_living_room
 
 ### MALL ###
 ## DAY 1 ##
@@ -322,7 +374,7 @@ label lbl_city_mall_day2:
 
     menu:
         "Go home":
-            jump lbl_city_street_1st
+            jump lbl_home_living_room
 
 ### LILY HOME ###
 ## DAY 2 ##
@@ -408,11 +460,20 @@ label lbl_city_home_lily_day2:
 ### 1ST STREET ###
 ## DAY 2 ##
 label lbl_city_street_1st_day2:
-    if v_time == 840:
+    if v_time == 720:
+        "Lisa should be having lunch right now maybe I should go talk to her, but Sarah told me to visit maybe I should ask her about Marcus, see if she remember him at all."
+        menu:
+            "Home":
+                jump lbl_home_living_room
+            "Sarah":
+                jump lbl_city_home_marcy
+
+    elif v_time == 840:
         "Where should I go?"
 
         menu:
             "Home":
+                $ v_time = 900
                 jump lbl_home_room_mia
             "Marcy":
                 jump lbl_city_home_marcy_room
@@ -438,7 +499,7 @@ label lbl_city_beach_day2:
 
     menu:
         "Go home":
-            jump lbl_city_street_1st
+            jump lbl_home_living_room
 
 ### CHURCH ###
 ## DAY 2 ##
@@ -464,4 +525,4 @@ label lbl_city_church_day2:
 
     menu:
         "Go home":
-            jump lbl_city_street_1st
+            jump lbl_home_living_room

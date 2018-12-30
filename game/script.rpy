@@ -55,6 +55,11 @@
         renpy.image("npc_portrait_karen_" + str(i).zfill(2), "images/people/jayden_jaymes/karen_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Lisa
+    renpy.image("img_lisa_kiss_01", "images/people/brandi_love/lisa_kiss_01.jpg")
+
+    for i in range(1,6):
+        renpy.image("img_lisa_shower_" + str(i).zfill(2), "images/people/brandi_love/lisa_shower_" + str(i).zfill(2) + ".jpg")
+
     for i in range(1,7):
         renpy.image("npc_portrait_lisa_" + str(i).zfill(2), "images/people/brandi_love/lisa_portrait_" + str(i).zfill(2) + ".jpg")
 
@@ -95,6 +100,9 @@
         renpy.image("npc_portrait_nina_" + str(i).zfill(2), "images/people/alexis_texas/nina_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Sarah
+    for i in range(1,5):
+        renpy.image("img_sarah_shower_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_shower_" + str(i).zfill(2) + ".jpg")
+
     for i in range(1,4):
         renpy.image("npc_portrait_sarah_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_portrait_" + str(i).zfill(2) + ".jpg")
 
@@ -188,6 +196,7 @@ image loc_home_room_mia = "images/location/loc_home_room_mia.jpg"
 
 # City
 image loc_city_home_marcy = "images/location/loc_city_home_marcy.jpg"
+image loc_city_home_marcy_bathroom = "images/location/loc_city_home_marcy_bathroom.jpg"
 image loc_city_home_marcy_room = "images/location/loc_city_home_marcy_room.jpg"
 image loc_city_mall = "images/location/loc_city_mall.jpg"
 image loc_city_mall_store = "images/location/loc_city_mall_store.jpg"
@@ -216,6 +225,9 @@ image vid_lisa_room_masturbate = Movie(play="images/people/brandi_love/lisa_mast
 # Marcy
 image vid_marcy_boobs_bounce = Movie(play="images/people/brittney_white/marcy_boobs_bounce.webm", size=(552,780))
 image vid_marcy_masturbate = Movie(play="images/people/brittney_white/marcy_masturbate.webm", size=(704,512))
+
+# Mia
+image vid_mia_masturbate = Movie(play="images/people/mia_malkova/mia_masturbate.webm", size=(1000,496))
 
 # College
 image vid_college_shower_01 = Movie(play="images/events/college_shower_01.webm", size=(620,612))
