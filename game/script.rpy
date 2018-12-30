@@ -34,15 +34,24 @@
 
     ### IMAGES
     ## MC
-    renpy.image("mc_sleep", "images/people/MC/mc_sleep.jpg")
+    renpy.image("img_mc_sleep", "images/people/MC/mc_sleep.jpg")
 
     ## NPC
     # Bonnie
     for i in range(1,5):
         renpy.image("img_bonnie_shower_" + str(i).zfill(2), "images/people/kennedy_leigh/bonnie_shower_" + str(i).zfill(2) + ".jpg")
 
+    # Hitomi
+    for i in range(1,3):
+        renpy.image("npc_portrait_hitomi_" + str(i).zfill(2), "images/people/hitomi/hitomi_portrait_" + str(i).zfill(2) + ".jpg")
+
     # Karen
-    for i in range(1,4):
+    renpy.image("img_karen_kiss", "images/people/jayden_jaymes/karen_kiss.jpg")
+
+    for i in range(1,3):
+        renpy.image("img_karen_couch_" + str(i).zfill(2), "images/people/jayden_jaymes/karen_couch_" + str(i).zfill(2) + ".jpg")
+
+    for i in range(1,5):
         renpy.image("npc_portrait_karen_" + str(i).zfill(2), "images/people/jayden_jaymes/karen_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Lisa
@@ -52,11 +61,13 @@
     # Lily
     renpy.image("img_lily_couch", "images/people/lilith/lily_couch.jpg")
 
-    for i in range(1,7):
+    for i in range(1,11):
         renpy.image("npc_portrait_lily_" + str(i).zfill(2), "images/people/lilith/lily_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Marcy
-    for i in range(1,2):
+    renpy.image("img_marcy_boobs_01", "images/people/brittney_white/marcy_boobs_01.jpg")
+
+    for i in range(1,4):
         renpy.image("npc_portrait_marcy_" + str(i).zfill(2), "images/people/brittney_white/marcy_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Maria
@@ -68,17 +79,19 @@
         renpy.image("npc_portrait_megan_" + str(i).zfill(2), "images/people/nikki_benz/megan_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Mia
-    renpy.image("img_mia_ass_01", "images/people/mia_malkova/mia_ass_01.jpg")
     renpy.image("img_mia_kiss_01", "images/people/mia_malkova/mia_kiss_01.jpg")
 
-    for i in range(1,13):
+    for i in range(1,3):
+        renpy.image("img_mia_ass_" + str(i).zfill(2), "images/people/mia_malkova/mia_ass_" + str(i).zfill(2) + ".jpg")
+
+    for i in range(1,14):
         renpy.image("npc_portrait_mia_" + str(i).zfill(2), "images/people/mia_malkova/mia_portrait_" + str(i).zfill(2) + ".jpg")
 
     for i in range(1,4):
         renpy.image("img_mia_shower_" + str(i).zfill(2), "images/people/mia_malkova/mia_shower_" + str(i).zfill(2) + ".jpg")
 
     # Nina
-    for i in range(1,4):
+    for i in range(1,8):
         renpy.image("npc_portrait_nina_" + str(i).zfill(2), "images/people/alexis_texas/nina_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Sarah
@@ -86,7 +99,7 @@
         renpy.image("npc_portrait_sarah_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Veronica
-    for i in range(1,5):
+    for i in range(1,3):
         renpy.image("npc_portrait_veronica_" + str(i).zfill(2), "images/people/angela_white/veronica_portrait_" + str(i).zfill(2) + ".jpg")
 
     ## NPC OTHERS
@@ -94,6 +107,14 @@
     renpy.image("npc_portrait_marcus", "images/people/others/portrait_marcus.jpg")
     renpy.image("npc_portrait_mr_smith_01", "images/people/others/portrait_mr_smith_01.jpg")
     renpy.image("npc_portrait_mr_smith_02", "images/people/others/portrait_mr_smith_02.jpg")
+
+    ## BEACH
+    renpy.image("img_beach_nude_01", "images/people/beach/beach_nude_01.jpg")
+    renpy.image("img_beach_nude_02", "images/people/beach/beach_nude_02.jpg")
+    renpy.image("img_beach_topless", "images/people/beach/beach_topless.jpg")
+
+    ## CHURCH
+    renpy.image("npc_portrait_nun", "images/people/church/portrait_nun.jpg")
 
 ## NAMES & PORTRAITS
 # Player
@@ -103,6 +124,7 @@ image side portrait_mc = "images/portrait/portrait_mc1.jpg"
 
 # NPC
 define bonnie = Character("Bonnie", image = "portrait_bonnie", color = clr_sand)
+define hitomi = Character("Hitomi", image = "portrait_hitomi", color = clr_ginger)
 define karen = Character("Karen", image = "portrait_karen", color = clr_gray)
 define lily = Character("Lily", image = "portrait_lily", color = clr_auburn)
 define lisa = Character("Lisa", image = "portrait_lisa", color = clr_gold)
@@ -114,6 +136,7 @@ define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut
 define veronica = Character("Veronica", image = "portrait_veronica", color = clr_gray)
 
 image side portrait_bonnie = "images/portrait/portrait_bonnie.jpg"
+image side portrait_hitomi = "images/portrait/portrait_hitomi.jpg"
 image side portrait_karen = "images/portrait/portrait_karen.jpg"
 image side portrait_lily = "images/portrait/portrait_lily.jpg"
 image side portrait_lisa = "images/portrait/portrait_lisa.jpg"
@@ -130,6 +153,7 @@ define jason = Character("Jason", image = "portrait_jason", color = clr_dark_gra
 define kyle = Character("Kyle", image = "portrait_kyle", color = clr_dark_gray)
 define marcus = Character("Marcus", image = "portrait_marcus", color = clr_dark_gray)
 define mr_smith = Character("Mr Smith", image = "portrait_mr_smith", color = clr_dark_gray)
+define nun = Character("Nun", image = "portrait_nun", color = clr_dark_gray)
 define unknown = Character("???", color = clr_dark_gray)
 
 image side portrait_kyle = "images/portrait/portrait_kyle.jpg"
@@ -137,6 +161,7 @@ image side portrait_jason = "images/portrait/portrait_jason.jpg"
 image side portrait_marcus = "images/portrait/portrait_marcus.jpg"
 image side portrait_mr_smith = "images/portrait/portrait_mr_smith_01.jpg"
 image side portrait_mr_smith younger = "images/portrait/portrait_mr_smith_02.jpg"
+image side portrait_nun = "images/portrait/portrait_nun.jpg"
 
 ## Effects
 define d1 = Dissolve(0.2)
@@ -159,9 +184,11 @@ image loc_home_living_room = "images/location/loc_home_living_room.jpg"
 image loc_home_room_lisa_bed = "images/location/loc_home_room_lisa_bed.jpg"
 image loc_home_room_mc = "images/location/loc_home_room_mc.jpg"
 image loc_home_room_mc_bed = "images/location/loc_home_room_mc_bed.jpg"
+image loc_home_room_mia = "images/location/loc_home_room_mia.jpg"
 
 # City
-image loc_city_home_marcus = "images/location/loc_city_home_marcus.jpg"
+image loc_city_home_marcy = "images/location/loc_city_home_marcy.jpg"
+image loc_city_home_marcy_room = "images/location/loc_city_home_marcy_room.jpg"
 image loc_city_mall = "images/location/loc_city_mall.jpg"
 image loc_city_mall_store = "images/location/loc_city_mall_store.jpg"
 image loc_city_street_1st = "images/location/loc_city_street_1st.jpg"
@@ -178,11 +205,21 @@ image loc_college_yard = "images/location/loc_college_yard.jpg"
 # MC
 image vid_mc_erection = Movie(play="images/people/MC/MC_erection.webm")
 
-# City
-image vid_lily_kiss = Movie(play="images/people/lilith/lily_kiss.webm", size=(960,544))
+# Lily
+image vid_lily_kiss_01 = Movie(play="images/people/lilith/lily_kiss_01.webm", size=(960,544))
+image vid_lily_kiss_02 = Movie(play="images/people/lilith/lily_kiss_02.webm", size=(1000,460))
+
+# Lisa
+image vid_lisa_bathroom_incident = Movie(play="images/people/brandi_love/lisa_bathroom_incident.webm", size=(590,590))
+image vid_lisa_room_masturbate = Movie(play="images/people/brandi_love/lisa_masturbation.webm")
+
+# Marcy
+image vid_marcy_boobs_bounce = Movie(play="images/people/brittney_white/marcy_boobs_bounce.webm", size=(552,780))
+image vid_marcy_masturbate = Movie(play="images/people/brittney_white/marcy_masturbate.webm", size=(704,512))
 
 # College
-image vid_college_shower = Movie(play="images/events/college_shower.webm", size=(620,612))
+image vid_college_shower_01 = Movie(play="images/events/college_shower_01.webm", size=(620,612))
+image vid_college_shower_02 = Movie(play="images/events/college_shower_02.webm", size=(598,736))
 image vid_college_spanking = Movie(play="images/events/college_spanking.webm", size=(534,800))
 
 # Home
@@ -190,8 +227,6 @@ image vid_pc_porn_01 = Movie(play="images/events/pc_porn_01.webm", size=(1000,52
 image vid_pc_porn_02 = Movie(play="images/events/pc_porn_02.webm", size=(1000,514))
 image vid_pc_porn_03 = Movie(play="images/events/pc_porn_03.webm", size=(570,848))
 image vid_pc_porn_04 = Movie(play="images/events/pc_porn_04.webm", size=(1000,560))
-image vid_lisa_bathroom_incident = Movie(play="images/people/brandi_love/lisa_bathroom_incident.webm", size=(590,590))
-image vid_lisa_room_masturbate = Movie(play="images/people/brandi_love/lisa_masturbation.webm")
 
 ## START
 label splashscreen:
@@ -203,6 +238,7 @@ label start:
     $ f_name_prompt = True
     $ f_bypass = False
     $ f_day1_lisa_bathroom_incident = False
+    $ f_day2_nurse = False
     $ f_day2_shower = False
 
     # Variables

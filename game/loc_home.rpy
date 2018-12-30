@@ -35,8 +35,15 @@ label lbl_home_room_mc:
     elif v_day == 2:
         jump lbl_home_room_mc_day2
 
+label lbl_home_room_mia:
+    scene loc_home_room_mia
+
+    if v_day == 2:
+        jump lbl_home_room_mia_day2
+
 #### EVENTS ####
 ### ROOM MC ###
+## DAY 1 ##
 label lbl_home_room_mc_day1:
     if v_time == 1140:
         "Entering my room my computer is on."
@@ -103,40 +110,110 @@ label lbl_home_room_mc_day1:
 
         jump lbl_home_bathroom
 
+## DAY 2 ##
 label lbl_home_room_mc_day2:
-    show mc_sleep at truecenter with d3
-    "You wake up for another day."
-    hide mc_sleep with d3
-    me "What time is it... It's morning already? Shit hope I'm not late again. But what a strange dream, and I didn't even get to see some boobs, that's my luck for you... Why I'm naked?"
-    "In that moment between me noticing I'm completely nude and before I can put any clothes, Lisa comes through the door and sees me in all my glorious nakedness."
-    show npc_portrait_lisa_03 at top with d3
-    lisa "[me] are you u... Why are you naked?"
-    "A lot of scenarios go through my head, is she going to freak out, faint, beat me to a pulp? But no what happens next no one could predict. She is only mildly embarrassed!"
-    lisa "You should put some clothes sweetie."
-    hide npc_portrait_lisa_03
-    show npc_portrait_lisa_04
-    "But before I can recover from the shock I realise that I'm not the only one that's not properly dressed."
-    hide npc_portrait_lisa_04 with d3
-    show vid_mc_erection at truecenter
-    "That is a bit too much for a man to take."
-    "I try to hide it before she can see it. To no avail it seems."
-    hide vid_mc_erection
-    show npc_portrait_lisa_04 with d3
-    me "Please, put some clothes Lisa."
-    lisa "Did you just get an... erection?"
-    "She blushes, but no signs of getting angry."
-    lisa "Looks sweetie it's perfectly normal for a man to have those \"reactions\" to a woman's body, I should have put some more clothes. But you have nothing to be ashamed of."
-    me "O-Ok... Can I put some clothes now?"
-    lisa "Ah sure, sorry."
-    hide npc_portrait_lisa_04 with d3
-    "Before she leaves I think I saw her trying to take another look at my manhood. Has the world gone crazy? The Lisa I know would never just leave her room before putting clothes."
-    "Could that dream... no that's crazy talk, maybe she is drunk for some reason, she acts completely out of character when she drinks. I should take a cold shower. Or maybe I should take care of this bad boy the fun way."
+    if v_time == 900:
+        "Let me see what is going on in the rest of the world."
+        "{i}President makes all beaches open to nudists.{/i}"
+        "{i}Porn industry surpasses Hollywood.{/i}"
+        "Ok, that's enough, it's not a local phenomena. Shit, I think Lily is here."
 
-    menu:
-        "Shower":
-            jump lbl_home_bathroom
-        "My PC":
-            jump lbl_home_room_mc_day2_pc
+        menu:
+            "Kitchen":
+                jump lbl_home_kitchen
+
+    elif v_time == 1200:
+        show loc_home_room_mc_bed at top
+        "After a few minutes Lily knocks on my door."
+        hide loc_home_room_mc_bed with d1
+        show npc_portrait_lily_07 with d1
+        lily "Can I come in?"
+        me "Yes come in."
+        lily "So have you given any thought about our situation?"
+        me "I..."
+        hide npc_portrait_lily_07
+        show npc_portrait_nina_04 with vpunch
+        "That's when a cloud of purple smoke comes out of nowhere."
+        nina "Hello partn..."
+        hide npc_portrait_nina_04
+        show npc_portrait_lily_08
+        "We all stare at each other for a few seconds before Lily breaks the silence."
+        lily "It's you!!! You are the goddess that he was talking about."
+        hide npc_portrait_lily_08 with d1
+        show npc_portrait_nina_05 with d1
+        nina "And you! I can feel the blood in you, are you Lilith?"
+        lily "Just Lily please."
+        nina "Well we have a happy family reunion here, [me] why didn't you tell me your aunt was in the city?"
+        me "Well for starters, I thought it was all a dream, second what the hell happened with Marcus?"
+        hide npc_portrait_nina_05 with d1
+        show npc_portrait_nina_06 with d1
+        nina "Oh, your friend? Well I thought he would be the best candidate to show you the power we possess. He was not the only one but he is the only man I thought you would notice was changed straight away. Didn't you like it? I think she is pretty hot."
+        me "I want to say no, but the words just won't come out, I have been thinking about it and you are right I should enjoy this. My life before sucked, and now I have a chance to be better, why shouldn't I take it? I also suppressed my inner pervert for too long."
+        nina "Well said, now Lily, [me] is the heir to the most of the old blood so I chose him as my catalyst, and partner, but that doesn't mean you can't have some fun."
+        nina "I will give you a blessing so you don't have to worry about your mind being altered, once the corruption is done, you and [me] will be like gods, but like I said he is in charge here and you will probably also be affected by the corruption."
+        hide npc_portrait_nina_06 with d1
+        show npc_portrait_lily_09 with d1
+        lily "I will?"
+        nina "It can't be helped sorry, but it should be nothing major, just an increased sex drive and stamina."
+        lily "Well, that is actually kind of cool."
+        nina "Good then, I need to go now [me] can fill you in on the detail later, good night and see you soon."
+        me "Wait, why are guys turning into chicks? You are not planning for a \"planet of the girls\" type of world are you?"
+        nina "Oh that... I just assumed you would like have more women than man in your town, that is unless you are into guys... or NTR..."
+        me "NO, NO NTR, UNDERSTAND?"
+        hide npc_portrait_lily_09 with d1
+        show npc_portrait_nina_07 with d1
+        nina "Okay, okay. So expect a lot of the guys you know to acquire some tits as the week goes. But I really have to go now, mom doesn't like... I mean my time is up. My friends, forces beyond my control pull me back to my dimension. Good night."
+        hide npc_portrait_nina_07 with d1
+        "She leaves the room in cloud of smoke."
+        lily "[me], this is great, we are going to have so much fun..."
+        me "Yes we will, but tomorrow, I need to sleep now."
+        show vid_lily_kiss_02 at top with d1
+        lily "Let me give you a goodnight's kiss then."
+        hide vid_lily_kiss_02 with d1
+        me "Whoa that was..."
+        lily "Just a taste... goodnight [me]..."
+
+        $ v_day = 3
+        $ v_time = 0
+
+        menu:
+            "Sleep":
+                jump lbl_home_kitchen
+
+    else:
+        show img_mc_sleep at truecenter with d3
+        "You wake up for another day."
+        hide mc_sleep with d3
+        me "What time is it... It's morning already? Shit hope I'm not late again. But what a strange dream, and I didn't even get to see some boobs, that's my luck for you... Why I'm naked?"
+        "In that moment between me noticing I'm completely nude and before I can put any clothes, Lisa comes through the door and sees me in all my glorious nakedness."
+        show npc_portrait_lisa_03 at top with d3
+        lisa "[me] are you u... Why are you naked?"
+        "A lot of scenarios go through my head, is she going to freak out, faint, beat me to a pulp? But no what happens next no one could predict. She is only mildly embarrassed!"
+        lisa "You should put some clothes sweetie."
+        hide npc_portrait_lisa_03
+        show npc_portrait_lisa_04
+        "But before I can recover from the shock I realise that I'm not the only one that's not properly dressed."
+        hide npc_portrait_lisa_04 with d3
+        show vid_mc_erection at truecenter
+        "That is a bit too much for a man to take."
+        "I try to hide it before she can see it. To no avail it seems."
+        hide vid_mc_erection
+        show npc_portrait_lisa_04 with d3
+        me "Please, put some clothes Lisa."
+        lisa "Did you just get an... erection?"
+        "She blushes, but no signs of getting angry."
+        lisa "Looks sweetie it's perfectly normal for a man to have those \"reactions\" to a woman's body, I should have put some more clothes. But you have nothing to be ashamed of."
+        me "O-Ok... Can I put some clothes now?"
+        lisa "Ah sure, sorry."
+        hide npc_portrait_lisa_04 with d3
+        "Before she leaves I think I saw her trying to take another look at my manhood. Has the world gone crazy? The Lisa I know would never just leave her room before putting clothes."
+        "Could that dream... no that's crazy talk, maybe she is drunk for some reason, she acts completely out of character when she drinks. I should take a cold shower. Or maybe I should take care of this bad boy the fun way."
+
+        menu:
+            "Shower":
+                jump lbl_home_bathroom
+            "My PC":
+                jump lbl_home_room_mc_day2_pc
 
 label lbl_home_room_mc_day2_pc:
     "I boot the laptop on my desk ready for some action, let's see..."
@@ -160,6 +237,7 @@ label lbl_home_room_mc_day2_pc:
             jump lbl_home_room_lisa
 
 ### BATHROOM ###
+## DAY 1 ##
 label lbl_home_bathroom_day1:
     "When I'm about to enter the bathroom, I hear a loud scream."
     show npc_portrait_mia_01
@@ -233,6 +311,7 @@ label lbl_home_bathroom_day1:
                 "Take a shower in a hurry":
                     jump lbl_home_kitchen
 
+## DAY 2 ##
 label lbl_home_bathroom_day2:
     mia "WAIT BROOOO!!!"
     show npc_portrait_mia_01 with d3
@@ -299,6 +378,7 @@ label lbl_home_bathroom_day2:
             jump lbl_home_kitchen
 
 ### KITCHEN ###
+## DAY 1 ##
 label lbl_home_kitchen_day1:
     if f_day1_lisa_bathroom_incident and v_time == 0:
         me "Well... I will be late, smelly, broke and probably grounded for the rest of the week. But I will not be hungry. There is always a bright side (I feel dead inside)."
@@ -371,8 +451,9 @@ label lbl_home_kitchen_day1:
             "Leave":
                 jump lbl_city_street_1st
 
+## DAY 2 ##
 label lbl_home_kitchen_day2:
-    if f_day2_shower:
+    if f_day2_shower and v_time == 0:
         "What a strange day."
         show npc_portrait_lisa_05 with d3
         "Lisa is here already, properly dressed."
@@ -394,7 +475,7 @@ label lbl_home_kitchen_day2:
             "To Marcus":
                 jump lbl_city_street_1st
 
-    else:
+    elif v_time == 0:
         "What a strange day."
         show npc_portrait_mia_08 with d1
         "Mia is already here, but what is she wearing?"
@@ -424,7 +505,29 @@ label lbl_home_kitchen_day2:
             "To Marcus":
                 jump lbl_city_street_1st
 
+    elif v_time == 900:
+        show npc_portrait_lily_01
+        "I walk down the stair aunt Lily is giving everyone hugs."
+        lisa "[me] come say hi to your aunt."
+        lily "Yes, I need another hug from my nephew."
+        "She wraps her arms around me but this time instead of crushing me it looks like she is trying to make me feel her breasts pressing against me... damn it, it's a success."
+        hide npc_portrait_lily_01 with d1
+        show npc_portrait_mia_13 with d1
+        mia "[me], auntie said you went to see her today, I should be angry you went alone, but now I can have you all to myself then auntie."
+        hide npc_portrait_mia_13 with d1
+        show npc_portrait_lisa_01 with d1
+        lisa "Let's eat guys, before it gets cold."
+        hide npc_portrait_lisa_01 with d1
+        "We have a very interesting dinner, Lily tell everyone about her trips, people she met. After we are done, Mia drags Lily to her room, and I decide to go to mine."
+
+        $ v_time = 1200
+
+        menu:
+            "Go to my room":
+                jump lbl_home_room_mc
+
 ### LIVING ROOM ###
+## DAY 1 ##
 label lbl_home_living_room_day1:
     "She is here, and waiting for me, it was a good life..."
     lisa "[me], sit down."
@@ -444,6 +547,8 @@ label lbl_home_living_room_day1:
         "My room":
             jump lbl_home_room_mc
 
+### LISA ROOM ###
+## DAY 2 ##
 label lbl_home_room_lisa_day2:
     "I'm on my way to the kitchen when I hear some noises from Lisa's room, the door is not closed so i decide to take a look."
     show vid_lisa_room_masturbate at truecenter with d3
@@ -453,3 +558,38 @@ label lbl_home_room_lisa_day2:
     menu:
         "Kitchen":
             jump lbl_home_kitchen
+
+### MIA ROOM ###
+## DAY 2 ##
+label lbl_home_room_mia_day2:
+    show npc_portrait_mia_06 at top with d1
+    mia "Hey bro, what's up?"
+    me "Nothing much, what are you doing?"
+    mia "I'm reading this book."
+    me "What is it called?"
+    mia "\"Grey's Shades of Red\", I'm loving it."
+    me "Oh whoa, isn't that a erotic novel?"
+    mia "It is, yeah, why?"
+    me "Oh nothing, nothing."
+    mia "Listen, it looks like mom thinks you could use some help on interacting with girls. She is planning on teaching you how to kiss I think."
+    me "What, are you serious?"
+    mia "Yes. But it's no fair she does it alone, so I'm teaching you too what do you think?"
+    me "Can we maybe talk about this some other time?"
+    mia "Sure, but..."
+    me "Sorry sis I just can't think about it right now."
+    mia "Okay, okay... so want to talk about something else?"
+    hide npc_portrait_mia_06 with d3
+    "We talk for a time, but when I'm about to leave I knock her book off the bed."
+    me "Shit, sorry."
+    mia "It's okay let me get it."
+    show img_mia_ass_02 with d1
+    "Then she turns around..."
+    "Shit... No don't look, just leave."
+    me "Sorry sis, bye!"
+    hide img_mia_ass_02
+
+    $ v_time = 900
+
+    menu:
+        "My room":
+            jump lbl_home_room_mc

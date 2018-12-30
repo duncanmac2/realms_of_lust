@@ -1,34 +1,57 @@
 #### LOCATIONS ####
+label lbl_city_beach:
+    scene loc_city_beach
+
+    if v_day == 2:
+        jump lbl_city_beach_day2
+
+label lbl_city_church:
+    scene loc_city_church
+
+    if v_day == 2:
+        jump lbl_city_church_day2
+
 label lbl_city_home_lily:
     scene loc_city_home_lily
 
     if v_day == 2:
         jump lbl_city_home_lily_day2
 
-label lbl_city_home_marcus:
-    scene loc_city_home_marcus
+label lbl_city_home_marcy:
+    scene loc_city_home_marcy
 
     if v_day == 1:
         jump lbl_city_home_marcus_day1b
     elif v_day == 2:
-        jump lbl_city_home_marcus_day2b
+        jump lbl_city_home_marcy_day2b
+
+label lbl_city_home_marcy_room:
+    scene loc_city_home_marcy_room
+
+    if v_day == 2:
+        jump lbl_city_home_marcy_room_day2
 
 label lbl_city_mall:
     scene loc_city_mall
 
     if v_day == 1:
         jump lbl_city_mall_day1
+    elif v_day == 2:
+        jump lbl_city_mall_day2
 
 label lbl_city_street_1st:
     scene loc_city_street_1st
 
     if v_day == 1:
         jump lbl_city_home_marcus_day1a
-    elif v_day == 2:
-        jump lbl_city_home_marcus_day2a
+    elif v_day == 2 and v_time == 0:
+        jump lbl_city_home_marcy_day2a
+    elif v_day == 2 and v_time > 0:
+        jump lbl_city_street_1st_day2
 
 #### EVENTS ####
-### MARCUS HOME ###
+### MARCY HOME ###
+## DAY 1 ##
 label lbl_city_home_marcus_day1a:
     "We leave the house a few minutes later than usual, but still within a safe margin, the college is close enough that we can go on foot so we can take on the scenery while on the way."
     "My best friend Marcus lives on the house across the street, we usually go together the three of us so we have to go by his house to pick him up."
@@ -124,7 +147,8 @@ label lbl_city_home_marcus_day1b:
             "Go home":
                 jump lbl_home_room_mc
 
-label lbl_city_home_marcus_day2a:
+## DAY 2 ##
+label lbl_city_home_marcy_day2a:
     show npc_portrait_mia_11
     mia "Bro are you ok, you have been acting strange today."
     me "I'm fine Mia."
@@ -143,9 +167,9 @@ label lbl_city_home_marcus_day2a:
 
     menu:
         "Marcy's house":
-            jump lbl_city_home_marcus
+            jump lbl_city_home_marcy
 
-label lbl_city_home_marcus_day2b:
+label lbl_city_home_marcy_day2b:
     "I have been here hundreds of times, but now I feel like I don't know this place at all, something isn't right, is Marcus really... Only one way to find out."
     show npc_portrait_sarah_03 with d3
     "Sarah answers the doorbell soon."
@@ -168,7 +192,49 @@ label lbl_city_home_marcus_day2b:
         "College":
             jump lbl_college_yard
 
+### MARCY ROOM ###
+## DAY 2 ##
+label lbl_city_home_marcy_room_day2:
+    "I decide to go see Marcy, maybe she has some insight on this changes."
+    me "Hey Marcy."
+    show npc_portrait_marcy_03
+    marcy "Hey [me]."
+    me "How did things go on the locker?"
+    marcy "After you left, the janitor came in and I had to bail, just like yesterday, didn't even have time to co..."
+    me "Whoa, too much information, let's change subject."
+    marcy "Do you want to play some games?"
+    me "Sure, what do you have there."
+    marcy "I found this new game yesterday called \"A Spell for All\" it's amazing."
+    me "Never heard of it, let's give it a try."
+    hide npc_portrait_marcy_03 with d3
+    "After a few minutes."
+    me "Is this porn game?"
+    marcy "Well yes isn't it cool?"
+    me "Kind of, it's just I had a different idea of what we were going to play."
+    marcy "We have been playing fighting games for how many years now? Let's try something different for a change."
+    show vid_marcy_masturbate at top with d1
+    me "Ok, just a few more minutes and... what are you doing?"
+    marcy "What do you think?"
+    me "Not with me in here you are not!"
+    marcy "Why, it's not like you have never seen me naked. This is just the next step on our friendship..."
+    "Shit, there its comes again... that overwhelming lust, I just can't take my eyes off her now."
+    marcy "You are bigger than I remember..."
+    "She points at another bulge in my pants... shit not again."
+    me "Yes, this is..."
+    hide vid_marcy_masturbate with d1
+    show vid_marcy_boobs_bounce at top with d1
+    marcy "Can I see it? I mean as friend... Here is something in return."
+    "That is enough to snap me out of the trance."
+    me "Bye Marcy!"
+    hide vid_marcy_boobs_bounce
+    marcy "What wait, I sorry..."
+
+    menu:
+        "Go home":
+            jump lbl_city_street_1st
+
 ### MALL ###
+## DAY 1 ##
 label lbl_city_mall_day1:
     me "Sorry man, I have some others plans."
     marcus "It's cool [me], come see us when you have some time. I have this new game and it's pretty good."
@@ -216,7 +282,50 @@ label lbl_city_mall_day1:
         "Go home":
             jump lbl_home_living_room
 
+## DAY 2 ##
+label lbl_city_mall_day2:
+    "I should probably look for Karen..."
+    show npc_portrait_karen_04 at top with d3
+    me "Hey Karen."
+    karen "[me] is that you you came to buy something?"
+    me "Actually I came to see you, want to go to the cafe?"
+    karen "That is sweet of you but I can't leave the store now."
+    me "But it's empty."
+    karen "I know and it's probably going to stay empty for the rest of the day, but the manager won't let me set a foot outside of the shop. However, if we stayed in the back were the employee, and by that I mean me, take a break, we could probably talk a bit."
+    me "Great."
+    hide npc_portrait_karen_04 with d5
+    show img_karen_couch_01 at top with d5
+    karen "You know [me], I'm glad you came to visit... did Veronica told you what I said about you?"
+    me "Yeah she did."
+    hide img_karen_couch_01 with d1
+    show img_karen_couch_02 at top with d1
+    "She leans closer."
+    karen "That's good, then you know why I brought you here."
+    me "Yes..."
+    hide img_karen_couch_02 with d1
+    show img_karen_kiss at top with d1
+    "This is amazing, this might be the best moment of this day, I'm kissing a hot girl and don't have to feel guilty about it. But it doesn't last long."
+    hide img_karen_kiss
+    show npc_portrait_hitomi_01
+    hitomi "Karen, why are you here and who is this?"
+    karen "Oh Ms. Tanaka this is a friend..."
+    hitomi "Look I'm not against some down time, with \"friends\", but you should be working now, so get to it or do you want to find a new job?"
+    me "I'm sorry it was my idea and..."
+    karen "No [me] it's fine, we will talk later."
+    "She goes to the front of the store leaving me with her boss."
+    me "Ms. Tanaka is it? I'm really sorry..."
+    hide npc_portrait_hitomi_01 with d1
+    show npc_portrait_hitomi_02 with d1
+    hitomi "You know, I don't mind if you visit her but do it during her break from now on, ok. And maybe you could stay after her break ends to get to know someone else."
+    me "Sure...?"
+    hitomi "Now get moving."
+
+    menu:
+        "Go home":
+            jump lbl_city_street_1st
+
 ### LILY HOME ###
+## DAY 2 ##
 label lbl_city_home_lily_day2:
     "That's her house, hope she is home."
     "I ring the doorbell."
@@ -277,11 +386,82 @@ label lbl_city_home_lily_day2:
     lily "Ha, I know deep inside you have the hearth of a pervert. Look I have to leave now, but Lisa invited me for dinner, we can talk about that later okay, just think about it."
     me "I-I will, I will be leaving now then, bye Lily."
     hide npc_portrait_lily_05 with d1
-    show vid_lily_kiss at top with d1
+    show vid_lily_kiss_01 at top with d1
     "She kisses me with passion."
     hide vid_lily_kiss with d3
     lily "See? Not bad at all."
 
+    if f_day2_nurse:
+        $ v_time = 720
+
+        menu:
+            "Back to college":
+                jump lbl_college_yard
+
+    else:
+        $ v_time = 840
+
+        menu:
+            "Go back home":
+                jump lbl_city_street_1st
+
+### 1ST STREET ###
+## DAY 2 ##
+label lbl_city_street_1st_day2:
+    if v_time == 840:
+        "Where should I go?"
+
+        menu:
+            "Home":
+                jump lbl_home_room_mia
+            "Marcy":
+                jump lbl_city_home_marcy_room
+            "Mall":
+                jump lbl_city_mall
+            "Visit the church":
+                jump lbl_city_church
+            "Visit the beach":
+                jump lbl_city_beach
+
+### CHURCH ###
+## DAY 2 ##
+label lbl_city_beach_day2:
+    show img_beach_topless with d1
+    "Here is the beach, looks like everything is mostly normal here, more topless woman than normal, but nothing very strange."
+    hide img_beach_topless with d1
+    show img_beach_nude_01 at top with d1
+    "Spoke too soon..."
+    hide img_beach_nude_01 with d1
+    show img_beach_nude_02 at top with d1
+    pause
+    hide img_beach_nude_02 with d1
+
     menu:
-        "Back to college":
-            jump lbl_home_living_room
+        "Go home":
+            jump lbl_city_street_1st
+
+### CHURCH ###
+## DAY 2 ##
+label lbl_city_church_day2:
+    "This is the local church, maybe they can help me with my crysis..."
+    show npc_portrait_nun with d3
+    nun "Hello, young man, can I help you?"
+    me "Hello sister, can I speak with the priest?"
+    nun "Sorry he isn't here right now, but maybe I can help?"
+    me "Maybe, have you noticed something wrong with our city today?"
+    nun "What do you mean exactly?"
+    me "People seem a bit too open to desire today, it's like someone turned on the lusty buttom on everyone, my sister almost french kissed me in front of my friend today."
+    me "My... someone who is like a mother to me entered my room half naked today and didn't think much of the erection I got..."
+    "She is uncomfortable, maybe I should hold back on the details..."
+    nun "Mister, why do you think that's strange? I mean people shouldn't be making love on the streets but the holy book teaches us that this passion is a gift and should not be ashamed to express our love physically."
+    me "It does?"
+    nun "Yes, the goddess teaches us that..."
+    "Goddess? What is going on here, now that she mentioned it, the figures on the wall are mostly feminine."
+    nun "...and that's why you should always wash your hands after touching the doornobs."
+    me "Oh, right thanks sister, I should go now, but thanks for the advice."
+    hide npc_portrait_nun with d3
+    "Let's go home, I think someone owns me anwers, and she should be back in my room later."
+
+    menu:
+        "Go home":
+            jump lbl_city_street_1st
