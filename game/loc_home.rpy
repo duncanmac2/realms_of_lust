@@ -286,7 +286,7 @@ label lbl_home_room_mc_day3:
         "Go take a shower":
             jump lbl_home_bathroom
         "Go eat something":
-            jump lbl_home_room_lisa
+            jump lbl_home_kitchen
         "Spy on Lisa":
             jump lbl_home_room_lisa
 
@@ -512,7 +512,7 @@ label lbl_home_kitchen_day1:
         hide npc_portrait_mia_02
         show npc_portrait_mia_03 at top with d3
         me "Sorry doesn't cut it Mia, Lisa will eat me alive when we are back from college, you know how she is she doens't even own a bikini because it shows too much skin... And I saw her naked !!!"
-        mia "I didn't know, I thought she was down here and just forgot to wake us. Please forgive me Max, I-I will... talk to Hikari, I know you have a crush on her so I will set you up on a date, how about that?"
+        mia "I didn't know, I thought she was down here and just forgot to wake us. Please forgive me [me], I-I will... talk to Hikari, I know you have a crush on her so I will set you up on a date, how about that?"
         me "That would be great, except last month I tried to ask her out. All she said is she does not go out with losers and perverts. A pervert. ME?"
         mia "Well, you do hang around Markus a lot."
         me "I know. Let's do this then, you will owe me a favor, whatever I ask, whenever I ask. Deal?"
@@ -652,7 +652,110 @@ label lbl_home_kitchen_day2:
 
 ## KITCHEN - DAY 3 ##
 label lbl_home_kitchen_day3:
-    "bla"
+    if not f_day3_shower and not f_day3_spy:
+        "There is no one here now, they must be taking a shower, why do I feel like I lost an opportunity?"
+        "A few minutes later."
+        show npc_portrait_mia_14 with d3
+        mia "Hey bro, good morning."
+        me "Morning Mia. Aren't you going to put pants on?"
+        mia "Later, I'm hungry now, give some of that jam."
+        hide npc_portrait_mia_14 with d3
+        show npc_portrait_lisa_07 with d3
+        "After a few minutes Lisa comes down the stair to join us."
+        lisa "Good morning guys."
+        mia "Good morning."
+        lisa "Mia, I have a favor to ask, can you go to the library before you come back home today to get me a book, talk to the librarian tell her it's for me."
+        mia "Research for your latest book?"
+        "Oh right Lisa is writer, that's why she stays home most of the time, I don't know this never came up before, it's almost like \"someone\" had not decide what Lisa's job was until now."
+        lisa "Yes and no, it's research for the next book, after I finish writing the one I'm working on now. I want to delve in the world of erotica, so the librarian, Jessica is holding onto some steamy material for me."
+        mia "Cool, what is it the theme of the book?"
+        lisa "I don't know for certain yet, maybe something about forbidden love..."
+        me "That's a little vague isn't it?"
+        lisa "Well, I didn't start working on it it so there is a lot work to be done."
+        mia "Yeah, bro give her some time."
+        "We talk for a few more minutes, before it's time to go out. We put some proper clothes and get ready to leave."
+        hide npc_portrait_lisa_07 with d1
+
+    elif f_day3_shower:
+        show npc_portrait_lisa_07 with d1
+        lisa "Hey sweetie, come on sit down, is Mia coming down?"
+        me "She will be here soon..."
+        hide npc_portrait_lisa_07 with d1
+        show npc_portrait_mia_14 with d1
+        mia "Already here bro."
+        "Wow, no wonder she was so fast she put only her top."
+        lisa "Sit down kid, the food will get cold."
+        "We take our usual places at the table."
+        lisa "So how was the shower?"
+        me "That's an unusual question, why?"
+        lisa "Well since you don't have a hard on right now, I can assume only two things, you jerked off on Mia in the bathroom or Mia jerked you off, which one is it."
+        me "Maybe I'm not in the mood."
+        lisa "I'm not wearing a top, and Mia has no pants, or panties, unless you became gay in the last few minutes I doubt you would be flacid right now."
+        mia "Mom, why are you so interested in what we do in there, are you jealous?"
+        hide npc_portrait_mia_14 with d1
+        show npc_portrait_lisa_03 at top with d1
+        lisa "Well, I-I... look I know you are both virgins, and it's normal for siblings to explore their sexuality together, but I just want to make sure you don't take it too far, okay. I'm too young to be a grandmother."
+        mia "MOM! It's not like that, I just used my hands ok, that's all."
+        lisa "Well, I guess that's okay, what you can't do is fuck each other, you are still brother and sister after all. Blood related or no."
+        me "So... what you are saying is blowjobs are ok?"
+        hide npc_portrait_lisa_03 with d1
+        show npc_portrait_mia_03 at top with d1
+        mia "You wish bro, that's not going to happen."
+        "It's totally going to happen."
+        me "Right, but if did happen, would you be angry?"
+        lisa "[me], let's change the subject ok."
+        "That's not a yes."
+        "We talk for a few more minutes before it's time to leave."
+        hide npc_portrait_mia_03 with d1
+
+    elif f_day3_spy:
+        show npc_portrait_mia_14 with d1
+        "Mia is here already, her pants however are not..."
+        me "Morning sis."
+        mia "Hey, bro are you done spying on my mom?"
+        me "I-I... what... no, I was... you see..."
+        mia "Haha, relax silly, I'm not mad, it must be torture to live in a house with a beauty like her, walking around half naked all the time, I'm just surprised it took this long for you to do it."
+        me "Really? Well thanks Mia for being so cool about it."
+        mia "It's fine, maybe the next time call me, it would be... fun."
+        hide npc_portrait_mia_14
+        show npc_portrait_lisa_03 at top with vpunch
+        lisa "What an interesting conversation you are having!"
+        "We both freeze in shock as Lisa walks behind me."
+        mia "MOM, this is not what it looks like..."
+        lisa "Kids sit down, I want to talk with both of you."
+        "We do as we are told, even a future god is not immune to motherly wrath... but she does not seem angry."
+        lisa "Kids, I just realised something, both of you are still virgins correct?"
+        "We nod."
+        lisa "That is not common for your age, so I think maybe I have been sheltering both of you too much, and even worse teasing you without realising it."
+        lisa "So I think it's time for us to be more open to each other, about how we feel, our desires and wants. I want you both to feel more confident in yourselves and your bodies."
+        me "What are you trying to say Lisa?"
+        lisa "Ok, [me] I want you to be honest, did you felt sexual desires for Mia or I?"
+        me "That's... I... yes..."
+        lisa "And you Mia?"
+        hide npc_portrait_lisa_03 with d1
+        show npc_portrait_mia_03 at top with d1
+        mia "Yes."
+        lisa "So did I, and I think those desires are normal, I don't mean we should act on then, completely that is, we are family after all."
+        lisa "But from now on if you are felling horny, I think we should help eachother to the best of our ability. No sex however, but I would not be opposed to some other forms of release..."
+        me "Are you saying we are free to do things like... blowjobs maybe?"
+        lisa "Not in public, but if both parties agree with it then yes."
+        hide npc_portrait_mia_03 with d1
+        "Everything is going very well, that is the best family talk we have ever had."
+        mia "Mom that's... shit bro we have to leave soon."
+        lisa "Sorry kids, go put some clother I will make you a sandwhich to eat on the way."
+        "A few minutes later..."
+
+    show vid_lisa_kiss_02 at top with d1
+    lisa "Have a nice day guys, come here give me a goodbye kiss..."
+    hide vid_lisa_kiss_02 with d1
+    show vid_lisa_kiss_03 at top with d1
+    lisa "You too Mia."
+    hide vid_lisa_kiss_03 with d1
+    "That's a good way to start your day."
+
+    menu:
+        "Outside":
+            jump lbl_city_street_1st
 
 ### LIVING ROOM ###
 ## LIVING ROOM - DAY 1 ##
@@ -753,9 +856,6 @@ label lbl_home_room_lisa_day3:
     scene loc_home_bathroom2
     show img_lisa_shower_05 with d1
     "Oh, I was not expecting this, maybe she was as excited as me from what happened earlier, maybe she needs some help. But should I risk it? That's a bit far from what we have done so far."
-
-    $ f_day3_spy = True
-
     menu:
         "Do it":
             hide img_lisa_shower_05
@@ -769,10 +869,13 @@ label lbl_home_room_lisa_day3:
             me "Sorry Lisa, I'm going."
             "Shit I knew that would be a bit too far, guess I will have to wait a few days before we can go further."
 
-            jump lbl_home_kitchen
-
         "Don't do it":
             "Now let's get out of here before she sees me."
+
+    $ f_day3_spy = True
+
+    menu:
+        "Kitchen":
             jump lbl_home_kitchen
 
 ### MIA ROOM ###

@@ -62,7 +62,7 @@
     for i in range(1,6):
         renpy.image("img_lisa_shower_" + str(i).zfill(2), "images/people/brandi_love/lisa_shower_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,7):
+    for i in range(1,8):
         renpy.image("npc_portrait_lisa_" + str(i).zfill(2), "images/people/brandi_love/lisa_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Lily
@@ -92,7 +92,7 @@
     for i in range(1,3):
         renpy.image("img_mia_ass_" + str(i).zfill(2), "images/people/mia_malkova/mia_ass_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,14):
+    for i in range(1,15):
         renpy.image("npc_portrait_mia_" + str(i).zfill(2), "images/people/mia_malkova/mia_portrait_" + str(i).zfill(2) + ".jpg")
 
     for i in range(1,4):
@@ -225,6 +225,8 @@ image vid_lily_kiss_02 = Movie(play="images/people/lilith/lily_kiss_02.webm", si
 # Lisa
 image vid_lisa_bathroom_incident = Movie(play="images/people/brandi_love/lisa_bathroom_incident.webm", size=(590,590))
 image vid_lisa_handjob_cum = Movie(play="images/people/brandi_love/lisa_handjob_cum.webm", size=(800,418))
+image vid_lisa_kiss_02 = Movie(play="images/people/brandi_love/lisa_kiss_02.webm", size=(1000,540))
+image vid_lisa_kiss_03 = Movie(play="images/people/brandi_love/lisa_kiss_03.webm", size=(800,778))
 image vid_lisa_show_boobs = Movie(play="images/people/brandi_love/lisa_boobs_01.webm")
 image vid_lisa_room_masturbate = Movie(play="images/people/brandi_love/lisa_masturbation.webm")
 
