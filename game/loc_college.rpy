@@ -6,6 +6,8 @@ label lbl_college_class:
         jump lbl_college_class_day1
     elif v_day == 2:
         jump lbl_college_class_day2
+    elif v_day == 3:
+        jump lbl_college_class_day3
 
 label lbl_college_garden:
     scene loc_college_garden
@@ -44,8 +46,8 @@ label lbl_college_yard:
         jump lbl_college_yard_day2
 
 #### EVENTS ####
-### YARD ###
-## DAY 1 ##
+### SCHOOLYARD ###
+## SCHOOLYARD - DAY 1 ##
 label lbl_college_yard_day1:
     "We reach the campus several minute too late."
     mia "See you guys later."
@@ -61,7 +63,7 @@ label lbl_college_yard_day1:
         "Go to class":
             jump lbl_college_class
 
-## DAY 2 ##
+## SCHOOLYARD - DAY 2 ##
 label lbl_college_yard_day2:
     if v_time == 720:
         mia "Hey bro are you going to eat with us?"
@@ -96,7 +98,7 @@ label lbl_college_yard_day2:
                 jump lbl_college_nurse
 
 ### CLASS ###
-## DAY 1 ##
+## CLASS - DAY 1 ##
 label lbl_college_class_day1:
     "As fast as we could run we were not fast enough, we are 10 minutes late, waiting for the worst we enter the classroom ready to have our heads chopped off, but..."
     marcus "Where is he? You don't think that he is also late right?"
@@ -110,7 +112,7 @@ label lbl_college_class_day1:
     "Once he caught a poor guy sleeping, he made him try to solve a extremely complex equation, and when he couldn't he failed him. We never saw him again."
     "After what feels like an eternity the class end, both of us start making our way to the garden to eat lunch with Mia and, that's when the stereotypical bully enter the scene."
     hide npc_portrait_mr_smith
-    show npc_portrait_jason at top with d3
+    show npc_portrait_jason_01 at top with d3
     "This is Jason, he is a douche."
     jason "Hey loser, where is that hottie you sister she hasn't been answering my messages."
     me "Sorry to hear that Jason, maybe she changed her number again because she doesn't want to be harassed by you."
@@ -120,7 +122,7 @@ label lbl_college_class_day1:
     "I'm saved, this is the captain of the football team and the only person that can keep Jason in check. Unlike most of his peers he is a really nice guy to us nerds and lost souls (that's me and Marcus on that order)."
     "I knew him in fifth grade he was the fat kid everyone made fun of, except Marcus and I, so when we met again in college he started watching our back. Doesn't mean Jason is not picking on me when he is not looking but other guys have it much worse."
     jason "As you wish \"captain\", see you later nerd."
-    hide npc_portrait_jason with d3
+    hide npc_portrait_jason_01 with d3
 
     if f_day1_lisa_bathroom_incident:
         kyle "Hey [me], here is the key to the men's shower, should be empty now. Don't worry man we all have woken up too late to take a shower before."
@@ -140,7 +142,7 @@ label lbl_college_class_day1:
             "Lunch":
                 jump lbl_college_garden
 
-## DAY 2 ##
+## CLASS - DAY 2 ##
 label lbl_college_class_day2:
     "Once inside I notice that there are some new faces, girl faces in class, and we are missing a few guys... shit I hoped Marcy was an isolated case."
     me "So... do you remember why you were late yesterday?"
@@ -168,8 +170,45 @@ label lbl_college_class_day2:
         "Aunt Lily":
             jump lbl_city_home_lily
 
+## CLASS - DAY 3 ##
+label lbl_college_class_day3:
+    show vid_college_run at top
+    marcy "We will no get there in time."
+    me "Less talking more running."
+    mia "This is my stop good luck guys."
+    hide vid_college_run with d3
+    show npc_portrait_ellie_01 with d3
+    "Mia continues running to her class, while we run to ours. We open the door and everyone is on their seats. The bell goes of as soon as we enter the classroom. A strange woman looks at us, is she..."
+    ellie "That was close guys, you need wake a little earlier, specially you Marcy, with your grades you can't afford to be late."
+    marcy "Sorry Ms. Smith."
+    "That confirms it. Mr. Smith is Miss now."
+    ellie "And you Max, if you have some time come see me in my office after lunch."
+    me "Yes Miss Smith."
+    hide npc_portrait_ellie_01 with d3
+    "I don't think I'm in trouble, she said \"if\" I have the time, what does she want?"
+    "We sit, and than I take a look at the rest of the class. There are more girls than ever here, Nina did not disappoint. And my old nemesis is nowhere to be seen, I wonder which of the new girls he is... Oh nevermind he is still here, but now he looks really pathetic... that's a good sign."
+    "The class goes on as normal, and at the end of it Jason of all people come to talk to me."
+    show npc_portrait_jason_02 at top with d3
+    jason "[me], my man, so tell me is your sister still single?"
+    "This guy... well he won't be a guy for much longer by the looks of it, and I'm pretty sure he can't kick my ass, not easily at least, so..."
+    me "Listen Jason, Mia doesn't want to go out with you, get this through your thick skull."
+    jason "Sorry dude, I know, but come on grease the wheels for me a bit, I will own you one."
+    "This gives me a idea, if he owns me one, when he becomes a she, she might still own me..."
+    me "Ok, how about this, I will talk to her, but no promises and you will own me, independent of her answear, deal?"
+    jason "Ok.. ok deal, thanks dude."
+    hide npc_portrait_jason_02 at top with d3
+    "Marcy comes to talk to me after he goes away."
+    marcy "You know she will say no, right?"
+    me "Yes, but he thinks there is a chance, and now he will own me a favor."
+    marcy "That's harsh, dude, but I can't say he doesn't deserve it, he likes to bully anyone he sees as weak. If you were not so big I think he would be demanding you, not asking."
+    "Spot on, let's get out of here now."
+
+    menu:
+        "College":
+            jump lbl_college_yard
+
 ### GARDEN ###
-## DAY 1 ##
+## GARDEN - DAY 1 ##
 label lbl_college_garden_day1:
     if f_day1_lisa_bathroom_incident:
         mia "[me] why took you so long?"
@@ -241,7 +280,7 @@ label lbl_college_garden_day1:
             "Go with him":
                 jump lbl_college_locker_room
 
-## DAY 2 ##
+## GARDEN - DAY 2 ##
 label lbl_college_garden_day2:
     me "Yes, I'm a starving."
     mia "Ok how was class today?"
@@ -266,7 +305,7 @@ label lbl_college_garden_day2:
             jump lbl_college_locker_room
 
 ### LOCKER ROOM ###
-## DAY 1 ##
+## LOCKER ROOM - DAY 1 ##
 label lbl_college_locker_room_day1:
     show loc_college_locker_room_men at top
     "He brings me to mens locker room, I have a bad feeling about this..."
@@ -295,7 +334,7 @@ label lbl_college_locker_room_day1:
         "Go to Marcus's":
             jump lbl_city_home_marcy
 
-## DAY 2 ##
+## LOCKER ROOM - DAY 2 ##
 label lbl_college_locker_room_day2:
     me "So where are we going?"
     marcy "Where do you think?"
@@ -328,7 +367,7 @@ label lbl_college_locker_room_day2:
             jump lbl_city_street_1st
 
 ### SHOWER ###
-## DAY 1 ##
+## SHOWER - DAY 1 ##
 label lbl_college_shower_men_day1:
     "It's empty just as Kyle said, luckyly I have a shirt on my backpack, let's take a quick shower."
     "I take my clothes off an enter the cold, cold water... better this than nothing I guess."
@@ -360,7 +399,7 @@ label lbl_college_shower_men_day1:
             jump lbl_college_garden
 
 ### NURSE ###
-## DAY 2 ##
+## NURSE - DAY 2 ##
 label lbl_college_nurse_day2:
     "Just in case I'm sick it's best to talk to Megan the nurse."
     show npc_portrait_megan_01 with d3

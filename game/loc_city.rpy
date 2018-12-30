@@ -26,18 +26,24 @@ label lbl_city_home_marcy:
         jump lbl_city_home_marcus_day1b
     elif v_day == 2:
         jump lbl_city_home_marcy_day2b
+    elif v_day == 3:
+        jump lbl_city_home_marcy_day3
 
 label lbl_city_home_marcy_bathroom:
     scene loc_city_home_marcy_bathroom
 
     if v_day == 2:
         jump lbl_city_home_marcy_bathroom_day2
+    elif v_day == 3:
+        jump lbl_city_home_marcy_bathroom_day3
 
 label lbl_city_home_marcy_room:
     scene loc_city_home_marcy_room
 
     if v_day == 2:
         jump lbl_city_home_marcy_room_day2
+    elif v_day == 3:
+        jump lbl_city_home_marcy_room_day3
 
 ### MALL ###
 label lbl_city_mall:
@@ -58,10 +64,12 @@ label lbl_city_street_1st:
         jump lbl_city_home_marcy_day2a
     elif v_day == 2 and v_time > 0:
         jump lbl_city_street_1st_day2
+    elif v_day == 3:
+        jump lbl_city_street_1st_day3
 
 #### EVENTS ####
 ### MARCY HOME ###
-## DAY 1 ##
+## MARCY HOME - DAY 1 ##
 label lbl_city_home_marcus_day1a:
     "We leave the house a few minutes later than usual, but still within a safe margin, the college is close enough that we can go on foot so we can take on the scenery while on the way."
     "My best friend Marcus lives on the house across the street, we usually go together the three of us so we have to go by his house to pick him up."
@@ -157,7 +165,7 @@ label lbl_city_home_marcus_day1b:
             "Go home":
                 jump lbl_home_room_mc
 
-## DAY 2 ##
+## MARCY HOME - DAY 2 ##
 label lbl_city_home_marcy_day2a:
     show npc_portrait_mia_11
     mia "Bro are you ok, you have been acting strange today."
@@ -222,8 +230,38 @@ label lbl_city_home_marcy_day2b:
             "College":
                 jump lbl_college_yard
 
+## MARCY HOME - DAY 3 ##
+label lbl_city_home_marcy_day3:
+    "Mia rings the doorbell, Sarah comes to the door soon after."
+    show npc_portrait_sarah_04 with d3
+    sarah "Good morning guys, how are you."
+    me "We are good Sarah thanks for asking, is Marcy ready?"
+    sarah "I will call her just a second."
+    hide npc_portrait_sarah_04 with d3
+    mia "That's a nice lingerie don't you think bro, I wish I had something so stylish."
+    me "You like it? Maybe you will get a nice gift sometime this week then."
+    mia "Thanks bro you are the best."
+    show npc_portrait_marcy_04
+    marcy "Hey, if you are giving gifts give me one too."
+    me "I only give gifts to people who are ready on time, unless you are going to college in that outfit I don't think you fit the criteria."
+    marcy "Sorry, I spend the night playing games again, come in I will be ready in no time."
+    me "Ok, we have the time, but don't take too long."
+    marcy "Don't worry I will be right back."
+    hide npc_portrait_marcy_04 with d3
+    mia "Bro, why didn't you and Marcy ever fucked."
+    me "Good question, I guess it never came up on our conversations, and she is my friend, maybe it would be weird after we did."
+    "A few minutes later..."
+    me "Why is she taking so long? I will go check on her."
+    mia "Ok."
+
+    menu:
+        "Go to the bathroom":
+            jump lbl_city_home_marcy_bathroom
+        "Call Marcy":
+            jump lbl_city_home_marcy_room
+
 ### MARCY BATHROOM ###
-## DAY 2 ##
+## MARCY BATHROOM - DAY 2 ##
 label lbl_city_home_marcy_bathroom_day2:
     "I decide to go wait in Marcy's room, I can also see if the place has changed much since... why is the bathroom door open?"
     show img_sarah_shower_01 with d3
@@ -244,8 +282,38 @@ label lbl_city_home_marcy_bathroom_day2:
         "Out of here":
             jump lbl_city_street_1st
 
+## MARCY BATHROOM - DAY 3 ##
+label lbl_city_home_marcy_bathroom_day3:
+    "The bathroom door is open is she in there?"
+    show img_sarah_shower_05 with d3
+    "Marcy?"
+    hide img_sarah_shower_05 with d1
+    show img_sarah_shower_06 with d1
+    sarah "No, it's me [me]."
+    me "Sorry Sarah, I didn't mean to walk in on you."
+    hide img_sarah_shower_06 with d1
+    show img_sarah_shower_07 with d1
+    sarah "It's ok, I don't mind, in fact I have a question what do you think about them?"
+    me "Your breasts?"
+    hide img_sarah_shower_07 with d1
+    show img_sarah_shower_08 with d1
+    sarah "Yes, my breasts, do you like them?"
+    me "I think they are really nice."
+    sarah "Would you like to touch then?"
+    "What a stupid question. Of course I want to touch them."
+    me "Yes, yes I would love to."
+    sarah "Go ahead them."
+    "I to go slow, to savor the moment, the weight, the soft skin, her hard nipples, this is paradise. But then..."
+    marcy "[me], where are you? Let's go!"
+    me "Shit, I gotta go now Sarah."
+    sarah "A shame, if you want to continue this some other time just visit me ok."
+
+    menu:
+        "College":
+            jump lbl_college_class
+
 ### MARCY ROOM ###
-## DAY 2 ##
+## MARCY ROOM - DAY 2 ##
 label lbl_city_home_marcy_room_day2:
     "I decide to go see Marcy, maybe she has some insight on this changes."
     me "Hey Marcy."
@@ -285,8 +353,46 @@ label lbl_city_home_marcy_room_day2:
         "Go home":
             jump lbl_home_living_room
 
+## MARCY ROOM - DAY 3 ##
+label lbl_city_home_marcy_room_day3:
+    "The door to the bathroom is open, maybe I... no, no time let's call her."
+    me "Marcy?"
+    show img_marcy_undress_01 with d1
+    marcy "Hey [me], decided to spy on me did you?"
+    me "No I came to see why you are taking so long to just change clothes."
+    marcy "Oh is because I was looking for something, sorry, I'll find it later."
+    hide img_marcy_undress_01 with d1
+    show img_marcy_undress_02 with d1
+    "She starts striping in front of me, she has a really nice body."
+    marcy "So what do you think?"
+    me "About?"
+    hide img_marcy_undress_02 with d1
+    show vid_marcy_boobs_02 at top with d1
+    marcy "My tits, are they too big?"
+    me "Of course not, I think they are perfect."
+    hide vid_marcy_boobs_02 with d1
+    show img_marcy_undress_03 at top with d1
+    marcy "Aww, thanks, I think it's in the family, mom is big, aunt Ny is big, even grandma Diana is huge. Speaking of which, do you really think it would be awkward if we had sex?"
+    me "You heard that huh. I don't know, maybe, what do you think."
+    hide img_marcy_undress_03 with d1
+    show img_marcy_undress_04 at top with d1
+    marcy "Who knows, I think it would be ok, but if you are not sure I understand."
+    me "You know that almost sounded like a normal person."
+    hide img_marcy_undress_04 with d1
+    show img_marcy_undress_05 at top with d1
+    marcy "Then I have to tell you, if you want to do something else like getting a blowjob all you need is ask, hahaha..."
+    me "Now that's more like you."
+    marcy "But serious, if you ever change your mind, call me, you know I'm always ready..."
+    me "But you are a virgin too..."
+    hide img_marcy_undress_05 with d3
+    marcy "That's why I'm always ready. It will happen any day now... I hope. Ok, I'm done let's go."
+
+    menu:
+        "College":
+            jump lbl_college_class
+
 ### MALL ###
-## DAY 1 ##
+## MALL - DAY 1 ##
 label lbl_city_mall_day1:
     me "Sorry man, I have some others plans."
     marcus "It's cool [me], come see us when you have some time. I have this new game and it's pretty good."
@@ -334,7 +440,7 @@ label lbl_city_mall_day1:
         "Go home":
             jump lbl_home_living_room
 
-## DAY 2 ##
+## MALL - DAY 2 ##
 label lbl_city_mall_day2:
     "I should probably look for Karen..."
     show npc_portrait_karen_04 at top with d3
@@ -377,7 +483,7 @@ label lbl_city_mall_day2:
             jump lbl_home_living_room
 
 ### LILY HOME ###
-## DAY 2 ##
+## LILY HOME - DAY 2 ##
 label lbl_city_home_lily_day2:
     "That's her house, hope she is home."
     "I ring the doorbell."
@@ -458,7 +564,7 @@ label lbl_city_home_lily_day2:
                 jump lbl_city_street_1st
 
 ### 1ST STREET ###
-## DAY 2 ##
+## 1ST STREET - DAY 2 ##
 label lbl_city_street_1st_day2:
     if v_time == 720:
         "Lisa should be having lunch right now maybe I should go talk to her, but Sarah told me to visit maybe I should ask her about Marcus, see if she remember him at all."
@@ -484,8 +590,41 @@ label lbl_city_street_1st_day2:
             "Visit the beach":
                 jump lbl_city_beach
 
-### CHURCH ###
-## DAY 2 ##
+## 1ST STREET - DAY 3 ##
+label lbl_city_street_1st_day3:
+    "On out way to Marcy Mia decides to ask me something."
+    show npc_portrait_mia_15 with d1
+    mia "So bro, what do you think of lesbians."
+    "After picking my jaw from the floor I answer."
+    me "Why are you asking me this? Are you...?"
+    mia "What no, it's just... Veronica talked to me about teaching me some tricks on the bed and she said we could have some fun while doing it... But is that weird?"
+    "Wow, that would be great to see, but what if Veronica takes her virginity before me? Should I take the risk?"
+
+    menu:
+        "Yes":
+            me "I think it's a good idea sis, Veronica is, how should I put this..."
+            mia "Experienced."
+            me "Yes, that's the word."
+            mia "If you think so bro, I will go to her house later today I think, want me to send you pictures?"
+            me "You would do that?"
+            mia "Maybe, you have been a good brother, so maybe you deserve it..."
+            "I can't wait to see it now."
+
+        "No":
+            me "Mia, I don't know, I don't have nothing against some fun between girls, but if you want some tips, maybe I can help you instead..."
+            mia "Wow, wait a minute bro, are you jealous?"
+            me "What, me, no, I just..."
+            mia "That's so cute! I will tell V to wait on those leasons for now okay."
+            me "Thanks Mia."
+            "Mia's first time is mine Veronica, maybe mine is also hers... we will see."
+
+    menu:
+        "Marcy's house":
+            jump lbl_city_home_marcy
+
+
+### BEACH ###
+## BEACH - DAY 2 ##
 label lbl_city_beach_day2:
     show img_beach_topless with d1
     "Here is the beach, looks like everything is mostly normal here, more topless woman than normal, but nothing very strange."
@@ -502,7 +641,7 @@ label lbl_city_beach_day2:
             jump lbl_home_living_room
 
 ### CHURCH ###
-## DAY 2 ##
+## CHURCH - DAY 2 ##
 label lbl_city_church_day2:
     "This is the local church, maybe they can help me with my crysis..."
     show npc_portrait_nun with d3

@@ -43,6 +43,10 @@
     for i in range(1,5):
         renpy.image("img_bonnie_shower_" + str(i).zfill(2), "images/people/kennedy_leigh/bonnie_shower_" + str(i).zfill(2) + ".jpg")
 
+    # Ellie
+    for i in range(1,2):
+        renpy.image("npc_portrait_ellie_" + str(i).zfill(2), "images/people/julia_ann/ellie_portrait_" + str(i).zfill(2) + ".jpg")
+
     # Hitomi
     for i in range(1,3):
         renpy.image("npc_portrait_hitomi_" + str(i).zfill(2), "images/people/hitomi/hitomi_portrait_" + str(i).zfill(2) + ".jpg")
@@ -74,7 +78,10 @@
     # Marcy
     renpy.image("img_marcy_boobs_01", "images/people/brittney_white/marcy_boobs_01.jpg")
 
-    for i in range(1,4):
+    for i in range(1,6):
+        renpy.image("img_marcy_undress_" + str(i).zfill(2), "images/people/brittney_white/marcy_undress_" + str(i).zfill(2) + ".jpg")
+
+    for i in range(1,5):
         renpy.image("npc_portrait_marcy_" + str(i).zfill(2), "images/people/brittney_white/marcy_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Maria
@@ -92,7 +99,7 @@
     for i in range(1,3):
         renpy.image("img_mia_ass_" + str(i).zfill(2), "images/people/mia_malkova/mia_ass_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,15):
+    for i in range(1,16):
         renpy.image("npc_portrait_mia_" + str(i).zfill(2), "images/people/mia_malkova/mia_portrait_" + str(i).zfill(2) + ".jpg")
 
     for i in range(1,4):
@@ -103,10 +110,10 @@
         renpy.image("npc_portrait_nina_" + str(i).zfill(2), "images/people/alexis_texas/nina_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Sarah
-    for i in range(1,5):
+    for i in range(1,9):
         renpy.image("img_sarah_shower_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_shower_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,4):
+    for i in range(1,5):
         renpy.image("npc_portrait_sarah_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Veronica
@@ -114,7 +121,8 @@
         renpy.image("npc_portrait_veronica_" + str(i).zfill(2), "images/people/angela_white/veronica_portrait_" + str(i).zfill(2) + ".jpg")
 
     ## NPC OTHERS
-    renpy.image("npc_portrait_jason", "images/people/others/portrait_jason.jpg")
+    renpy.image("npc_portrait_jason_01", "images/people/others/portrait_jason_01.jpg")
+    renpy.image("npc_portrait_jason_02", "images/people/others/portrait_jason_02.jpg")
     renpy.image("npc_portrait_marcus", "images/people/others/portrait_marcus.jpg")
     renpy.image("npc_portrait_mr_smith_01", "images/people/others/portrait_mr_smith_01.jpg")
     renpy.image("npc_portrait_mr_smith_02", "images/people/others/portrait_mr_smith_02.jpg")
@@ -136,6 +144,7 @@ define me = DynamicCharacter("your_name", image="portrait_mc", color = clr_dark_
 
 # NPC
 define bonnie = Character("Bonnie", image = "portrait_bonnie", color = clr_sand)
+define ellie = Character("Ellie", image = "portrait_ellie", color = clr_gold)
 define hitomi = Character("Hitomi", image = "portrait_hitomi", color = clr_ginger)
 define karen = Character("Karen", image = "portrait_karen", color = clr_gray)
 define lily = Character("Lily", image = "portrait_lily", color = clr_auburn)
@@ -148,6 +157,7 @@ define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut
 define veronica = Character("Veronica", image = "portrait_veronica", color = clr_gray)
 
 image side portrait_bonnie = "images/portrait/portrait_bonnie.jpg"
+image side portrait_ellie = "images/portrait/portrait_ellie.jpg"
 image side portrait_hitomi = "images/portrait/portrait_hitomi.jpg"
 image side portrait_karen = "images/portrait/portrait_karen.jpg"
 image side portrait_lily = "images/portrait/portrait_lily.jpg"
@@ -231,6 +241,7 @@ image vid_lisa_show_boobs = Movie(play="images/people/brandi_love/lisa_boobs_01.
 image vid_lisa_room_masturbate = Movie(play="images/people/brandi_love/lisa_masturbation.webm")
 
 # Marcy
+image vid_marcy_boobs_02 = Movie(play="images/people/brittney_white/marcy_boobs_02.webm", size=(630,716))
 image vid_marcy_boobs_bounce = Movie(play="images/people/brittney_white/marcy_boobs_bounce.webm", size=(552,780))
 image vid_marcy_masturbate = Movie(play="images/people/brittney_white/marcy_masturbate.webm", size=(704,512))
 
@@ -238,6 +249,7 @@ image vid_marcy_masturbate = Movie(play="images/people/brittney_white/marcy_mast
 image vid_mia_masturbate = Movie(play="images/people/mia_malkova/mia_masturbate.webm", size=(1000,496))
 
 # College
+image vid_college_run = Movie(play="images/events/college_run.webm")
 image vid_college_shower_01 = Movie(play="images/events/college_shower_01.webm", size=(620,612))
 image vid_college_shower_02 = Movie(play="images/events/college_shower_02.webm", size=(598,736))
 image vid_college_spanking = Movie(play="images/events/college_spanking.webm", size=(534,800))
