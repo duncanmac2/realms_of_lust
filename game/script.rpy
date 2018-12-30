@@ -34,6 +34,8 @@
 
     ### IMAGES
     ## MC
+    renpy.image("img_mc_body", "images/people/MC/mc_body.jpg")
+    renpy.image("img_mc_dick", "images/people/MC/mc_dick.jpg")
     renpy.image("img_mc_sleep", "images/people/MC/mc_sleep.jpg")
 
     ## NPC
@@ -84,6 +86,7 @@
         renpy.image("npc_portrait_megan_" + str(i).zfill(2), "images/people/nikki_benz/megan_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Mia
+    renpy.image("img_mia_handjob", "images/people/mia_malkova/mia_handjob.jpg")
     renpy.image("img_mia_kiss_01", "images/people/mia_malkova/mia_kiss_01.jpg")
 
     for i in range(1,3):
@@ -127,8 +130,9 @@
 ## NAMES & PORTRAITS
 # Player
 default your_name = ""
-define me = DynamicCharacter("your_name", image = "portrait_mc", color = clr_dark_red)
-image side portrait_mc = "images/portrait/portrait_mc1.jpg"
+default mc_portrait = "old"
+image side portrait_mc = ConditionSwitch("mc_portrait == 'old'", "images/portrait/portrait_mc1.jpg", "mc_portrait == 'new'", "images/portrait/portrait_mc2.jpg")
+define me = DynamicCharacter("your_name", image="portrait_mc", color = clr_dark_red)
 
 # NPC
 define bonnie = Character("Bonnie", image = "portrait_bonnie", color = clr_sand)
@@ -220,6 +224,8 @@ image vid_lily_kiss_02 = Movie(play="images/people/lilith/lily_kiss_02.webm", si
 
 # Lisa
 image vid_lisa_bathroom_incident = Movie(play="images/people/brandi_love/lisa_bathroom_incident.webm", size=(590,590))
+image vid_lisa_handjob_cum = Movie(play="images/people/brandi_love/lisa_handjob_cum.webm", size=(800,418))
+image vid_lisa_show_boobs = Movie(play="images/people/brandi_love/lisa_boobs_01.webm")
 image vid_lisa_room_masturbate = Movie(play="images/people/brandi_love/lisa_masturbation.webm")
 
 # Marcy
@@ -252,6 +258,8 @@ label start:
     $ f_day1_lisa_bathroom_incident = False
     $ f_day2_nurse = False
     $ f_day2_shower = False
+    $ f_day3_shower = False
+    $ f_day3_spy = False
 
     # Variables
     $ v_day = 1

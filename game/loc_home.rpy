@@ -6,6 +6,8 @@ label lbl_home_bathroom:
         jump lbl_home_bathroom_day1
     elif v_day == 2:
         jump lbl_home_bathroom_day2
+    elif v_day == 3:
+        jump lbl_home_bathroom_day3
 
 label lbl_home_kitchen:
     scene loc_home_kitchen
@@ -14,6 +16,8 @@ label lbl_home_kitchen:
         jump lbl_home_kitchen_day1
     elif v_day == 2:
         jump lbl_home_kitchen_day2
+    elif v_day == 3:
+        jump lbl_home_kitchen_day3
 
 label lbl_home_living_room:
     scene loc_home_living_room
@@ -28,6 +32,8 @@ label lbl_home_room_lisa:
 
     if v_day == 2:
         jump lbl_home_room_lisa_day2
+    elif v_day == 3:
+        jump lbl_home_room_lisa_day3
 
 label lbl_home_room_mc:
     scene loc_home_room_mc
@@ -36,6 +42,8 @@ label lbl_home_room_mc:
         jump lbl_home_room_mc_day1
     elif v_day == 2:
         jump lbl_home_room_mc_day2
+    elif v_day == 3:
+        jump lbl_home_room_mc_day3
 
 label lbl_home_room_mia:
     scene loc_home_room_mia
@@ -45,7 +53,7 @@ label lbl_home_room_mia:
 
 #### EVENTS ####
 ### ROOM MC ###
-## DAY 1 ##
+## ROOM MC - DAY 1 ##
 label lbl_home_room_mc_day1:
     if v_time == 1140:
         "Entering my room my computer is on."
@@ -112,7 +120,7 @@ label lbl_home_room_mc_day1:
 
         jump lbl_home_bathroom
 
-## DAY 2 ##
+## ROOM MC - DAY 2 ##
 label lbl_home_room_mc_day2:
     if v_time == 900:
         "Let me see what is going on in the rest of the world."
@@ -177,10 +185,11 @@ label lbl_home_room_mc_day2:
 
         $ v_day = 3
         $ v_time = 0
+        $ mc_portrait = "new"
 
         menu:
             "Sleep":
-                jump lbl_home_kitchen
+                jump lbl_home_room_mc
 
     else:
         show img_mc_sleep at truecenter with d3
@@ -238,8 +247,51 @@ label lbl_home_room_mc_day2_pc:
         "Breakfast":
             jump lbl_home_room_lisa
 
+## ROOM MC - DAY 3 ##
+label lbl_home_room_mc_day3:
+    "It's morning, time to wake up to a bright new day... The fuck?"
+    "I don't remember having a six-pack or being so tall and handsome? God damn it Nina warn me before you mess with my body. Not that I mind it I look good. But Lisa should be coming here any..."
+    show npc_portrait_lisa_04 with d1
+    lisa "[me] time to wake up."
+    hide npc_portrait_lisa_04 with d1
+    show img_mc_body at top with d1
+    me "...time now. Morning Lisa. Sorry I just woke up didn't have time to get dressed."
+    hide img_mc_body with d1
+    show npc_portrait_lisa_04 with d1
+    lisa "Come on sweetie, how many times have I seen you naked before. You are not even hard this time, should I feel offended?"
+    "You know a few days ago if Lisa ever said that to me I would have freaked out, now it's a normal morning chat."
+    lisa "If you keep waking up before I can call you maybe I will stop coming here each morning."
+    "Let's push our luck a bit."
+    me "No, please, if you don't then I won't have this magnificent view first thing in the morning, it's pretty good for my morale."
+    lisa "Well, I'm glad you like it, should I start coming in only my panties then?"
+    "She is playing it as a joke but there is a hint of a serious proposal there, maybe..."
+    me "That would be a bad idea, your boobs are so incredible I would get a permanent boner..."
+    lisa "Ohhh [me], stop joking, I'm sure you prefer some younger girl would show you her breasts..."
+    me "What, are you kidding you are not old, you are the hottest mom I know, the very definition of MILF."
+    hide npc_portrait_lisa_04 with d1
+    show vid_lisa_show_boobs with d1
+    lisa "That so kind of you sweetie, since you think so here is a reward."
+    hide vid_lisa_show_boobs with d1
+    show vid_mc_erection at top with d1
+    "One small step for a man..."
+    hide vid_mc_erection at top with d1
+    show vid_lily_kiss_01 at top with d1
+    lisa "Now that's the right reaction, I will let you go to the bathroom now, but before I leave."
+    hide vid_lily_kiss_01 at top with d1
+    lisa "Now let's go, you don't want to be late again right?"
+    me "Ok, I'm going."
+    "Time to see what the day has in store for us."
+
+    menu:
+        "Go take a shower":
+            jump lbl_home_bathroom
+        "Go eat something":
+            jump lbl_home_room_lisa
+        "Spy on Lisa":
+            jump lbl_home_room_lisa
+
 ### BATHROOM ###
-## DAY 1 ##
+## BATHROOM - DAY 1 ##
 label lbl_home_bathroom_day1:
     "When I'm about to enter the bathroom, I hear a loud scream."
     show npc_portrait_mia_01
@@ -275,7 +327,7 @@ label lbl_home_bathroom_day1:
             scene loc_home_bathroom2
             show vid_lisa_bathroom_incident at truecenter
             "My head is in the clouds, thinking about why she didn't woke me up today. I'm so distracted that I find the answer the worst way possible."
-            lisa "MAX! DON'T YOU KNOW HOW TO KNOCK?"
+            lisa "[me]! Don't you know how to knock?"
             me "SHIT, sorry, I thought you were already finished..."
             "Why is she here now? But whoa... she is in great shape foor her age... What the fuck am I thinking?"
             me "I'm..."
@@ -313,7 +365,7 @@ label lbl_home_bathroom_day1:
                 "Take a shower in a hurry":
                     jump lbl_home_kitchen
 
-## DAY 2 ##
+## BATHROOM - DAY 2 ##
 label lbl_home_bathroom_day2:
     if v_time == 840:
         "Let's see where is Lisa."
@@ -404,8 +456,53 @@ label lbl_home_bathroom_day2:
             "Kitchen":
                 jump lbl_home_kitchen
 
+## BATHROOM - DAY 3 ##
+label lbl_home_bathroom_day3:
+    "Ah, a shower in a hot morning, the only way this would be better is if I had some comp..."
+    show img_mia_shower_02 with hpunch
+    "The door then opens so fast it's like someone really needed to use this room."
+    me "Holy shit, Mia! Knock before you enter."
+    mia "Sorry I didn't mean to scare you, I just came here for us to take our shower together."
+    "By the sounds of it, it's a more common occurrence now, in her mind at least."
+    me "Well, you are already naked so come in."
+    hide img_mia_shower_02 with d1
+    show img_mia_shower_03 with d1
+    mia "What about that?"
+    hide img_mia_shower_03 with d1
+    show img_mc_dick at top with d1
+    me "That? What are you talking about... ohhh!"
+    hide img_mc_dick with d1
+    show img_mia_shower_03 with d1
+    me "Can you blame me? You are quite hot, sis."
+    mia "Aww... that was almost sweet, but thanks bro, since I'm the cause, maybe I can be the solution?"
+    me "Meaning?"
+    mia "Let me take care of that monster for you, I-I can use my hands."
+    "She is equal parts nervous and eaguer, how can I say no."
+    me "Come on in then sis."
+    mia "Ok, Veronica showed me how this works."
+    me "She did WHAT?"
+    hide img_mia_shower_03 with d1
+    show img_mia_handjob at top with d1
+    mia "Calm down bro, it was on a dildo... let's see."
+    "She is inexperienced, if it was not for the fact that she was my sister, and that she is smoking hot, it would take a long time for me to cum. But as things stand..."
+    hide img_mia_handjob with d1
+    show vid_lisa_handjob_cum at top with d1
+    mia "Wow, so the is what it feels like... it tastes funny."
+    hide vid_lisa_handjob_cum with d1
+    me "Mia that was... ok."
+    mia "Just ok?"
+    me "For a first timer... hahaha."
+    mia "Haha, come on bro, wash my back at least now."
+    "After we are finished, Mia heads to her room to put some clothes and I go to the kitchen to have some breakfast."
+
+    $ f_day3_shower = True
+
+    menu:
+        "Kitchen":
+            jump lbl_home_kitchen
+
 ### KITCHEN ###
-## DAY 1 ##
+## KITCHEN - DAY 1 ##
 label lbl_home_kitchen_day1:
     if f_day1_lisa_bathroom_incident and v_time == 0:
         me "Well... I will be late, smelly, broke and probably grounded for the rest of the week. But I will not be hungry. There is always a bright side (I feel dead inside)."
@@ -478,7 +575,7 @@ label lbl_home_kitchen_day1:
             "Leave":
                 jump lbl_city_street_1st
 
-## DAY 2 ##
+## KITCHEN - DAY 2 ##
 label lbl_home_kitchen_day2:
     if f_day2_shower and v_time == 0:
         "What a strange day."
@@ -553,8 +650,12 @@ label lbl_home_kitchen_day2:
             "Go to my room":
                 jump lbl_home_room_mc
 
+## KITCHEN - DAY 3 ##
+label lbl_home_kitchen_day3:
+    "bla"
+
 ### LIVING ROOM ###
-## DAY 1 ##
+## LIVING ROOM - DAY 1 ##
 label lbl_home_living_room_day1:
     "She is here, and waiting for me, it was a good life..."
     lisa "[me], sit down."
@@ -574,7 +675,7 @@ label lbl_home_living_room_day1:
         "My room":
             jump lbl_home_room_mc
 
-## DAY 2 ##
+## LIVING ROOM - DAY 2 ##
 label lbl_home_living_room_day2:
     if v_time == 720:
         me "Lisa I went to see the nurse and she told me to come home earlier."
@@ -634,7 +735,7 @@ label lbl_home_living_room_day2:
                 jump lbl_home_room_mc
 
 ### LISA ROOM ###
-## DAY 2 ##
+## LISA ROOM - DAY 2 ##
 label lbl_home_room_lisa_day2:
     "I'm on my way to the kitchen when I hear some noises from Lisa's room, the door is not closed so i decide to take a look."
     show vid_lisa_room_masturbate at truecenter with d3
@@ -645,8 +746,37 @@ label lbl_home_room_lisa_day2:
         "Kitchen":
             jump lbl_home_kitchen
 
+## LISA ROOM - DAY 3 ##
+label lbl_home_room_lisa_day3:
+    "That was a great way to start my day, but now what am I supposed to do? I have a boner and it's killing me, maybe Lisa should take responsibility for it..."
+    "Her door is half open lets see what she is doing... she is not here? Oh wait she is in her bathroom I can hear the water running. Let's take a peek, after what happened in my room, I'm sure she would not mind."
+    scene loc_home_bathroom2
+    show img_lisa_shower_05 with d1
+    "Oh, I was not expecting this, maybe she was as excited as me from what happened earlier, maybe she needs some help. But should I risk it? That's a bit far from what we have done so far."
+
+    $ f_day3_spy = True
+
+    menu:
+        "Do it":
+            hide img_lisa_shower_05
+            show img_lisa_shower_01 with vpunch
+            lisa "AHHHH... damnit [me] you scared me, can't you see I'm taking care of my business here. Wait were you spying on me?"
+            me "That... is not important, I thought you maybe want some help."
+            "I nod suggestively..."
+            hide img_lisa_shower_01 with d1
+            show img_lisa_shower_03 at top with d1
+            lisa "As happy as I'm that you are willing to help me, I want some time alone, so it's time for you to GET OUT!"
+            me "Sorry Lisa, I'm going."
+            "Shit I knew that would be a bit too far, guess I will have to wait a few days before we can go further."
+
+            jump lbl_home_kitchen
+
+        "Don't do it":
+            "Now let's get out of here before she sees me."
+            jump lbl_home_kitchen
+
 ### MIA ROOM ###
-## DAY 2 ##
+## MIA ROOM - DAY 2 ##
 label lbl_home_room_mia_day2:
     if v_time == 840:
         "I decide to look at what sis is doing."
