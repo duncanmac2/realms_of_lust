@@ -6,6 +6,11 @@
     def func_name_input(str):
         store.your_name = str
 
+    # Time function
+    def func_readable_time(time):
+        readable_time = divmod(time, 60)
+        return str(readable_time[0]).zfill(2) + ":" + str(readable_time[1]).zfill(2)
+
     s_interface_total_width = 1920
     s_interface_total_height = 1080
 
@@ -185,7 +190,7 @@ image side portrait_mr_smith = "images/portrait/portrait_mr_smith_01.jpg"
 image side portrait_mr_smith younger = "images/portrait/portrait_mr_smith_02.jpg"
 image side portrait_nun = "images/portrait/portrait_nun.jpg"
 
-## Effects
+## EFFECTS
 define d1 = Dissolve(0.2)
 define d2 = Dissolve(0.2)
 define d3 = Dissolve(0.3)
@@ -278,6 +283,8 @@ label start:
     # Variables
     $ v_day = 1
     $ v_time = 0
+    $ v_time_readable = ""
+    $ v_localisation = ""
 
     # Start
     hide screen main_menu

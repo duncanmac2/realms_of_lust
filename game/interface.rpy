@@ -1,16 +1,10 @@
 ## FUNCTIONS
 # Main
 label main_show(show_all=0):
-    if show_all == 0:
-        scene img_black
-        #hide screen scr_map_city
-        #hide screen scr_main_info
+    $ v_time_readable = func_readable_time(v_time)
 
-    elif show_all == "city":
-        call main_show
-        #show screen scr_map_city
-        #if f_change_time:
-        #    show screen scr_main_info
+    if show_all == 0:
+        hide screen scr_navigation
 
     return
 
@@ -36,5 +30,30 @@ screen scr_warning:
         action Jump("close_renpy")
 
 ## SCREENS LOCATIONS
-screen scr_home_room_mc:
-    add "images/location/loc_room_mc.jpg"
+screen scr_navigation:
+    text v_localisation color clr_dark_red size 100 xalign 0.5 yalign 0.1
+
+    frame:
+        xpadding 28
+        ypadding 10
+        xpos 10
+        ypos 10
+        xmaximum 120
+        ymaximum 95
+
+        python:
+            ui.text("{b}" + v_time_readable + "{/b}", size = 20)
+
+        imagebutton:
+            xpos -13
+            ypos 32
+            idle "images/interface/icon_map.png"
+            #action [Hide("scr_phone"), Show("scr_phone_gallery"), SetVariable("f_photo_new", False)]
+
+        imagebutton:
+            xpos 37
+            ypos 32
+            idle "images/interface/icon_phone.png"
+            #action [Hide("scr_phone"), Show("scr_phone_gallery"), SetVariable("f_photo_new", False)]
+
+        #vbox:

@@ -6,7 +6,7 @@ label lbl_college_class:
         jump lbl_college_class_day1
     elif v_day == 2:
         jump lbl_college_class_day2
-    elif v_day == 3:
+    elif v_day == 3 and v_time < 720:
         jump lbl_college_class_day3
 
 label lbl_college_garden:
@@ -39,11 +39,15 @@ label lbl_college_shower_men:
 
 label lbl_college_yard:
     scene loc_college_yard
+    $ v_localisation = "College"
 
     if v_day == 1:
         jump lbl_college_yard_day1
     elif v_day == 2:
         jump lbl_college_yard_day2
+    else:
+        call main_show
+        call screen scr_navigation
 
 #### EVENTS ####
 ### SCHOOLYARD ###
@@ -182,7 +186,7 @@ label lbl_college_class_day3:
     ellie "That was close guys, you need wake a little earlier, specially you Marcy, with your grades you can't afford to be late."
     marcy "Sorry Ms. Smith."
     "That confirms it. Mr. Smith is Miss now."
-    ellie "And you Max, if you have some time come see me in my office after lunch."
+    ellie "And you [me], if you have some time come see me in my office after lunch."
     me "Yes Miss Smith."
     hide npc_portrait_ellie_01 with d3
     "I don't think I'm in trouble, she said \"if\" I have the time, what does she want?"
@@ -202,6 +206,8 @@ label lbl_college_class_day3:
     me "Yes, but he thinks there is a chance, and now he will own me a favor."
     marcy "That's harsh, dude, but I can't say he doesn't deserve it, he likes to bully anyone he sees as weak. If you were not so big I think he would be demanding you, not asking."
     "Spot on, let's get out of here now."
+
+    $ v_time = 730
 
     menu:
         "College":
