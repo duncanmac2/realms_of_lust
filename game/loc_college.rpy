@@ -21,6 +21,13 @@ label lbl_college_garden:
     elif v_day == 3:
         jump lbl_college_garden_day3
 
+label lbl_college_gym:
+    call main_show
+    scene loc_college_gym
+
+    if v_day == 3:
+        jump lbl_college_gym_day3
+
 label lbl_college_locker_room:
     call main_show
     scene loc_college_locker_room
@@ -378,6 +385,131 @@ label lbl_college_garden_day3:
 
     else:
         "There is no one I know here now."
+
+    menu:
+        "College":
+            jump lbl_college_yard
+
+### GYM ###
+## GYM - DAY 3 ##
+label lbl_college_gym_day3:
+    if tb_event[3]["college_gym"]["bonnie"] == 0 and v_time < 840 and f_day1_lisa_bathroom_incident:
+        show npc_portrait_bonnie_01 at top with d3
+        "Here is were the cheerleader train on most days, but it's mostly empty now, except for..."
+        me "Hey you, you are the pervert that interrupted my shower."
+        hide npc_portrait_bonnie_01 with d1
+        show img_bonnie_ass with d1
+        bonnie "Me? Oh right, you are that guy in the locker room, what are you doing here?"
+        me "Don't try to change the subject, I think you own me an apology."
+        bonnie "Why? If I remember right, you had a great time looking at me."
+        me "Well that is true..."
+        bonnie "See, we both benefit from that, so let's leave it at that."
+        me "But... fine. But at least tell me why you were in such a hurry?"
+        bonnie "It's complicated, but maybe some day I will tell you, you seem like a nice guy and don't have many friends, so tell me [me], want to be my friend?"
+        me "Uhh sure, why not."
+        hide img_bonnie_ass with d1
+        show npc_portrait_bonnie_01 at top with d1
+        bonnie "Great, let me give you my number... there. Now I need to go, but I'm here everyday from 12 to 14 hours. Come here and we can talk."
+        "She is leaving. Maybe she is going to take another shower. I wouldn't mind seeing it again."
+        me "Hey Bonnie, are you going to take a shower?"
+        bonnie "That's right."
+        me "Well as your friend, I think I should escort you, I mean if some creep enters the showers and you are there alone... who know what might happen."
+        bonnie "Hahaha... if you want to see me naked so badly all you need is ask. But you do have a point, there is this guy that... nevermind, come on my noble friend, protect this young madam..."
+        me "You got it."
+        hide npc_portrait_bonnie_01 with d3
+
+        menu:
+            "Follow her":
+                pass
+
+        scene loc_college_locker_room
+
+        show img_bonnie_undress with d3
+        bonnie "Well here we are..."
+        "With only those words spoken she starts stripping..."
+        me "You are very comfortable being naked around people."
+        hide img_bonnie_undress with d1
+        show img_bonnie_shower_05 with d1
+        bonnie "I just am, I don't care about nudity that much..."
+        me "Oh, I see..."
+        bonnie "Come on you can't protect me if you stay here here."
+        hide img_bonnie_shower_05 with d1
+        show img_bonnie_shower_06 at top with d1
+        "We enter the showers and she starts wash herself, she is as hot as I remember."
+        bonnie "I'm almost done, it looks like no creep is comming here today... maybe because I locked the door."
+        me "Did you know?"
+        hide img_bonnie_shower_06 with d1
+        show img_bonnie_shower_07 with d1
+        bonnie "Indeed, but you were willing to protect me, I think you deserve a reward..."
+        "She goes down on her knees and opens my zipper."
+        me "Even better than I remember..."
+        hide img_bonnie_shower_07 with d1
+        show vid_bonnie_blowjob_01 at top with d1
+        "She is amazing, she know how to work my weak spots... her tongue is doing things I could never have imagined."
+        me "Bonnie... that's..."
+        hide vid_bonnie_blowjob_01 with d1
+        show vid_bonnie_blowjob_02 at top with d1
+        "She starts to suck so hard it feels like she is going to take my soul with her."
+        me "I-I'm..."
+        hide vid_bonnie_blowjob_02 with d1
+        bonnie "Wow, that's a lot, how was the reward?"
+        me "It was amazing!"
+        bonnie "Glad you liked it, but now I have to go. Let's put some clothes."
+        "After a few minutes we say our goodbyes and she leaves. I think we will be great friend."
+
+        $ tb_event[3]["college_gym"]["bonnie"] = 1
+        $ v_time += 15
+
+    elif tb_event[3]["college_gym"]["bonnie"] == 0 and v_time < 840 and not f_day1_lisa_bathroom_incident:
+        show npc_portrait_bonnie_01 at top with d3
+        "This place is empty, why did I come here again? Oh wait there is a girl here. Why is she reading a book in the gymnasium? And eating a sandwich?"
+        bonnie "Hey, you!"
+        me "Me?"
+        bonnie "Yes you, come here."
+        me "Okay, what is it?"
+        bonnie "Hey, I'm Bonnie, to make a long story short, I'm need to take a shower and I don't want to throw away my sandwich, do you want it?"
+        me "What? Are you offering me a half eaten sandwich? To a stranger? Why?"
+        bonnie "Well it would be a waste to throw it on the trash, and we are alone here so..."
+        me "No thanks, I don't even like ham."
+        bonnie "It's not ham, here..."
+        "She comes closer to show me whats inside, but loses her balance, I manage to catch her but the sandwich lands on my shirt, my white shirt... there was mustard in it..."
+        bonnie "Shit, I'm so sorry, come on, let's wash it before it stained."
+        hide npc_portrait_bonnie_01 with d1
+
+        menu:
+            "Follow her":
+                pass
+
+        scene loc_college_locker_room
+
+        bonnie "Take your shirt off I will wash it."
+        me "Okay..."
+        "She run to the showers with my shirt and a few moments later I hear water running... and running... She is taking a really long time, let's see what is happening."
+        show img_bonnie_shower_04 with d1
+        bonnie "Oh sorry, I'm almost finished."
+        me "I thought you were going to wash my shirt, why are you taking a shower?"
+        bonnie "I told you I have to leave soon, sooo... two birds, one stone."
+        me "Really, now it's soaked, good thing I have a spare in my backpack."
+        hide img_bonnie_shower_04 with d1
+        show img_bonnie_shower_07 with d1
+        bonnie "I'm really sorry about your shirt, but hey think of this as my most sincere apologies."
+        hide img_bonnie_shower_07 with d1
+        show img_mc_bulge at top with d1
+        "There is a massive bulge on my pants, I mean she is pretty hot, I can't lie."
+        hide img_mc_bulge at top with d1
+        bonnie "You know, I think you deserve a reward for being so nice to a clut like me."
+        show img_bonnie_handjob_01 at top with d1
+        "She knees and open my pants, and slowly massages my cock with her soft hands."
+        hide img_bonnie_handjob_01 with d1
+        show vid_bonnie_handjob_02 at top with d1
+        pause
+        hide vid_bonnie_handjob_02 with d1
+        me "Consider yourself forgiven Bonnie, I'm [me] by the way."
+        bonnie "Well [me], if you want to talk some more I'm here on the gymnasium everyday before 14 o'clock."
+        me "I will come visit when I have the time."
+
+        $ tb_event[3]["college_gym"]["bonnie"] = 1
+        $ v_time += 15
 
     menu:
         "College":

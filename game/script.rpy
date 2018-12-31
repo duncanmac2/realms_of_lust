@@ -40,13 +40,21 @@
     ### IMAGES
     ## MC
     renpy.image("img_mc_body", "images/people/MC/mc_body.jpg")
+    renpy.image("img_mc_bulge", "images/people/MC/mc_bulge.jpg")
     renpy.image("img_mc_dick", "images/people/MC/mc_dick.jpg")
     renpy.image("img_mc_sleep", "images/people/MC/mc_sleep.jpg")
 
     ## NPC
     # Bonnie
-    for i in range(1,5):
+    renpy.image("img_bonnie_ass", "images/people/kennedy_leigh/bonnie_ass.jpg")
+    renpy.image("img_bonnie_handjob_01", "images/people/kennedy_leigh/bonnie_handjob_01.jpg")
+    renpy.image("img_bonnie_undress", "images/people/kennedy_leigh/bonnie_undress.jpg")
+
+    for i in range(1,8):
         renpy.image("img_bonnie_shower_" + str(i).zfill(2), "images/people/kennedy_leigh/bonnie_shower_" + str(i).zfill(2) + ".jpg")
+
+    for i in range(1,2):
+        renpy.image("npc_portrait_bonnie_" + str(i).zfill(2), "images/people/kennedy_leigh/bonnie_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Dakota
     for i in range(1,2):
@@ -245,6 +253,7 @@ image loc_city_street_1st = "images/location/loc_city_street_1st.jpg"
 # College
 image loc_college_class = "images/location/loc_college_class.jpg"
 image loc_college_garden = "images/location/loc_college_garden.jpg"
+image loc_college_gym = "images/location/loc_college_gym.jpg"
 image loc_college_locker_room = "images/location/loc_college_locker_room.jpg"
 image loc_college_nurse = "images/location/loc_college_nurse.jpg"
 image loc_college_office_ellie = "images/location/loc_college_office_ellie.jpg"
@@ -255,6 +264,11 @@ image loc_college_yard = "images/location/loc_college_yard.jpg"
 ## VIDEOS
 # MC
 image vid_mc_erection = Movie(play="images/people/MC/MC_erection.webm")
+
+# Bonnie
+image vid_bonnie_blowjob_01 = Movie(play="images/people/kennedy_leigh/bonnie_blowjob_01.webm", size=(800,426))
+image vid_bonnie_blowjob_02 = Movie(play="images/people/kennedy_leigh/bonnie_blowjob_02.webm", size=(960,540))
+image vid_bonnie_handjob_02 = Movie(play="images/people/kennedy_leigh/bonnie_handjob_02.webm", size=(900,506))
 
 # Ellie
 image vid_ellie_cuni = Movie(play="images/people/julia_ann/ellie_cuni.webm", size=(800,450))
@@ -309,10 +323,12 @@ label start:
 
     $ tb_event[3] = {
         "college_garden": {},
+        "college_gym": {},
         "college_office_ellie": {}
     }
 
     $ tb_event[3]["college_garden"] = { "veronica": 0 }
+    $ tb_event[3]["college_gym"] = { "bonnie": 0 }
     $ tb_event[3]["college_office_ellie"] = { "aphrodisiac": 0 }
 
     # Repeatable

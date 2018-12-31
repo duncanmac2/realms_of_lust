@@ -77,7 +77,7 @@ screen scr_navigation:
                 ypos 62
                 idle "images/interface/loc_college_gym.jpg"
                 hover "images/interface/loc_college_gym_hover.jpg"
-                action [SetVariable("v_localisation", "college_gym")]
+                action [SetVariable("v_localisation", "college_gym"), Jump("lbl_college_gym")]
 
             imagebutton:
                 ypos 124
