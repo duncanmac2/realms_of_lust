@@ -95,6 +95,7 @@
 
     # Megan
     renpy.image("img_megan_boobs_02", "images/people/nikki_benz/megan_boobs_02.jpg")
+    renpy.image("img_megan_handjob", "images/people/nikki_benz/megan_handjob.jpg")
     renpy.image("img_megan_taste", "images/people/nikki_benz/megan_taste.jpg")
 
     for i in range(1,5):
@@ -279,9 +280,19 @@ label splashscreen:
     call screen scr_warning
 
 label start:
+    ## EVENTS
+    # Repeatable
+    $ tb_repeatable = {3: {}, 4: {}}
+
+    $ tb_repeatable[3] = {
+        "college_nurse": {}
+    }
+
+    $ tb_repeatable[3]["college_nurse"] = { "bj": 0, "hj": 0 }
+
+
     # Flags
     $ f_name_prompt = True
-    $ f_bypass = False
     $ f_day1_lisa_bathroom_incident = False
     $ f_day2_nurse = False
     $ f_day2_shower = False
@@ -297,13 +308,11 @@ label start:
     # Start
     hide screen main_menu
     scene black onlayer background
-    jump lbl_bypass
 
     "Do you have play previous version and want to jump directly to new content?"
     menu:
         "Jump to new content":
-            $ f_bypass = True
-            jump lbl_censorship
+            jump lbl_bypass
         "Start from the beginning":
             jump lbl_name_input
 
@@ -339,5 +348,13 @@ label lbl_intro:
 
 label lbl_bypass:
     $ your_name = "John"
+    $ mc_portrait = "new"
+    $ v_day = 3
 
-    jump lbl_intro
+    $ f_day1_lisa_bathroom_incident = True
+    $ f_day2_nurse = True
+    $ f_day2_shower = True
+    $ f_day3_shower = True
+    $ f_day3_spy = False
+
+    jump lbl_college_class

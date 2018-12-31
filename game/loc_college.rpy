@@ -462,7 +462,7 @@ label lbl_college_nurse_day2:
 
 ## NURSE - DAY 3 ##
 label lbl_college_nurse_day3:
-    if f_day2_nurse:
+    if f_day2_nurse and tb_repeatable[3]["college_nurse"]["bj"] == 0:
         "Let's go see Megan again, I want to see how far I can push her today."
         show npc_portrait_megan_04 with d3
         megan "[me]! It's good you are here, I have the results of your exams."
@@ -500,7 +500,7 @@ label lbl_college_nurse_day3:
         me "What are you waiting for then."
         hide img_megan_taste with d1
         show vid_megan_blowjob at top with d1
-        "She does not hesitate, she goes straight for my dick. Wow... she is good, I can feel her tongue dancing around the tip of my cock..."
+        "She does not hesitate, she goes straight for my dick. Wow... she is good, I can feel her tongue dancing around the tip of my cock."
         me "Megan, I'm..."
         hide vid_megan_blowjob with d3
         megan "She was lost in the moment, so she was caught by surprise. Even so she swallows every single drop."
@@ -510,7 +510,64 @@ label lbl_college_nurse_day3:
         megan "Haha, for you maybe, but you have to go now, I have a patient waiting but please come back some other time."
         me "Oh I will."
 
-        $ v_time += 10
+        $ tb_repeatable[3]["college_nurse"]["bj"] = 1
+        $ tb_repeatable[3]["college_nurse"]["hj"] = 1
+
+    elif not f_day2_nurse and tb_repeatable[3]["college_nurse"]["hj"] == 0:
+        "If I remember correctly Megan, the nurse is gathering sperm sample for a research lab, it could be fun to see what she is willing to do to get them."
+        show npc_portrait_megan_04 with d3
+        megan "Hello [me], anything I can help you with?"
+        me "I saw the poster, you are looking for volunteers to gatter semen right."
+        megan "Correct, we pay a small fee for each sample, do you want to donate?"
+        me "Sure, sign me up. I don't suppose you have some magazines have you?"
+        hide npc_portrait_megan_04 with d1
+        show vid_megan_boobs_01 at top with d1
+        "No, but I could always show you some real breasts if you like."
+        hide vid_megan_boobs_01 with d1
+        show img_megan_boobs_02 at top with d1
+        me "Well how about something more?"
+        megan "What do you mean, more?"
+        me "Well, nurse my hands are hurting so maybe you could do the job for me..."
+        "She looks surprised by my suggestion, maybe I went to far."
+        megan "Look I don't go around giving handjobs to my patients, but since your hands are hurting, I will make an exception. Now let me see it."
+        hide img_megan_boobs_02 with d3
+        show img_megan_taste at top with d3
+        megan "Wow, that's pretty big..."
+        "Her hands are warm... and she is great at this, maybe I'm not her first after all."
+        hide img_megan_taste at top with d1
+        show img_megan_handjob with d1
+        megan "That's a lot, when was the last... No matter, thanks for your help [me], that was actually pretty fun. Come back when you can, and if your hands are still hurting then, I guess I wouldn't mind helping you again."
+        hide img_megan_handjob with d1
+        me "I would love that, bye Megan."
+        megan "Bye [me]."
+
+        $ tb_repeatable[3]["college_nurse"]["hj"] = 1
+
+    else:
+        menu:
+            "Blowjob" if tb_repeatable[3]["college_nurse"]["bj"] == 1:
+                show npc_portrait_megan_04 with d3
+                me "Can I get a..."
+                hide npc_portrait_megan_04 with d1
+                show vid_megan_blowjob at top with d1
+                "She does not hesitate, she goes straight for my dick. She is so good, I can feel her tongue dancing around the tip of my cock."
+                me "Megan, I'm..."
+                hide vid_megan_blowjob with d3
+                megan "Mmmmm... thanks [me], come back when you can."
+
+            "Handjob" if tb_repeatable[3]["college_nurse"]["hj"] == 1:
+                show npc_portrait_megan_04 with d3
+                me "Can I get a..."
+                hide npc_portrait_megan_04 with d1
+                show img_megan_taste at top with d1
+                "Her hands are warm... and she is great at this, maybe I'm not her first after all."
+                hide img_megan_taste at top with d1
+                show img_megan_handjob with d1
+                megan "That's a lot as always, thanks for your help [me], come back when you can."
+                hide img_megan_handjob with d1
+                me "I will!"
+
+    $ v_time += 10
 
     menu:
         "College":
