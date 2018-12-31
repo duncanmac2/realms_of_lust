@@ -632,7 +632,7 @@ label lbl_college_nurse_day3:
                 hide img_megan_handjob with d1
                 me "I will!"
 
-    elif v_time >= 1260:
+    elif v_time >= 1020:
         "Megan is with someone, the door isn't locked, let's take a peek."
         show vid_megan_lesbian at top with d3
         "Wow... nice!"
