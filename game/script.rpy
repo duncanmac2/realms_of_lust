@@ -94,7 +94,10 @@
         renpy.image("npc_portrait_maria_" + str(i).zfill(2), "images/people/ariana_marie/maria_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Megan
-    for i in range(1,4):
+    renpy.image("img_megan_boobs_02", "images/people/nikki_benz/megan_boobs_02.jpg")
+    renpy.image("img_megan_taste", "images/people/nikki_benz/megan_taste.jpg")
+
+    for i in range(1,5):
         renpy.image("npc_portrait_megan_" + str(i).zfill(2), "images/people/nikki_benz/megan_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Mia
@@ -249,6 +252,10 @@ image vid_lisa_room_masturbate = Movie(play="images/people/brandi_love/lisa_mast
 image vid_marcy_boobs_02 = Movie(play="images/people/brittney_white/marcy_boobs_02.webm", size=(630,716))
 image vid_marcy_boobs_bounce = Movie(play="images/people/brittney_white/marcy_boobs_bounce.webm", size=(552,780))
 image vid_marcy_masturbate = Movie(play="images/people/brittney_white/marcy_masturbate.webm", size=(704,512))
+
+# Megan
+image vid_megan_blowjob = Movie(play="images/people/nikki_benz/megan_blowjob.webm", size=(750,844))
+image vid_megan_boobs_01 = Movie(play="images/people/nikki_benz/megan_boobs_01.webm", size=(800,450))
 
 # Mia
 image vid_mia_masturbate = Movie(play="images/people/mia_malkova/mia_masturbate.webm", size=(1000,496))

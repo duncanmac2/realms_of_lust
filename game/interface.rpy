@@ -72,7 +72,7 @@ screen scr_navigation:
             imagebutton:
                 idle "images/interface/loc_college_nurse.jpg"
                 hover "images/interface/loc_college_nurse_hover.jpg"
-                action [SetVariable("v_localisation", "college_nurse")]
+                action [SetVariable("v_localisation", "college_nurse"), Jump("lbl_college_nurse")]
 
             imagebutton:
                 ypos 62

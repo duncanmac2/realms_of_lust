@@ -1,5 +1,6 @@
 #### LOCATIONS ####
 label lbl_college_class:
+    call main_show
     scene loc_college_class
 
     if v_day == 1:
@@ -10,6 +11,7 @@ label lbl_college_class:
         jump lbl_college_class_day3
 
 label lbl_college_garden:
+    call main_show
     scene loc_college_garden
 
     if v_day == 1:
@@ -18,6 +20,7 @@ label lbl_college_garden:
         jump lbl_college_garden_day2
 
 label lbl_college_locker_room:
+    call main_show
     scene loc_college_locker_room
 
     if v_day == 1:
@@ -26,19 +29,25 @@ label lbl_college_locker_room:
         jump lbl_college_locker_room_day2
 
 label lbl_college_nurse:
+    call main_show
     scene loc_college_nurse
 
     if v_day == 2:
         jump lbl_college_nurse_day2
+    elif v_day == 3:
+        jump lbl_college_nurse_day3
 
 label lbl_college_shower_men:
+    call main_show
     scene loc_college_shower_men
 
     if v_day == 1:
         jump lbl_college_shower_men_day1
 
 label lbl_college_yard:
+    call main_show
     scene loc_college_yard
+
     $ v_localisation = "college_yard"
 
     if v_day == 1:
@@ -46,7 +55,6 @@ label lbl_college_yard:
     elif v_day == 2:
         jump lbl_college_yard_day2
     else:
-        call main_show
         call screen scr_navigation
 
 #### EVENTS ####
@@ -451,3 +459,59 @@ label lbl_college_nurse_day2:
     menu:
         "Aunt Lily":
             jump lbl_city_home_lily
+
+## NURSE - DAY 3 ##
+label lbl_college_nurse_day3:
+    if f_day2_nurse:
+        "Let's go see Megan again, I want to see how far I can push her today."
+        show npc_portrait_megan_04 with d3
+        megan "[me]! It's good you are here, I have the results of your exams."
+        me "What exams?"
+        megan "From the sperm sample."
+        me "Oh, right, so what are the results?"
+        megan "You have an exceptional sperm count, great mobility, taste... great numbers all across the board. So good in fact that the lab scientists think that you are a great candidate for being a donor in their research to cure for male impotence."
+        me "That's... wow... ({i}did she just say taste?{/i})"
+        megan "I know right, and here I was thinking the results would be below average because of all the stress. Anyway they asked me to retrieve some more samples, I'm allowed to give you a monetary compensation in exchange for your semen. So do we have a deal?"
+        me "Sure, sign me up, do you want some samples right now?"
+        megan "That would be preferred, yes."
+        me "I don't suppose you bought some magazines have you?"
+        hide npc_portrait_megan_04 with d1
+        show vid_megan_boobs_01 at top with d1
+        megan "No, but I could always show you some real breasts if you like."
+        hide vid_megan_boobs_01 with d1
+        show img_megan_boobs_02 at top with d1
+        me "Well how about something more?"
+        megan "What do you mean, more?"
+        me "Well, nurse my hands are hurting so maybe you could do the job for me..."
+        "She looks surprised by my suggestion, maybe I went too far."
+        megan "Look I don't go around giving handjobs to my patients, but since your hands are hurting, I will make an exception. Now let me see it."
+        hide img_megan_boobs_02 with d3
+        show img_megan_taste at top with d3
+        megan "Wow, it's bigger than I remember."
+        "Her hands are warm... and she is great at this, maybe I'm not her first after all."
+        megan "You heard what I said about taste?"
+        me "Well I did, do you have some tasting machine or something like that?"
+        megan "No, after you left, I had some stuck in my clothes, and when I smelled it, it was like nothing I have ever smelled before so I tasted it."
+        me "You, tasted it?"
+        megan "Yes, and ever since I can't stop thinking about it..."
+        "She is fixated on my penis, that's a great chance."
+        me "Do you want to taste some more?"
+        megan "Yes."
+        me "What are you waiting for then."
+        hide img_megan_taste with d1
+        show vid_megan_blowjob at top with d1
+        "She does not hesitate, she goes straight for my dick. Wow... she is good, I can feel her tongue dancing around the tip of my cock..."
+        me "Megan, I'm..."
+        hide vid_megan_blowjob with d3
+        megan "She was lost in the moment, so she was caught by surprise. Even so she swallows every single drop."
+        me "So how was it?"
+        megan "Amazing, be careful [me], I might get addicted to it, if you keep feeding me."
+        me "That doesn't sound so bad."
+        megan "Haha, for you maybe, but you have to go now, I have a patient waiting but please come back some other time."
+        me "Oh I will."
+
+        $ v_time += 10
+
+    menu:
+        "College":
+            jump lbl_college_yard
