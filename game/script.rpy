@@ -53,10 +53,15 @@
         renpy.image("npc_portrait_dakota_" + str(i).zfill(2), "images/people/dakota/dakota_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Ellie
+    renpy.image("img_ellie_spread", "images/people/julia_ann/ellie_spread.jpg")
+
     for i in range(1,2):
         renpy.image("img_ellie_dakota_" + str(i).zfill(2), "images/people/julia_ann/ellie_dakota_" + str(i).zfill(2) + ".jpg")
 
     for i in range(1,5):
+        renpy.image("img_ellie_undress_" + str(i).zfill(2), "images/people/julia_ann/ellie_undress_" + str(i).zfill(2) + ".jpg")
+
+    for i in range(1,4):
         renpy.image("npc_portrait_ellie_" + str(i).zfill(2), "images/people/julia_ann/ellie_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Hitomi
@@ -109,6 +114,7 @@
         renpy.image("npc_portrait_megan_" + str(i).zfill(2), "images/people/nikki_benz/megan_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Mia
+    renpy.image("img_mia_bikini", "images/people/mia_malkova/mia_bikini.jpg")
     renpy.image("img_mia_handjob", "images/people/mia_malkova/mia_handjob.jpg")
     renpy.image("img_mia_kiss_01", "images/people/mia_malkova/mia_kiss_01.jpg")
 
@@ -133,6 +139,8 @@
         renpy.image("npc_portrait_sarah_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Veronica
+    renpy.image("img_veronica_bikini", "images/people/angela_white/veronica_bikini.jpg")
+
     for i in range(1,3):
         renpy.image("npc_portrait_veronica_" + str(i).zfill(2), "images/people/angela_white/veronica_portrait_" + str(i).zfill(2) + ".jpg")
 
@@ -248,6 +256,9 @@ image loc_college_yard = "images/location/loc_college_yard.jpg"
 # MC
 image vid_mc_erection = Movie(play="images/people/MC/MC_erection.webm")
 
+# Ellie
+image vid_ellie_cuni = Movie(play="images/people/julia_ann/ellie_cuni.webm", size=(800,450))
+
 # Lily
 image vid_lily_kiss_01 = Movie(play="images/people/lilith/lily_kiss_01.webm", size=(960,544))
 image vid_lily_kiss_02 = Movie(play="images/people/lilith/lily_kiss_02.webm", size=(1000,460))
@@ -268,6 +279,7 @@ image vid_marcy_masturbate = Movie(play="images/people/brittney_white/marcy_mast
 # Megan
 image vid_megan_blowjob = Movie(play="images/people/nikki_benz/megan_blowjob.webm", size=(750,844))
 image vid_megan_boobs_01 = Movie(play="images/people/nikki_benz/megan_boobs_01.webm", size=(800,450))
+image vid_megan_lesbian = Movie(play="images/people/nikki_benz/megan_lesbian.webm", size=(1000,450))
 
 # Mia
 image vid_mia_masturbate = Movie(play="images/people/mia_malkova/mia_masturbate.webm", size=(1000,496))
@@ -296,10 +308,12 @@ label start:
     $ tb_event = {3: {}, 4: {}}
 
     $ tb_event[3] = {
+        "college_garden": {},
         "college_office_ellie": {}
     }
 
-    $ tb_event[3]["college_office_ellie"] = { "dakota": 0 }
+    $ tb_event[3]["college_garden"] = { "veronica": 0 }
+    $ tb_event[3]["college_office_ellie"] = { "aphrodisiac": 0 }
 
     # Repeatable
     $ tb_repeatable = {3: {}, 4: {}}

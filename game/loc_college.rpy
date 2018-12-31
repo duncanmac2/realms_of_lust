@@ -18,6 +18,8 @@ label lbl_college_garden:
         jump lbl_college_garden_day1
     elif v_day == 2:
         jump lbl_college_garden_day2
+    elif v_day == 3:
+        jump lbl_college_garden_day3
 
 label lbl_college_locker_room:
     call main_show
@@ -332,6 +334,55 @@ label lbl_college_garden_day2:
         "Follow Marcy":
             jump lbl_college_locker_room
 
+## GARDEN - DAY 3 ##
+label lbl_college_garden_day3:
+    if tb_event[3]["college_garden"]["veronica"] == 0 and v_time < 1020:
+        show img_mia_bikini with d3
+        me "Hey, guys how were your class? And why are you in a bikini?"
+        mia "Hey. We are sunbathing."
+        hide img_mia_bikini with d1
+        show img_veronica_bikini with d1
+        "That's a strange thing to do in the garden of our college, but now that they mentioned it they are not the only ones, I guess since the beach is a nudist heaven, this is the place for some tan marks."
+        veronica "Did you know some student was caught fucking in a class earlier today."
+        me "What are you serious, shit what happend?"
+        veronica "Well the cleaning lady entered a class room, this morning and it looks like they were doing it on the teacher's desk."
+        mia "Whoa, so what happened to them?"
+        veronica "Ms. Figgs scolded them and took them to the dean, they got a suspension for a day."
+        marcy "Just out of curiosity, which classroom was it?"
+        me "Yeah, do you know who it was?"
+        veronica "I do... it's a guy from the football team, and me."
+        me "I'm sorry did you just say \"me\"?"
+        veronica "I did..."
+        mia "V, what are you thinking, what if they expelled you?"
+        veronica "Come on Mia, I'm not the first to get caught during some sexy time in here, if they didn't fire the coach of the football team after they caught him with a cheerleader, they will not expel me. Besides it's fun to run the risk of being caught."
+        "Veronica was never this open with her private activities before, it's not like she hides it, but she never boasted in public before. It looks like the more naughty you were before Nina started working her magic, the faster you get corrupted."
+        veronica "I took some pics, do you guys want to see it?"
+        marcy "YES!!!"
+        veronica "Calm down Marcy, it's nothing explicit just pics of the guy in question."
+        marcy "AWWW..."
+        me "No thanks. No offense, but I don't want to know who you sleep with."
+        veronica "Are you jealous [me]? Aww... don't worry, when you and Mia get finally together, do what your heart command, I will be happy to be your second."
+        hide img_veronica_bikini with d1
+        show npc_portrait_mia_05 at top with d1
+        mia "Veronica!!!"
+        veronica "What? You know it's true, you are one of the most beautiful girls in the college Mia, the only reason you are still a virgin is because deep inside you want your big bro to be your first..."
+        mia "THAT'S ENOUGH."
+        "Wow, I never saw Mia this angry before, Veronica is even more shocked than me, I think she must be a few days ahead of the rest of us in the corruption department. Mia is not even considering the possibility of us doing it yet. Shit I think Veronica is going to cry."
+        veronica "Mia... sorry, I..."
+        mia "Guys, can you give us some privacy."
+        marcy "Come on [me], time for us to leave."
+        hide npc_portrait_mia_05 with d3
+
+        $ tb_event[3]["college_garden"]["veronica"] = 1
+        $ v_time += 10
+
+    else:
+        "There is no one I know here now."
+
+    menu:
+        "College":
+            jump lbl_college_yard
+
 ### LOCKER ROOM ###
 ## LOCKER ROOM - DAY 1 ##
 label lbl_college_locker_room_day1:
@@ -476,7 +527,7 @@ label lbl_college_nurse_day2:
 
 ## NURSE - DAY 3 ##
 label lbl_college_nurse_day3:
-    if f_day2_nurse and tb_repeatable[3]["college_nurse"]["bj"] == 0:
+    if f_day2_nurse and tb_repeatable[3]["college_nurse"]["bj"] == 0 and v_time < 1020:
         "Let's go see Megan again, I want to see how far I can push her today."
         show npc_portrait_megan_04 with d3
         megan "[me]! It's good you are here, I have the results of your exams."
@@ -527,7 +578,7 @@ label lbl_college_nurse_day3:
         $ tb_repeatable[3]["college_nurse"]["bj"] = 1
         $ tb_repeatable[3]["college_nurse"]["hj"] = 1
 
-    elif not f_day2_nurse and tb_repeatable[3]["college_nurse"]["hj"] == 0:
+    elif not f_day2_nurse and tb_repeatable[3]["college_nurse"]["hj"] == 0 and v_time < 1020:
         "If I remember correctly Megan, the nurse is gathering sperm sample for a research lab, it could be fun to see what she is willing to do to get them."
         show npc_portrait_megan_04 with d3
         megan "Hello [me], anything I can help you with?"
@@ -557,7 +608,7 @@ label lbl_college_nurse_day3:
 
         $ tb_repeatable[3]["college_nurse"]["hj"] = 1
 
-    else:
+    elif tb_repeatable[3]["college_nurse"]["hj"] == 1 and v_time < 1020:
         menu:
             "Blowjob" if tb_repeatable[3]["college_nurse"]["bj"] == 1:
                 show npc_portrait_megan_04 with d3
@@ -581,6 +632,12 @@ label lbl_college_nurse_day3:
                 hide img_megan_handjob with d1
                 me "I will!"
 
+    elif v_time >= 1260:
+        "Megan is with someone, the door isn't locked, let's take a peek."
+        show vid_megan_lesbian at top with d3
+        "Wow... nice!"
+        hide vid_megan_lesbian with d3
+
     $ v_time += 10
 
     menu:
@@ -590,7 +647,7 @@ label lbl_college_nurse_day3:
 ### ELLIE OFFICE ###
 ## ELLIE OFFICE - DAY 3 ##
 label lbl_college_office_ellie_day3:
-    if tb_event[3]["college_office_ellie"]["dakota"] == 0:
+    if tb_event[3]["college_office_ellie"]["aphrodisiac"] == 0 and v_time < 1020:
         "I want to talk to Miss Smith, her office is right here. I knock on the door."
         show npc_portrait_ellie_02 with d3
         me "Hello Miss Smith."
@@ -599,9 +656,9 @@ label lbl_college_office_ellie_day3:
         show npc_portrait_dakota_01 with d1
         dakota "Hi."
         hide npc_portrait_dakota_01 with d1
-        me "Hey. What did you want to talk about Miss Smith."
+        me "Hey. What did you want to talk about Miss Smith?"
         ellie "Call me Ellie, [me] you are making me feel old. What I wanted to talk is about is about a project, I'm studying pheromones, and I want you as my assistant."
-        me "Whoa that's interesting, what are studying exactly."
+        me "Whoa that's interesting, what are studying exactly?"
         "She pull a vial from a drawer."
         ellie "This chemical has the ability to cause intense lust in females, there is a company that wants to sell it as a aphrodisiac and they asked me to refine the formula. Here take it, it's safe for you to smell it, it only works on women."
         show npc_portrait_ellie_03 at top with d1
@@ -609,10 +666,10 @@ label lbl_college_office_ellie_day3:
         ellie "OH SHIT! Dakota are you okay?"
         dakota "I-I think so... but I feel a little... tigly."
         hide npc_portrait_ellie_03 with d1
-        show npc_portrait_ellie_04 with d1
+        show img_ellie_undress_02 with d1
         "Maybe unconsciously both of them start to rub their panties..."
         ellie "[me]...can you l-leave us... please."
-        hide npc_portrait_ellie_04 with d1
+        hide img_ellie_undress_02 with d1
         show img_ellie_dakota_01 with d1
         "You don't have time to answer, before you can say anything Dakota lunges towards her mother and both of them start to tear each other clothes apart."
         "You think you are in heaven... but Ellie manage to summon the last of her will to say..."
@@ -620,11 +677,63 @@ label lbl_college_office_ellie_day3:
         "It's best to do as she says."
         hide img_ellie_dakota_01 with d1
 
-        $ tb_event[3]["college_office_ellie"]["dakota"] = 1
+        $ tb_event[3]["college_office_ellie"]["aphrodisiac"] = 1
         $ v_time += 10
 
-    else:
-        "I can't enter right now."
+    elif tb_event[3]["college_office_ellie"]["aphrodisiac"] == 0 and v_time >= 1020:
+        "I want to talk to Miss Smith, her office is right here. I knock on the door."
+        show npc_portrait_ellie_02 with d3
+        "Hello Miss Smith."
+        ellie "[me], come in."
+        me "What did you want to talk about Miss Smith?"
+        ellie "Call me Ellie, [me] you are making me feel old. What I wanted to talk is about is about a project, I'm studying pheromones, and I want you as my assistant."
+        me "Whoa that's interesting, what are studying exactly?"
+        "She pull a vial from a drawer."
+        ellie "This chemical has the ability to cause intense lust in females, there is a company that wants to sell it as a aphrodisiac and they asked me to refine the formula. Here take it, it's safe for you to smell it, it only works on women."
+        hide npc_portrait_ellie_02 with d1
+        show npc_portrait_ellie_03 at top with d1
+        "I smell nothing, and give it back to Ellie, but in that exact moment something goes wrong and the vial falls and breaks splashing the liquid all over her."
+        ellie "OH SHIT! [me] you need to..."
+        hide npc_portrait_ellie_03 with d1
+        show img_ellie_undress_01 with d1
+        "She stops before finishing her sentence and starts to rub herself and undress."
+        hide img_ellie_undress_01 with d1
+        show img_ellie_undress_02 with d1
+        ellie "[me]... you know as my assistant you have a obligation to help me in whatever I need."
+        me "Is that so?"
+        ellie "Yes and right now..."
+        hide img_ellie_undress_02 with d1
+        show img_ellie_undress_03 with d1
+        ellie "...I need..."
+        hide img_ellie_undress_03 with d1
+        show img_ellie_undress_04 with d1
+        ellie "...YOU..."
+        hide img_ellie_undress_04 with d1
+        show img_ellie_spread with d1
+        ellie "To lick me..."
+        me "Well you see Ellie I'm never accepted the position, so I don't have to do shit..."
+        ellie "But..."
+        me "However if you ask nicely I will be happy to help my lovely teacher."
+        "She is a bit displeased to have lost control, but she is way too horny to hold back now."
+        ellie "P-Please..."
+        me "Please what?"
+        ellie "Please lick me [me]..."
+        "I decide to \"help her before she explodes\"."
+        hide img_ellie_spread with d1
+        show vid_ellie_cuni at top with d1
+        "All she does is moan and gasp, I'm new at this, but the god's blood seems to be guiding me."
+        hide vid_ellie_cuni with d1
+        "Finally..."
+        "Ellie is on a catatonic state, barely moving, I will let her be for now."
+
+        $ tb_event[3]["college_office_ellie"]["aphrodisiac"] = 1
+        $ v_time += 10
+
+    elif tb_event[3]["college_office_ellie"]["aphrodisiac"] == 1:
+        if v_time >= 1020:
+            "Let Ellie rest."
+        else:
+            "I can't enter right now."
 
     menu:
         "College":
