@@ -70,7 +70,10 @@ label lbl_home_room_mc_day1:
         "She always kept in contact but I sometimes forget to send her news. She is also aunt Lily to Mia since she is my step sister, they are very close. But enough exposition let's... wait I got a new message."
         show npc_portrait_lily_01 with d1
         "PS: we haven't seen eachother in a long time here is a picture to see how I've changed. Not so chubby anymore."
-        "Whoa, she really has changed she used to be... well chubby is very generous. She is actualy pretty hot now... what no she is my aunt can't think of her this way."
+        hide npc_portrait_lily_01 with d1
+        show vid_pc_game at top with d1
+        "Whoa, she really has changed she used to be... well chubby is very generous. She is actualy pretty hot now... what no she is my aunt can't think of her this way. Let's kill some time before dinner."
+        hide vid_pc_game with d1
         "Time to eat some dinner."
 
         menu:
@@ -513,7 +516,7 @@ label lbl_home_kitchen_day1:
         show npc_portrait_mia_03 at top with d3
         me "Sorry doesn't cut it Mia, Lisa will eat me alive when we are back from college, you know how she is she doens't even own a bikini because it shows too much skin... And I saw her naked !!!"
         mia "I didn't know, I thought she was down here and just forgot to wake us. Please forgive me [me], I-I will... talk to Hikari, I know you have a crush on her so I will set you up on a date, how about that?"
-        me "That would be great, except last month I tried to ask her out. All she said is she does not go out with losers and perverts. A pervert. ME?"
+        me "That would be great, except last month I tried to ask her out. All she said is she does not go out with losers and perverts. A pervert, ME?"
         mia "Well, you do hang around Markus a lot."
         me "I know. Let's do this then, you will owe me a favor, whatever I ask, whenever I ask. Deal?"
         hide npc_portrait_mia_03
@@ -852,7 +855,11 @@ label lbl_home_room_lisa_day2:
 ## LISA ROOM - DAY 3 ##
 label lbl_home_room_lisa_day3:
     "That was a great way to start my day, but now what am I supposed to do? I have a boner and it's killing me, maybe Lisa should take responsibility for it..."
-    "Her door is half open lets see what she is doing... she is not here? Oh wait she is in her bathroom I can hear the water running. Let's take a peek, after what happened in my room, I'm sure she would not mind."
+    "Her door is half open lets see what she is doing... she is not here? Oh wait she is in her bathroom I can hear the water running."
+    if f_day1_lisa_bathroom_incident:
+        "If only I had heard that monday I would have avoided a lot of trouble. But I don't think she would mind if I take a peek now."
+    else:
+        "Let's take a peek, after what happened in my room, I'm sure she would not mind."
     scene loc_home_bathroom2
     show img_lisa_shower_05 with d1
     "Oh, I was not expecting this, maybe she was as excited as me from what happened earlier, maybe she needs some help. But should I risk it? That's a bit far from what we have done so far."

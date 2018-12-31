@@ -260,6 +260,7 @@ image vid_college_shower_02 = Movie(play="images/events/college_shower_02.webm",
 image vid_college_spanking = Movie(play="images/events/college_spanking.webm", size=(534,800))
 
 # Home
+image vid_pc_game = Movie(play="images/events/pc_game.webm", size=(996,818))
 image vid_pc_porn_01 = Movie(play="images/events/pc_porn_01.webm", size=(1000,522))
 image vid_pc_porn_02 = Movie(play="images/events/pc_porn_02.webm", size=(1000,514))
 image vid_pc_porn_03 = Movie(play="images/events/pc_porn_03.webm", size=(570,848))

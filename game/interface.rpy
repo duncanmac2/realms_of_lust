@@ -31,29 +31,69 @@ screen scr_warning:
 
 ## SCREENS LOCATIONS
 screen scr_navigation:
-    text v_localisation color clr_dark_red size 100 xalign 0.5 yalign 0.1
+    default tt = Tooltip("")
 
     frame:
-        xpadding 28
-        ypadding 10
+        xpadding 20
+        ypadding 20
+        xalign 0.5
+        ypos 10
+        text v_localisation.replace("_", " ").title() size 80
+
+    frame:
         xpos 10
         ypos 10
         xmaximum 120
         ymaximum 95
 
-        python:
-            ui.text("{b}" + v_time_readable + "{/b}", size = 20)
+        text "{b}" + v_time_readable + "{/b}" size 20 xalign 0.5
 
         imagebutton:
-            xpos -13
+            xpos 8
             ypos 32
             idle "images/interface/icon_map.png"
             #action [Hide("scr_phone"), Show("scr_phone_gallery"), SetVariable("f_photo_new", False)]
 
         imagebutton:
-            xpos 37
+            xpos 60
             ypos 32
             idle "images/interface/icon_phone.png"
             #action [Hide("scr_phone"), Show("scr_phone_gallery"), SetVariable("f_photo_new", False)]
 
-        #vbox:
+    frame:
+        xpadding 10
+        ypadding 10
+        xpos 1757
+        ypos 10
+        xmaximum 153
+        ymaximum 323
+
+        if v_localisation == "college_yard":
+            imagebutton:
+                idle "images/interface/loc_college_nurse.jpg"
+                hover "images/interface/loc_college_nurse_hover.jpg"
+                action [SetVariable("v_localisation", "college_nurse")]
+
+            imagebutton:
+                ypos 62
+                idle "images/interface/loc_college_gym.jpg"
+                hover "images/interface/loc_college_gym_hover.jpg"
+                action [SetVariable("v_localisation", "college_gym")]
+
+            imagebutton:
+                ypos 124
+                idle "images/interface/loc_college_teacher_office.jpg"
+                hover "images/interface/loc_college_teacher_office_hover.jpg"
+                action [SetVariable("v_localisation", "college_teacher_office")]
+
+            imagebutton:
+                ypos 186
+                idle "images/interface/loc_college_garden.jpg"
+                hover "images/interface/loc_college_garden_hover.jpg"
+                action [SetVariable("v_localisation", "college_garden")]
+
+            imagebutton:
+                ypos 248
+                idle "images/interface/loc_college_locker_room.jpg"
+                hover "images/interface/loc_college_locker_room_hover.jpg"
+                action [SetVariable("v_localisation", "college_garden")]

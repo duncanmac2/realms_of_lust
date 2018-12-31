@@ -39,7 +39,7 @@ label lbl_college_shower_men:
 
 label lbl_college_yard:
     scene loc_college_yard
-    $ v_localisation = "College"
+    $ v_localisation = "college_yard"
 
     if v_day == 1:
         jump lbl_college_yard_day1
@@ -115,7 +115,7 @@ label lbl_college_class_day1:
     "The class goes at the usual pace, a very boring and slow, but no one is even thinking about sleeping, that would be a very bad idea. Mr Smith is not only ponctual but also very strict."
     "Once he caught a poor guy sleeping, he made him try to solve a extremely complex equation, and when he couldn't he failed him. We never saw him again."
     "After what feels like an eternity the class end, both of us start making our way to the garden to eat lunch with Mia and, that's when the stereotypical bully enter the scene."
-    hide npc_portrait_mr_smith
+    hide npc_portrait_mr_smith_01
     show npc_portrait_jason_01 at top with d3
     "This is Jason, he is a douche."
     jason "Hey loser, where is that hottie you sister she hasn't been answering my messages."
