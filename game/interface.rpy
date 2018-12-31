@@ -24,6 +24,7 @@ screen scr_warning:
         idle ("images/interface/b_continue.png")
         hover ("images/interface/b_continue_hover.png")
         action Jump("game_start")
+
     imagebutton xpos 0.5 ypos 0.8:
         idle ("images/interface/b_exit.png")
         hover ("images/interface/b_exit_hover.png")
@@ -31,14 +32,12 @@ screen scr_warning:
 
 ## SCREENS LOCATIONS
 screen scr_navigation:
-    default tt = Tooltip("")
-
     frame:
         xpadding 20
         ypadding 20
         xalign 0.5
         ypos 10
-        text v_localisation.replace("_", " ").title() size 80
+        text v_localisation.replace("_", " ").title() size 50
 
     frame:
         xpos 10
@@ -84,7 +83,7 @@ screen scr_navigation:
                 ypos 124
                 idle "images/interface/loc_college_teacher_office.jpg"
                 hover "images/interface/loc_college_teacher_office_hover.jpg"
-                action [SetVariable("v_localisation", "college_teacher_office")]
+                action [SetVariable("v_localisation", "college_teacher_office"), Jump("lbl_college_teacher_office")]
 
             imagebutton:
                 ypos 186

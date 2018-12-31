@@ -48,8 +48,15 @@
     for i in range(1,5):
         renpy.image("img_bonnie_shower_" + str(i).zfill(2), "images/people/kennedy_leigh/bonnie_shower_" + str(i).zfill(2) + ".jpg")
 
+    # Dakota
+    for i in range(1,2):
+        renpy.image("npc_portrait_dakota_" + str(i).zfill(2), "images/people/dakota/dakota_portrait_" + str(i).zfill(2) + ".jpg")
+
     # Ellie
     for i in range(1,2):
+        renpy.image("img_ellie_dakota_" + str(i).zfill(2), "images/people/julia_ann/ellie_dakota_" + str(i).zfill(2) + ".jpg")
+
+    for i in range(1,5):
         renpy.image("npc_portrait_ellie_" + str(i).zfill(2), "images/people/julia_ann/ellie_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Hitomi
@@ -153,6 +160,7 @@ define me = DynamicCharacter("your_name", image="portrait_mc", color = clr_dark_
 
 # NPC
 define bonnie = Character("Bonnie", image = "portrait_bonnie", color = clr_sand)
+define dakota = Character("Dakota", image = "portrait_dakota", color = clr_gold)
 define ellie = Character("Ellie", image = "portrait_ellie", color = clr_gold)
 define hitomi = Character("Hitomi", image = "portrait_hitomi", color = clr_ginger)
 define karen = Character("Karen", image = "portrait_karen", color = clr_gray)
@@ -166,6 +174,7 @@ define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut
 define veronica = Character("Veronica", image = "portrait_veronica", color = clr_gray)
 
 image side portrait_bonnie = "images/portrait/portrait_bonnie.jpg"
+image side portrait_dakota = "images/portrait/portrait_dakota.jpg"
 image side portrait_ellie = "images/portrait/portrait_ellie.jpg"
 image side portrait_hitomi = "images/portrait/portrait_hitomi.jpg"
 image side portrait_karen = "images/portrait/portrait_karen.jpg"
@@ -230,7 +239,9 @@ image loc_college_class = "images/location/loc_college_class.jpg"
 image loc_college_garden = "images/location/loc_college_garden.jpg"
 image loc_college_locker_room = "images/location/loc_college_locker_room.jpg"
 image loc_college_nurse = "images/location/loc_college_nurse.jpg"
+image loc_college_office_ellie = "images/location/loc_college_office_ellie.jpg"
 image loc_college_shower_men = "images/location/loc_college_shower_men.jpg"
+image loc_college_teacher_office = "images/location/loc_college_teacher_office.jpg"
 image loc_college_yard = "images/location/loc_college_yard.jpg"
 
 ## VIDEOS
@@ -281,6 +292,15 @@ label splashscreen:
 
 label start:
     ## EVENTS
+    # Normal
+    $ tb_event = {3: {}, 4: {}}
+
+    $ tb_event[3] = {
+        "college_office_ellie": {}
+    }
+
+    $ tb_event[3]["college_office_ellie"] = { "dakota": 0 }
+
     # Repeatable
     $ tb_repeatable = {3: {}, 4: {}}
 

@@ -37,12 +37,26 @@ label lbl_college_nurse:
     elif v_day == 3:
         jump lbl_college_nurse_day3
 
+label lbl_college_office_ellie:
+    call main_show
+    scene loc_college_office_ellie
+
+    if v_day == 3:
+        jump lbl_college_office_ellie_day3
+
 label lbl_college_shower_men:
     call main_show
     scene loc_college_shower_men
 
     if v_day == 1:
         jump lbl_college_shower_men_day1
+
+label lbl_college_teacher_office:
+    call main_show
+    scene loc_college_teacher_office
+
+    if v_day == 3:
+        jump lbl_college_office_ellie
 
 label lbl_college_yard:
     call main_show
@@ -568,6 +582,49 @@ label lbl_college_nurse_day3:
                 me "I will!"
 
     $ v_time += 10
+
+    menu:
+        "College":
+            jump lbl_college_yard
+
+### ELLIE OFFICE ###
+## ELLIE OFFICE - DAY 3 ##
+label lbl_college_office_ellie_day3:
+    if tb_event[3]["college_office_ellie"]["dakota"] == 0:
+        "I want to talk to Miss Smith, her office is right here. I knock on the door."
+        show npc_portrait_ellie_02 with d3
+        me "Hello Miss Smith."
+        ellie "[me], come in, this is my daughter Dakota."
+        hide npc_portrait_ellie_02 with d1
+        show npc_portrait_dakota_01 with d1
+        dakota "Hi."
+        hide npc_portrait_dakota_01 with d1
+        me "Hey. What did you want to talk about Miss Smith."
+        ellie "Call me Ellie, [me] you are making me feel old. What I wanted to talk is about is about a project, I'm studying pheromones, and I want you as my assistant."
+        me "Whoa that's interesting, what are studying exactly."
+        "She pull a vial from a drawer."
+        ellie "This chemical has the ability to cause intense lust in females, there is a company that wants to sell it as a aphrodisiac and they asked me to refine the formula. Here take it, it's safe for you to smell it, it only works on women."
+        show npc_portrait_ellie_03 at top with d1
+        "I smell nothing, and give it back to Ellie, but in that exact moment something goes wrong and the vial falls and breaks splashing the liquid all over mother and daughter."
+        ellie "OH SHIT! Dakota are you okay?"
+        dakota "I-I think so... but I feel a little... tigly."
+        hide npc_portrait_ellie_03 with d1
+        show npc_portrait_ellie_04 with d1
+        "Maybe unconsciously both of them start to rub their panties..."
+        ellie "[me]...can you l-leave us... please."
+        hide npc_portrait_ellie_04 with d1
+        show img_ellie_dakota_01 with d1
+        "You don't have time to answer, before you can say anything Dakota lunges towards her mother and both of them start to tear each other clothes apart."
+        "You think you are in heaven... but Ellie manage to summon the last of her will to say..."
+        ellie "LEAVE!"
+        "It's best to do as she says."
+        hide img_ellie_dakota_01 with d1
+
+        $ tb_event[3]["college_office_ellie"]["dakota"] = 1
+        $ v_time += 10
+
+    else:
+        "I can't enter right now."
 
     menu:
         "College":
