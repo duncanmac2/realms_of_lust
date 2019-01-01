@@ -95,4 +95,4 @@ screen scr_navigation:
                 ypos 248
                 idle "images/interface/loc_college_locker_room.jpg"
                 hover "images/interface/loc_college_locker_room_hover.jpg"
-                action [SetVariable("v_localisation", "college_garden")]
+                action [SetVariable("v_localisation", "college_locker_room"), Jump("lbl_college_locker_room")]

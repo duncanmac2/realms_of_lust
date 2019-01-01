@@ -36,6 +36,8 @@ label lbl_college_locker_room:
         jump lbl_college_locker_room_day1
     elif v_day == 2:
         jump lbl_college_locker_room_day2
+    elif v_day == 3:
+        jump lbl_college_locker_room_day3
 
 label lbl_college_nurse:
     call main_show
@@ -579,6 +581,74 @@ label lbl_college_locker_room_day2:
     menu:
         "Home":
             jump lbl_city_street_1st
+
+## LOCKER ROOM - DAY 3 ##
+label lbl_college_locker_room_day3:
+    if tb_event[3]["college_gym"]["bonnie"] == 0 and v_time >= 840 and v_time < 900 and f_day1_lisa_bathroom_incident:
+        "Maybe that girl is here again today, what's her name? Bonnie. Let's take a look."
+        show img_bonnie_shower_04 with d3
+        "There she is."
+        "Since we are alone here I have to take advantage of the situation."
+        hide img_bonnie_shower_04 with d1
+        show img_bonnie_shower_06 at top with d1
+        bonnie "Enjoying the show [me]?"
+        me "Oh shit, you knew I was here?"
+        bonnie "You are not as stealthy as you think. Come here."
+        "No point in trying to hide what I'm doing now."
+        bonnie "So you were having some fun huh. But I have a better idea, take those clothes off and come here, I will wash your back."
+        "What is she going to do? Well might as well do it. I enter the hot water under the shower, Bonnie then gives me a hug from the back, her body is pressed again mine, I can fell her tits on my back."
+        bonnie "Now relax."
+        hide img_bonnie_shower_06 with d1
+        show img_bonnie_handjob_01 at top with d1
+        "She knees and open my pants, and slowly massages my cock with her soft hands."
+        "Her hands reach around to my cock and she starts jerking me off."
+        "I don't know what is better, her naked body rubbing again my back or her hands playing with my dick."
+        hide img_bonnie_handjob_01 with d1
+        show vid_bonnie_handjob_02 at top with d1
+        "After I climax, I turn to her to ask her the obvious question."
+        hide vid_bonnie_handjob_02 with d1
+        me "That's was amazing, don't get me wrong... but why?"
+        bonnie "I've wanted to do this since I saw you monday... When I want to do something I just do it."
+        me "Okay, I guess."
+        bonnie "I have to go now, but hey come see me in the gym after lunch some times, you look like a nice guy, we could be friends."
+        me "Sure why not."
+        "What a weird girl."
+
+        $ tb_event[3]["college_gym"]["bonnie"] = 1
+        $ v_time += 5
+
+    elif tb_event[3]["college_gym"]["bonnie"] == 0 and v_time >= 840 and v_time < 900 and not f_day1_lisa_bathroom_incident:
+        show img_bonnie_shower_04 with d3
+        "There is someone in the shower, but... the hell, it's a girl. Why is she here?"
+        "She is so hot... wow, my dick is on fire! There is no one here right now besides us and she hasn't seen me."
+        hide img_bonnie_shower_04 with d1
+        show img_bonnie_shower_06 at top with d1
+        "After a few minutes of choking the chicken, she turns to me and says."
+        bonnie "I hope you liked the show..."
+        "Shit, she saw me? Okay let's stay calm, she is not freaking out, maybe she likes being watched."
+        bonnie "Hey are you listening?"
+        me "Yeah... I'm sorry for spying on you."
+        bonnie "Why are you apologizing? I asked if you liked the show."
+        me "Well I did yeah."
+        bonnie "Good, for you... uhhh... what's your name again?"
+        me "[me]."
+        hide img_bonnie_shower_06 with d1
+        show img_bonnie_shower_07 with d1
+        bonnie "[me], I'm Bonnie. Look I'm late for something but now I think it's only fair if you do something for me don't you think? Come back here tomorrow."
+        me "I... ok, I will be here if I have the time."
+        bonnie "I will be waiting."
+        hide img_bonnie_shower_07 with d1
+        "She puts her clothes and leaves. What a strange girl."
+
+        $ tb_event[3]["college_gym"]["bonnie"] = 1
+        $ v_time += 5
+
+    else:
+        "This place is empty."
+
+    menu:
+        "College":
+            jump lbl_college_yard
 
 ### SHOWER ###
 ## SHOWER - DAY 1 ##
