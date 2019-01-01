@@ -343,7 +343,7 @@ label lbl_college_garden_day2:
 
 ## GARDEN - DAY 3 ##
 label lbl_college_garden_day3:
-    if tb_event[3]["college_garden"]["veronica"] == 0 and v_time < 1020:
+    if tb_event[3]["college_garden"]["veronica"] == 0 and v_time < 780:
         show img_mia_bikini with d3
         me "Hey, guys how were your class? And why are you in a bikini?"
         mia "Hey. We are sunbathing."
@@ -384,7 +384,7 @@ label lbl_college_garden_day3:
         $ v_time += 10
 
     else:
-        "There is no one I know here now."
+        "There is no one I know here right now."
 
     menu:
         "College":
@@ -510,6 +510,9 @@ label lbl_college_gym_day3:
 
         $ tb_event[3]["college_gym"]["bonnie"] = 1
         $ v_time += 15
+
+    else:
+        "There is nobody here right now."
 
     menu:
         "College":
@@ -779,7 +782,7 @@ label lbl_college_nurse_day3:
 ### ELLIE OFFICE ###
 ## ELLIE OFFICE - DAY 3 ##
 label lbl_college_office_ellie_day3:
-    if tb_event[3]["college_office_ellie"]["aphrodisiac"] == 0 and v_time < 1020:
+    if tb_event[3]["college_office_ellie"]["aphrodisiac"] == 0 and v_time < 780:
         "I want to talk to Miss Smith, her office is right here. I knock on the door."
         show npc_portrait_ellie_02 with d3
         me "Hello Miss Smith."
@@ -812,7 +815,7 @@ label lbl_college_office_ellie_day3:
         $ tb_event[3]["college_office_ellie"]["aphrodisiac"] = 1
         $ v_time += 10
 
-    elif tb_event[3]["college_office_ellie"]["aphrodisiac"] == 0 and v_time >= 1020:
+    elif tb_event[3]["college_office_ellie"]["aphrodisiac"] == 0 and v_time >= 780:
         "I want to talk to Miss Smith, her office is right here. I knock on the door."
         show npc_portrait_ellie_02 with d3
         "Hello Miss Smith."
@@ -862,7 +865,7 @@ label lbl_college_office_ellie_day3:
         $ v_time += 10
 
     elif tb_event[3]["college_office_ellie"]["aphrodisiac"] == 1:
-        if v_time >= 1020:
+        if v_time >= 780:
             "Let Ellie rest."
         else:
             "I can't enter right now."
