@@ -31,6 +31,47 @@ screen scr_warning:
         action Jump("close_renpy")
 
 ## SCREENS LOCATIONS
+screen scr_main_map:
+    # Beach
+    button:
+        xpos 941 # 947
+        ypos 586 # 592
+        add "images/interface/icon_gps.png"
+        text "Beach" color clr_black size 16 xpos -10 ypos 48
+        action [SetVariable("v_localisation", "city_beach"), Jump("lbl_city_beach")]
+
+    # College
+    button:
+        xpos 808 # 814
+        ypos 338 # 344
+        add "images/interface/icon_gps.png"
+        text "College" color clr_black size 16 xpos -16 ypos 48
+        action [SetVariable("v_localisation", "college_yard"), Jump("lbl_college_yard")]
+
+    # First street
+    button:
+        xpos 892 # 898
+        ypos 464 # 470
+        add "images/interface/icon_gps.png"
+        text "1st street" color clr_black size 16 xpos -25 ypos 48
+        action [SetVariable("v_localisation", "city_1st_street"), Jump("lbl_city_street_1st")]
+
+    # Second street
+    button:
+        xpos 972 # 978
+        ypos 339 # 345
+        add "images/interface/icon_gps.png"
+        text "2nd street" color clr_black size 16 xpos -25 ypos 48
+        action [SetVariable("v_localisation", "city_2nd_street"), Jump("lbl_city_street_2nd")]
+
+    # Third street
+    button:
+        xpos 774 # 780
+        ypos 463 # 469
+        add "images/interface/icon_gps.png"
+        text "3th street" color clr_black size 16 xpos -30 ypos 48
+        action [SetVariable("v_localisation", "city_3th_street"), Jump("lbl_city_street_3th")]
+
 screen scr_navigation:
     frame:
         xpadding 20

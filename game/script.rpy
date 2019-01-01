@@ -243,6 +243,7 @@ image loc_home_room_mc_bed = "images/location/loc_home_room_mc_bed.jpg"
 image loc_home_room_mia = "images/location/loc_home_room_mia.jpg"
 
 # City
+image loc_city_map = "images/location/loc_city_map.jpg"
 image loc_city_map_back = "images/location/loc_city_map_back.jpg"
 image loc_city_home_marcy = "images/location/loc_city_home_marcy.jpg"
 image loc_city_home_marcy_bathroom = "images/location/loc_city_home_marcy_bathroom.jpg"

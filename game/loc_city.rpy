@@ -1,6 +1,11 @@
 #### LOCATIONS ####
 label lbl_main_map:
+    call main_show
     scene loc_city_map_back
+
+    show loc_city_map at truecenter
+
+    call screen scr_main_map
 
 label lbl_city_beach:
     scene loc_city_beach
