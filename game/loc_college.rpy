@@ -503,6 +503,7 @@ label lbl_college_gym_day3:
         show img_bonnie_handjob_01 at top with d1
         "She knees and open my pants, and slowly massages my cock with her soft hands."
         hide img_bonnie_handjob_01 with d1
+        window hide
         show vid_bonnie_handjob_02 at top with d1
         pause
         hide vid_bonnie_handjob_02 with d1

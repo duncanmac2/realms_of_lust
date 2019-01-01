@@ -234,6 +234,7 @@ label lbl_home_room_mc_day2_pc:
     show vid_pc_porn_01 at top
     "There."
     hide vid_pc_porn_01 with d1
+    window hide
     show vid_pc_porn_02 at top with d1
     pause
     hide vid_pc_porn_02 with d1
@@ -373,6 +374,7 @@ label lbl_home_bathroom_day2:
     if v_time == 840:
         "Let's see where is Lisa."
         "I hear someone on her shower, I shouldn't... but I can't stop thinking about it. Fuck! One look, just one look."
+        window hide
         show img_lisa_shower_01 with d1
         me "Whoa..."
         hide img_lisa_shower_01 with d1

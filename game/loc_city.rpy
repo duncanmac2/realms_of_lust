@@ -16,30 +16,20 @@ label lbl_city_beach:
     elif v_day == 3:
         jump lbl_city_beach_day3
 
-label lbl_city_church:
-    scene loc_city_church
+### 1ST STREET ###
+label lbl_city_street_1st:
+    scene loc_city_street_1st
 
-    if v_day == 2:
-        jump lbl_city_church_day2
+    if v_day == 1:
+        jump lbl_city_home_marcus_day1a
+    elif v_day == 2 and v_time == 0:
+        jump lbl_city_home_marcy_day2a
+    elif v_day == 2 and v_time > 0:
+        jump lbl_city_street_1st_day2
     elif v_day == 3:
-        jump lbl_city_church_day3
+        jump lbl_city_street_1st_day3
 
-label lbl_city_pgp_corporation:
-    scene loc_city_pgp_corporation
-
-    if v_day == 3:
-        jump lbl_city_pgp_corporation_day3
-
-### LILY HOME ###
-label lbl_city_home_lily:
-    scene loc_city_home_lily
-
-    if v_day == 2:
-        jump lbl_city_home_lily_day2
-    elif v_day == 3:
-        jump lbl_city_home_lily_day3
-
-### MARCY HOME ###
+## 1ST STREET - MARCY HOME ##
 label lbl_city_home_marcy:
     scene loc_city_home_marcy
 
@@ -66,28 +56,7 @@ label lbl_city_home_marcy_room:
     elif v_day == 3:
         jump lbl_city_home_marcy_room_day3
 
-### MALL ###
-label lbl_city_mall:
-    scene loc_city_mall
-
-    if v_day == 1:
-        jump lbl_city_mall_day1
-    elif v_day == 2:
-        jump lbl_city_mall_day2
-
-### STREETS ###
-label lbl_city_street_1st:
-    scene loc_city_street_1st
-
-    if v_day == 1:
-        jump lbl_city_home_marcus_day1a
-    elif v_day == 2 and v_time == 0:
-        jump lbl_city_home_marcy_day2a
-    elif v_day == 2 and v_time > 0:
-        jump lbl_city_street_1st_day2
-    elif v_day == 3:
-        jump lbl_city_street_1st_day3
-
+### 2ND STREET ###
 label lbl_city_street_2nd:
     $ v_localisation = "city_second_street"
 
@@ -95,12 +64,63 @@ label lbl_city_street_2nd:
     scene loc_city_street_2nd
     call screen scr_navigation
 
+## 2ND STREET - CHURCH ##
+label lbl_city_church:
+    scene loc_city_church
+
+    if v_day == 2:
+        jump lbl_city_church_day2
+    elif v_day == 3:
+        jump lbl_city_church_day3
+
+## 2ND STREET - LILY HOME ##
+label lbl_city_home_lily:
+    scene loc_city_home_lily
+
+    if v_day == 2:
+        jump lbl_city_home_lily_day2
+    elif v_day == 3:
+        jump lbl_city_home_lily_day3
+
+##  2ND STREET - PGP CORPORATION ##
+label lbl_city_pgp_corporation:
+    scene loc_city_pgp_corporation
+
+    if v_day == 3:
+        jump lbl_city_pgp_corporation_day3
+
+### 3TH STREET ###
 label lbl_city_street_3th:
     $ v_localisation = "city_third_street"
 
     call main_show
     scene loc_city_street_3th
     call screen scr_navigation
+
+### 3TH STREET - GYM ###
+label lbl_city_gym:
+    scene loc_city_gym
+
+    if v_day == 3:
+        jump lbl_city_gym_day3
+
+### 3TH STREET - MALL ###
+label lbl_city_mall:
+    scene loc_city_mall
+
+    if v_day == 1:
+        jump lbl_city_mall_day1
+    elif v_day == 2:
+        jump lbl_city_mall_day2
+    elif v_day == 3:
+        jump lbl_city_mall_day3
+
+### 3TH STREET - PARK ###
+label lbl_city_park:
+    scene loc_city_park
+
+    if v_day == 3:
+        jump lbl_city_park_day3
 
 #### EVENTS ####
 ### MARCY HOME ###
@@ -302,6 +322,7 @@ label lbl_city_home_marcy_bathroom_day2:
     show img_sarah_shower_01 with d3
     "My curiosity gets the best of me and I take a look."
     hide img_sarah_shower_01 with d1
+    window hide
     show img_sarah_shower_02 with d1
     pause
     hide img_sarah_shower_02 with d1
@@ -310,6 +331,7 @@ label lbl_city_home_marcy_bathroom_day2:
     hide img_sarah_shower_03 with d1
     show img_sarah_shower_04 with d1
     "Sara's naked body is amazing, I never got this hard... Ok, change of plans, time to leave. But did she left the door open on purpose?"
+    hide img_sarah_shower_04 with d1
 
     $ v_time = 840
 
@@ -517,6 +539,16 @@ label lbl_city_mall_day2:
         "Go home":
             jump lbl_home_living_room
 
+## MALL - DAY 3 ##
+label lbl_city_mall_day3:
+    "bla"
+
+    $ v_time += 5
+
+    menu:
+        "Back to Third Street":
+            jump lbl_city_street_3th
+
 ### LILY HOME ###
 ## LILY HOME - DAY 2 ##
 label lbl_city_home_lily_day2:
@@ -714,6 +746,7 @@ label lbl_city_beach_day2:
     show img_beach_nude_01 at top with d1
     "Spoke too soon..."
     hide img_beach_nude_01 with d1
+    window hide
     show img_beach_nude_02 at top with d1
     pause
     hide img_beach_nude_02 with d1
@@ -856,7 +889,7 @@ label lbl_city_church_day3:
         "Back to Second Street":
             jump lbl_city_street_2nd
 
-## PGP CORPORATION ##
+### PGP CORPORATION ###
 ## PGP CORPORATION - DAY 3 ##
 label lbl_city_pgp_corporation_day3:
     if v_time < 780:
@@ -917,3 +950,37 @@ label lbl_city_pgp_corporation_day3:
     menu:
         "Back to Second Street":
             jump lbl_city_street_2nd
+
+### GYM ###
+## GYM - DAY 3 ##
+label lbl_city_gym_day3:
+    "bla"
+
+    $ v_time += 5
+
+    menu:
+        "Back to Third Street":
+            jump lbl_city_street_3th
+
+
+### PARK ###
+## PARK - DAY 3 ##
+label lbl_city_park_day3:
+    if v_time < 1020:
+        "Things here are still mostly normal... with some exceptions."
+        window hide
+        show img_park_exhibition_01 with d1
+        pause
+        hide img_park_exhibition_01 with d1
+        show img_park_exhibition_02 at top with d1
+        pause
+        hide img_park_exhibition_02 with d1
+        show img_park_exhibition_03 with d1
+        pause
+        hide img_park_exhibition_03 with d1
+
+        $ v_time += 5
+
+    menu:
+        "Back to Third Street":
+            jump lbl_city_street_3th

@@ -172,6 +172,18 @@ screen scr_navigation:
 
         elif v_localisation == "city_third_street":
             imagebutton:
-                idle "images/interface/loc_college_locker_room.jpg"
-                hover "images/interface/loc_college_locker_room_hover.jpg"
-                action [Jump("lbl_college_locker_room")]
+                idle "images/interface/loc_city_gym.jpg"
+                hover "images/interface/loc_city_gym_hover.jpg"
+                action [Jump("lbl_city_gym")]
+
+            imagebutton:
+                ypos 62
+                idle "images/interface/loc_city_mall.jpg"
+                hover "images/interface/loc_city_mall_hover.jpg"
+                action [Jump("lbl_city_mall")]
+
+            imagebutton:
+                ypos 124
+                idle "images/interface/loc_city_park.jpg"
+                hover "images/interface/loc_city_park_hover.jpg"
+                action [Jump("lbl_city_park")]

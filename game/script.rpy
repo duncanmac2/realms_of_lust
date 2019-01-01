@@ -182,6 +182,10 @@
     renpy.image("npc_portrait_nun_01", "images/people/church/portrait_nun_01.jpg")
     renpy.image("npc_portrait_nun_02", "images/people/church/portrait_nun_02.jpg")
 
+    ## PARK
+    for i in range(1,4):
+        renpy.image("img_park_exhibition_" + str(i).zfill(2), "images/people/park/park_exhibition_" + str(i).zfill(2) + ".jpg")
+
 ## NAMES & PORTRAITS
 # Player
 default your_name = ""
@@ -265,12 +269,14 @@ image loc_home_room_mia = "images/location/loc_home_room_mia.jpg"
 image loc_city_map = "images/location/loc_city_map.jpg"
 image loc_city_map_back = "images/location/loc_city_map_back.jpg"
 image loc_city_church = "images/location/loc_city_church.jpg"
+image loc_city_gym = "images/location/loc_city_gym.jpg"
 image loc_city_home_lily = "images/location/loc_city_home_lily.jpg"
 image loc_city_home_marcy = "images/location/loc_city_home_marcy.jpg"
 image loc_city_home_marcy_bathroom = "images/location/loc_city_home_marcy_bathroom.jpg"
 image loc_city_home_marcy_room = "images/location/loc_city_home_marcy_room.jpg"
 image loc_city_mall = "images/location/loc_city_mall.jpg"
 image loc_city_mall_store = "images/location/loc_city_mall_store.jpg"
+image loc_city_park = "images/location/loc_city_park.jpg"
 image loc_city_pgp_corporation = "images/location/loc_city_pgp_corporation.jpg"
 image loc_city_pgp_corporation_office_lily = "images/location/loc_city_pgp_corporation_office_lily.jpg"
 image loc_city_street_1st = "images/location/loc_city_street_1st.jpg"
