@@ -126,28 +126,52 @@ screen scr_navigation:
             imagebutton:
                 idle "images/interface/loc_college_nurse.jpg"
                 hover "images/interface/loc_college_nurse_hover.jpg"
-                action [SetVariable("v_localisation", "college_nurse"), Jump("lbl_college_nurse")]
+                action [Jump("lbl_college_nurse")]
 
             imagebutton:
                 ypos 62
                 idle "images/interface/loc_college_gym.jpg"
                 hover "images/interface/loc_college_gym_hover.jpg"
-                action [SetVariable("v_localisation", "college_gym"), Jump("lbl_college_gym")]
+                action [Jump("lbl_college_gym")]
 
             imagebutton:
                 ypos 124
                 idle "images/interface/loc_college_teacher_office.jpg"
                 hover "images/interface/loc_college_teacher_office_hover.jpg"
-                action [SetVariable("v_localisation", "college_teacher_office"), Jump("lbl_college_teacher_office")]
+                action [Jump("lbl_college_teacher_office")]
 
             imagebutton:
                 ypos 186
                 idle "images/interface/loc_college_garden.jpg"
                 hover "images/interface/loc_college_garden_hover.jpg"
-                action [SetVariable("v_localisation", "college_garden"), Jump("lbl_college_garden")]
+                action [Jump("lbl_college_garden")]
 
             imagebutton:
                 ypos 248
                 idle "images/interface/loc_college_locker_room.jpg"
                 hover "images/interface/loc_college_locker_room_hover.jpg"
-                action [SetVariable("v_localisation", "college_locker_room"), Jump("lbl_college_locker_room")]
+                action [Jump("lbl_college_locker_room")]
+
+        elif v_localisation == "city_second_street":
+            imagebutton:
+                idle "images/interface/loc_city_home_lily.jpg"
+                hover "images/interface/loc_city_home_lily_hover.jpg"
+                action [Jump("lbl_city_home_lily")]
+
+            imagebutton:
+                ypos 62
+                idle "images/interface/loc_city_pgp_corporation.jpg"
+                hover "images/interface/loc_city_pgp_corporation_hover.jpg"
+                action [Jump("lbl_city_pgp_corporation")]
+
+            imagebutton:
+                ypos 124
+                idle "images/interface/loc_city_church.jpg"
+                hover "images/interface/loc_city_church_hover.jpg"
+                action [Jump("lbl_city_church")]
+
+        elif v_localisation == "city_third_street":
+            imagebutton:
+                idle "images/interface/loc_college_locker_room.jpg"
+                hover "images/interface/loc_college_locker_room_hover.jpg"
+                action [Jump("lbl_college_locker_room")]

@@ -21,6 +21,14 @@ label lbl_city_church:
 
     if v_day == 2:
         jump lbl_city_church_day2
+    elif v_day == 3:
+        jump lbl_city_church_day3
+
+label lbl_city_pgp_corporation:
+    scene loc_city_pgp_corporation
+
+    if v_day == 3:
+        jump lbl_city_pgp_corporation_day3
 
 ### LILY HOME ###
 label lbl_city_home_lily:
@@ -28,6 +36,8 @@ label lbl_city_home_lily:
 
     if v_day == 2:
         jump lbl_city_home_lily_day2
+    elif v_day == 3:
+        jump lbl_city_home_lily_day3
 
 ### MARCY HOME ###
 label lbl_city_home_marcy:
@@ -79,14 +89,18 @@ label lbl_city_street_1st:
         jump lbl_city_street_1st_day3
 
 label lbl_city_street_2nd:
-    scene loc_city_street_2nd
+    $ v_localisation = "city_second_street"
 
-    "bla"
+    call main_show
+    scene loc_city_street_2nd
+    call screen scr_navigation
 
 label lbl_city_street_3th:
-    scene loc_city_street_3th
+    $ v_localisation = "city_third_street"
 
-    "bla"
+    call main_show
+    scene loc_city_street_3th
+    call screen scr_navigation
 
 #### EVENTS ####
 ### MARCY HOME ###
@@ -584,6 +598,16 @@ label lbl_city_home_lily_day2:
             "Go back home":
                 jump lbl_city_street_1st
 
+## LILY HOME - DAY 3 ##
+label lbl_city_home_lily_day3:
+    "bla"
+
+    $ v_time += 5
+
+    menu:
+        "Back to Second Street":
+            jump lbl_city_street_2nd
+
 ### 1ST STREET ###
 ## 1ST STREET - DAY 2 ##
 label lbl_city_street_1st_day2:
@@ -740,7 +764,7 @@ label lbl_city_beach_day3:
 ## CHURCH - DAY 2 ##
 label lbl_city_church_day2:
     "This is the local church, maybe they can help me with my crysis..."
-    show npc_portrait_nun with d3
+    show npc_portrait_nun_01 with d3
     nun "Hello, young man, can I help you?"
     me "Hello sister, can I speak with the priest?"
     nun "Sorry he isn't here right now, but maybe I can help?"
@@ -755,9 +779,53 @@ label lbl_city_church_day2:
     "Goddess? What is going on here, now that she mentioned it, the figures on the wall are mostly feminine."
     nun "...and that's why you should always wash your hands after touching the doornobs."
     me "Oh, right thanks sister, I should go now, but thanks for the advice."
-    hide npc_portrait_nun with d3
+    hide npc_portrait_nun_01 with d3
     "Let's go home, I think someone owns me anwers, and she should be back in my room later."
 
     menu:
         "Go home":
             jump lbl_home_living_room
+
+## CHURCH - DAY 3 ##
+label lbl_city_church_day3:
+    if v_time < 840:
+        "The place is empty, but I can hear Kyle's voice coming from a room."
+        kyle "And remember, there is nothing wrong with being gay, that's what my greatest friend thought me."
+        if f_day1_lisa_bathroom_incident:
+            "Veronica was right!"
+        else:
+            "He is gay?"
+
+    elif v_time >= 840 and v_time < 1020:
+        show npc_portrait_nun_02 at top with d3
+        "There are a few nuns here, their habits are not quite how I remember them."
+        hide npc_portrait_nun_02 with d3
+
+    elif v_time >= 1020 and v_time < 1080:
+        "There is a line of nuns leading to somewhere in the back. This warants some investigation."
+        show vid_church_nun_blowjob at top with d3
+        "After some sneaking around I finally understand what is going on."
+        "Sisters, receive my holy seed as the goddess demands."
+        nun "Yes father."
+        "Interesting demands Nina."
+        hide vid_church_nun_blowjob with d3
+
+    elif v_time >= 1080:
+        "The church is closed for now, I will come back later."
+
+    $ v_time += 5
+
+    menu:
+        "Back to Second Street":
+            jump lbl_city_street_2nd
+
+## PGP CORPORATION ##
+## PGP CORPORATION - DAY 3 ##
+label lbl_city_pgp_corporation_day3:
+    "bla"
+
+    $ v_time += 5
+
+    menu:
+        "Back to Second Street":
+            jump lbl_city_street_2nd

@@ -70,10 +70,10 @@ label lbl_college_teacher_office:
         jump lbl_college_office_ellie
 
 label lbl_college_yard:
+    $ v_localisation = "college_yard"
+
     call main_show
     scene loc_college_yard
-
-    $ v_localisation = "college_yard"
 
     if v_day == 1:
         jump lbl_college_yard_day1

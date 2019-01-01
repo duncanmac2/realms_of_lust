@@ -170,7 +170,8 @@
     renpy.image("img_beach_topless", "images/people/beach/beach_topless.jpg")
 
     ## CHURCH
-    renpy.image("npc_portrait_nun", "images/people/church/portrait_nun.jpg")
+    renpy.image("npc_portrait_nun_01", "images/people/church/portrait_nun_01.jpg")
+    renpy.image("npc_portrait_nun_02", "images/people/church/portrait_nun_02.jpg")
 
 ## NAMES & PORTRAITS
 # Player
@@ -252,11 +253,14 @@ image loc_home_room_mia = "images/location/loc_home_room_mia.jpg"
 # City
 image loc_city_map = "images/location/loc_city_map.jpg"
 image loc_city_map_back = "images/location/loc_city_map_back.jpg"
+image loc_city_church = "images/location/loc_city_church.jpg"
+image loc_city_home_lily = "images/location/loc_city_home_lily.jpg"
 image loc_city_home_marcy = "images/location/loc_city_home_marcy.jpg"
 image loc_city_home_marcy_bathroom = "images/location/loc_city_home_marcy_bathroom.jpg"
 image loc_city_home_marcy_room = "images/location/loc_city_home_marcy_room.jpg"
 image loc_city_mall = "images/location/loc_city_mall.jpg"
 image loc_city_mall_store = "images/location/loc_city_mall_store.jpg"
+image loc_city_pgp_corporation = "images/location/loc_city_pgp_corporation.jpg"
 image loc_city_street_1st = "images/location/loc_city_street_1st.jpg"
 image loc_city_street_2nd = "images/location/loc_city_street_2nd.jpg"
 image loc_city_street_3th = "images/location/loc_city_street_3th.jpg"
@@ -272,7 +276,7 @@ image loc_college_shower_men = "images/location/loc_college_shower_men.jpg"
 image loc_college_teacher_office = "images/location/loc_college_teacher_office.jpg"
 image loc_college_yard = "images/location/loc_college_yard.jpg"
 
-## VIDEOS NPC
+## VIDEOS - NPC
 # MC
 image vid_mc_erection = Movie(play="images/people/MC/MC_erection.webm")
 
@@ -309,11 +313,14 @@ image vid_megan_lesbian = Movie(play="images/people/nikki_benz/megan_lesbian.web
 # Mia
 image vid_mia_masturbate = Movie(play="images/people/mia_malkova/mia_masturbate.webm", size=(1000,496))
 
-## VIDEOS LOCATION
+## VIDEOS - LOCATION
 # Beach
 image vid_city_beach_boobs_01 = Movie(play="images/people/beach/beach_boobs_01.webm", size=(1000,742))
 image vid_city_beach_boobs_02 = Movie(play="images/people/beach/beach_boobs_02.webm", size=(584,440))
 image vid_city_beach_boobs_03 = Movie(play="images/people/beach/beach_boobs_03.webm", size=(800,660))
+
+# Church
+image vid_church_nun_blowjob = Movie(play="images/people/church/nun_blowjob.webm", size=(840,416))
 
 # College
 image vid_college_run = Movie(play="images/events/college_run.webm")
@@ -361,6 +368,7 @@ label start:
 
 
     # Flags
+    $ f_bypass = False
     $ f_name_prompt = True
     $ f_day1_lisa_bathroom_incident = False
     $ f_day2_nurse = False
@@ -381,6 +389,8 @@ label start:
     "Do you have play previous version and want to jump directly to new content?"
     menu:
         "Jump to new content":
+            $ f_bypass = False
+            #jump lbl_name_input
             jump lbl_bypass
         "Start from the beginning":
             jump lbl_name_input
