@@ -399,11 +399,11 @@ label lbl_city_home_marcy_room_day2:
     "She points at another bulge in my pants... shit not again."
     me "Yes, this is..."
     hide vid_marcy_masturbate with d1
-    show vid_marcy_boobs_bounce at top with d1
+    show vid_marcy_boobs_bounce_01 at top with d1
     marcy "Can I see it? I mean as friend... Here is something in return."
     "That is enough to snap me out of the trance."
     me "Bye Marcy!"
-    hide vid_marcy_boobs_bounce
+    hide vid_marcy_boobs_bounce_01
     marcy "What wait, I sorry..."
 
     menu:
@@ -758,15 +758,16 @@ label lbl_city_beach_day2:
 ## BEACH - DAY 3 ##
 label lbl_city_beach_day3:
     if v_time < 780:
-        show vid_city_beach_boobs_01 at top with d3
+        show vid_beach_boobs_01 at top with d3
         "Nice view."
-        hide vid_city_beach_boobs_01 with d1
-        show vid_city_beach_boobs_02 at top with d1
+        hide vid_beach_boobs_01 with d1
+        window hide
+        show vid_beach_boobs_02 at top with d1
         pause
-        hide vid_city_beach_boobs_02 with d1
-        show vid_city_beach_boobs_03 at top with d1
+        hide vid_beach_boobs_02 with d1
+        show vid_beach_boobs_03 at top with d1
         pause
-        hide vid_city_beach_boobs_03 with d3
+        hide vid_beach_boobs_03 with d3
         "After a few minutes I leave."
 
     elif v_time >= 780 and v_time < 960 and tb_event[3]["city_beach"]["nyomi"] == 0:
@@ -954,9 +955,174 @@ label lbl_city_pgp_corporation_day3:
 ### GYM ###
 ## GYM - DAY 3 ##
 label lbl_city_gym_day3:
-    "bla"
+    if v_time < 840:
+        "The gym is closed for lunch right now."
 
-    $ v_time += 5
+    elif v_time >= 840 and v_time < 960 and tb_event[3]["city_gym"]["veronica"] == 0:
+        show vid_veronica_gym_01 at top with d1
+        "This is the gym that is closest to my house, it's decent, my membership is still valid, but I haven't come here to train in a long time. I see a friendly face, Veronica."
+        hide vid_veronica_gym_01 with d1
+        show img_veronica_gym_02 with d1
+        veronica "[me], I haven't seen you here before, are you a new member?"
+        me "Not exactly, I bought a 2 years membership along time ago, come in once and never again."
+        veronica "Whoa, then how do you keep those guns?"
+        me "Guns? Oh, you mean how do I keep in shape? Would you believe me if I said magic?"
+        veronica "Haha, very funny, are you thinking of begin coming in now?"
+        me "Well I did pay for the membership, even if it expires in a couple of month, I should get some use out of it."
+        veronica "That's cool, I think Marcy's mom and Lisa also come here."
+        me "They do. It was Lisa who convinced me to buy that membership."
+        hide img_veronica_gym_02 with d1
+        show img_veronica_gym_03 with d1
+        veronica "Do you want some help, whatever you have been doing to keep in shape, you could always use the help when dealing with this equipment."
+        me "Sure, why not."
+        "I start to work out, and Veronica stays by my side giving me tips."
+        me "Hey Veronica, can I ask you a personal question?"
+        hide img_veronica_gym_03 with d1
+        show img_veronica_gym_02 with d1
+        veronica "Go ahead."
+        me "You have a reputation... people call you a..."
+        veronica "Slut? Yes that's what happens when you go around sleeping with every dick available, and some woman too, but I'm happy with my choices, I guess even I would call myself a slut at this point. Why?"
+        me "Well, you like to flirt with almost every male around but you never even suggested doing something sexual with me. Why?"
+        veronica "Look at the time, it's time for me to talk with someone... You should go take a shower!"
+        hide img_veronica_gym_02 with hpunch
+        "And in a flash she disappears from my sight, I think she was embarrassed..."
+
+        menu:
+            "Shower":
+                scene loc_college_shower_men
+                pass
+
+        show img_veronica_gym_04 with d1
+        "I start to enjoy a great shower when Veronica bursts in the room."
+        veronica "Look, about what you asked, you are my best friend's brother, and I know Mia likes you a lot. So it would not be fair to take away from her the chance for the both of you to lose you virginity together."
+        veronica "No matter how much I want to fuck you, and trust me I have been fantasizing about you even before I knew what the word sex meant and..."
+        hide img_veronica_gym_04 with d1
+        "She pauses for a second and realises what she just said, she then try to run away but I grab her by the waist."
+        me "Before you go, I need to say some things myself. I get that you don't want to lose a friend but I'm not exclusive property of my sister, and I can have sex with whoever I choose. Mia know this, maybe she want to wait for me, but it's my decision to make if I will wait for her."
+        veronica "But [me] I..."
+        me "Just as it is your decision to have sex with me or no, but that does not mean we can't do some other stuff together."
+        "She stopped strugling so I let her go."
+        me "So what do you think?"
+        veronica "I don't know, I still think I will wait for Mia to find the will to do it with you first, but..."
+        me "But..."
+        veronica "I wanted to taste you for a long time and after that hug, I don't think I can wait any longer."
+        show vid_veronica_blowjob at top with d1
+        "She drops on her kneed and grabs my cock."
+        me "Ver... that's.... ahh..."
+        hide vid_veronica_blowjob with hpunch
+        me "I'm cumming..."
+        veronica "So, will you tell her what just happenned?"
+        me "If you want to keep it a secret, I will keep my mouth shut, but in my opinion you should tell her."
+        veronica "I think you are right. You can finish your shower, we will see each other some other time."
+        me "Bye V."
+        veronica "Only Mia is suposed to call me that... but I will make on exception for you."
+
+        $ tb_event[3]["city_gym"]["veronica"] = 1
+        $ v_time += 15
+
+        menu:
+            "Back to the gym":
+                jump lbl_city_gym
+
+    elif v_time >= 960 and v_time < 1020 and tb_event[3]["city_gym"]["sarah"] == 0:
+        show img_sarah_gym_01 at top with d1
+        "Looks like Sarah is keeping in shape."
+        sarah "Hey [me], do you still have that membership you bought a couple years ago."
+        me "Yep, still valid for two months."
+        sarah "I still don't know how you got so... muscular without regular visits, hahaha."
+        me "Yeah, good genetics I think..."
+        sarah "Yeah those pesky genetics, I got these thanks to my mother you know."
+        "She points at her boobs."
+        sarah "All men should thank her for them, me on the other hand have to keep exercising regulary to avoid back pain. I have thought about having a surgery to..."
+        hide img_sarah_gym_01
+        show img_sarah_gym_02 with vpunch
+        me "Noooo!"
+        "Shit, that slipped out..."
+        sarah "Whoa, I guess you really do like them, hahaha."
+        me "Yeah, that's..."
+        sarah "Calm down [me], I'm not getting under the knife, that idea was scratched a long time ago, also those back pains have been getting even more rare in the last few days..."
+        "Nina you are the best, you really do think of everything."
+        sarah "Well, I'm finished, can you help me take my top off there is this stupid zipper in the back please."
+        hide img_sarah_gym_02 with d1
+        "Her mouth says something innocent, but her eyes say that she intends to do something naughty..."
+        me "I would love to."
+
+        menu:
+            "Follow her":
+                scene loc_college_locker_room
+                pass
+
+        sarah "Here we are, unzip it for me, please."
+        show img_sarah_nude with d1
+        "It's an easy request, done in seconds."
+        sarah "Thanks [me], so since you like my puppies so much how about I use them as a way to thank you properly?"
+        me "I do like the sound of that."
+        sarah "Then pull it, I garantee you will love it."
+        window hide
+        hide img_sarah_nude with d1
+        show vid_sarah_titjob at top with d1
+        pause
+        hide vid_sarah_titjob with d1
+        show img_sarah_facial at top with d1
+        me "Sarah that's... I'm cumming."
+        hide img_sarah_facial with d3
+        me "You were right, I loved it."
+        sarah "Glad to hear it, but listen, let's keep this a secret from Marcy...."
+        me "Keep it a secret? Why?"
+        sarah "It's complicated, just trust me ok."
+        me "If you say so."
+        sarah "Great, now I have to go home, come by some time."
+        me "I will..."
+        "That's odd, why can't Marcy know?"
+
+        $ tb_event[3]["city_gym"]["sarah"] = 1
+        $ v_time += 15
+
+        menu:
+            "Back to the gym":
+                jump lbl_city_gym
+
+    elif v_time >= 1020 and v_time < 1080 and tb_event[3]["city_gym"]["lisa"] == 0:
+        show img_lisa_gym_01 with d1
+        "Lisa is here now, she always try to stay in shape."
+        me "Hi Lisa."
+        hide img_lisa_gym_01 with d2
+        lisa "Sweetie, I'm so glad to see you back here, are you going to start frequenting the place again?"
+        me "Maybe, for today I was just exploring the town and ended up here."
+        lisa "Well if you decide to start working out here again, maybe we could help each other on our routines."
+        me "That's a good idea, do you want some help right now?"
+        lisa "In fact yes I do, can you help me do some stretches?"
+        me "On it."
+        window hide
+        show vid_lisa_gym_02 at top with d1
+        pause
+        hide vid_lisa_gym_02 with d1
+        lisa "That was great sweetie, it sure would be nice if you could help me everyday."
+
+        me "Let's do this, if I have the time I will come by to help you."
+        lisa "That would be great thanks."
+        me "I will be going now."
+        lisa "Bye [me], don't be late for dinner."
+
+        $ tb_event[3]["city_gym"]["lisa"] = 1
+        $ v_time += 15
+
+    elif v_time >= 1080:
+        "No one I know here but the view..."
+        show vid_gym_01 at top with d1
+        pause
+        hide vid_gym_01 with d1
+        show vid_gym_02 at top with d1
+        pause
+        hide vid_gym_02 with d1
+        show vid_gym_03 at top with d1
+        pause
+        hide vid_gym_03 with d1
+
+        $ v_time += 5
+
+    else:
+        "There is a lot of people here, no one I know though."
 
     menu:
         "Back to Third Street":
@@ -980,6 +1146,30 @@ label lbl_city_park_day3:
         hide img_park_exhibition_03 with d1
 
         $ v_time += 5
+
+    elif v_time >= 1020 and v_time < 1080 and tb_event[3]["city_park"]["marcy"] == 0:
+        "Marcy is here, she looks a litle sad."
+        me "Are you ok?"
+        marcy "Hey [me], I was just remembering, my dad used to bring me here everyday you remember."
+        me "I do, you used to call me and we would come here and run around for hours."
+        marcy "Yeah, things were simpler back then."
+        me "I remember sometimes we would jump in the water and your dad has to give us his jacket because our clothes were soaked."
+        show vid_marcy_boobs_bounce_02 at top with d1
+        marcy "We had to go home naked under that \"blanket\" more than once. I miss him."
+        hide vid_marcy_boobs_bounce_02 with d1
+        me "I know, we are never ready for the dead of the ones we love."
+        marcy "[me], can you stay here with for a while."
+        me "Of course Marcy."
+        "Later..."
+
+        $ tb_event[3]["city_park"]["marcy"] = 1
+        $ v_time += 20
+
+    elif v_time >= 1020 and v_time < 1080:
+        "There is nothing to do here now."
+
+    else:
+        "It's getting late and it's not completely safe to be in the park during the night yet."
 
     menu:
         "Back to Third Street":

@@ -87,6 +87,7 @@
         renpy.image("npc_portrait_karen_" + str(i).zfill(2), "images/people/jayden_jaymes/karen_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Lisa
+    renpy.image("img_lisa_gym_01", "images/people/brandi_love/lisa_gym_01.jpg")
     renpy.image("img_lisa_kiss_01", "images/people/brandi_love/lisa_kiss_01.jpg")
 
     for i in range(1,6):
@@ -152,8 +153,13 @@
     for i in range(1,2):
         renpy.image("npc_portrait_rikki_" + str(i).zfill(2), "images/people/rikki_six/rikki_portrait_" + str(i).zfill(2) + ".jpg")
 
-
     # Sarah
+    renpy.image("img_sarah_facial", "images/people/diamond_jackson/sarah_facial.jpg")
+    renpy.image("img_sarah_nude", "images/people/diamond_jackson/sarah_nude.jpg")
+
+    for i in range(1,3):
+        renpy.image("img_sarah_gym_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_gym_" + str(i).zfill(2) + ".jpg")
+
     for i in range(1,9):
         renpy.image("img_sarah_shower_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_shower_" + str(i).zfill(2) + ".jpg")
 
@@ -162,6 +168,9 @@
 
     # Veronica
     renpy.image("img_veronica_bikini", "images/people/angela_white/veronica_bikini.jpg")
+
+    for i in range(2,5):
+        renpy.image("img_veronica_gym_" + str(i).zfill(2), "images/people/angela_white/veronica_gym_" + str(i).zfill(2) + ".jpg")
 
     for i in range(1,3):
         renpy.image("npc_portrait_veronica_" + str(i).zfill(2), "images/people/angela_white/veronica_portrait_" + str(i).zfill(2) + ".jpg")
@@ -312,6 +321,7 @@ image vid_lily_kiss_02 = Movie(play="images/people/lilith/lily_kiss_02.webm", si
 
 # Lisa
 image vid_lisa_bathroom_incident = Movie(play="images/people/brandi_love/lisa_bathroom_incident.webm", size=(590,590))
+image vid_lisa_gym_02 = Movie(play="images/people/brandi_love/lisa_gym_02.webm", size=(1080,606))
 image vid_lisa_handjob_cum = Movie(play="images/people/brandi_love/lisa_handjob_cum.webm", size=(800,418))
 image vid_lisa_kiss_02 = Movie(play="images/people/brandi_love/lisa_kiss_02.webm", size=(1000,540))
 image vid_lisa_kiss_03 = Movie(play="images/people/brandi_love/lisa_kiss_03.webm", size=(800,778))
@@ -320,7 +330,8 @@ image vid_lisa_room_masturbate = Movie(play="images/people/brandi_love/lisa_mast
 
 # Marcy
 image vid_marcy_boobs_02 = Movie(play="images/people/brittney_white/marcy_boobs_02.webm", size=(630,716))
-image vid_marcy_boobs_bounce = Movie(play="images/people/brittney_white/marcy_boobs_bounce.webm", size=(552,780))
+image vid_marcy_boobs_bounce_01 = Movie(play="images/people/brittney_white/marcy_boobs_bounce_01.webm", size=(552,780))
+image vid_marcy_boobs_bounce_02 = Movie(play="images/people/brittney_white/marcy_boobs_bounce_02.webm", size=(552,780))
 image vid_marcy_masturbate = Movie(play="images/people/brittney_white/marcy_masturbate.webm", size=(704,512))
 
 # Megan
@@ -334,11 +345,18 @@ image vid_mia_masturbate = Movie(play="images/people/mia_malkova/mia_masturbate.
 # Rikki
 image vid_rikki_blowjob_01 = Movie(play="images/people/rikki_six/rikki_blowjob_01.webm", size=(650,833))
 
+# Sarah
+image vid_sarah_titjob = Movie(play="images/people/diamond_jackson/sarah_titjob.webm", size=(720,540))
+
+# Veronica
+image vid_veronica_blowjob = Movie(play="images/people/angela_white/veronica_blowjob.webm", size=(960,540))
+image vid_veronica_gym_01 = Movie(play="images/people/angela_white/veronica_gym_01.webm", size=(735,721))
+
 ## VIDEOS - LOCATION
 # Beach
-image vid_city_beach_boobs_01 = Movie(play="images/people/beach/beach_boobs_01.webm", size=(1000,742))
-image vid_city_beach_boobs_02 = Movie(play="images/people/beach/beach_boobs_02.webm", size=(584,440))
-image vid_city_beach_boobs_03 = Movie(play="images/people/beach/beach_boobs_03.webm", size=(800,660))
+image vid_beach_boobs_01 = Movie(play="images/people/beach/beach_boobs_01.webm", size=(1000,742))
+image vid_beach_boobs_02 = Movie(play="images/people/beach/beach_boobs_02.webm", size=(584,440))
+image vid_beach_boobs_03 = Movie(play="images/people/beach/beach_boobs_03.webm", size=(800,660))
 
 # Church
 image vid_church_nun_blowjob = Movie(play="images/people/church/nun_blowjob.webm", size=(840,416))
@@ -348,6 +366,11 @@ image vid_college_run = Movie(play="images/events/college_run.webm")
 image vid_college_shower_01 = Movie(play="images/events/college_shower_01.webm", size=(620,612))
 image vid_college_shower_02 = Movie(play="images/events/college_shower_02.webm", size=(598,736))
 image vid_college_spanking = Movie(play="images/events/college_spanking.webm", size=(534,800))
+
+# Gym
+image vid_gym_01 = Movie(play="images/people/gym/gym_01.webm", size=(998,556))
+image vid_gym_02 = Movie(play="images/people/gym/gym_02.webm", size=(600,592))
+image vid_gym_03 = Movie(play="images/people/gym/gym_03.webm", size=(720,406))
 
 # Home
 image vid_pc_game = Movie(play="images/events/pc_game.webm", size=(996,818))
@@ -368,7 +391,9 @@ label start:
 
     $ tb_event[3] = {
         "city_beach": {},
+        "city_gym": {},
         "city_home_lily": {},
+        "city_park": {},
         "city_pgp_corporation": {},
         "college_garden": {},
         "college_gym": {},
@@ -376,7 +401,9 @@ label start:
     }
 
     $ tb_event[3]["city_beach"] = { "nyomi": 0 }
+    $ tb_event[3]["city_gym"] = { "lisa": 0, "sarah": 0, "veronica": 0 }
     $ tb_event[3]["city_home_lily"] = { "lily": 0 }
+    $ tb_event[3]["city_park"] = { "marcy": 0 }
     $ tb_event[3]["city_pgp_corporation"] = { "lily": 0 }
     $ tb_event[3]["college_garden"] = { "veronica": 0 }
     $ tb_event[3]["college_gym"] = { "bonnie": 0 }
@@ -454,6 +481,7 @@ label lbl_bypass:
     $ your_name = "John"
     $ mc_portrait = "new"
     $ v_day = 3
+    $ v_time = 720
 
     $ f_day1_lisa_bathroom_incident = True
     $ f_day2_nurse = True
