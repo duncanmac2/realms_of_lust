@@ -2,8 +2,9 @@
 label lbl_main_map:
     call main_show
     scene loc_city_map_back
-
     show loc_city_map at truecenter
+
+    $ v_time += 5
 
     call screen scr_main_map
 
@@ -12,6 +13,8 @@ label lbl_city_beach:
 
     if v_day == 2:
         jump lbl_city_beach_day2
+    elif v_day == 3:
+        jump lbl_city_beach_day3
 
 label lbl_city_church:
     scene loc_city_church
@@ -74,6 +77,16 @@ label lbl_city_street_1st:
         jump lbl_city_street_1st_day2
     elif v_day == 3:
         jump lbl_city_street_1st_day3
+
+label lbl_city_street_2nd:
+    scene loc_city_street_2nd
+
+    "bla"
+
+label lbl_city_street_3th:
+    scene loc_city_street_3th
+
+    "bla"
 
 #### EVENTS ####
 ### MARCY HOME ###
@@ -647,6 +660,36 @@ label lbl_city_beach_day2:
     menu:
         "Go home":
             jump lbl_home_living_room
+
+## BEACH - DAY 3 ##
+label lbl_city_beach_day3:
+    "I came to the beach to relax, but soon I saw a face I knew..."
+    show img_nyomi_beach_01 with d3
+    "This Nyomi, Sarah's sister and Marcy's aunt, she helped Sarah take care of Mia and I sometimes when Sarah was too busy. I haven't seen her in almost a year... she is as sexy as I remember."
+    hide img_nyomi_beach_01 with d1
+    show img_nyomi_beach_02 at top with d1
+    nyomi "[me]? Is that you?"
+    me "It is, how are Nyomi?"
+    nyomi "I'm great, is been so long, you are even more handsome, girls must be falling for you all over the place."
+    me "Hahaha..."
+    nyomi "Sit down let's talk, get confortable, most people don't wear any clothes to this beach, so if you want take those shorts off."
+    hide img_nyomi_beach_02 with d1
+    show img_mc_body at top with d1
+    "Why not? It will be a new experience."
+    hide img_mc_body with d1
+    show img_nyomi_beach_03 with d1
+    nyomi "Oh my you have grown, in all the right places..."
+    me "Uhhh, thanks..."
+    "We spend a few minutes catching up, talking about all that has happened in our lives."
+    nyomi "I need to go now, but you should come to my house, if you can bring my niece with you, she never visits anymore."
+    me "Sure Nyomi."
+    hide img_nyomi_beach_03 with d3
+
+    $ v_time += 5
+
+    menu:
+        "Leave":
+            jump lbl_main_map
 
 ### CHURCH ###
 ## CHURCH - DAY 2 ##

@@ -139,6 +139,10 @@
     for i in range(1,8):
         renpy.image("npc_portrait_nina_" + str(i).zfill(2), "images/people/alexis_texas/nina_portrait_" + str(i).zfill(2) + ".jpg")
 
+    # Nyomi
+    for i in range(1,4):
+        renpy.image("img_nyomi_beach_" + str(i).zfill(2), "images/people/nyomi_bank/nyomi_beach_" + str(i).zfill(2) + ".jpg")
+
     # Sarah
     for i in range(1,9):
         renpy.image("img_sarah_shower_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_shower_" + str(i).zfill(2) + ".jpg")
@@ -186,6 +190,7 @@ define marcy = Character("Marcy", image = "portrait_marcy", color = clr_chestnut
 define megan = Character("Megan", image = "portrait_megan", color = clr_sand)
 define mia = Character("Mia", image = "portrait_mia", color = clr_palegold)
 define nina = Character("Nina", image = "portrait_nina", color = clr_sand)
+define nyomi = Character("Nyomi", image = "portrait_nyomi", color = clr_chestnut_brown)
 define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut_brown)
 define veronica = Character("Veronica", image = "portrait_veronica", color = clr_gray)
 
@@ -200,6 +205,7 @@ image side portrait_marcy = "images/portrait/portrait_marcy.jpg"
 image side portrait_megan = "images/portrait/portrait_megan.jpg"
 image side portrait_mia = "images/portrait/portrait_mia.jpg"
 image side portrait_nina = "images/portrait/portrait_nina.jpg"
+image side portrait_nyomi = "images/portrait/portrait_nyomi.jpg"
 image side portrait_sarah = "images/portrait/portrait_sarah.jpg"
 image side portrait_veronica = "images/portrait/portrait_veronica.jpg"
 
@@ -251,6 +257,8 @@ image loc_city_home_marcy_room = "images/location/loc_city_home_marcy_room.jpg"
 image loc_city_mall = "images/location/loc_city_mall.jpg"
 image loc_city_mall_store = "images/location/loc_city_mall_store.jpg"
 image loc_city_street_1st = "images/location/loc_city_street_1st.jpg"
+image loc_city_street_2nd = "images/location/loc_city_street_2nd.jpg"
+image loc_city_street_3th = "images/location/loc_city_street_3th.jpg"
 
 # College
 image loc_college_class = "images/location/loc_college_class.jpg"

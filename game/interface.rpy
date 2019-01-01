@@ -32,10 +32,20 @@ screen scr_warning:
 
 ## SCREENS LOCATIONS
 screen scr_main_map:
+    # MC Room
+    button:
+        xpos 1180
+        ypos 540
+        focus_mask "images/interface/icon_gps_mask.png"
+        add "images/interface/icon_gps.png"
+        text "My room" color clr_black size 16 xpos -20 ypos 48
+        action [SetVariable("v_localisation", "home_my_room"), Jump("lbl_home_room_mc")]
+
     # Beach
     button:
         xpos 941 # 947
         ypos 586 # 592
+        focus_mask "images/interface/icon_gps_mask.png"
         add "images/interface/icon_gps.png"
         text "Beach" color clr_black size 16 xpos -10 ypos 48
         action [SetVariable("v_localisation", "city_beach"), Jump("lbl_city_beach")]
@@ -44,6 +54,7 @@ screen scr_main_map:
     button:
         xpos 808 # 814
         ypos 338 # 344
+        focus_mask "images/interface/icon_gps_mask.png"
         add "images/interface/icon_gps.png"
         text "College" color clr_black size 16 xpos -16 ypos 48
         action [SetVariable("v_localisation", "college_yard"), Jump("lbl_college_yard")]
@@ -52,22 +63,25 @@ screen scr_main_map:
     button:
         xpos 892 # 898
         ypos 464 # 470
+        focus_mask "images/interface/icon_gps_mask.png"
         add "images/interface/icon_gps.png"
-        text "1st street" color clr_black size 16 xpos -25 ypos 48
+        text "1st street" color clr_black size 16 xpos -30 ypos 48
         action [SetVariable("v_localisation", "city_1st_street"), Jump("lbl_city_street_1st")]
 
     # Second street
     button:
         xpos 972 # 978
         ypos 339 # 345
+        focus_mask "images/interface/icon_gps_mask.png"
         add "images/interface/icon_gps.png"
-        text "2nd street" color clr_black size 16 xpos -25 ypos 48
+        text "2nd street" color clr_black size 16 xpos -30 ypos 48
         action [SetVariable("v_localisation", "city_2nd_street"), Jump("lbl_city_street_2nd")]
 
     # Third street
     button:
         xpos 774 # 780
         ypos 463 # 469
+        focus_mask "images/interface/icon_gps_mask.png"
         add "images/interface/icon_gps.png"
         text "3th street" color clr_black size 16 xpos -30 ypos 48
         action [SetVariable("v_localisation", "city_3th_street"), Jump("lbl_city_street_3th")]
