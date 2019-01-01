@@ -106,7 +106,7 @@ screen scr_navigation:
             xpos 8
             ypos 32
             idle "images/interface/icon_map.png"
-            action [Jump("lbl_main_map")]
+            action [Jump("lbl_city_map")]
 
         imagebutton:
             xpos 60

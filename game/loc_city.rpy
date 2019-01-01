@@ -1,5 +1,5 @@
 #### LOCATIONS ####
-label lbl_main_map:
+label lbl_city_map:
     call main_show
     scene loc_city_map_back
     show loc_city_map at truecenter
@@ -600,9 +600,46 @@ label lbl_city_home_lily_day2:
 
 ## LILY HOME - DAY 3 ##
 label lbl_city_home_lily_day3:
-    "bla"
+    if v_time < 780 and tb_event[3]["city_home_lily"]["lily"] == 0:
+        "I ring the door bell."
+        show npc_portrait_lily_02 with d3
+        lily "[me], I'm glad you are here."
+        me "Thanks Lily, I wanted to see you."
+        lily "That's so sweet, but you came at a very bad time, I have to leave for work soon."
+        me "I see, I will leave then."
+        lily "No, stay, I just about to take a shower, we can talk in the bathroom."
+        me "In the bathroom? Sure, why not."
+        hide npc_portrait_lily_02 with d3
+        "I follow her to the place, that's when it hits me, I never saw her naked, I wonder how does she look like..."
+        show img_lily_shower_01 with d1
+        "Holy shit... just... just... look at her, hot is not the right word to describe her, she could melt steel with her looks."
+        lily "[me], honey, you are drooling."
+        me "Oh... sorry, aunt Lily you are amazing."
+        hide img_lily_shower_01 with d1
+        show img_lily_shower_02 with d1
+        lily "Thanks [me], by the way I noticed that you are different, is this..."
+        me "Oh, I have no idea how it happened, but I can't complain."
+        hide img_lily_shower_02 with d1
+        show img_lily_shower_03 with d1
+        lily "Nice..."
+        hide img_lily_shower_03 with d1
+        show img_lily_shower_04 at top with d1
+        "We continue talking for some time, while I continue to drool on the floor. After she is done she puts her clothes and comes to talk to me."
+        hide img_lily_shower_04 with d1
+        lily "Hey [me], come see me in my office when you have the time, for now I need to leave, but my house is your house. I even have a room just for you so if you want to stay and wait for me, make yourself at home."
+        me "Thanks Lily, but I think I should go explore the town for a bit."
+        lily "I understand, but here, a copy of the keys, you can come in any time, even if I'm out ok."
+        me "Ok."
+        lily "Give me a kiss now."
+        show vid_lily_kiss_01 at top with d1
+        me "Bye."
+        hide vid_lily_kiss_01 with d1
 
-    $ v_time += 5
+        $ tb_event[3]["city_home_lily"]["lily"] = 1
+        $ v_time += 10
+
+    else:
+        "She is not here, so there is nothing to do here now."
 
     menu:
         "Back to Second Street":
@@ -758,7 +795,7 @@ label lbl_city_beach_day3:
 
     menu:
         "Leave":
-            jump lbl_main_map
+            jump lbl_city_map
 
 ### CHURCH ###
 ## CHURCH - DAY 2 ##
@@ -822,7 +859,58 @@ label lbl_city_church_day3:
 ## PGP CORPORATION ##
 ## PGP CORPORATION - DAY 3 ##
 label lbl_city_pgp_corporation_day3:
-    "bla"
+    if v_time < 780:
+        "This is where Lily works? Nice, no wonder she can afford such a huge house. What is that sound?"
+        show vid_rikki_blowjob_01 at top with d1
+        "Better leave them alone."
+        hide vid_rikki_blowjob_01 with d1
+
+    elif v_time >= 780 and tb_event[3]["city_pgp_corporation"]["lily"] == 0:
+        show npc_portrait_rikki_01 with d1
+        me "Hi, I'm [me], can I see Lilith? She is new here."
+        rikki "Oh, so you are the famous [me]? She talks about you all the time, you are as handsome as she says, go on in third door on the right."
+        me "Thanks."
+        hide npc_portrait_rikki_01 with d1
+        "Third door she said... right here then."
+        "*Knock* *knock*"
+        lily "Come in."
+        me "Hi auntie."
+        show npc_portrait_lily_11 with d1
+        lily "[me]! Came to visit little old me?"
+        me "I did, I wanted to tell you about everything Nina told me so far..."
+        "After a few minutes of explaining later."
+        lily "Wow, seriously, cool, I noticed my libido is taking a lot of effort to control as of late."
+        me "I know right! I have a bonner everywhere I go, it's worse than an overdose of the blue pill."
+        lily "I can see that."
+        me "And I can hear that buzzing sound coming from under your desk..."
+        lily "Guilty, but since you are here how about we help each other."
+        me "What kind of help? Like a handjob?"
+        hide npc_portrait_lily_11 with d1
+        show npc_portrait_lily_12 with d1
+        lily "No dummie, I want you to pull that cock out and fuck me."
+        me "Whoa, whoa, calm down Lily, I have been taking advantage of the situations that arise but I haven't taken that step yet."
+        lily "Oh, I get it, waiting for the right girl to fuck are we?"
+        me "I don't know, maybe, or maybe it's like when you are in a candy store and you don't know what you want to pick."
+        hide npc_portrait_lily_12 with d1
+        show npc_portrait_lily_11 with d1
+        lily "How about this, come stay the night in my home today if you are ready, I don't think Mia or Lisa are ready for that either. So if you want to keep it in the family, you come or blue balls for a day or two, it's your call."
+        me "Ok I will think about it."
+        lily "Do you want to talk about something else?"
+        me "No, I think it's time for me to go, bye aunt Lily."
+        hide npc_portrait_lily_11 with d1
+        show img_lily_boobs with d1
+        lily "Bye, [me] but before you leave here is some motivation."
+        me "Great Scott!"
+        hide img_lily_boobs with d3
+        "After I leave, moans start coming from the office."
+
+        $ tb_event[3]["city_pgp_corporation"]["lily"] = 1
+        $ v_time += 5
+
+    elif v_time >= 780 and tb_event[3]["city_pgp_corporation"]["lily"] == 1:
+        show loc_city_pgp_corporation_office_lily at top with d1
+        "She is probably busy now, it's best not to disturb her."
+        hide loc_city_pgp_corporation_office_lily at top with d1
 
     $ v_time += 5
 

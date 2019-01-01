@@ -96,9 +96,13 @@
         renpy.image("npc_portrait_lisa_" + str(i).zfill(2), "images/people/brandi_love/lisa_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Lily
+    renpy.image("img_lily_boobs", "images/people/lilith/lily_boobs.jpg")
     renpy.image("img_lily_couch", "images/people/lilith/lily_couch.jpg")
 
-    for i in range(1,11):
+    for i in range(1,6):
+        renpy.image("img_lily_shower_" + str(i).zfill(2), "images/people/lilith/lily_portrait_shower_" + str(i).zfill(2) + ".jpg")
+
+    for i in range(1,13):
         renpy.image("npc_portrait_lily_" + str(i).zfill(2), "images/people/lilith/lily_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Marcy
@@ -143,6 +147,11 @@
     # Nyomi
     for i in range(1,4):
         renpy.image("img_nyomi_beach_" + str(i).zfill(2), "images/people/nyomi_bank/nyomi_beach_" + str(i).zfill(2) + ".jpg")
+
+    # Rikki
+    for i in range(1,2):
+        renpy.image("npc_portrait_rikki_" + str(i).zfill(2), "images/people/rikki_six/rikki_portrait_" + str(i).zfill(2) + ".jpg")
+
 
     # Sarah
     for i in range(1,9):
@@ -193,6 +202,7 @@ define megan = Character("Megan", image = "portrait_megan", color = clr_sand)
 define mia = Character("Mia", image = "portrait_mia", color = clr_palegold)
 define nina = Character("Nina", image = "portrait_nina", color = clr_sand)
 define nyomi = Character("Nyomi", image = "portrait_nyomi", color = clr_chestnut_brown)
+define rikki = Character("Rikki", image = "portrait_rikki", color = clr_palegold)
 define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut_brown)
 define veronica = Character("Veronica", image = "portrait_veronica", color = clr_gray)
 
@@ -208,6 +218,7 @@ image side portrait_megan = "images/portrait/portrait_megan.jpg"
 image side portrait_mia = "images/portrait/portrait_mia.jpg"
 image side portrait_nina = "images/portrait/portrait_nina.jpg"
 image side portrait_nyomi = "images/portrait/portrait_nyomi.jpg"
+image side portrait_rikki = "images/portrait/portrait_rikki.jpg"
 image side portrait_sarah = "images/portrait/portrait_sarah.jpg"
 image side portrait_veronica = "images/portrait/portrait_veronica.jpg"
 
@@ -261,6 +272,7 @@ image loc_city_home_marcy_room = "images/location/loc_city_home_marcy_room.jpg"
 image loc_city_mall = "images/location/loc_city_mall.jpg"
 image loc_city_mall_store = "images/location/loc_city_mall_store.jpg"
 image loc_city_pgp_corporation = "images/location/loc_city_pgp_corporation.jpg"
+image loc_city_pgp_corporation_office_lily = "images/location/loc_city_pgp_corporation_office_lily.jpg"
 image loc_city_street_1st = "images/location/loc_city_street_1st.jpg"
 image loc_city_street_2nd = "images/location/loc_city_street_2nd.jpg"
 image loc_city_street_3th = "images/location/loc_city_street_3th.jpg"
@@ -313,6 +325,9 @@ image vid_megan_lesbian = Movie(play="images/people/nikki_benz/megan_lesbian.web
 # Mia
 image vid_mia_masturbate = Movie(play="images/people/mia_malkova/mia_masturbate.webm", size=(1000,496))
 
+# Rikki
+image vid_rikki_blowjob_01 = Movie(play="images/people/rikki_six/rikki_blowjob_01.webm", size=(650,833))
+
 ## VIDEOS - LOCATION
 # Beach
 image vid_city_beach_boobs_01 = Movie(play="images/people/beach/beach_boobs_01.webm", size=(1000,742))
@@ -347,12 +362,16 @@ label start:
 
     $ tb_event[3] = {
         "city_beach": {},
+        "city_home_lily": {},
+        "city_pgp_corporation": {},
         "college_garden": {},
         "college_gym": {},
         "college_office_ellie": {}
     }
 
     $ tb_event[3]["city_beach"] = { "nyomi": 0 }
+    $ tb_event[3]["city_home_lily"] = { "lily": 0 }
+    $ tb_event[3]["city_pgp_corporation"] = { "lily": 0 }
     $ tb_event[3]["college_garden"] = { "veronica": 0 }
     $ tb_event[3]["college_gym"] = { "bonnie": 0 }
     $ tb_event[3]["college_office_ellie"] = { "aphrodisiac": 0 }
@@ -436,4 +455,4 @@ label lbl_bypass:
     $ f_day3_shower = True
     $ f_day3_spy = False
 
-    jump lbl_college_class
+    jump lbl_city_map
