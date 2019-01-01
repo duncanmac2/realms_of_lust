@@ -47,6 +47,7 @@
     ## NPC
     # Bonnie
     renpy.image("img_bonnie_ass", "images/people/kennedy_leigh/bonnie_ass.jpg")
+    renpy.image("img_bonnie_beach", "images/people/kennedy_leigh/bonnie_beach.jpg")
     renpy.image("img_bonnie_handjob_01", "images/people/kennedy_leigh/bonnie_handjob_01.jpg")
     renpy.image("img_bonnie_undress", "images/people/kennedy_leigh/bonnie_undress.jpg")
 
@@ -271,7 +272,7 @@ image loc_college_shower_men = "images/location/loc_college_shower_men.jpg"
 image loc_college_teacher_office = "images/location/loc_college_teacher_office.jpg"
 image loc_college_yard = "images/location/loc_college_yard.jpg"
 
-## VIDEOS
+## VIDEOS NPC
 # MC
 image vid_mc_erection = Movie(play="images/people/MC/MC_erection.webm")
 
@@ -308,6 +309,12 @@ image vid_megan_lesbian = Movie(play="images/people/nikki_benz/megan_lesbian.web
 # Mia
 image vid_mia_masturbate = Movie(play="images/people/mia_malkova/mia_masturbate.webm", size=(1000,496))
 
+## VIDEOS LOCATION
+# Beach
+image vid_city_beach_boobs_01 = Movie(play="images/people/beach/beach_boobs_01.webm", size=(1000,742))
+image vid_city_beach_boobs_02 = Movie(play="images/people/beach/beach_boobs_02.webm", size=(584,440))
+image vid_city_beach_boobs_03 = Movie(play="images/people/beach/beach_boobs_03.webm", size=(800,660))
+
 # College
 image vid_college_run = Movie(play="images/events/college_run.webm")
 image vid_college_shower_01 = Movie(play="images/events/college_shower_01.webm", size=(620,612))
@@ -332,11 +339,13 @@ label start:
     $ tb_event = {3: {}, 4: {}}
 
     $ tb_event[3] = {
+        "city_beach": {},
         "college_garden": {},
         "college_gym": {},
         "college_office_ellie": {}
     }
 
+    $ tb_event[3]["city_beach"] = { "nyomi": 0 }
     $ tb_event[3]["college_garden"] = { "veronica": 0 }
     $ tb_event[3]["college_gym"] = { "bonnie": 0 }
     $ tb_event[3]["college_office_ellie"] = { "aphrodisiac": 0 }

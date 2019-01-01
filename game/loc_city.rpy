@@ -663,27 +663,72 @@ label lbl_city_beach_day2:
 
 ## BEACH - DAY 3 ##
 label lbl_city_beach_day3:
-    "I came to the beach to relax, but soon I saw a face I knew..."
-    show img_nyomi_beach_01 with d3
-    "This Nyomi, Sarah's sister and Marcy's aunt, she helped Sarah take care of Mia and I sometimes when Sarah was too busy. I haven't seen her in almost a year... she is as sexy as I remember."
-    hide img_nyomi_beach_01 with d1
-    show img_nyomi_beach_02 at top with d1
-    nyomi "[me]? Is that you?"
-    me "It is, how are Nyomi?"
-    nyomi "I'm great, is been so long, you are even more handsome, girls must be falling for you all over the place."
-    me "Hahaha..."
-    nyomi "Sit down let's talk, get confortable, most people don't wear any clothes to this beach, so if you want take those shorts off."
-    hide img_nyomi_beach_02 with d1
-    show img_mc_body at top with d1
-    "Why not? It will be a new experience."
-    hide img_mc_body with d1
-    show img_nyomi_beach_03 with d1
-    nyomi "Oh my you have grown, in all the right places..."
-    me "Uhhh, thanks..."
-    "We spend a few minutes catching up, talking about all that has happened in our lives."
-    nyomi "I need to go now, but you should come to my house, if you can bring my niece with you, she never visits anymore."
-    me "Sure Nyomi."
-    hide img_nyomi_beach_03 with d3
+    if v_time < 780:
+        show vid_city_beach_boobs_01 at top with d3
+        "Nice view."
+        hide vid_city_beach_boobs_01 with d1
+        show vid_city_beach_boobs_02 at top with d1
+        pause
+        hide vid_city_beach_boobs_02 with d1
+        show vid_city_beach_boobs_03 at top with d1
+        pause
+        hide vid_city_beach_boobs_03 with d3
+        "After a few minutes I leave."
+
+    elif v_time >= 780 and v_time < 960 and tb_event[3]["city_beach"]["nyomi"] == 0:
+        "I came to the beach to relax, but soon I saw a face I knew..."
+        show img_nyomi_beach_01 with d3
+        "This Nyomi, Sarah's sister and Marcy's aunt, she helped Sarah take care of Mia and I sometimes when Sarah was too busy. I haven't seen her in almost a year... she is as sexy as I remember."
+        hide img_nyomi_beach_01 with d1
+        show img_nyomi_beach_02 at top with d1
+        nyomi "[me]? Is that you?"
+        me "It is, how are Nyomi?"
+        nyomi "I'm great, is been so long, you are even more handsome, girls must be falling for you all over the place."
+        me "Hahaha..."
+        nyomi "Sit down let's talk, get confortable, most people don't wear any clothes to this beach, so if you want take those shorts off."
+        hide img_nyomi_beach_02 with d1
+        show img_mc_body at top with d1
+        "Why not? It will be a new experience."
+        hide img_mc_body with d1
+        show img_nyomi_beach_03 with d1
+        nyomi "Oh my you have grown, in all the right places..."
+        me "Uhhh, thanks..."
+        "We spend a few minutes catching up, talking about all that has happened in our lives."
+        nyomi "I need to go now, but you should come to my house, if you can bring my niece with you, she never visits anymore."
+        me "Sure Nyomi."
+        hide img_nyomi_beach_03 with d3
+
+        $ tb_event[3]["city_beach"]["nyomi"] = 1
+
+    elif v_time >= 780 and v_time < 960 and tb_event[3]["city_beach"]["nyomi"] == 1:
+        show img_nyomi_beach_01 with d3
+        "Nyomi is here but it's best to leave her alone."
+        hide img_nyomi_beach_01 with d3
+
+    elif v_time >= 960 and tb_event[3]["college_gym"]["bonnie"] == 0 and f_day1_lisa_bathroom_incident:
+        show img_bonnie_beach with d3
+        "That is Bonnie, the crazy girl that entered the man's bathroom while I was taking a shower."
+        hide img_bonnie_beach with d3
+
+    elif v_time >= 960 and tb_event[3]["college_gym"]["bonnie"] == 1 and f_day1_lisa_bathroom_incident:
+        "Bonnie is here, let's talk to her."
+        me "Hey Bonnie."
+        show img_bonnie_beach with d1
+        bonnie "Hiii..."
+        "We talk for a few minutes, it was a nice chat."
+        hide img_bonnie_beach with d1
+
+    elif v_time >= 960 and tb_event[3]["college_gym"]["bonnie"] == 0 and not f_day1_lisa_bathroom_incident:
+        "I don't know anyone here, except maybe..."
+        show img_bonnie_beach with d1
+        "No never seen her before."
+        hide img_bonnie_beach with d1
+
+    elif v_time >= 960 and tb_event[3]["college_gym"]["bonnie"] == 1 and not f_day1_lisa_bathroom_incident:
+        show img_bonnie_beach with d3
+        "That strange girl is here, let's talk to her."
+        "After a few minutes I leave."
+        hide img_bonnie_beach with d3
 
     $ v_time += 5
 
