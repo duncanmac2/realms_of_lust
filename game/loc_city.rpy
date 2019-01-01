@@ -1,4 +1,7 @@
 #### LOCATIONS ####
+label lbl_main_map:
+    scene loc_city_map_back
+
 label lbl_city_beach:
     scene loc_city_beach
 

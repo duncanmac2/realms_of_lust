@@ -51,7 +51,7 @@ screen scr_navigation:
             xpos 8
             ypos 32
             idle "images/interface/icon_map.png"
-            #action [Hide("scr_phone"), Show("scr_phone_gallery"), SetVariable("f_photo_new", False)]
+            action [Jump("lbl_main_map")]
 
         imagebutton:
             xpos 60
