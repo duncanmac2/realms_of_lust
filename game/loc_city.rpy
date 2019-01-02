@@ -64,6 +64,13 @@ label lbl_city_home_marcy_room:
     elif v_day == 3:
         jump lbl_city_home_marcy_room_day3
 
+## 1ST STREET - PRYIA HOME ##
+label lbl_city_home_priya:
+    scene loc_city_home_priya
+
+    if v_day == 3:
+        jump lbl_city_home_pryia_day3
+
 ### 2ND STREET ###
 label lbl_city_street_2nd:
     $ v_localisation = "city_second_street"
@@ -850,6 +857,38 @@ label lbl_city_home_lily_day3:
         "Back to Second Street":
             jump lbl_city_street_2nd
 
+### PRYIA HOME ###
+## PRYIA HOME - DAY 3 ##
+label lbl_city_home_pryia_day3:
+    if v_time >= 720 and v_time < 960:
+        "She is not here right now, must be working."
+
+    elif v_time >= 960 and v_time < 1080 and tb_event[3]["city_home_priya"]["priya"] == 0:
+        "I decide to see what our other neighbour Priya is doing. I used to spy on her sunbathing. Once I even caught her topless, I'm pretty sure she knew that I was looking but she didn't seem to care. I think it excited her even."
+        show img_priya_pool_01 with d1
+        "I sneak to my old pepping spot, and it looks like she is busy."
+        window hide
+        hide img_priya_pool_01
+        show img_priya_pool_02 with d1
+        pause
+        hide img_priya_pool_02 with d1
+        show img_priya_pool_03 with d1
+        pause
+        hide img_priya_pool_03 with d1
+        show img_priya_pool_04 with d1
+        "Did she just wink at me? Well now I really know she likes to be watched."
+        hide img_priya_pool_04 with d1
+
+        $ tb_event[3]["city_home_priya"]["priya"] = 1
+        $ v_time += 10
+
+    else:
+        "She must be out right now."
+
+    menu:
+        "Back to First Street":
+            jump lbl_city_street_1st
+
 ### 1ST STREET ###
 ## 1ST STREET - DAY 2 ##
 label lbl_city_street_1st_day2:
@@ -1168,8 +1207,13 @@ label lbl_city_gym_day3:
 
         show img_veronica_gym_04 with d1
         "I start to enjoy a great shower when Veronica bursts in the room."
-        veronica "Look, about what you asked, you are my best friend's brother, and I know Mia likes you a lot. So it would not be fair to take away from her the chance for the both of you to lose you virginity together."
-        veronica "No matter how much I want to fuck you, and trust me I have been fantasizing about you even before I knew what the word sex meant and..."
+
+        if tb_event[3]["college_garden"]["veronica"] == 1:
+            veronica "Look, about what I said, yes I would like for you to fuck me, in fact I think about it all the time. The reason I sleep around so much is because I can't have the one guy I have been fantasising for years and..."
+        else:
+            veronica "Look, about what you asked, you are my best friend's brother, and I know Mia likes you a lot. So it would not be fair to take away from her the chance for the both of you to lose you virginity together."
+            veronica "No matter how much I want to fuck you, and trust me I have been fantasizing about you even before I knew what the word sex meant and..."
+
         hide img_veronica_gym_04 with d1
         "She pauses for a second and realises what she just said, she then try to run away but I grab her by the waist."
         me "Before you go, I need to say some things myself. I get that you don't want to lose a friend but I'm not exclusive property of my sister, and I can have sex with whoever I choose. Mia know this, maybe she want to wait for me, but it's my decision to make if I will wait for her."
@@ -1301,7 +1345,6 @@ label lbl_city_gym_day3:
     menu:
         "Back to Third Street":
             jump lbl_city_street_3th
-
 
 ### PARK ###
 ## PARK - DAY 3 ##

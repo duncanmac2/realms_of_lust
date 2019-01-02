@@ -150,6 +150,10 @@
     for i in range(1,4):
         renpy.image("img_nyomi_beach_" + str(i).zfill(2), "images/people/nyomi_bank/nyomi_beach_" + str(i).zfill(2) + ".jpg")
 
+    # Pryia
+    for i in range(1,5):
+        renpy.image("img_priya_pool_" + str(i).zfill(2), "images/people/priya_rai/priya_pool_" + str(i).zfill(2) + ".jpg")
+
     # Rikki
     for i in range(1,2):
         renpy.image("npc_portrait_rikki_" + str(i).zfill(2), "images/people/rikki_six/rikki_portrait_" + str(i).zfill(2) + ".jpg")
@@ -216,6 +220,7 @@ define megan = Character("Megan", image = "portrait_megan", color = clr_sand)
 define mia = Character("Mia", image = "portrait_mia", color = clr_palegold)
 define nina = Character("Nina", image = "portrait_nina", color = clr_sand)
 define nyomi = Character("Nyomi", image = "portrait_nyomi", color = clr_chestnut_brown)
+define priya = Character("Priya", image = "portrait_priya", color = clr_gray)
 define rikki = Character("Rikki", image = "portrait_rikki", color = clr_palegold)
 define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut_brown)
 define veronica = Character("Veronica", image = "portrait_veronica", color = clr_gray)
@@ -232,6 +237,7 @@ image side portrait_megan = "images/portrait/portrait_megan.jpg"
 image side portrait_mia = "images/portrait/portrait_mia.jpg"
 image side portrait_nina = "images/portrait/portrait_nina.jpg"
 image side portrait_nyomi = "images/portrait/portrait_nyomi.jpg"
+image side portrait_priya = "images/portrait/portrait_priya.jpg"
 image side portrait_rikki = "images/portrait/portrait_rikki.jpg"
 image side portrait_sarah = "images/portrait/portrait_sarah.jpg"
 image side portrait_veronica = "images/portrait/portrait_veronica.jpg"
@@ -284,6 +290,7 @@ image loc_city_home_lily = "images/location/loc_city_home_lily.jpg"
 image loc_city_home_marcy = "images/location/loc_city_home_marcy.jpg"
 image loc_city_home_marcy_bathroom = "images/location/loc_city_home_marcy_bathroom.jpg"
 image loc_city_home_marcy_room = "images/location/loc_city_home_marcy_room.jpg"
+image loc_city_home_priya = "images/location/loc_city_home_priya.jpg"
 image loc_city_mall = "images/location/loc_city_mall.jpg"
 image loc_city_mall_break = "images/location/loc_city_mall_break.jpg"
 image loc_city_mall_store = "images/location/loc_city_mall_store.jpg"
@@ -405,6 +412,7 @@ label start:
         "city_beach": {},
         "city_gym": {},
         "city_home_lily": {},
+        "city_home_priya": {},
         "city_mall": {},
         "city_park": {},
         "city_pgp_corporation": {},
@@ -416,6 +424,7 @@ label start:
     $ tb_event[3]["city_beach"] = { "nyomi": 0 }
     $ tb_event[3]["city_gym"] = { "lisa": 0, "sarah": 0, "veronica": 0 }
     $ tb_event[3]["city_home_lily"] = { "lily": 0 }
+    $ tb_event[3]["city_home_priya"] = { "priya": 0 }
     $ tb_event[3]["city_mall"] = { "karen": 0 }
     $ tb_event[3]["city_park"] = { "marcy": 0 }
     $ tb_event[3]["city_pgp_corporation"] = { "lily": 0 }
