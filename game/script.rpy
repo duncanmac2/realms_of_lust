@@ -74,16 +74,17 @@
         renpy.image("npc_portrait_ellie_" + str(i).zfill(2), "images/people/julia_ann/ellie_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Hitomi
-    for i in range(1,3):
-        renpy.image("npc_portrait_hitomi_" + str(i).zfill(2), "images/people/hitomi/hitomi_portrait_" + str(i).zfill(2) + ".jpg")
+    for i in range(1,5):
+        renpy.image("npc_portrait_hitomi_" + str(i).zfill(2), "images/people/hitomi_tanaka/hitomi_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Karen
+    renpy.image("img_karen_blowjob_02", "images/people/jayden_jaymes/karen_blowjob_02.jpg")
     renpy.image("img_karen_kiss", "images/people/jayden_jaymes/karen_kiss.jpg")
 
     for i in range(1,3):
         renpy.image("img_karen_couch_" + str(i).zfill(2), "images/people/jayden_jaymes/karen_couch_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,5):
+    for i in range(1,7):
         renpy.image("npc_portrait_karen_" + str(i).zfill(2), "images/people/jayden_jaymes/karen_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Lisa
@@ -284,6 +285,7 @@ image loc_city_home_marcy = "images/location/loc_city_home_marcy.jpg"
 image loc_city_home_marcy_bathroom = "images/location/loc_city_home_marcy_bathroom.jpg"
 image loc_city_home_marcy_room = "images/location/loc_city_home_marcy_room.jpg"
 image loc_city_mall = "images/location/loc_city_mall.jpg"
+image loc_city_mall_break = "images/location/loc_city_mall_break.jpg"
 image loc_city_mall_store = "images/location/loc_city_mall_store.jpg"
 image loc_city_park = "images/location/loc_city_park.jpg"
 image loc_city_pgp_corporation = "images/location/loc_city_pgp_corporation.jpg"
@@ -314,6 +316,16 @@ image vid_bonnie_handjob_02 = Movie(play="images/people/kennedy_leigh/bonnie_han
 
 # Ellie
 image vid_ellie_cuni = Movie(play="images/people/julia_ann/ellie_cuni.webm", size=(800,450))
+
+# Hitomi
+image vid_hitomi_boobs = Movie(play="images/people/hitomi_tanaka/hitomi_boobs.webm")
+
+# Karen
+image vid_karen_69 = Movie(play="images/people/jayden_jaymes/karen_69.webm")
+image vid_karen_blowjob_01 = Movie(play="images/people/jayden_jaymes/karen_blowjob_01.webm", size=(1000,560))
+image vid_karen_blowjob_03 = Movie(play="images/people/jayden_jaymes/karen_blowjob_03.webm", size=(866,406))
+image vid_karen_boobs = Movie(play="images/people/jayden_jaymes/karen_boobs.webm", size=(1000,562))
+image vid_karen_cuni = Movie(play="images/people/jayden_jaymes/karen_cuni.webm", size=(1080,480))
 
 # Lily
 image vid_lily_kiss_01 = Movie(play="images/people/lilith_lust/lily_kiss_01.webm", size=(960,544))
@@ -393,6 +405,7 @@ label start:
         "city_beach": {},
         "city_gym": {},
         "city_home_lily": {},
+        "city_mall": {},
         "city_park": {},
         "city_pgp_corporation": {},
         "college_garden": {},
@@ -403,6 +416,7 @@ label start:
     $ tb_event[3]["city_beach"] = { "nyomi": 0 }
     $ tb_event[3]["city_gym"] = { "lisa": 0, "sarah": 0, "veronica": 0 }
     $ tb_event[3]["city_home_lily"] = { "lily": 0 }
+    $ tb_event[3]["city_mall"] = { "karen": 0 }
     $ tb_event[3]["city_park"] = { "marcy": 0 }
     $ tb_event[3]["city_pgp_corporation"] = { "lily": 0 }
     $ tb_event[3]["college_garden"] = { "veronica": 0 }
@@ -423,6 +437,7 @@ label start:
     $ f_bypass = False
     $ f_name_prompt = True
     $ f_day1_lisa_bathroom_incident = False
+    $ f_day2_mall_karen = False
     $ f_day2_nurse = False
     $ f_day2_shower = False
     $ f_day3_shower = False
@@ -484,6 +499,7 @@ label lbl_bypass:
     $ v_time = 720
 
     $ f_day1_lisa_bathroom_incident = True
+    $ f_day2_mall_karen = True
     $ f_day2_nurse = True
     $ f_day2_shower = True
     $ f_day3_shower = True

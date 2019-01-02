@@ -509,11 +509,11 @@ label lbl_city_mall_day2:
     karen "I know and it's probably going to stay empty for the rest of the day, but the manager won't let me set a foot outside of the shop. However, if we stayed in the back were the employee, and by that I mean me, take a break, we could probably talk a bit."
     me "Great."
     hide npc_portrait_karen_04 with d5
-    show img_karen_couch_01 at top with d5
+    show img_karen_couch_01 with d5
     karen "You know [me], I'm glad you came to visit... did Veronica told you what I said about you?"
     me "Yeah she did."
     hide img_karen_couch_01 with d1
-    show img_karen_couch_02 at top with d1
+    show img_karen_couch_02 with d1
     "She leans closer."
     karen "That's good, then you know why I brought you here."
     me "Yes..."
@@ -535,15 +535,174 @@ label lbl_city_mall_day2:
     me "Sure...?"
     hitomi "Now get moving."
 
+    $ f_day2_mall_karen = True
+
     menu:
         "Go home":
             jump lbl_home_living_room
 
 ## MALL - DAY 3 ##
 label lbl_city_mall_day3:
-    "bla"
+    if v_time < 780:
+        "The antique store is closed for lunch."
 
-    $ v_time += 5
+    elif v_time >= 780 and v_time < 900 and tb_event[3]["city_mall"]["karen"] == 0:
+        "Karen is here now, maybe I should talk to her."
+        show npc_portrait_karen_05 with d1
+        me "Hello Karen."
+        karen "[me]? What are you doing here?"
+        me "I saw you here and thought I'd say hi."
+        karen "That's nice of you, working in an antique store can be very boring, Hitomi... I mean Miss Tanaka is in her office most of the time."
+        me "Why are you working here if you don't like it then?"
+        karen "It's complicated, I just need the money."
+        "She doesn't look like she wants to talk about this. Time to change the subject."
+        me "Did you know what happened in the college today? Veronica got a days suspension."
+        hide npc_portrait_karen_05 with d1
+        show npc_portrait_karen_06 at top with d1
+        karen "What for?"
+        me "She was caught, having sex with someone on a classroom."
+        karen "Really, she never changes does she? I would never even dream of doing something like that."
+        me "Not even with the right person?"
+        "I smile seductively."
+        karen "Well... maybe with the right person..."
+        hide npc_portrait_karen_06 with d1
+        show img_karen_kiss at top with d1
+        "She returns my smile, and start to get closer and closer."
+        hide img_karen_kiss
+        show npc_portrait_hitomi_03 with vpunch
+        hitomi "Karen have you... You young people, haha, I would just leave now, but you still have to work Karen."
+        karen "Hito... Miss Tanaka, sorry we..."
+
+        if f_day2_mall_karen:
+            hitomi "No need to explain Karen, you are young and full of energy, but do try to keep this activities to the break time. And you, Max."
+            me "Yes miss?"
+        else:
+            hitomi "No need to explain Karen, you are young and full of energy, but do try to keep this activities to the break time. And you, what's your name?"
+            me "I'm [me] miss."
+
+        hitomi "Call me Hitomi, her break is between 3 and 4 PM, you can come here to \"talk\" to her then, but before you leave, I need some muscle here in my office can you help me?"
+        me "Uhh, sure."
+        hitomi "And Karen, to work my darling, we have clients entering the store."
+        hide npc_portrait_hitomi_03 with d1
+        "Karen goes to talk to the clients, while I enter Hitomi's office."
+        hitomi "Here can you put this box on the top shelf?"
+        me "No problem."
+        "The box is not heavy at all, but the shelf is so high up that after pushing it to the back, I accidently lose my balance and fall on top of Hitomi, with hands and face on those enormous boobs of hers. They are soft and warm and... wait is she ok?"
+        me "Shit, Hitomi are you ok?"
+        hitomi "I'm fine, but most important is that a metal pipe in your pants?"
+        me "That's..."
+        hitomi "Oh... I guess you liked the place where you landed then? I can't blame you."
+        "We both stand up."
+        show npc_portrait_hitomi_04 with d1
+        hitomi "It looks like the box is were where I asked you to put it and we have no broken bones, I call that a well done job."
+        me "You are welcome."
+        hitomi "Before you go care to tell me something [me]. Did you liked to fondle my breasts?"
+        me "It was an accident, but I can't say it was unpleasant."
+        hitomi "Give me your hand then."
+        hide npc_portrait_hitomi_04 with d1
+        show vid_hitomi_boobs at top with d1
+        me "She grabs my hand, removes her shirt and puts it in her massive juggs."
+        hide vid_hitomi_boobs with d1
+        hitomi "Something for you to remember from me. If you are in the mall when Karen is working I would be happy to entertain you while you wait. Now go on, I have to finish a report."
+        me "Sure, later Hitomi."
+
+        $ tb_event[3]["city_mall"]["karen"] = 1
+        $ v_time += 10
+
+    elif v_time >= 780 and v_time < 900 and tb_event[3]["city_mall"]["karen"] == 1:
+        "I will come back later."
+
+    elif v_time >= 900 and v_time < 960 and tb_event[3]["city_mall"]["karen"] == 0:
+        "Karen is here. Looks like she works at the antique shop, let's talk to her."
+        show npc_portrait_karen_05 with d3
+        me "Hey Karen."
+        "[me], what are you doing here?"
+        me "I was walking around when I saw you, I wanted to tak to you."
+        karen "That's so sweet, I'm on my break now, come with me we can talk in the break room."
+        hide npc_portrait_karen_05 with d1
+
+        menu:
+            "Lead the way":
+                pass
+
+        scene loc_city_mall_break
+        show img_karen_couch_01 with d1
+        karen "So [me], how are things lately?"
+        me "They are good, so why do you work here? You need money or something like that?"
+        karen "Kind of, it's..."
+        "She looks a bit sad."
+        me "Hey did you know Veronica got a day of suspension after being caught fucking a dude in a class?"
+        karen "Really? Hahaha, she never changes does she. I would never dream of doing that in public."
+        me "What if it was the right person?"
+        "I give her my best seductive look."
+        karen "If it was the right person, maybe..."
+        hide img_karen_couch_01 with d1
+        show img_karen_couch_02 with d1
+        "She comes closer and closer."
+        hide img_karen_couch_02 with d1
+        show vid_karen_boobs at top with d1
+        "We stand there kissing for a good time, but she finally finds some courage and starts to massage my cock from outside of my pants. To not be left behind I put my hand inside her top and feel her boobs."
+        hide vid_karen_boobs with d1
+        karen "[me]... w-we can't go too far, my boss will not be happy... but I can't just let you leave empty handed."
+
+        "She takes to her knees and opens my pants."
+        show img_karen_blowjob_02 with d1
+        "She starts slow at first but them picks up the pace, her mouth is so warm it's like I'm going to melt."
+        hide img_karen_blowjob_02 with d1
+        show vid_karen_blowjob_03 at top with d1
+        me "Karen... I'm..."
+        karen "Do it, let me taste you cum."
+        hide vid_karen_blowjob_03 with hpunch
+        "She looks like she is in a bliss, and stays that way for a few seconds, but then she stands up."
+        karen "Do you think you will come here again?"
+        me "I will, nothing would stop me."
+        karen "Then I will have an even better surprise for you next time. But I have to work now, I will see you later."
+        me "Later Karen."
+
+        $ tb_event[3]["city_mall"]["karen"] = 2
+        $ v_time += 15
+
+    elif v_time >= 900 and v_time < 960 and tb_event[3]["city_mall"]["karen"] == 1:
+        "Karen is on her break now, let's go visit her."
+        show npc_portrait_karen_05 with d3
+        "Hello Karen."
+        "[me] you came back, if you want to pick up from where we left off come with me."
+        hide npc_portrait_karen_05 with d1
+
+        menu:
+            "Lead the way":
+                pass
+
+        scene loc_city_mall_break
+        "Once we are inside she wastes no time, she give me a passionate kiss."
+        show vid_karen_boobs at top with d1
+        "We stand there kissing for a good time, but she finally finds some courage and starts to massage my cock from outside of my pants. To not be left behind I put my hand inside her top and feel her boobs."
+        karen "[me]..."
+        hide vid_karen_boobs with d1
+        "She is moaning, she then takes the next step, and takes my cock out and starts massaging it while I take her boobs out as well."
+        show vid_karen_blowjob_01 at top with d1
+        "We can't contain our lust, maybe it's time to lose my V card... No, I will make this decision with a cool head... but it's so hard when she is giving me a blowjob like this..."
+        me "Karen... I..."
+        hide vid_karen_blowjob_01 with d1
+        show vid_karen_cuni at top with d1
+        "That's when an idea comes to mind, I grab her and at the same time start licking her pussy."
+        window hide
+        hide vid_karen_cuni with d1
+        show vid_karen_69 at top with d1
+        pause
+        hide vid_karen_69 with d1
+        "After a little while we reach our climaxes together."
+        "She looks like she is in a bliss, and stays that way for a few seconds, but then she stands up."
+        karen "Do you think you will come here again?"
+        me "I will, nothing would stop me."
+        karen "Then I will have an even better surprise for you next time. But I have to work now. I will see you later."
+        me "Later Karen."
+
+        $ tb_event[3]["city_mall"]["karen"] = 2
+        $ v_time += 15
+
+    else:
+        "It say here the store is closed because of an emergency. Guess I will come back tomorrow."
 
     menu:
         "Back to Third Street":
