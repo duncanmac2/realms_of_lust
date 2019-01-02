@@ -29,8 +29,10 @@ label lbl_city_street_1st:
         jump lbl_city_home_marcy_day2a
     elif v_day == 2 and v_time > 0:
         jump lbl_city_street_1st_day2
-    elif v_day == 3:
+    elif v_day == 3 and v_time == 0:
         jump lbl_city_street_1st_day3
+    elif v_day == 3 and v_time > 0:
+        call screen scr_navigation
 
 ## 1ST STREET - MARCY HOME ##
 label lbl_city_home_marcy:
@@ -288,6 +290,7 @@ label lbl_city_home_marcy_day2b:
         marcy "Okaayyy... We should go then..."
         me "Yes, sure goodbye Sarah."
         sarah "Bye guys, and don't forget to visit."
+        hide npc_portrait_marcy_01 with d3
         "Mia and Marcu...y keep looking at me like I'm crazy. Whatever is going on I have to keep calm, worrying them will not help me, let me try to keep my cool..."
 
         menu:
@@ -501,6 +504,7 @@ label lbl_city_mall_day1:
     mia "I know, but she is too shy to tell you, she is a nice girl why don't you ask her out."
     me "I will think about it, let's go home?"
     mia "Let's!"
+    hide npc_portrait_mia_06 with d1
 
     menu:
         "Go home":
@@ -543,6 +547,7 @@ label lbl_city_mall_day2:
     hitomi "You know, I don't mind if you visit her but do it during her break from now on, ok. And maybe you could stay after her break ends to get to know someone else."
     me "Sure...?"
     hitomi "Now get moving."
+    hide npc_portrait_hitomi_02 with d1
 
     $ f_day2_mall_karen = True
 
@@ -890,6 +895,7 @@ label lbl_city_street_1st_day3:
             mia "If you think so bro, I will go to her house later today I think, want me to send you pictures?"
             me "You would do that?"
             mia "Maybe, you have been a good brother, so maybe you deserve it..."
+            hide npc_portrait_mia_15 with d1
             "I can't wait to see it now."
 
         "No":
@@ -898,12 +904,12 @@ label lbl_city_street_1st_day3:
             me "What, me, no, I just..."
             mia "That's so cute! I will tell V to wait on those leasons for now okay."
             me "Thanks Mia."
+            hide npc_portrait_mia_15 with d1
             "Mia's first time is mine Veronica, maybe mine is also hers... we will see."
 
     menu:
         "Marcy's house":
             jump lbl_city_home_marcy
-
 
 ### BEACH ###
 ## BEACH - DAY 2 ##

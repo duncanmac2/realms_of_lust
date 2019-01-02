@@ -146,6 +146,7 @@ screen scr_navigation:
         xmaximum 153
         ymaximum 323
 
+        # College
         if v_localisation == "college_yard":
             imagebutton:
                 idle "images/interface/loc_college_nurse.jpg"
@@ -176,6 +177,26 @@ screen scr_navigation:
                 hover "images/interface/loc_college_locker_room_hover.jpg"
                 action Jump("lbl_college_locker_room")
 
+        # First street
+        elif v_localisation == "city_first_street":
+            imagebutton:
+                idle "images/interface/loc_home_living_room.jpg"
+                hover "images/interface/loc_home_living_room_hover.jpg"
+                action Jump("lbl_home_living_room")
+
+            imagebutton:
+                ypos 62
+                idle "images/interface/loc_city_home_marcy.jpg"
+                hover "images/interface/loc_city_home_marcy_hover.jpg"
+                action Jump("lbl_city_home_marcy")
+
+            imagebutton:
+                ypos 124
+                idle "images/interface/loc_city_home_priya.jpg"
+                hover "images/interface/loc_city_home_priya_hover.jpg"
+                action Jump("lbl_city_home_priya")
+
+        # Second street
         elif v_localisation == "city_second_street":
             imagebutton:
                 idle "images/interface/loc_city_home_lily.jpg"
@@ -194,6 +215,7 @@ screen scr_navigation:
                 hover "images/interface/loc_city_church_hover.jpg"
                 action Jump("lbl_city_church")
 
+        # Third street
         elif v_localisation == "city_third_street":
             imagebutton:
                 idle "images/interface/loc_city_gym.jpg"

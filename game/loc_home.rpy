@@ -198,9 +198,9 @@ label lbl_home_room_mc_day2:
                 jump lbl_home_room_mc
 
     else:
-        show img_mc_sleep at truecenter with d3
+        show img_mc_sleep at top with d3
         "You wake up for another day."
-        hide mc_sleep with d3
+        hide img_mc_sleep with d3
         me "What time is it... It's morning already? Shit hope I'm not late again. But what a strange dream, and I didn't even get to see some boobs, that's my luck for you... Why I'm naked?"
         "In that moment between me noticing I'm completely nude and before I can put any clothes, Lisa comes through the door and sees me in all my glorious nakedness."
         show npc_portrait_lisa_03 at top with d3
@@ -211,7 +211,7 @@ label lbl_home_room_mc_day2:
         show npc_portrait_lisa_04
         "But before I can recover from the shock I realise that I'm not the only one that's not properly dressed."
         hide npc_portrait_lisa_04 with d3
-        show vid_mc_erection at truecenter
+        show vid_mc_erection at top
         "That is a bit too much for a man to take."
         "I try to hide it before she can see it. To no avail it seems."
         hide vid_mc_erection
@@ -332,7 +332,7 @@ label lbl_home_bathroom_day1:
                     pass
 
             scene loc_home_bathroom2
-            show vid_lisa_bathroom_incident at truecenter
+            show vid_lisa_bathroom_incident at top
             "My head is in the clouds, thinking about why she didn't woke me up today. I'm so distracted that I find the answer the worst way possible."
             lisa "[me]! Don't you know how to knock?"
             me "SHIT, sorry, I thought you were already finished..."
@@ -518,7 +518,7 @@ label lbl_home_kitchen_day1:
         "After a few minutes pondering if I should eat all of Mia's food for sending me to my figurative demise, she comes down the stair."
         mia "Sooooo... I-I'm sorryyyyy???"
         hide npc_portrait_mia_02
-        show npc_portrait_mia_03 at top with d3
+        show npc_portrait_mia_03 with d3
         me "Sorry doesn't cut it Mia, Lisa will eat me alive when we are back from college, you know how she is she doens't even own a bikini because it shows too much skin... And I saw her naked !!!"
         mia "I didn't know, I thought she was down here and just forgot to wake us. Please forgive me [me], I-I will... talk to Hikari, I know you have a crush on her so I will set you up on a date, how about that?"
         me "That would be great, except last month I tried to ask her out. All she said is she does not go out with losers and perverts. A pervert, ME?"
@@ -600,6 +600,7 @@ label lbl_home_kitchen_day2:
         show npc_portrait_mia_01 with d1
         mia "Morning, bro, mom."
         lisa "Good morning Mia."
+        hide npc_portrait_mia_01 with d3
         "The rest of our time goes as usual, but it's clear that something is not right..."
         "After we eat, Mia and I finish getting ready and leave the house."
 
@@ -630,6 +631,7 @@ label lbl_home_kitchen_day2:
         "I almost jump out of the chair."
         me "Oh... Good morning."
         mia "Morning mom."
+        hide npc_portrait_lisa_06 with d3
         "The rest of our time goes as usual, but it's clear that something is not right..."
         "After we eat, Mia and I finish getting ready and leave the house."
 
@@ -707,7 +709,7 @@ label lbl_home_kitchen_day3:
         lisa "Well, I guess that's okay, what you can't do is fuck each other, you are still brother and sister after all. Blood related or no."
         me "So... what you are saying is blowjobs are ok?"
         hide npc_portrait_lisa_03 with d1
-        show npc_portrait_mia_03 at top with d1
+        show npc_portrait_mia_03 with d1
         mia "You wish bro, that's not going to happen."
         "It's totally going to happen."
         me "Right, but if did happen, would you be angry?"
@@ -741,7 +743,7 @@ label lbl_home_kitchen_day3:
         me "That's... I... yes..."
         lisa "And you Mia?"
         hide npc_portrait_lisa_03 with d1
-        show npc_portrait_mia_03 at top with d1
+        show npc_portrait_mia_03 with d1
         mia "Yes."
         lisa "So did I, and I think those desires are normal, I don't mean we should act on then, completely that is, we are family after all."
         lisa "But from now on if you are felling horny, I think we should help eachother to the best of our ability. No sex however, but I would not be opposed to some other forms of release..."
@@ -849,9 +851,10 @@ label lbl_home_living_room_day2:
 ## LISA ROOM - DAY 2 ##
 label lbl_home_room_lisa_day2:
     "I'm on my way to the kitchen when I hear some noises from Lisa's room, the door is not closed so i decide to take a look."
-    show vid_lisa_room_masturbate at truecenter with d3
+    show vid_lisa_room_masturbate at top with d3
     "Ohhh... [me]..."
     "What the fuck! Is she...? But... Why am I still looking? It's best to leave if she catches me I'm a dead man."
+    hide vid_lisa_room_masturbate with d3
 
     menu:
         "Kitchen":

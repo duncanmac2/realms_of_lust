@@ -338,6 +338,7 @@ label lbl_college_garden_day2:
     marcy "Sorry, I didn't mean to scare you Veronica. But [me], how about we go celebrate, then come with me."
     "Why not, it's probably a good chance to see if Marcy remembers having a penis."
     me "Ok, let's go."
+    hide npc_portrait_marcy_02 with d3
 
     menu:
         "Follow Marcy":
