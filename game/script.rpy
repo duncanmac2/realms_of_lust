@@ -97,14 +97,14 @@
         renpy.image("npc_portrait_lisa_" + str(i).zfill(2), "images/people/brandi_love/lisa_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Lily
-    renpy.image("img_lily_boobs", "images/people/lilith/lily_boobs.jpg")
-    renpy.image("img_lily_couch", "images/people/lilith/lily_couch.jpg")
+    renpy.image("img_lily_boobs", "images/people/lilith_lust/lily_boobs.jpg")
+    renpy.image("img_lily_couch", "images/people/lilith_lust/lily_couch.jpg")
 
     for i in range(1,6):
-        renpy.image("img_lily_shower_" + str(i).zfill(2), "images/people/lilith/lily_portrait_shower_" + str(i).zfill(2) + ".jpg")
+        renpy.image("img_lily_shower_" + str(i).zfill(2), "images/people/lilith_lust/lily_portrait_shower_" + str(i).zfill(2) + ".jpg")
 
     for i in range(1,13):
-        renpy.image("npc_portrait_lily_" + str(i).zfill(2), "images/people/lilith/lily_portrait_" + str(i).zfill(2) + ".jpg")
+        renpy.image("npc_portrait_lily_" + str(i).zfill(2), "images/people/lilith_lust/lily_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Marcy
     renpy.image("img_marcy_boobs_01", "images/people/brittney_white/marcy_boobs_01.jpg")
@@ -316,8 +316,8 @@ image vid_bonnie_handjob_02 = Movie(play="images/people/kennedy_leigh/bonnie_han
 image vid_ellie_cuni = Movie(play="images/people/julia_ann/ellie_cuni.webm", size=(800,450))
 
 # Lily
-image vid_lily_kiss_01 = Movie(play="images/people/lilith/lily_kiss_01.webm", size=(960,544))
-image vid_lily_kiss_02 = Movie(play="images/people/lilith/lily_kiss_02.webm", size=(1000,460))
+image vid_lily_kiss_01 = Movie(play="images/people/lilith_lust/lily_kiss_01.webm", size=(960,544))
+image vid_lily_kiss_02 = Movie(play="images/people/lilith_lust/lily_kiss_02.webm", size=(1000,460))
 
 # Lisa
 image vid_lisa_bathroom_incident = Movie(play="images/people/brandi_love/lisa_bathroom_incident.webm", size=(590,590))
