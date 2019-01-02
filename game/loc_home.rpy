@@ -20,6 +20,9 @@ label lbl_home_kitchen:
         jump lbl_home_kitchen_day3
 
 label lbl_home_living_room:
+    $ v_localisation = "home_living_room"
+
+    call main_show
     scene loc_home_living_room
 
     if v_day == 1:

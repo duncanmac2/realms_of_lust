@@ -18,6 +18,9 @@ label lbl_city_beach:
 
 ### 1ST STREET ###
 label lbl_city_street_1st:
+    $ v_localisation = "city_first_street"
+
+    call main_show
     scene loc_city_street_1st
 
     if v_day == 1:
@@ -31,6 +34,9 @@ label lbl_city_street_1st:
 
 ## 1ST STREET - MARCY HOME ##
 label lbl_city_home_marcy:
+    $ v_localisation = "city_marcy's_home"
+
+    call main_show
     scene loc_city_home_marcy
 
     if v_day == 1:
@@ -106,6 +112,9 @@ label lbl_city_gym:
 
 ### 3TH STREET - MALL ###
 label lbl_city_mall:
+    $ v_localisation = "city_mall"
+
+    call main_show
     scene loc_city_mall
 
     if v_day == 1:
