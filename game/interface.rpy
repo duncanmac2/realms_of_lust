@@ -270,3 +270,34 @@ screen scr_navigation:
                 idle "images/interface/loc_city_street_1st.jpg"
                 hover "images/interface/loc_city_street_1st_hover.jpg"
                 action Jump("lbl_city_street_1st")
+
+        # Marcy's home
+        elif v_localisation == "marcy_home":
+            imagebutton:
+                idle "images/interface/loc_city_home_marcy_room.jpg"
+                hover "images/interface/loc_city_home_marcy_room_hover.jpg"
+                action Jump("lbl_city_home_marcy_room")
+
+            imagebutton:
+                ypos 62
+                idle "images/interface/loc_city_home_marcy_room_sarah.jpg"
+                hover "images/interface/loc_city_home_marcy_room_sarah_hover.jpg"
+                action Jump("lbl_city_home_marcy_room_sarah")
+
+            imagebutton:
+                ypos 124
+                idle "images/interface/loc_city_home_marcy_bathroom.jpg"
+                hover "images/interface/loc_city_home_marcy_bathroom_hover.jpg"
+                action Jump("lbl_city_home_marcy_bathroom")
+
+            imagebutton:
+                ypos 186
+                idle "images/interface/loc_city_home_marcy_pool.jpg"
+                hover "images/interface/loc_city_home_marcy_pool_hover.jpg"
+                action Jump("lbl_city_home_marcy_pool")
+
+            imagebutton:
+                ypos 248
+                idle "images/interface/loc_city_street_1st.jpg"
+                hover "images/interface/loc_city_street_1st_hover.jpg"
+                action Jump("lbl_city_street_1st")

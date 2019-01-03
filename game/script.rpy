@@ -412,6 +412,7 @@ label start:
         "city_beach": {},
         "city_gym": {},
         "city_home_lily": {},
+        "city_home_marcy": {},
         "city_home_priya": {},
         "city_mall": {},
         "city_park": {},
@@ -425,6 +426,7 @@ label start:
     $ tb_event[3]["city_beach"] = { "nyomi": 0 }
     $ tb_event[3]["city_gym"] = { "lisa": 0, "sarah": 0, "veronica": 0 }
     $ tb_event[3]["city_home_lily"] = { "lily": 0 }
+    $ tb_event[3]["city_home_marcy"] = { "sarah": 0, "marcy": 0 }
     $ tb_event[3]["city_home_priya"] = { "priya": 0 }
     $ tb_event[3]["city_mall"] = { "karen": 0 }
     $ tb_event[3]["city_park"] = { "marcy": 0 }

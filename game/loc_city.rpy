@@ -36,7 +36,7 @@ label lbl_city_street_1st:
 
 ## 1ST STREET - MARCY HOME ##
 label lbl_city_home_marcy:
-    $ v_localisation = "city_marcy's_home"
+    $ v_localisation = "marcy_home"
 
     call main_show
     scene loc_city_home_marcy
@@ -56,6 +56,12 @@ label lbl_city_home_marcy_bathroom:
     elif v_day == 3:
         jump lbl_city_home_marcy_bathroom_day3
 
+label lbl_city_home_marcy_pool:
+    scene loc_city_home_marcy_pool
+
+    if v_day == 3:
+        jump lbl_city_home_marcy_pool_day3
+
 label lbl_city_home_marcy_room:
     scene loc_city_home_marcy_room
 
@@ -63,6 +69,12 @@ label lbl_city_home_marcy_room:
         jump lbl_city_home_marcy_room_day2
     elif v_day == 3:
         jump lbl_city_home_marcy_room_day3
+
+label lbl_city_home_marcy_room_sarah:
+    scene loc_city_home_marcy_room_sarah
+
+    if v_day == 3:
+        jump lbl_city_home_marcy_room_sarah_day3
 
 ## 1ST STREET - PRYIA HOME ##
 label lbl_city_home_priya:
@@ -306,33 +318,88 @@ label lbl_city_home_marcy_day2b:
 
 ## MARCY HOME - DAY 3 ##
 label lbl_city_home_marcy_day3:
-    "Mia rings the doorbell, Sarah comes to the door soon after."
-    show npc_portrait_sarah_04 with d3
-    sarah "Good morning guys, how are you."
-    me "We are good Sarah thanks for asking, is Marcy ready?"
-    sarah "I will call her just a second."
-    hide npc_portrait_sarah_04 with d3
-    mia "That's a nice lingerie don't you think bro, I wish I had something so stylish."
-    me "You like it? Maybe you will get a nice gift sometime this week then."
-    mia "Thanks bro you are the best."
-    show npc_portrait_marcy_04
-    marcy "Hey, if you are giving gifts give me one too."
-    me "I only give gifts to people who are ready on time, unless you are going to college in that outfit I don't think you fit the criteria."
-    marcy "Sorry, I spend the night playing games again, come in I will be ready in no time."
-    me "Ok, we have the time, but don't take too long."
-    marcy "Don't worry I will be right back."
-    hide npc_portrait_marcy_04 with d3
-    mia "Bro, why didn't you and Marcy ever fucked."
-    me "Good question, I guess it never came up on our conversations, and she is my friend, maybe it would be weird after we did."
-    "A few minutes later..."
-    me "Why is she taking so long? I will go check on her."
-    mia "Ok."
+    if v_time == 0:
+        "Mia rings the doorbell, Sarah comes to the door soon after."
+        show npc_portrait_sarah_04 with d3
+        sarah "Good morning guys, how are you."
+        me "We are good Sarah thanks for asking, is Marcy ready?"
+        sarah "I will call her just a second."
+        hide npc_portrait_sarah_04 with d3
+        mia "That's a nice lingerie don't you think bro, I wish I had something so stylish."
+        me "You like it? Maybe you will get a nice gift sometime this week then."
+        mia "Thanks bro you are the best."
+        show npc_portrait_marcy_04
+        marcy "Hey, if you are giving gifts give me one too."
+        me "I only give gifts to people who are ready on time, unless you are going to college in that outfit I don't think you fit the criteria."
+        marcy "Sorry, I spend the night playing games again, come in I will be ready in no time."
+        me "Ok, we have the time, but don't take too long."
+        marcy "Don't worry I will be right back."
+        hide npc_portrait_marcy_04 with d3
+        mia "Bro, why didn't you and Marcy ever fucked."
+        me "Good question, I guess it never came up on our conversations, and she is my friend, maybe it would be weird after we did."
+        "A few minutes later..."
+        me "Why is she taking so long? I will go check on her."
+        mia "Ok."
 
-    menu:
-        "Go to the bathroom":
-            jump lbl_city_home_marcy_bathroom
-        "Call Marcy":
-            jump lbl_city_home_marcy_room
+        menu:
+            "Go to the bathroom":
+                jump lbl_city_home_marcy_bathroom
+            "Call Marcy":
+                jump lbl_city_home_marcy_room
+
+    elif v_time >= 720 and v_time < 780 and tb_event[3]["city_home_marcy"]["sarah"] == 0:
+        "Sarah is eating lunch."
+        #
+        sarah "[me], what a surprise want to eat with me?"
+        me "No thanks Sarah, I was just passing by."
+        sarah "Are you sure I have enough food for the both of us."
+        me "I'm sure."
+        sarah "Then sit down let's talk a little."
+        "I sit in front of her."
+        sarah "I talked to Lisa earlier, I heard Lily is back in town."
+        me "She is, she is working at PGP Corp."
+        sarah "That's great, it's always good to have family close by. My mother has moved to a house in Canary Street last week, I will be visiting her after I finish my lunch."
+        me "Oh, I'm not bothering you then am I?"
+        #
+        sarah "Nonsense, you are welcome any time. I don't even know why you still bother knocking on the door, you are like the son I never had, you can come in at any time."
+        me "Thanks Sarah, but I'm sure you wouldn't want me to come in the middle of the night like a burglar."
+        sarah "Haha, if you want to come and see Marcy in the middle of the night I don't mind, just make sure to wear a condom."
+        #
+        me "I... I will keep that in mind."
+        sarah "It's getting late I'm leaving now, but feel free to stay in Marcy's room if you want, she will be here soon. If you need to leave you know where I keep the spare key, just lock the door."
+        "She leaves me in the house alone, I better go."
+
+        $ tb_event[3]["city_home_marcy"]["sarah"] = 1
+        $ v_time += 10
+
+    elif v_time >= 900 and v_time < 1020 and tb_event[3]["city_home_marcy"]["marcy"] == 0:
+        "Marcy is on the couch watching some TV."
+        #
+        me "What are you watching?"
+        marcy "Just some show about who can sleep with more woman in a day."
+        me "What, serious? Is there a show like that?"
+        marcy "Yeah, it's a new one, it's interesting."
+        me "Let's watch it together, I want to see how that works."
+        "After a few minutes Marcy turns to me and asks me a surprising question."
+        #
+        marcy "How come you never kiss me?"
+        me "Wow, that came out of nowhere! I have no idea, maybe because you never asked me to."
+        marcy "If I were to ask would you kiss me?"
+        me "I would, yes."
+        marcy "Then I want a kiss, right now."
+        "I don't know what got into her but I have no reason to reject the request."
+        #
+        marcy "That was amazing, we should do it more often."
+        me "If you want to, I will admit you are a good kisser."
+        marcy "Thanks, you are not bad yourself."
+        #
+        "We continue to watch TV until Marcy falls asleep in the couch. I will let her rest."
+
+        $ tb_event[3]["city_home_marcy"]["marcy"] = 1
+        $ v_time += 20
+
+    call main_show
+    call screen scr_navigation
 
 ### MARCY BATHROOM ###
 ## MARCY BATHROOM - DAY 2 ##
