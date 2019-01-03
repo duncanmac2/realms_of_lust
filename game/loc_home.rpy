@@ -29,6 +29,8 @@ label lbl_home_living_room:
         jump lbl_home_living_room_day1
     elif v_day == 2:
         jump lbl_home_living_room_day2
+    elif v_day == 3:
+        jump lbl_home_living_room_day3
 
 label lbl_home_room_lisa:
     scene loc_home_room_lisa_bed
@@ -846,6 +848,26 @@ label lbl_home_living_room_day2:
             "Go play a videogame":
                 $ v_time = 900
                 jump lbl_home_room_mc
+
+## LIVING ROOM - DAY 3 ##
+label lbl_home_living_room_day3:
+    if v_time >= 900 and v_time < 960 and tb_event[3]["home_living_room"]["lisa_hj"] == 0:
+        "Lisa and Mia are talking in the living room."
+        me "Hey guys what are you tal..."
+        lisa "Oh sweetie your sister asked me to teach her a few kissing techniques."
+        me "I see..."
+        mia "Is that... whoa bro, that must have really turned you on! You dick is poking out of you pants."
+        me "I can't denied that it was hot... maybe you could teach Mia some handjob techniques next Lisa."
+        lisa "I don't see why not, come closer."
+        "She pull my pants down and starts working on my shaft. She is talking with Mia but all I can do is feel her hand on my cock."
+        lisa "Wow, that was a lot of cum sweetie, you need to relieve yourself more often. If you need help you can ask me or Mia."
+        me "I will, I promise."
+
+        $ tb_event[3]["home_living_room"]["lisa_hj"] = 1
+        $ v_time += 10
+
+    call main_show
+    call screen scr_navigation
 
 ### LISA ROOM ###
 ## LISA ROOM - DAY 2 ##

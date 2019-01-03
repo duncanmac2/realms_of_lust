@@ -418,7 +418,8 @@ label start:
         "city_pgp_corporation": {},
         "college_garden": {},
         "college_gym": {},
-        "college_office_ellie": {}
+        "college_office_ellie": {},
+        "home_living_room": {}
     }
 
     $ tb_event[3]["city_beach"] = { "nyomi": 0 }
@@ -431,6 +432,7 @@ label start:
     $ tb_event[3]["college_garden"] = { "veronica": 0 }
     $ tb_event[3]["college_gym"] = { "bonnie": 0 }
     $ tb_event[3]["college_office_ellie"] = { "aphrodisiac": 0 }
+    $ tb_event[3]["home_living_room"] = { "lisa_hj": 0 }
 
     # Repeatable
     $ tb_repeatable = {3: {}, 4: {}}

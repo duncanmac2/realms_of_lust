@@ -144,7 +144,7 @@ screen scr_navigation:
         xpos 1757
         ypos 10
         xmaximum 153
-        ymaximum 323
+        ymaximum 385
 
         # College
         if v_localisation == "college_yard":
@@ -233,3 +233,40 @@ screen scr_navigation:
                 idle "images/interface/loc_city_park.jpg"
                 hover "images/interface/loc_city_park_hover.jpg"
                 action Jump("lbl_city_park")
+
+        # Home
+        elif v_localisation == "home_living_room":
+            imagebutton:
+                idle "images/interface/loc_home_room_mc.jpg"
+                hover "images/interface/loc_home_room_mc_hover.jpg"
+                action Jump("lbl_home_room_mc")
+
+            imagebutton:
+                ypos 62
+                idle "images/interface/loc_home_room_mia.jpg"
+                hover "images/interface/loc_home_room_mia_hover.jpg"
+                action Jump("lbl_home_room_mia")
+
+            imagebutton:
+                ypos 124
+                idle "images/interface/loc_home_room_lisa.jpg"
+                hover "images/interface/loc_home_room_lisa_hover.jpg"
+                action Jump("lbl_home_room_lisa")
+
+            imagebutton:
+                ypos 186
+                idle "images/interface/loc_home_kitchen.jpg"
+                hover "images/interface/loc_home_kitchen_hover.jpg"
+                action Jump("lbl_home_kitchen")
+
+            imagebutton:
+                ypos 248
+                idle "images/interface/loc_home_pool.jpg"
+                hover "images/interface/loc_home_pool_hover.jpg"
+                action Jump("lbl_home_pool")
+
+            imagebutton:
+                ypos 310
+                idle "images/interface/loc_city_street_1st.jpg"
+                hover "images/interface/loc_city_street_1st_hover.jpg"
+                action Jump("lbl_city_street_1st")
