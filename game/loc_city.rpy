@@ -6,6 +6,7 @@ label lbl_city_map:
 
     $ v_time += 5
 
+    call time_check
     call screen scr_main_map
 
 label lbl_city_beach:

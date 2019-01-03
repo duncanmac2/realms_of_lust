@@ -276,6 +276,7 @@ image loc_home_bathroom1 = "images/location/loc_home_bathroom1.jpg"
 image loc_home_bathroom2 = "images/location/loc_home_bathroom2.jpg"
 image loc_home_kitchen = "images/location/loc_home_kitchen.jpg"
 image loc_home_living_room = "images/location/loc_home_living_room.jpg"
+image loc_home_pool = "images/location/loc_home_pool.jpg"
 image loc_home_room_lisa_bed = "images/location/loc_home_room_lisa_bed.jpg"
 image loc_home_room_mc = "images/location/loc_home_room_mc.jpg"
 image loc_home_room_mc_bed = "images/location/loc_home_room_mc_bed.jpg"
@@ -425,7 +426,9 @@ label start:
         "college_garden": {},
         "college_gym": {},
         "college_office_ellie": {},
-        "home_living_room": {}
+        "home_kitchen": {},
+        "home_living_room": {},
+        "home_room_mia": {}
     }
 
     $ tb_event[3]["city_beach"] = { "nyomi": 0 }
@@ -442,7 +445,9 @@ label start:
     $ tb_event[3]["college_garden"] = { "veronica": 0 }
     $ tb_event[3]["college_gym"] = { "bonnie": 0 }
     $ tb_event[3]["college_office_ellie"] = { "aphrodisiac": 0 }
+    $ tb_event[3]["home_kitchen"] = { "mia": 0 }
     $ tb_event[3]["home_living_room"] = { "lisa_hj": 0 }
+    $ tb_event[3]["home_room_mia"] = { "mia_cuni": 0 }
 
     # Repeatable
     $ tb_repeatable = {3: {}, 4: {}}

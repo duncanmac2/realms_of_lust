@@ -8,12 +8,18 @@ label main_show(show_all=0):
 
     return
 
+label time_check:
+    if v_time >= 1140:
+        if v_day == 3:
+            "It's getting late, let's go home."
+            jump lbl_home_kitchen
+
+    return
+
 label time_change:
     $ v_time += 30
 
-    if v_time >= 1140:
-        "It's getting late, let's go home."
-        jump lbl_home_living_room
+    call time_check
 
     if v_localisation == "city_first_street":
         jump lbl_city_street_1st
