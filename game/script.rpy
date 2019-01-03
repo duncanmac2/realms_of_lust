@@ -73,8 +73,12 @@
     for i in range(1,4):
         renpy.image("npc_portrait_ellie_" + str(i).zfill(2), "images/people/julia_ann/ellie_portrait_" + str(i).zfill(2) + ".jpg")
 
+    # Emma
+    for i in range(1,4):
+        renpy.image("img_emma_hospital_" + str(i).zfill(2), "images/people/sophie_dee/emma_hospital_" + str(i).zfill(2) + ".jpg")
+
     # Hitomi
-    for i in range(1,5):
+    for i in range(1,7):
         renpy.image("npc_portrait_hitomi_" + str(i).zfill(2), "images/people/hitomi_tanaka/hitomi_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Karen
@@ -84,12 +88,13 @@
     for i in range(1,3):
         renpy.image("img_karen_couch_" + str(i).zfill(2), "images/people/jayden_jaymes/karen_couch_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,7):
+    for i in range(1,10):
         renpy.image("npc_portrait_karen_" + str(i).zfill(2), "images/people/jayden_jaymes/karen_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Lisa
     renpy.image("img_lisa_gym_01", "images/people/brandi_love/lisa_gym_01.jpg")
     renpy.image("img_lisa_kiss_01", "images/people/brandi_love/lisa_kiss_01.jpg")
+    renpy.image("img_lisa_pool_01", "images/people/brandi_love/lisa_pool_01.jpg")
 
     for i in range(1,6):
         renpy.image("img_lisa_shower_" + str(i).zfill(2), "images/people/brandi_love/lisa_shower_" + str(i).zfill(2) + ".jpg")
@@ -110,10 +115,19 @@
     # Marcy
     renpy.image("img_marcy_boobs_01", "images/people/brittney_white/marcy_boobs_01.jpg")
 
+    for i in range(1,4):
+        renpy.image("img_marcy_couch_" + str(i).zfill(2), "images/people/brittney_white/marcy_couch_" + str(i).zfill(2) + ".jpg")
+
+    for i in range(1,3):
+        renpy.image("img_marcy_nude_" + str(i).zfill(2), "images/people/brittney_white/marcy_nude_" + str(i).zfill(2) + ".jpg")
+
+    for i in range(1,3):
+        renpy.image("img_marcy_pool_" + str(i).zfill(2), "images/people/brittney_white/marcy_pool_" + str(i).zfill(2) + ".jpg")
+
     for i in range(1,6):
         renpy.image("img_marcy_undress_" + str(i).zfill(2), "images/people/brittney_white/marcy_undress_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,5):
+    for i in range(1,8):
         renpy.image("npc_portrait_marcy_" + str(i).zfill(2), "images/people/brittney_white/marcy_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Maria
@@ -130,13 +144,16 @@
 
     # Mia
     renpy.image("img_mia_bikini", "images/people/mia_malkova/mia_bikini.jpg")
+    renpy.image("img_mia_book", "images/people/mia_malkova/mia_book.jpg")
     renpy.image("img_mia_handjob", "images/people/mia_malkova/mia_handjob.jpg")
     renpy.image("img_mia_kiss_01", "images/people/mia_malkova/mia_kiss_01.jpg")
+    renpy.image("img_mia_kiss_lisa", "images/people/mia_malkova/mia_kiss_lisa.jpg")
+    renpy.image("img_mia_pussy", "images/people/mia_malkova/mia_pussy.jpg")
 
     for i in range(1,3):
         renpy.image("img_mia_ass_" + str(i).zfill(2), "images/people/mia_malkova/mia_ass_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,16):
+    for i in range(1,18):
         renpy.image("npc_portrait_mia_" + str(i).zfill(2), "images/people/mia_malkova/mia_portrait_" + str(i).zfill(2) + ".jpg")
 
     for i in range(1,4):
@@ -168,7 +185,7 @@
     for i in range(1,9):
         renpy.image("img_sarah_shower_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_shower_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,5):
+    for i in range(1,8):
         renpy.image("npc_portrait_sarah_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Veronica
@@ -183,6 +200,7 @@
     ## NPC OTHERS
     renpy.image("npc_portrait_jason_01", "images/people/others/portrait_jason_01.jpg")
     renpy.image("npc_portrait_jason_02", "images/people/others/portrait_jason_02.jpg")
+    renpy.image("npc_portrait_grandma", "images/people/others/portrait_grandma.jpg")
     renpy.image("npc_portrait_marcus", "images/people/others/portrait_marcus.jpg")
     renpy.image("npc_portrait_mr_smith_01", "images/people/others/portrait_mr_smith_01.jpg")
     renpy.image("npc_portrait_mr_smith_02", "images/people/others/portrait_mr_smith_02.jpg")
@@ -318,6 +336,9 @@ image loc_college_shower_men = "images/location/loc_college_shower_men.jpg"
 image loc_college_teacher_office = "images/location/loc_college_teacher_office.jpg"
 image loc_college_yard = "images/location/loc_college_yard.jpg"
 
+## OBJECTS
+image obj_sarah_playboy_collection = "images/objects/sarah_playboy_collection.jpg"
+
 ## VIDEOS - NPC
 # MC
 image vid_mc_erection = Movie(play="images/people/MC/MC_erection.webm")
@@ -347,17 +368,25 @@ image vid_lily_kiss_02 = Movie(play="images/people/lilith_lust/lily_kiss_02.webm
 # Lisa
 image vid_lisa_bathroom_incident = Movie(play="images/people/brandi_love/lisa_bathroom_incident.webm", size=(590,590))
 image vid_lisa_gym_02 = Movie(play="images/people/brandi_love/lisa_gym_02.webm", size=(1080,606))
-image vid_lisa_handjob_cum = Movie(play="images/people/brandi_love/lisa_handjob_cum.webm", size=(800,418))
+image vid_lisa_handjob_cum = Movie(play="images/people/brandi_love/lisa_handjob_cum.webm", size=(816,460))
 image vid_lisa_kiss_02 = Movie(play="images/people/brandi_love/lisa_kiss_02.webm", size=(1000,540))
 image vid_lisa_kiss_03 = Movie(play="images/people/brandi_love/lisa_kiss_03.webm", size=(800,778))
 image vid_lisa_show_boobs = Movie(play="images/people/brandi_love/lisa_boobs_01.webm")
 image vid_lisa_room_masturbate = Movie(play="images/people/brandi_love/lisa_masturbation.webm")
+image vid_lisa_undress = Movie(play="images/people/brandi_love/lisa_undress.webm", size=(450,652))
 
 # Marcy
+image vid_marcy_blowjob_01 = Movie(play="images/people/brittney_white/marcy_blowjob_01.webm", size=(920,800))
+image vid_marcy_blowjob_02 = Movie(play="images/people/brittney_white/marcy_blowjob_02.webm", size=(738,744))
 image vid_marcy_boobs_02 = Movie(play="images/people/brittney_white/marcy_boobs_02.webm", size=(630,716))
+image vid_marcy_boobs_03 = Movie(play="images/people/brittney_white/marcy_boobs_03.webm", size=(1000,562))
 image vid_marcy_boobs_bounce_01 = Movie(play="images/people/brittney_white/marcy_boobs_bounce_01.webm", size=(552,780))
 image vid_marcy_boobs_bounce_02 = Movie(play="images/people/brittney_white/marcy_boobs_bounce_02.webm", size=(552,780))
+image vid_marcy_facial = Movie(play="images/people/brittney_white/marcy_facial.webm", size=(1000,600))
+image vid_marcy_kiss = Movie(play="images/people/brittney_white/marcy_kiss.webm", size=(1000,560))
 image vid_marcy_masturbate = Movie(play="images/people/brittney_white/marcy_masturbate.webm", size=(704,512))
+image vid_marcy_sex_01 = Movie(play="images/people/brittney_white/marcy_sex_01.webm", size=(365,800))
+image vid_marcy_sex_02 = Movie(play="images/people/brittney_white/marcy_sex_02.webm")
 
 # Megan
 image vid_megan_blowjob = Movie(play="images/people/nikki_benz/megan_blowjob.webm", size=(750,844))
@@ -365,6 +394,9 @@ image vid_megan_boobs_01 = Movie(play="images/people/nikki_benz/megan_boobs_01.w
 image vid_megan_lesbian = Movie(play="images/people/nikki_benz/megan_lesbian.webm", size=(1000,450))
 
 # Mia
+image vid_mia_ass_03 = Movie(play="images/people/mia_malkova/mia_ass_03.webm", size=(437,791))
+image vid_mia_finger = Movie(play="images/people/mia_malkova/mia_finger.webm", size=(764,610))
+image vid_mia_handjob_cum = Movie(play="images/people/mia_malkova/mia_handjob_cum.webm", size=(800,418))
 image vid_mia_masturbate = Movie(play="images/people/mia_malkova/mia_masturbate.webm", size=(1000,496))
 
 # Rikki
@@ -450,7 +482,7 @@ label start:
     $ tb_event[3]["college_office_ellie"] = { "aphrodisiac": 0 }
     $ tb_event[3]["home_kitchen"] = { "mia": 0 }
     $ tb_event[3]["home_living_room"] = { "lisa_hj": 0 }
-    $ tb_event[3]["home_room_mia"] = { "mia_cuni": 0 }
+    $ tb_event[3]["home_room_mia"] = { "mia_finger": 0 }
 
     # Repeatable
     $ tb_repeatable = {3: {}, 4: {}}

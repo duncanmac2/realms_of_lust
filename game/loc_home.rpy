@@ -523,7 +523,7 @@ label lbl_home_bathroom_day3:
     mia "Calm down bro, it was on a dildo... let's see."
     "She is inexperienced, if it was not for the fact that she was my sister, and that she is smoking hot, it would take a long time for me to cum. But as things stand..."
     hide img_mia_handjob with d1
-    show vid_lisa_handjob_cum at top with d1
+    show vid_mia_handjob_cum at top with d1
     mia "Wow, so the is what it feels like... it tastes funny."
     hide vid_lisa_handjob_cum with d1
     me "Mia that was... ok."
@@ -800,28 +800,33 @@ label lbl_home_kitchen_day3:
     elif v_time >= 1020 and v_time < 1080 and tb_event[3]["home_kitchen"]["mia"] == 0:
         "Mia is here, grabing some snacks to hide in her room again."
         me "What are you doing sis?"
-        #
+        show npc_portrait_mia_17 with hpunch
         mia "Ahhh... [me]! Don't scare me like that."
         me "Sorry. You are going to hide these in your room again aren't you? Honestly sis, I don't know how you are not overweight."
+        hide npc_portrait_mia_17 with d1
+        show vid_mia_ass_03 at top with d1
         mia "I do some exercises every day in the evening."
         me "Well, go ahead then, before mom catches you."
-        #
+        hide vid_mia_ass_03 with d1
 
         $ tb_event[3]["home_kitchen"]["mia"] = 1
         $ v_time += 5
 
     elif v_time >= 1080 and v_time < 1140:
-        #
+        show npc_portrait_lisa_01 with d3
         "Lisa is here preparing dinner, let's not bother her."
+        hide npc_portrait_lisa_01 with d3
 
     elif v_time >= 1140:
+        show npc_portrait_mia_06 at top with d3
         "Lisa and Mia are waiting for me in the kitchen, the have a smile on their faces."
-        #
-        #
+        hide npc_portrait_mia_06 with d1
+        show npc_portrait_lisa_04 with d1
         lisa "[me], sweetie I have great news for you! I was in the hospital were your grandma is today and guess what? She is fully awake and contious."
         me "Really that's wonderful! When can I visit?"
         lisa "Finish eating your dinner and we are going."
         me "That's awesome."
+        hide npc_portrait_lisa_04 with d1
         "I start to gobble down on the food so fast that I almost choke to death. I haven't talked to grandma in months, she got worse in August and... wait a second, is she affected by the corruption too? I don't know what to think about it, she is very old and I am not into that..."
         "I will think about this later, time to go."
 
@@ -921,13 +926,17 @@ label lbl_home_living_room_day3:
     if v_time >= 840 and v_time < 900 and tb_event[3]["home_living_room"]["lisa_hj"] == 0:
         "Lisa and Mia are talking in the living room."
         me "Hey guys what are you tal..."
+        show img_mia_kiss_lisa at top with hpunch
         lisa "Oh sweetie your sister asked me to teach her a few kissing techniques."
         me "I see..."
         mia "Is that... whoa bro, that must have really turned you on! You dick is poking out of you pants."
         me "I can't denied that it was hot... maybe you could teach Mia some handjob techniques next Lisa."
         lisa "I don't see why not, come closer."
+        hide img_mia_kiss_lisa with d1
         "She pull my pants down and starts working on my shaft. She is talking with Mia but all I can do is feel her hand on my cock."
+        show vid_lisa_handjob_cum at top with d1
         lisa "Wow, that was a lot of cum sweetie, you need to relieve yourself more often. If you need help you can ask me or Mia."
+        hide vid_lisa_handjob_cum with d1
         me "I will, I promise."
 
         $ tb_event[3]["home_living_room"]["lisa_hj"] = 1
@@ -985,9 +994,13 @@ label lbl_home_room_lisa_day3:
 
     elif v_time >= 960 and v_time < 1020:
         "Lisa is getting ready for te gym."
-        #
-        #
+        window hide
+        show vid_lisa_undress at top with d1
+        pause
+        hide vid_lisa_undress with d1
+        show img_lisa_gym_01 with d1
         "She is hot."
+        hide img_lisa_gym_01 with d1
 
     else:
         "The room is empty."
@@ -1045,15 +1058,16 @@ label lbl_home_room_mia_day2:
 
 ## MIA ROOM - DAY 3 ##
 label lbl_home_room_mia_day3:
-    if v_time >= 900 and v_time < 1020 and tb_event[3]["home_room_mia"]["mia_cuni"] == 0:
+    if v_time >= 900 and v_time < 1020 and tb_event[3]["home_room_mia"]["mia_finger"] == 0:
         me "Hey Mia what are you doing?"
-        #
+        show img_mia_book with d1
         mia "Hey bro, I'm just reading a book."
         me "Another erotic book?"
         mia "Yeah, my favorite kind."
         "That was true even before Nina came along, but she kept that fact hidden."
         me "I don't know why you read those, wouldn't be simpler to just watch porn?"
-        #
+        hide img_mia_book with d1
+        show npc_portrait_mia_16 with d1
         mia "Bro you don't get it, reading makes you put your imagination to work and..."
         "She then goes on a rant about how books are the best entertainement medium that exist. I block most of it out."
         mia "...and that is why Scarlett is better than Angelina ever was."
@@ -1062,28 +1076,32 @@ label lbl_home_room_mia_day3:
         me "So you prefer thinking about kissing rather than doing it?"
         mia "I didn't say that, if it's the right person, it's much better in real life."
         "She starts to get a little flustered and look down. Even a virgin like me gets the clue. I put my hand on her cheek and bring her face closer."
-        #
+        hide npc_portrait_mia_16 with d1
+        show img_mia_kiss_01 at top with d1
         "Mia's lips are soft and so moist. Her scent is somehow better than it has ever been."
         "Her tongue starts to dance in my mouth driving me crazy. In that state, I start to rub her pussy through her shorts. She then stops."
+        hide img_mia_kiss_01 at top with d1
         mia "Bro please we can't go any further, if we do I won't be able to stop..."
         me "Mia, do you trust me?"
         mia "I do."
         me "Then turn around."
         "She does as I requested, so I proceed to kiss her neck and explore her body with my hands. She can't stop moaning. I then start fingering her. The moans only increase."
-        #
+        show vid_mia_finger at top with d1
         mia "Bro, I-I'm..."
         me "It's ok Mia."
         "She lets out a loud moan and her legs get weak, so I put her on the bed. She is almost in catatonic state. I will let her rest for now."
+        hide vid_mia_finger with d1
 
-        $ tb_event[3]["home_room_mia"]["mia_cuni"] = 1
+        $ tb_event[3]["home_room_mia"]["mia_finger"] = 1
         $ v_time += 15
 
-    elif v_time >= 900 and v_time < 1020 and tb_event[3]["home_room_mia"]["mia_cuni"] == 1:
+    elif v_time >= 900 and v_time < 1020 and tb_event[3]["home_room_mia"]["mia_finger"] == 1:
         "Mia is sleeping with a smile on her face."
 
     elif v_time >= 1080:
+        show vid_mia_masturbate at top with d1
         "Mia's is busy..."
-        #
+        hide vid_mia_masturbate with d1
 
     else:
         "Mia's room is empty, she must be somewhere else."
@@ -1097,8 +1115,9 @@ label lbl_home_room_mia_day3:
 label lbl_home_pool_day3:
     if v_time >= 900 and v_time < 960:
         "Lisa is swimming here."
-        #
+        show img_lisa_pool_01 at top with d1
         "Wow!"
+        hide img_lisa_pool_01 with d1
 
     else:
         "This is our pool. Lots of memories here."

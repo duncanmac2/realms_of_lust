@@ -358,50 +358,57 @@ label lbl_city_home_marcy_day3:
 
     elif v_time >= 720 and v_time < 780 and tb_event[3]["city_home_marcy"]["sarah"] == 0:
         "Sarah is eating lunch."
-        #
+        show npc_portrait_sarah_01 with d3
         sarah "[me], what a surprise want to eat with me?"
         me "No thanks Sarah, I was just passing by."
         sarah "Are you sure I have enough food for the both of us."
         me "I'm sure."
         sarah "Then sit down let's talk a little."
+        hide npc_portrait_sarah_01 with d3
         "I sit in front of her."
         sarah "I talked to Lisa earlier, I heard Lily is back in town."
         me "She is, she is working at PGP Corp."
         sarah "That's great, it's always good to have family close by. My mother has moved to a house in Canary Street last week, I will be visiting her after I finish my lunch."
         me "Oh, I'm not bothering you then am I?"
-        #
+        show npc_portrait_sarah_05 with d1
         sarah "Nonsense, you are welcome any time. I don't even know why you still bother knocking on the door, you are like the son I never had, you can come in at any time."
         me "Thanks Sarah, but I'm sure you wouldn't want me to come in the middle of the night like a burglar."
+        hide npc_portrait_sarah_05 with d1
+        show npc_portrait_sarah_06 with d1
         sarah "Haha, if you want to come and see Marcy in the middle of the night I don't mind, just make sure to wear a condom."
-        #
         me "I... I will keep that in mind."
         sarah "It's getting late I'm leaving now, but feel free to stay in Marcy's room if you want, she will be here soon. If you need to leave you know where I keep the spare key, just lock the door."
+        hide npc_portrait_sarah_06 with d3
         "She leaves me in the house alone, I better go."
 
         $ tb_event[3]["city_home_marcy"]["sarah"] = 1
         $ v_time += 10
 
     elif v_time >= 900 and v_time < 1020 and tb_event[3]["city_home_marcy"]["marcy"] == 0:
+        show img_marcy_couch_01 with d3
         "Marcy is on the couch watching some TV."
-        #
         me "What are you watching?"
         marcy "Just some show about who can sleep with more woman in a day."
         me "What, serious? Is there a show like that?"
         marcy "Yeah, it's a new one, it's interesting."
         me "Let's watch it together, I want to see how that works."
+        hide img_marcy_couch_01 with d1
+        show img_marcy_couch_02 with d1
         "After a few minutes Marcy turns to me and asks me a surprising question."
-        #
         marcy "How come you never kiss me?"
         me "Wow, that came out of nowhere! I have no idea, maybe because you never asked me to."
         marcy "If I were to ask would you kiss me?"
         me "I would, yes."
         marcy "Then I want a kiss, right now."
+        hide img_marcy_couch_02 with d1
+        show vid_marcy_kiss at top with d1
         "I don't know what got into her but I have no reason to reject the request."
-        #
+        hide vid_marcy_kiss with d1
         marcy "That was amazing, we should do it more often."
         me "If you want to, I will admit you are a good kisser."
+        show img_marcy_couch_03 with d1
         marcy "Thanks, you are not bad yourself."
-        #
+        hide img_marcy_couch_03 with d3
         "We continue to watch TV until Marcy falls asleep in the couch. I will let her rest."
 
         $ tb_event[3]["city_home_marcy"]["marcy"] = 1
@@ -412,21 +419,26 @@ label lbl_city_home_marcy_day3:
 
 ## MARCY HOME - DAY 4 ##
 label lbl_city_home_marcy_day4:
+    show npc_portrait_sarah_07 at top with d1
     sarah "Hey guys, how was your night?"
-    #
+    hide npc_portrait_sarah_07 with d1
+    show npc_portrait_marcy_06 with d1
     marcy "We had a lot of fun mom."
     sarah "I heard, we have thin wall remember."
-    #
     me "Crap, we are sorry."
+    hide npc_portrait_marcy_06 with d1
+    show npc_portrait_sarah_07 at top with d1
     sarah "Don't be sorry honey, I have to admit that I had some fun myself while hearing your moans."
     me "That's... huh... cool."
     sarah "But it would be even better if you could come visit me some nights too."
     me "I...I..."
-    #
+    hide npc_portrait_sarah_07 with d1
+    show npc_portrait_marcy_07 with d1
     marcy "He will mom, later, but we have to leave soon."
+    hide npc_portrait_marcy_07 with d1
     "We sit on the table, Marcy sits very close to me and during the entire time we are eating she rubbing me, or herself on me. It's not unpleasant but Sarah is looking jealously at us."
     "And that foot on my leg, it's not Marcy's that's for sure. After we finish I feeling almost like I'm going to faint from too much blood going to my dick. They both look like they are ready to rip my clothes off and kill me from snu snu. Luckily the doorbell rings, it's Mia."
-    #
+    show npc_portrait_mia_13 with d1
     mia "Good morning Sarah, are the two love birds ready?"
     sarah " Good morning Mia, they are ready."
     me "Hi sis."
@@ -495,8 +507,11 @@ label lbl_city_home_marcy_bathroom_day3:
                 jump lbl_college_class
 
     elif v_time >= 1020 and v_time < 1080:
+        show img_sarah_shower_08 with d1
         "Sarah is taking a shower. I don't think she saw me yet, not that would matter if she did, so let's just enjoy the show."
-        #
+        window hide
+        pause
+        hide img_sarah_shower_08 with d1
 
     else:
         "The is no one here."
@@ -509,14 +524,16 @@ label lbl_city_home_marcy_bathroom_day3:
 ## MARCY POOL - DAY 3 ##
 label lbl_city_home_marcy_pool_day3:
     if v_time >= 840 and v_time < 900 and tb_event[3]["city_home_marcy_pool"]["marcy"] == 0:
-        #
+        show img_marcy_pool_01 at top with d3
         me "Hey Marcy, swimming?"
         marcy "Yeah!"
         me "Why naked? Don't you have a bikini?"
         marcy "I do but I like the freedom, you should try it sometime."
         me "Maybe later, I will leave you to it."
-        #
+        hide img_marcy_pool_01 at top with d1
+        show img_marcy_pool_02 at top with d1
         marcy "Bye..."
+        hide img_marcy_pool_02 with d1
 
         $ tb_event[3]["city_home_marcy_pool"]["marcy"] = 1
         $ v_time += 5
@@ -609,23 +626,28 @@ label lbl_city_home_marcy_room_day3:
                 jump lbl_college_class
 
     elif v_time >= 780 and v_time < 840 and tb_event[3]["city_home_marcy_room"]["marcy"] == 0:
+        show img_marcy_nude_01 at top with d3
         me "Hey Marcy, what are you doing?"
-        #
         marcy "Playing some games, wanna join me?"
         me "Sure, do I have to follow the dress code however?"
         marcy "Dresscode? Oh, you mean get naked? Your choice, [me], but if you don't don't blame me if you get distracted and lose. If you do get naked we will both be equally distracted don't you think."
         me "That's a fair point. Let me get out of these..."
-        #
+        hide img_marcy_nude_01 with d1
+        show img_mc_body at top with d1
         marcy "Shit, I was wrong, I'm at a disadvantage now."
+        hide img_mc_body with d1
         me "Let's start, give me the controler."
         "We spend the next few minutes playing, she is right, she can barely stop looking at me... At the end of our match I stand up and I notice that my dick is dangling close to Marcy's face."
         "She is almost like in a trance looking at it when an idea comes to my mind, I start to get closer to her. Her breath is becoming louder and uneven, until she can no longer hold it."
-        #
+        show vid_marcy_blowjob_01 at top with d1
         "She is sucking like a crazy woman, no technique, no nothing, just pure lust she was holding back for so long."
-        #
+        hide vid_marcy_blowjob_01 with d1
+        show vid_marcy_blowjob_02 at top with d1
         me "Marcy, I'm cumming..."
-        #
+        hide vid_marcy_blowjob_02 with d1
+        show vid_marcy_facial at top with d1
         "After she tastes my cum for a few seconds, she comes back to it."
+        hide vid_marcy_facial with d1
         marcy "[me] that's the greatest day in my life! I never thought it was going to happen. Thank you, thank you!"
         "She is very happy about sucking my cock, guess I should expect nothing different from her. An extremely sexual person in an increasingly sexual world, but repressed."
         me "Glad I could help."
@@ -644,23 +666,31 @@ label lbl_city_home_marcy_room_day3:
         marcy "What? You want to... wow, it's happening, it's finally happening! what do I do now? [me] what do we do now?"
         "She is panicking, I always knew she was all bravado .. I will have to take the lead... I WILL HAVE TO TAKE THE LEAD! Ohhh shit what do I do? Calm down! All those years watching porn will not have been in vain."
         "Over the next few minutes we proceed to make awkward advances and decisions, but in the end things workout."
-        #
-        #
-        #
+        window hide
+        show vid_marcy_boobs_03 at top with d1
+        pause
+        hide vid_marcy_boobs_03 with d1
+        show vid_marcy_sex_01 at top with d1
+        pause
+        hide vid_marcy_sex_01 with d1
+        show vid_marcy_sex_02 at top with d1
+        pause
+        hide vid_marcy_sex_02 with d1
 
         menu:
             "Wake up":
                 pass
 
         me "Where... what? Oh right I'm in Marcy's room, that just happened..."
+        show img_marcy_nude_02 with d1
         marcy "Hey, sleep well?"
-        #
         me "I did, you?"
         marcy "Like an angel! I don't know why we waited so long, we should have done that sooner. Now that we are rested, you want to go at it again?"
         me "I would love to, but we have to be in class in an hour."
         marcy "Let's just no go today."
         me "Won't we get into trouble with Ellie?"
-        #
+        hide img_marcy_nude_02 with d1
+        show npc_portrait_marcy_05 with d1
         marcy "Of couse not, she doesn't care if we go to class or not, if we can pass the finals we are good to go."
         "Interesting development. But still I want to see how things are progressing."
         me "Sorry Marcy, we will do it another time I have things to do on campus today."
@@ -668,14 +698,17 @@ label lbl_city_home_marcy_room_day3:
         me "Ok, your mother would be upset if I left without at least say hi."
         marcy "Let's head down, but don't forget to put some clothes on, mom is a bit frustrated, she has not had a good fuck in some time. If you just come out with that swinging she will jump you on the spot."
         me "Yes, we don't want that... do we?"
-        #
+        hide npc_portrait_marcy_05 with d1
+        show npc_portrait_marcy_06 with d1
         marcy "Are you asking me if I would be okay if you had sex with my mother?"
         me "Maybe..."
         marcy "Well she is very lonely, maybe it would do her some good..."
+        hide npc_portrait_marcy_06 with d1
         "*Knock* *knock*"
-        #
+        show npc_portrait_sarah_07 at top with d1
         sarah "Guys, breakfast is ready, come down..."
         marcy "We will discuss this later, I'm hungry and since you want to go to class we have to hurry."
+        hide npc_portrait_sarah_07 with d1
 
         $ v_day = 4
         $ v_time = 0
@@ -696,19 +729,22 @@ label lbl_city_home_marcy_room_day3:
 label lbl_city_home_marcy_room_sarah_day3:
     if v_time >= 900 and v_time < 960 and tb_event[3]["city_home_marcy_room_sarah"]["sarah"] == 0:
         "Sarah is changing clothes to go to the gym it seems."
-        #
+        show img_sarah_gym_01 at top with d3
         sarah "Hey [me], are you looking for Marcy?"
         me "No, I was just admiring how well you keep your body in shape."
         sarah "Thank you, it's not easy, I can tell you that."
         me "I can imagine."
+        hide img_sarah_gym_01 at top with d1
+        show obj_sarah_playboy_collection at top with d1
         "A collection of rare adult DVDs is on a side of the room. Ever since her husband died they has been on the attic, but it looks like she brought it back here."
-        #
+        hide obj_sarah_playboy_collection with d1
         sarah "Incredible isn't it? Clayton always loved collecting those. I was always jealous of this girls in the cover so when he died I hid them away, but you know, I can see the beauty of it now."
         me "Marcy must love to come here to borrow some of them from time to time."
+        show img_sarah_gym_02 with d1
         sarah "Oh she does belive me, but it's her right, it belongs to her too. But now I have to leave [me], you can stay if you want, it's not like I have anything to hide here."
-        #
         me "No, I'm also leaving, I have some things to do. I will see you later Sarah."
         sarah "Later [me]."
+        hide img_sarah_gym_02 with d1
 
         $ tb_event[3]["city_home_marcy_room_sarah"]["sarah"] = 1
         $ v_time += 5
@@ -1656,13 +1692,14 @@ label lbl_city_hospital_day3:
 
     lisa "We are here [me], put the phone away."
     lisa "Hello, we are here to see Emma."
-    "Oh, I'm afraid only one person can go in at a time. "
+    unknown "Oh, I'm afraid only one person can go in at a time. "
     lisa "That's ok, [me] you go in, it's the first door on the left."
-    "I follow the instructions and start walking to her room, I still remember the last time I saw her..."
-    #
+    show npc_portrait_grandma at top with d1
+    "I follow the instructions and start walking to her room, I still remember the last time I saw her."
+    hide npc_portrait_grandma with d1
     "I wonder if she's all right."
+    show img_emma_hospital_01 at top with d1
     emma "[me]! My, it's been so long..."
-    #
     me "G-Grandma!?"
     emma "That's me [me], I missed you so much."
     me "Grandma you look... better."
@@ -1672,7 +1709,8 @@ label lbl_city_hospital_day3:
     me "It's good."
     emma "Have you rocked the boat of any young ladies?"
     me "Grandma!?"
-    #
+    hide img_emma_hospital_01 with d1
+    show img_emma_hospital_02 at top with d1
     emma "What? when I was your age I couldn't go more than a couple of days without some dick."
     "You know, I thought I would be used to this kind of conversations by now. But this! It's super awkward."
     emma "It's sad that all the nurses and doctors are woman, I haven't had any action in ages..."
@@ -1681,10 +1719,12 @@ label lbl_city_hospital_day3:
     "Breath [me], that's how it's going to be from now on, better get used to it."
     emma "So, young man, do you think I'm still attractive enough?"
     me "I... I think so?"
+    hide img_emma_hospital_02 with d1
+    show img_emma_hospital_03 with d1
     emma "I knew it! Thanks [me], I mean look at my puppies..."
-    #
     emma "They still pack some punch don't they?"
     me "Definitely."
+    hide img_emma_hospital_03 with d1
     "After that we talk for several more minutes, say our goodbyes and I leave."
 
     menu:
@@ -1692,51 +1732,64 @@ label lbl_city_hospital_day3:
             pass
 
     "After I leave the room, I bump into someone I was not expecting, Karen."
-    #
+    show npc_portrait_karen_07 with d1
     karen "[me], what a surprise, what are you doing here?"
     me "I came to see my grandmother, she has been hospitalized here for a few years. What about you?"
     karen "I..."
-    #
+    hide npc_portrait_karen_07
 
     if f_day2_mall_karen or tb_event[3]["city_mall"]["karen"] == 1:
+        show npc_portrait_hitomi_05
         hitomi "Karen I spoke to the doctor and... [me], you are here too? Visiting someone?"
         me "My grandmother, yes. Why both of you are here?"
         karen "You see [me], Hitomi is a friend of my late father and she is helping me take care of my sister. She was hospitalized here too."
         me "Was?"
-        #
+        hide npc_portrait_hitomi_05 with d1
+        show npc_portrait_karen_08 with d1
         karen "She was discharged today, she just suddenly got better. I guess miracles do happen."
         hitomi "Indeed."
         karen "We have to go we are dealing with the papers of her release."
         me "I understand, I have to go too, Lisa and Mia are waiting for me. Bye Karen."
+        hide npc_portrait_karen_08 with d1
+        show img_karen_kiss at top with d1
         "I approach her for a kiss and she reciprocates."
-        #
-        #
+        hide img_karen_kiss with d1
+        show npc_portrait_hitomi_06 with d1
         hitomi "Oh young people are so lively."
+        hide npc_portrait_hitomi_06 with d1
+        show npc_portrait_karen_09 with d1
         karen "Come see me again in the store [me]."
         me "I will."
+        hide npc_portrait_karen_09 with d1
 
     else:
+        show npc_portrait_hitomi_05
         hitomi "Karen I spoke to the doctor and... oh hello, are you a friend of Karen?"
         me "Yes, I'm [me]. Nice to meet you miss..."
         hitomi "Please call me Hitomi."
         karen "She is a friend of my late father and she is helping me take care of my sister. She was hospitalized here too. She is also my boss and owner of the store I work in."
         me "Was hospitalized?"
-        #
-        karen "She was discharged today, she just suddenly got better.I guess miracles do happen."
+        hide npc_portrait_hitomi_05 with d1
+        show npc_portrait_karen_08 with d1
+        karen "She was discharged today, she just suddenly got better. I guess miracles do happen."
         hitomi "Indeed."
-        #
-        hitomi "Karen I will go deal with the papers, why don't you stay here and talk to this lovely young man.."
+        hide npc_portrait_karen_08 with d1
+        show npc_portrait_hitomi_06 with d1
+        hitomi "Karen I will go deal with the papers, why don't you stay here and talk to this lovely young man."
+        hide npc_portrait_hitomi_06
         "Before she can say anything Hitomi disappears."
         me "Well, I guess you are stuck with me."
-        karen "That's not a bad thing, can I ask you something?."
+        karen "That's not a bad thing, can I ask you something?"
         me "Go ahead."
         karen "Veronica told me several times that I should ask you on a date, but I don't have the time, because I have to work all day... Could you if you have the time, visit me at the store?"
         me "Of course Karen, whenever you want."
-        #
+        show npc_portrait_karen_09 with d1
         karen "That's great... shit I need to go, but I will see you later right?"
         me "Count on it."
+        hide npc_portrait_karen_09 with d1
+        show img_karen_kiss at top with d1
         "In her excited state she gives me a kiss and runs off to the distance."
-        #
+        hide img_karen_kiss with d1
 
     menu:
         "Go home":
