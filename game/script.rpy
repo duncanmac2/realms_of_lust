@@ -39,7 +39,8 @@
 
     ### IMAGES
     ## MC
-    renpy.image("img_mc_body", "images/people/MC/mc_body.jpg")
+    renpy.image("img_mc_body_01", "images/people/MC/mc_body_01.jpg")
+    renpy.image("img_mc_body_02", "images/people/MC/mc_body_02.jpg")
     renpy.image("img_mc_bulge", "images/people/MC/mc_bulge.jpg")
     renpy.image("img_mc_dick", "images/people/MC/mc_dick.jpg")
     renpy.image("img_mc_sleep", "images/people/MC/mc_sleep.jpg")
@@ -103,8 +104,15 @@
         renpy.image("npc_portrait_lisa_" + str(i).zfill(2), "images/people/brandi_love/lisa_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Lily
-    renpy.image("img_lily_boobs", "images/people/lilith_lust/lily_boobs.jpg")
+    renpy.image("img_lily_blowjob_01", "images/people/lilith_lust/lily_blowjob_01.jpg")
     renpy.image("img_lily_couch", "images/people/lilith_lust/lily_couch.jpg")
+    renpy.image("img_lily_sex_01", "images/people/lilith_lust/lily_sex_01.jpg")
+
+    for i in range(1,3):
+        renpy.image("img_lily_nude_" + str(i).zfill(2), "images/people/lilith_lust/lily_nude_" + str(i).zfill(2) + ".jpg")
+
+    for i in range(1,3):
+        renpy.image("img_lily_boobs_" + str(i).zfill(2), "images/people/lilith_lust/lily_boobs_" + str(i).zfill(2) + ".jpg")
 
     for i in range(1,6):
         renpy.image("img_lily_shower_" + str(i).zfill(2), "images/people/lilith_lust/lily_portrait_shower_" + str(i).zfill(2) + ".jpg")
@@ -148,16 +156,17 @@
     renpy.image("img_mia_handjob", "images/people/mia_malkova/mia_handjob.jpg")
     renpy.image("img_mia_kiss_01", "images/people/mia_malkova/mia_kiss_01.jpg")
     renpy.image("img_mia_kiss_lisa", "images/people/mia_malkova/mia_kiss_lisa.jpg")
+    renpy.image("img_mia_nude", "images/people/mia_malkova/mia_nude.jpg")
     renpy.image("img_mia_pussy", "images/people/mia_malkova/mia_pussy.jpg")
 
     for i in range(1,3):
         renpy.image("img_mia_ass_" + str(i).zfill(2), "images/people/mia_malkova/mia_ass_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,18):
-        renpy.image("npc_portrait_mia_" + str(i).zfill(2), "images/people/mia_malkova/mia_portrait_" + str(i).zfill(2) + ".jpg")
-
     for i in range(1,4):
         renpy.image("img_mia_shower_" + str(i).zfill(2), "images/people/mia_malkova/mia_shower_" + str(i).zfill(2) + ".jpg")
+
+    for i in range(1,18):
+        renpy.image("npc_portrait_mia_" + str(i).zfill(2), "images/people/mia_malkova/mia_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Nina
     for i in range(1,8):
@@ -317,6 +326,7 @@ image loc_city_home_priya = "images/location/loc_city_home_priya.jpg"
 image loc_city_hospital = "images/location/loc_city_hospital.jpg"
 image loc_city_mall = "images/location/loc_city_mall.jpg"
 image loc_city_mall_break = "images/location/loc_city_mall_break.jpg"
+image loc_city_mall_coffee = "images/location/loc_city_mall_coffee.jpg"
 image loc_city_mall_store = "images/location/loc_city_mall_store.jpg"
 image loc_city_park = "images/location/loc_city_park.jpg"
 image loc_city_pgp_corporation = "images/location/loc_city_pgp_corporation.jpg"
@@ -364,6 +374,8 @@ image vid_karen_cuni = Movie(play="images/people/jayden_jaymes/karen_cuni.webm",
 # Lily
 image vid_lily_kiss_01 = Movie(play="images/people/lilith_lust/lily_kiss_01.webm", size=(960,544))
 image vid_lily_kiss_02 = Movie(play="images/people/lilith_lust/lily_kiss_02.webm", size=(1000,460))
+image vid_lily_sex_02 = Movie(play="images/people/lilith_lust/lily_sex_02.webm", size=(1000,576))
+image vid_lily_sex_03 = Movie(play="images/people/lilith_lust/lily_sex_03.webm", size=(1000,502))
 
 # Lisa
 image vid_lisa_bathroom_incident = Movie(play="images/people/brandi_love/lisa_bathroom_incident.webm", size=(590,590))
@@ -395,6 +407,7 @@ image vid_megan_lesbian = Movie(play="images/people/nikki_benz/megan_lesbian.web
 
 # Mia
 image vid_mia_ass_03 = Movie(play="images/people/mia_malkova/mia_ass_03.webm", size=(437,791))
+image vid_mia_ass_04 = Movie(play="images/people/mia_malkova/mia_ass_04.webm", size=(800,680))
 image vid_mia_finger = Movie(play="images/people/mia_malkova/mia_finger.webm", size=(764,610))
 image vid_mia_handjob_cum = Movie(play="images/people/mia_malkova/mia_handjob_cum.webm", size=(800,418))
 image vid_mia_masturbate = Movie(play="images/people/mia_malkova/mia_masturbate.webm", size=(1000,496))

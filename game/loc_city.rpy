@@ -154,6 +154,12 @@ label lbl_city_mall:
     elif v_day == 3:
         jump lbl_city_mall_day3
 
+label lbl_city_mall_coffee:
+    scene loc_city_mall_coffee
+
+    if v_day == 4:
+        jump lbl_city_mall_coffee_day4
+
 ### 3TH STREET - PARK ###
 label lbl_city_park:
     scene loc_city_park
@@ -633,9 +639,9 @@ label lbl_city_home_marcy_room_day3:
         marcy "Dresscode? Oh, you mean get naked? Your choice, [me], but if you don't don't blame me if you get distracted and lose. If you do get naked we will both be equally distracted don't you think."
         me "That's a fair point. Let me get out of these..."
         hide img_marcy_nude_01 with d1
-        show img_mc_body at top with d1
+        show img_mc_body_01 at top with d1
         marcy "Shit, I was wrong, I'm at a disadvantage now."
-        hide img_mc_body with d1
+        hide img_mc_body_01 with d1
         me "Let's start, give me the controler."
         "We spend the next few minutes playing, she is right, she can barely stop looking at me... At the end of our match I stand up and I notice that my dick is dangling close to Marcy's face."
         "She is almost like in a trance looking at it when an idea comes to my mind, I start to get closer to her. Her breath is becoming louder and uneven, until she can no longer hold it."
@@ -1018,6 +1024,32 @@ label lbl_city_mall_day3:
         "Back to Third Street":
             jump lbl_city_street_3th
 
+### COFFEE ###
+## COFFEE - DAY 4 ##
+label lbl_city_mall_coffee_day4:
+    show npc_portrait_lily_07 with d3
+    "We take a seat outside and order some food and coffee."
+    me "So aunt did you go see grandma at the hospital?"
+    hide npc_portrait_lily_07 with d1
+    show npc_portrait_lily_08 with d1
+    lily "I did..."
+    "She does not look all that trilled."
+    me "What do you think about her?"
+    lily "She looks decades younger and can't shut up about wanting to have sex with a hot dude. And that was yesterday... It's weird, mom was always uptight and now she is like that."
+    me "I thought you would like it."
+    hide npc_portrait_lily_08 with d1
+    show npc_portrait_lily_10 with d1
+    lily "So did I, but after being there it felt... I don't know. If Helen was alive how would you fell."
+    me "If mom was alive? Good question, grandma was weird for me too, but my mother... I don't know auntie, but I've been thinking about it and have come to the conclusion that we should accept this world we have brought up as it is even if sometimes things get strange for us."
+    me "We are the only one that remember the old one after all. I mean grandma would be in a bed for the rest of her life if everything stayed the same, but now she gets to live a new life. Even if she will probably want to fuck both off us soon..."
+    lily "I... I think you are right. Well I already fucked my nephew, we are both doomed either way, hahaha."
+    hide npc_portrait_lily_10 with d1
+    "After a few more minutes of banter, we get into aunt Lily's car and she drops me off at the campus."
+
+    menu:
+        "Go to class":
+            jump lbl_college_class
+
 ### LILY HOME ###
 ## LILY HOME - DAY 2 ##
 label lbl_city_home_lily_day2:
@@ -1138,6 +1170,61 @@ label lbl_city_home_lily_day3:
 
         $ tb_event[3]["city_home_lily"]["lily"] = 1
         $ v_time += 10
+
+    if v_time >= 1140:
+        "I tell Lisa my plans to sleep at my aunt and leave, in a few minutes I'm at her door. It's time."
+        me "Hey aunt... GOD!"
+        lily "Do you like it? Who am I kidding of course you do. Come on in."
+        "She continues to lead me to her room, what happens next is a blur..."
+        window hide
+        show img_lily_boobs_02 with d1
+        pause
+        hide img_lily_boobs_02 with d1
+        show img_lily_blowjob_01 with d1
+        pause
+        hide img_lily_blowjob_01 with d1
+        show img_lily_sex_01 at top with d1
+        pause
+        hide img_lily_sex_01 with d1
+        show vid_lily_sex_02 at top with d1
+        pause
+        hide vid_lily_sex_02 with d1
+        show vid_lily_sex_03 at top with d1
+        pause
+        hide vid_lily_sex_03 with d1
+        "That... was... awesome!"
+
+        menu:
+            "Wake up":
+                pass
+
+        show img_lily_nude_01 at top with d3
+        "When I wake up I have a beatiful woman naked at my side. That so happens to be my aunt."
+        lily "Good morning [me]."
+        me "Morning beautiful."
+        lily "Haha, beautiful? Thanks [me]."
+        me "Did you sleep well?"
+        lily "It was the best night I had in years, I even feel different."
+        me "How so?"
+        lily "I don't know, like I'm connected, to you in some way."
+        me "That's weird..."
+        hide img_lily_nude_01 with d1
+        show img_lily_nude_02 with d1
+        lily "Thanks for ruining the mood, haha. Want to eat some breakfast? There is a coffee shop around the corner, they sell some great sandwiches."
+        me "Sure,I will get my wallet and."
+        lily "Don't be silly, leave it to me."
+        me "Okay, thanks Lily."
+        hide img_lily_nude_02 with d1
+        show npc_portrait_lily_01 with d1
+        lily "But hey wanna go out just in underware to see what people will do?"
+        me "No."
+        lily "Awww..."
+        hide npc_portrait_lily_01 with d1
+
+        $ v_day = 4
+        $ v_time = 0
+
+        jump lbl_city_mall_coffee
 
     else:
         "She is not here, so there is nothing to do here now."
@@ -1284,9 +1371,9 @@ label lbl_city_beach_day3:
         me "Hahaha..."
         nyomi "Sit down let's talk, get confortable, most people don't wear any clothes to this beach, so if you want take those shorts off."
         hide img_nyomi_beach_02 with d1
-        show img_mc_body at top with d1
+        show img_mc_body_01 at top with d1
         "Why not? It will be a new experience."
-        hide img_mc_body with d1
+        hide img_mc_body_01 with d1
         show img_nyomi_beach_03 with d1
         nyomi "Oh my you have grown, in all the right places..."
         me "Uhhh, thanks..."
@@ -1434,10 +1521,10 @@ label lbl_city_pgp_corporation_day3:
         lily "Do you want to talk about something else?"
         me "No, I think it's time for me to go, bye aunt Lily."
         hide npc_portrait_lily_11 with d1
-        show img_lily_boobs with d1
+        show img_lily_boobs_01 with d1
         lily "Bye, [me] but before you leave here is some motivation."
         me "Great Scott!"
-        hide img_lily_boobs with d3
+        hide img_lily_boobs_01 with d3
         "After I leave, moans start coming from the office."
 
         $ tb_event[3]["city_pgp_corporation"]["lily"] = 1

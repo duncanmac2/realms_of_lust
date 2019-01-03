@@ -272,9 +272,9 @@ label lbl_home_room_mc_day3:
         show npc_portrait_lisa_04 with d1
         lisa "[me] time to wake up."
         hide npc_portrait_lisa_04 with d1
-        show img_mc_body at top with d1
+        show img_mc_body_01 at top with d1
         me "...time now. Morning Lisa. Sorry I just woke up didn't have time to get dressed."
-        hide img_mc_body with d1
+        hide img_mc_body_01 with d1
         show npc_portrait_lisa_04 with d1
         lisa "Come on sweetie, how many times have I seen you naked before. You are not even hard this time, should I feel offended?"
         "You know a few days ago if Lisa ever said that to me I would have freaked out, now it's a normal morning chat."
@@ -318,6 +318,58 @@ label lbl_home_room_mc_day3:
                 jump lbl_city_home_lily
             "Just sleep":
                 pass
+
+        "You know what, it's late and today was already very fun, I will let the sex for a later date."
+
+        menu:
+            "Go to sleep":
+                pass
+
+        mia "Wake up bro..."
+        me "Uhhh... five more minutes..."
+        mia "Bro, wake up already!"
+        me "Uhh... Mia?"
+        show img_mia_nude at top with d1
+        mia "Yeah it's me wake up."
+        me "Why are you waking me up, were is Lisa?"
+        mia "Mom had to leave for a meeting with her publisher, it was an emergency, so she asked me to wake you up. Now let's go."
+        me "Okay, okay. No need to push it."
+        hide img_mia_nude with d1
+        show img_mc_body_02 at top with d1
+        mia "Hey, since when do you sleep naked?"
+        hide img_mc_body_02 with d1
+        me "I don't know, a week maybe. Why?"
+        mia "Well it's a bit distracting seeing your manhood in its full glory just like that in the morning."
+        me "Yeah, what can I do. It's always like that in the morning. Also..."
+        show vid_mia_ass_04 at top with d1
+        mia "You are saying this is part my fault?"
+        me "Pretty much."
+        hide vid_mia_ass_04 with d1
+        if tb_event[3]["home_room_mia"]["mia_finger"] == 1:
+            mia "Well maybe I can help you like you helped me yesterday in my room. As your sister, it's my duty right?"
+        else:
+            mia "Well maybe I can help you get rid of it, I'm you sister after all, it's my duty to help you."
+        me "Are you sure you just want to help me, that is the reason?"
+        mia "W-why else would I do this?"
+        me "Maybe you like it, maybe you want to touch it, maybe you want to go even further."
+        show npc_portrait_mia_03 with d1
+        "She starts looking nervous, she looks like she wants to leave the room, should I let her?"
+
+        menu:
+            "Grab her":
+                hide npc_portrait_mia_03 with d1
+                "bla"
+
+            "Let her run away":
+                hide npc_portrait_mia_03 with d1
+                "Let her go, she will come around to the idea eventually. I will go take a shower, I think Mia is taking hers in Lisa's bathroom."
+                "After a refreshing shower I go down the stairs to eat breakfast."
+
+                menu:
+                    "Down the stairs":
+                        jump lbl_home_kitchen
+
+
 
     else:
         "Nothing to do here."
