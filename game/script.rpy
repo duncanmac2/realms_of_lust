@@ -211,6 +211,7 @@ define me = DynamicCharacter("your_name", image="portrait_mc", color = clr_dark_
 define bonnie = Character("Bonnie", image = "portrait_bonnie", color = clr_sand)
 define dakota = Character("Dakota", image = "portrait_dakota", color = clr_gold)
 define ellie = Character("Ellie", image = "portrait_ellie", color = clr_gold)
+define emma = Character("Emma", image = "portrait_emma", color = clr_auburn)
 define hitomi = Character("Hitomi", image = "portrait_hitomi", color = clr_ginger)
 define karen = Character("Karen", image = "portrait_karen", color = clr_gray)
 define lily = Character("Lily", image = "portrait_lily", color = clr_auburn)
@@ -228,6 +229,7 @@ define veronica = Character("Veronica", image = "portrait_veronica", color = clr
 image side portrait_bonnie = "images/portrait/portrait_bonnie.jpg"
 image side portrait_dakota = "images/portrait/portrait_dakota.jpg"
 image side portrait_ellie = "images/portrait/portrait_ellie.jpg"
+image side portrait_emma = "images/portrait/portrait_emma.jpg"
 image side portrait_hitomi = "images/portrait/portrait_hitomi.jpg"
 image side portrait_karen = "images/portrait/portrait_karen.jpg"
 image side portrait_lily = "images/portrait/portrait_lily.jpg"
@@ -294,6 +296,7 @@ image loc_city_home_marcy_pool = "images/location/loc_city_home_marcy_pool.jpg"
 image loc_city_home_marcy_room = "images/location/loc_city_home_marcy_room.jpg"
 image loc_city_home_marcy_room_sarah = "images/location/loc_city_home_marcy_room_sarah.jpg"
 image loc_city_home_priya = "images/location/loc_city_home_priya.jpg"
+image loc_city_hospital = "images/location/loc_city_hospital.jpg"
 image loc_city_mall = "images/location/loc_city_mall.jpg"
 image loc_city_mall_break = "images/location/loc_city_mall_break.jpg"
 image loc_city_mall_store = "images/location/loc_city_mall_store.jpg"

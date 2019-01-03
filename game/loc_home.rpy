@@ -77,7 +77,7 @@ label lbl_home_room_mc_day1:
         "It's aunt Lily here, how are you? I have great news I got a job on the PGP Corporation, right there in Libidine town, so I'm moving back there tomorrow."
         "I already got a house and everything, it's on Second Street 458, you absolutely must come visit me tomorrow, no excuses. Also tell Lisa and Mia aunt Lily is back in town."
         "Love you.\""
-        "Lily is back in town? That's great, she is dad's younger sister, after grandma got sick she came to live with mom and dad she was way younger than my father so she could not live alone I think she was just 10 when Grandma Kat was sent to the hospital."
+        "Lily is back in town? That's great, she is dad's younger sister, after grandma got sick she came to live with mom and dad she was way younger than my father so she could not live alone I think she was just 10 when grandma Kat was sent to the hospital."
         "She is still there by the way, she had a mysterious disease that has kept her there I go visit her sometimes but she is rarely lucid."
         "After the accident she also came to live with Lisa and Mia, but after two years she decided to travel around the world to find herself."
         "She always kept in contact but I sometimes forget to send her news. She is also aunt Lily to Mia since she is my step sister, they are very close. But enough exposition let's... wait I got a new message."
@@ -307,6 +307,17 @@ label lbl_home_room_mc_day3:
                 jump lbl_home_kitchen
             "Spy on Lisa":
                 jump lbl_home_room_lisa
+
+    elif v_time >= 1140:
+        "Ahhh home. What do I do now? Aunt Lily has a good point, maybe it's time to lose my virginity and she is hot... Marcy would probably also be on board... or I could just sleep and leave this for later."
+
+        menu:
+            "Go over to Marcy":
+                jump lbl_city_home_marcy_room
+            "Go to aunt Lily":
+                jump lbl_city_home_lily
+            "Just sleep":
+                pass
 
     else:
         "Nothing to do here."

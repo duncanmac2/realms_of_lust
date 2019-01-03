@@ -17,6 +17,12 @@ label lbl_city_beach:
     elif v_day == 3:
         jump lbl_city_beach_day3
 
+label lbl_city_hospital:
+    scene loc_city_hospital
+
+    if v_day == 3:
+        jump lbl_city_hospital_day3
+
 ### 1ST STREET ###
 label lbl_city_street_1st:
     $ v_localisation = "city_first_street"
@@ -48,6 +54,8 @@ label lbl_city_home_marcy:
         jump lbl_city_home_marcy_day2b
     elif v_day == 3:
         jump lbl_city_home_marcy_day3
+    elif v_day == 4:
+        jump lbl_city_home_marcy_day4
 
 label lbl_city_home_marcy_bathroom:
     scene loc_city_home_marcy_bathroom
@@ -402,6 +410,35 @@ label lbl_city_home_marcy_day3:
     call main_show
     call screen scr_navigation
 
+## MARCY HOME - DAY 4 ##
+label lbl_city_home_marcy_day4:
+    sarah "Hey guys, how was your night?"
+    #
+    marcy "We had a lot of fun mom."
+    sarah "I heard, we have thin wall remember."
+    #
+    me "Crap, we are sorry."
+    sarah "Don't be sorry honey, I have to admit that I had some fun myself while hearing your moans."
+    me "That's... huh... cool."
+    sarah "But it would be even better if you could come visit me some nights too."
+    me "I...I..."
+    #
+    marcy "He will mom, later, but we have to leave soon."
+    "We sit on the table, Marcy sits very close to me and during the entire time we are eating she rubbing me, or herself on me. It's not unpleasant but Sarah is looking jealously at us."
+    "And that foot on my leg, it's not Marcy's that's for sure. After we finish I feeling almost like I'm going to faint from too much blood going to my dick. They both look like they are ready to rip my clothes off and kill me from snu snu. Luckily the doorbell rings, it's Mia."
+    #
+    mia "Good morning Sarah, are the two love birds ready?"
+    sarah " Good morning Mia, they are ready."
+    me "Hi sis."
+    marcy "Hey Mia."
+    mia "Morning guys, I hope you didn't have too much fun last night, because we need to leave now."
+    marcy "We had an adequate amount of fun right [me]?"
+    me "Yes... let's get going, bye Sarah..."
+
+    menu:
+        "Go to class":
+            jump lbl_college_class
+
 ### MARCY BATHROOM ###
 ## MARCY BATHROOM - DAY 2 ##
 label lbl_city_home_marcy_bathroom_day2:
@@ -599,6 +636,53 @@ label lbl_city_home_marcy_room_day3:
 
         $ tb_event[3]["city_home_marcy_room"]["marcy"] = 1
         $ v_time += 10
+
+    elif v_time >= 1140:
+        "I let Lisa know that I will spend the night at Marcy, she acknowledges what I said and I go out. I knock on the door and Marcy lets me in."
+        marcy "So what brings you here? Maybe you came to fuck me? Hahaha."
+        me "Actually, yes."
+        marcy "What? You want to... wow, it's happening, it's finally happening! what do I do now? [me] what do we do now?"
+        "She is panicking, I always knew she was all bravado .. I will have to take the lead... I WILL HAVE TO TAKE THE LEAD! Ohhh shit what do I do? Calm down! All those years watching porn will not have been in vain."
+        "Over the next few minutes we proceed to make awkward advances and decisions, but in the end things workout."
+        #
+        #
+        #
+
+        menu:
+            "Wake up":
+                pass
+
+        me "Where... what? Oh right I'm in Marcy's room, that just happened..."
+        marcy "Hey, sleep well?"
+        #
+        me "I did, you?"
+        marcy "Like an angel! I don't know why we waited so long, we should have done that sooner. Now that we are rested, you want to go at it again?"
+        me "I would love to, but we have to be in class in an hour."
+        marcy "Let's just no go today."
+        me "Won't we get into trouble with Ellie?"
+        #
+        marcy "Of couse not, she doesn't care if we go to class or not, if we can pass the finals we are good to go."
+        "Interesting development. But still I want to see how things are progressing."
+        me "Sorry Marcy, we will do it another time I have things to do on campus today."
+        marcy "Awwww. But you will have breakfast with us right?"
+        me "Ok, your mother would be upset if I left without at least say hi."
+        marcy "Let's head down, but don't forget to put some clothes on, mom is a bit frustrated, she has not had a good fuck in some time. If you just come out with that swinging she will jump you on the spot."
+        me "Yes, we don't want that... do we?"
+        #
+        marcy "Are you asking me if I would be okay if you had sex with my mother?"
+        me "Maybe..."
+        marcy "Well she is very lonely, maybe it would do her some good..."
+        "*Knock* *knock*"
+        #
+        sarah "Guys, breakfast is ready, come down..."
+        marcy "We will discuss this later, I'm hungry and since you want to go to class we have to hurry."
+
+        $ v_day = 4
+        $ v_time = 0
+
+        menu:
+            "Go down for breakfast":
+                jump lbl_city_home_marcy
 
     else:
         "Marcy is not here now."
@@ -1560,3 +1644,100 @@ label lbl_city_park_day3:
     menu:
         "Back to Third Street":
             jump lbl_city_street_3th
+
+### HOSPITAL ###
+## HOSPITAL - DAY 3 ##
+label lbl_city_hospital_day3:
+    "On the way to the hospital I receive another e-mail this one reads:"
+    if tb_event[3]["city_pgp_corporation"]["lily"] == 1:
+        "{i}Hope you considered my proposal, I will wait for you in my room.\nxoxo Lily{/i}"
+    else:
+        "{i}Hey [me], I talked to Lisa and she has told me that you are still a virgin. I'd be more than happy to take that away from you. If you want to, come sleep in my house tonight... of course sleep is the last thing we will be doing. xoxo Lily{/i}"
+
+    lisa "We are here [me], put the phone away."
+    lisa "Hello, we are here to see Emma."
+    "Oh, I'm afraid only one person can go in at a time. "
+    lisa "That's ok, [me] you go in, it's the first door on the left."
+    "I follow the instructions and start walking to her room, I still remember the last time I saw her..."
+    #
+    "I wonder if she's all right."
+    emma "[me]! My, it's been so long..."
+    #
+    me "G-Grandma!?"
+    emma "That's me [me], I missed you so much."
+    me "Grandma you look... better."
+    emma "I know right. I fell a few decades younger."
+    "And looks like it too. Someone owes me some explanations."
+    emma "Sit down, we haven't seen eachother in months. How is college?"
+    me "It's good."
+    emma "Have you rocked the boat of any young ladies?"
+    me "Grandma!?"
+    #
+    emma "What? when I was your age I couldn't go more than a couple of days without some dick."
+    "You know, I thought I would be used to this kind of conversations by now. But this! It's super awkward."
+    emma "It's sad that all the nurses and doctors are woman, I haven't had any action in ages..."
+    "It just got even more awkward..."
+    emma "I still got it you know, if you were not my grandson, I would jump you as soon as you entered this room!"
+    "Breath [me], that's how it's going to be from now on, better get used to it."
+    emma "So, young man, do you think I'm still attractive enough?"
+    me "I... I think so?"
+    emma "I knew it! Thanks [me], I mean look at my puppies..."
+    #
+    emma "They still pack some punch don't they?"
+    me "Definitely."
+    "After that we talk for several more minutes, say our goodbyes and I leave."
+
+    menu:
+        "Leave the room":
+            pass
+
+    "After I leave the room, I bump into someone I was not expecting, Karen."
+    #
+    karen "[me], what a surprise, what are you doing here?"
+    me "I came to see my grandmother, she has been hospitalized here for a few years. What about you?"
+    karen "I..."
+    #
+
+    if f_day2_mall_karen or tb_event[3]["city_mall"]["karen"] == 1:
+        hitomi "Karen I spoke to the doctor and... [me], you are here too? Visiting someone?"
+        me "My grandmother, yes. Why both of you are here?"
+        karen "You see [me], Hitomi is a friend of my late father and she is helping me take care of my sister. She was hospitalized here too."
+        me "Was?"
+        #
+        karen "She was discharged today, she just suddenly got better. I guess miracles do happen."
+        hitomi "Indeed."
+        karen "We have to go we are dealing with the papers of her release."
+        me "I understand, I have to go too, Lisa and Mia are waiting for me. Bye Karen."
+        "I approach her for a kiss and she reciprocates."
+        #
+        #
+        hitomi "Oh young people are so lively."
+        karen "Come see me again in the store [me]."
+        me "I will."
+
+    else:
+        hitomi "Karen I spoke to the doctor and... oh hello, are you a friend of Karen?"
+        me "Yes, I'm [me]. Nice to meet you miss..."
+        hitomi "Please call me Hitomi."
+        karen "She is a friend of my late father and she is helping me take care of my sister. She was hospitalized here too. She is also my boss and owner of the store I work in."
+        me "Was hospitalized?"
+        #
+        karen "She was discharged today, she just suddenly got better.I guess miracles do happen."
+        hitomi "Indeed."
+        #
+        hitomi "Karen I will go deal with the papers, why don't you stay here and talk to this lovely young man.."
+        "Before she can say anything Hitomi disappears."
+        me "Well, I guess you are stuck with me."
+        karen "That's not a bad thing, can I ask you something?."
+        me "Go ahead."
+        karen "Veronica told me several times that I should ask you on a date, but I don't have the time, because I have to work all day... Could you if you have the time, visit me at the store?"
+        me "Of course Karen, whenever you want."
+        #
+        karen "That's great... shit I need to go, but I will see you later right?"
+        me "Count on it."
+        "In her excited state she gives me a kiss and runs off to the distance."
+        #
+
+    menu:
+        "Go home":
+            jump lbl_home_room_mc
