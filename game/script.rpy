@@ -289,7 +289,9 @@ image loc_city_gym = "images/location/loc_city_gym.jpg"
 image loc_city_home_lily = "images/location/loc_city_home_lily.jpg"
 image loc_city_home_marcy = "images/location/loc_city_home_marcy.jpg"
 image loc_city_home_marcy_bathroom = "images/location/loc_city_home_marcy_bathroom.jpg"
+image loc_city_home_marcy_pool = "images/location/loc_city_home_marcy_pool.jpg"
 image loc_city_home_marcy_room = "images/location/loc_city_home_marcy_room.jpg"
+image loc_city_home_marcy_room_sarah = "images/location/loc_city_home_marcy_room_sarah.jpg"
 image loc_city_home_priya = "images/location/loc_city_home_priya.jpg"
 image loc_city_mall = "images/location/loc_city_mall.jpg"
 image loc_city_mall_break = "images/location/loc_city_mall_break.jpg"
@@ -413,6 +415,9 @@ label start:
         "city_gym": {},
         "city_home_lily": {},
         "city_home_marcy": {},
+        "city_home_marcy_pool": {},
+        "city_home_marcy_room": {},
+        "city_home_marcy_room_sarah": {},
         "city_home_priya": {},
         "city_mall": {},
         "city_park": {},
@@ -426,7 +431,10 @@ label start:
     $ tb_event[3]["city_beach"] = { "nyomi": 0 }
     $ tb_event[3]["city_gym"] = { "lisa": 0, "sarah": 0, "veronica": 0 }
     $ tb_event[3]["city_home_lily"] = { "lily": 0 }
-    $ tb_event[3]["city_home_marcy"] = { "sarah": 0, "marcy": 0 }
+    $ tb_event[3]["city_home_marcy"] = { "marcy": 0 , "sarah": 0}
+    $ tb_event[3]["city_home_marcy_pool"] = { "marcy": 0 }
+    $ tb_event[3]["city_home_marcy_room"] = { "marcy": 0 }
+    $ tb_event[3]["city_home_marcy_room_sarah"] = { "sarah": 0 }
     $ tb_event[3]["city_home_priya"] = { "priya": 0 }
     $ tb_event[3]["city_mall"] = { "karen": 0 }
     $ tb_event[3]["city_park"] = { "marcy": 0 }

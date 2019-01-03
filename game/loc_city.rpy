@@ -427,33 +427,68 @@ label lbl_city_home_marcy_bathroom_day2:
 
 ## MARCY BATHROOM - DAY 3 ##
 label lbl_city_home_marcy_bathroom_day3:
-    "The bathroom door is open is she in there?"
-    show img_sarah_shower_05 with d3
-    "Marcy?"
-    hide img_sarah_shower_05 with d1
-    show img_sarah_shower_06 with d1
-    sarah "No, it's me [me]."
-    me "Sorry Sarah, I didn't mean to walk in on you."
-    hide img_sarah_shower_06 with d1
-    show img_sarah_shower_07 with d1
-    sarah "It's ok, I don't mind, in fact I have a question what do you think about them?"
-    me "Your breasts?"
-    hide img_sarah_shower_07 with d1
-    show img_sarah_shower_08 with d1
-    sarah "Yes, my breasts, do you like them?"
-    me "I think they are really nice."
-    sarah "Would you like to touch then?"
-    "What a stupid question. Of course I want to touch them."
-    me "Yes, yes I would love to."
-    sarah "Go ahead them."
-    "I to go slow, to savor the moment, the weight, the soft skin, her hard nipples, this is paradise. But then..."
-    marcy "[me], where are you? Let's go!"
-    me "Shit, I gotta go now Sarah."
-    sarah "A shame, if you want to continue this some other time just visit me ok."
+    if v_time == 0:
+        "The bathroom door is open is she in there?"
+        show img_sarah_shower_05 with d3
+        me "Marcy?"
+        hide img_sarah_shower_05 with d1
+        show img_sarah_shower_06 with d1
+        sarah "No, it's me [me]."
+        me "Sorry Sarah, I didn't mean to walk in on you."
+        hide img_sarah_shower_06 with d1
+        show img_sarah_shower_07 with d1
+        sarah "It's ok, I don't mind, in fact I have a question what do you think about them?"
+        me "Your breasts?"
+        hide img_sarah_shower_07 with d1
+        show img_sarah_shower_08 with d1
+        sarah "Yes, my breasts, do you like them?"
+        me "I think they are really nice."
+        sarah "Would you like to touch then?"
+        "What a stupid question. Of course I want to touch them."
+        me "Yes, yes I would love to."
+        sarah "Go ahead them."
+        "I to go slow, to savor the moment, the weight, the soft skin, her hard nipples, this is paradise. But then..."
+        marcy "[me], where are you? Let's go!"
+        me "Shit, I gotta go now Sarah."
+        sarah "A shame, if you want to continue this some other time just visit me ok."
+
+        menu:
+            "College":
+                jump lbl_college_class
+
+    elif v_time >= 1020 and v_time < 1080:
+        "Sarah is taking a shower. I don't think she saw me yet, not that would matter if she did, so let's just enjoy the show."
+        #
+
+    else:
+        "The is no one here."
 
     menu:
-        "College":
-            jump lbl_college_class
+        "Go back":
+            jump lbl_city_home_marcy
+
+### MARCY POOL ###
+## MARCY POOL - DAY 3 ##
+label lbl_city_home_marcy_pool_day3:
+    if v_time >= 840 and v_time < 900 and tb_event[3]["city_home_marcy_pool"]["marcy"] == 0:
+        #
+        me "Hey Marcy, swimming?"
+        marcy "Yeah!"
+        me "Why naked? Don't you have a bikini?"
+        marcy "I do but I like the freedom, you should try it sometime."
+        me "Maybe later, I will leave you to it."
+        #
+        marcy "Bye..."
+
+        $ tb_event[3]["city_home_marcy_pool"]["marcy"] = 1
+        $ v_time += 5
+
+    else:
+        "This is Marcy's pool, we had lots of fun here in the past. I hope we can have even more fun in the future... a different kind of fun."
+
+    menu:
+        "Go back":
+            jump lbl_city_home_marcy
 
 ### MARCY ROOM ###
 ## MARCY ROOM - DAY 2 ##
@@ -498,41 +533,107 @@ label lbl_city_home_marcy_room_day2:
 
 ## MARCY ROOM - DAY 3 ##
 label lbl_city_home_marcy_room_day3:
-    "The door to the bathroom is open, maybe I... no, no time let's call her."
-    me "Marcy?"
-    show img_marcy_undress_01 with d1
-    marcy "Hey [me], decided to spy on me did you?"
-    me "No I came to see why you are taking so long to just change clothes."
-    marcy "Oh is because I was looking for something, sorry, I'll find it later."
-    hide img_marcy_undress_01 with d1
-    show img_marcy_undress_02 with d1
-    "She starts striping in front of me, she has a really nice body."
-    marcy "So what do you think?"
-    me "About?"
-    hide img_marcy_undress_02 with d1
-    show vid_marcy_boobs_02 at top with d1
-    marcy "My tits, are they too big?"
-    me "Of course not, I think they are perfect."
-    hide vid_marcy_boobs_02 with d1
-    show img_marcy_undress_03 at top with d1
-    marcy "Aww, thanks, I think it's in the family, mom is big, aunt Ny is big, even grandma Diana is huge. Speaking of which, do you really think it would be awkward if we had sex?"
-    me "You heard that huh. I don't know, maybe, what do you think."
-    hide img_marcy_undress_03 with d1
-    show img_marcy_undress_04 at top with d1
-    marcy "Who knows, I think it would be ok, but if you are not sure I understand."
-    me "You know that almost sounded like a normal person."
-    hide img_marcy_undress_04 with d1
-    show img_marcy_undress_05 at top with d1
-    marcy "Then I have to tell you, if you want to do something else like getting a blowjob all you need is ask, hahaha..."
-    me "Now that's more like you."
-    marcy "But serious, if you ever change your mind, call me, you know I'm always ready..."
-    me "But you are a virgin too..."
-    hide img_marcy_undress_05 with d3
-    marcy "That's why I'm always ready. It will happen any day now... I hope. Ok, I'm done let's go."
+    if v_time == 0:
+        "The door to the bathroom is open, maybe I... no, no time let's call her."
+        me "Marcy?"
+        show img_marcy_undress_01 with d1
+        marcy "Hey [me], decided to spy on me did you?"
+        me "No I came to see why you are taking so long to just change clothes."
+        marcy "Oh is because I was looking for something, sorry, I'll find it later."
+        hide img_marcy_undress_01 with d1
+        show img_marcy_undress_02 with d1
+        "She starts striping in front of me, she has a really nice body."
+        marcy "So what do you think?"
+        me "About?"
+        hide img_marcy_undress_02 with d1
+        show vid_marcy_boobs_02 at top with d1
+        marcy "My tits, are they too big?"
+        me "Of course not, I think they are perfect."
+        hide vid_marcy_boobs_02 with d1
+        show img_marcy_undress_03 at top with d1
+        marcy "Aww, thanks, I think it's in the family, mom is big, aunt Ny is big, even grandma Diana is huge. Speaking of which, do you really think it would be awkward if we had sex?"
+        me "You heard that huh. I don't know, maybe, what do you think."
+        hide img_marcy_undress_03 with d1
+        show img_marcy_undress_04 at top with d1
+        marcy "Who knows, I think it would be ok, but if you are not sure I understand."
+        me "You know that almost sounded like a normal person."
+        hide img_marcy_undress_04 with d1
+        show img_marcy_undress_05 at top with d1
+        marcy "Then I have to tell you, if you want to do something else like getting a blowjob all you need is ask, hahaha..."
+        me "Now that's more like you."
+        marcy "But serious, if you ever change your mind, call me, you know I'm always ready..."
+        me "But you are a virgin too..."
+        hide img_marcy_undress_05 with d3
+        marcy "That's why I'm always ready. It will happen any day now... I hope. Ok, I'm done let's go."
+
+        menu:
+            "College":
+                jump lbl_college_class
+
+    elif v_time >= 780 and v_time < 840 and tb_event[3]["city_home_marcy_room"]["marcy"] == 0:
+        me "Hey Marcy, what are you doing?"
+        #
+        marcy "Playing some games, wanna join me?"
+        me "Sure, do I have to follow the dress code however?"
+        marcy "Dresscode? Oh, you mean get naked? Your choice, [me], but if you don't don't blame me if you get distracted and lose. If you do get naked we will both be equally distracted don't you think."
+        me "That's a fair point. Let me get out of these..."
+        #
+        marcy "Shit, I was wrong, I'm at a disadvantage now."
+        me "Let's start, give me the controler."
+        "We spend the next few minutes playing, she is right, she can barely stop looking at me... At the end of our match I stand up and I notice that my dick is dangling close to Marcy's face."
+        "She is almost like in a trance looking at it when an idea comes to my mind, I start to get closer to her. Her breath is becoming louder and uneven, until she can no longer hold it."
+        #
+        "She is sucking like a crazy woman, no technique, no nothing, just pure lust she was holding back for so long."
+        #
+        me "Marcy, I'm cumming..."
+        #
+        "After she tastes my cum for a few seconds, she comes back to it."
+        marcy "[me] that's the greatest day in my life! I never thought it was going to happen. Thank you, thank you!"
+        "She is very happy about sucking my cock, guess I should expect nothing different from her. An extremely sexual person in an increasingly sexual world, but repressed."
+        me "Glad I could help."
+        marcy "Can we fuck now?"
+        me "Wow, calm down Marcy, let's decide about that later, besides I need time to rest."
+        marcy "Oh, you are right, sorry. I'm going to touch myself now then..."
+        "She is still a bit strange, I will let her cool down, I will see her later."
+
+        $ tb_event[3]["city_home_marcy_room"]["marcy"] = 1
+        $ v_time += 10
+
+    else:
+        "Marcy is not here now."
 
     menu:
-        "College":
-            jump lbl_college_class
+        "Go back":
+            jump lbl_city_home_marcy
+
+### SARAH ROOM ###
+## SARAH ROOM - DAY 3 ##
+label lbl_city_home_marcy_room_sarah_day3:
+    if v_time >= 900 and v_time < 960 and tb_event[3]["city_home_marcy_room_sarah"]["sarah"] == 0:
+        "Sarah is changing clothes to go to the gym it seems."
+        #
+        sarah "Hey [me], are you looking for Marcy?"
+        me "No, I was just admiring how well you keep your body in shape."
+        sarah "Thank you, it's not easy, I can tell you that."
+        me "I can imagine."
+        "A collection of rare adult DVDs is on a side of the room. Ever since her husband died they has been on the attic, but it looks like she brought it back here."
+        #
+        sarah "Incredible isn't it? Clayton always loved collecting those. I was always jealous of this girls in the cover so when he died I hid them away, but you know, I can see the beauty of it now."
+        me "Marcy must love to come here to borrow some of them from time to time."
+        sarah "Oh she does belive me, but it's her right, it belongs to her too. But now I have to leave [me], you can stay if you want, it's not like I have anything to hide here."
+        #
+        me "No, I'm also leaving, I have some things to do. I will see you later Sarah."
+        sarah "Later [me]."
+
+        $ tb_event[3]["city_home_marcy_room_sarah"]["sarah"] = 1
+        $ v_time += 5
+
+    else:
+        "The is no one here."
+
+    menu:
+        "Go back":
+            jump lbl_city_home_marcy
 
 ### MALL ###
 ## MALL - DAY 1 ##
