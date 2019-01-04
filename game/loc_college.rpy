@@ -222,19 +222,19 @@ label lbl_college_class_day3:
     marcy "We will no get there in time."
     me "Less talking more running."
     mia "This is my stop good luck guys."
-    hide vid_college_run with d3
-    show npc_portrait_ellie_01 with d3
+    hide vid_college_run with d1
+    show npc_portrait_ellie_01 with d1
     "Mia continues running to her class, while we run to ours. We open the door and everyone is on their seats. The bell goes of as soon as we enter the classroom. A strange woman looks at us, is she..."
     ellie "That was close guys, you need wake a little earlier, specially you Marcy, with your grades you can't afford to be late."
     marcy "Sorry Ms. Smith."
     "That confirms it. Mr. Smith is Miss now."
     ellie "And you [me], if you have some time come see me in my office after lunch."
     me "Yes Miss Smith."
-    hide npc_portrait_ellie_01 with d3
+    hide npc_portrait_ellie_01 with d1
     "I don't think I'm in trouble, she said \"if\" I have the time, what does she want?"
     "We sit, and than I take a look at the rest of the class. There are more girls than ever here, Nina did not disappoint. And my old nemesis is nowhere to be seen, I wonder which of the new girls he is... Oh nevermind he is still here, but now he looks really pathetic... that's a good sign."
     "The class goes on as normal, and at the end of it Jason of all people come to talk to me."
-    show npc_portrait_jason_02 at top with d3
+    show npc_portrait_jason_02 at top with d1
     jason "[me], my man, so tell me is your sister still single?"
     "This guy... well he won't be a guy for much longer by the looks of it, and I'm pretty sure he can't kick my ass, not easily at least, so..."
     me "Listen Jason, Mia doesn't want to go out with you, get this through your thick skull."
@@ -242,7 +242,7 @@ label lbl_college_class_day3:
     "This gives me a idea, if he owns me one, when he becomes a she, she might still own me..."
     me "Ok, how about this, I will talk to her, but no promises and you will own me, independent of her answear, deal?"
     jason "Ok.. ok deal, thanks dude."
-    hide npc_portrait_jason_02 at top with d3
+    hide npc_portrait_jason_02 at top with d1
     "Marcy comes to talk to me after he goes away."
     marcy "You know she will say no, right?"
     me "Yes, but he thinks there is a chance, and now he will own me a favor."
@@ -375,7 +375,7 @@ label lbl_college_garden_day1:
         me "He's what now?"
         veronica "Gay, he has to be, I hit on him more times then I can count and he never even blinked."
         hide npc_portrait_veronica_01
-        show npc_portrait_mia_06 at top with d3
+        show npc_portrait_mia_06 at top with d1
         mia "V, not all guys that don't want to be with you are gay."
         veronica "You're so naive Mia, please never change."
         me "He is? I never knew, does anyone else knows? Doesn't matter even if he is gay it's none of my business. Where is Marcus?"
@@ -384,12 +384,12 @@ label lbl_college_garden_day1:
         marcus "Hello guys, I'm back."
         veronica "That's terrible news. What with that smile on your face?"
         marcus "It's a secret between men only."
-        hide npc_portrait_mia_06 with d3
-        show npc_portrait_veronica_01 with d3
+        hide npc_portrait_mia_06 with d1
+        show npc_portrait_veronica_01 with d1
         veronica "Fine no need to tell us. By the way Mia come here, let me tell you about the incident in the girl's shower last week."
         marcus "What incident?"
         veronica "Sorry, Marcus it's a secret between women only."
-        hide npc_portrait_veronica_01 with d3
+        hide npc_portrait_veronica_01 with d1
         "The curiosity is going to eat him alive now, it's almost too cruel."
         "After we eat Marcus call me to his house, but I was thinking of going to the mall with Mia. It's been a while since we went there to eat some ice cream. Where do I go?"
 
@@ -404,8 +404,8 @@ label lbl_college_garden_day1:
         show npc_portrait_veronica_01
         "This is Veronica, Mia's best friend. I now what you are thinking, he must have a crush on her... No I'm not some cliche main character, also she is kind of a slut, she beded the whole football tem acording to some rumors."
         "She is not that bad but she knows her way around a cock... not mine though, she has this strange respect for me, never ever flirted with me, don't know if that's good or bad."
-        hide npc_portrait_veronica_01
-        show npc_portrait_mia_06 at top with d3
+        hide npc_portrait_veronica_01 with d1
+        show npc_portrait_mia_06 at top with d1
         mia "Hey bro..."
         veronica "Hey [me], how was you class?"
         me "Boring, yours?"
@@ -416,8 +416,8 @@ label lbl_college_garden_day1:
         mia "What he usually buy?"
         me "Awwww... ahhh... things..."
         "(Again both of them) Ewwww..."
-        hide npc_portrait_mia_06 with d3
-        show npc_portrait_veronica_01 with d3
+        hide npc_portrait_mia_06 with d1
+        show npc_portrait_veronica_01 with d1
         veronica "Why do we go out with him?"
         mia "Because he is bro best friend..."
         veronica "Yeahhh..."
@@ -485,14 +485,14 @@ label lbl_college_garden_day3:
         veronica "Come on Mia, I'm not the first to get caught during some sexy time in here, if they didn't fire the coach of the football team after they caught him with a cheerleader, they will not expel me. Besides it's fun to run the risk of being caught."
         "Veronica was never this open with her private activities before, it's not like she hides it, but she never boasted in public before. It looks like the more naughty you were before Nina started working her magic, the faster you get corrupted."
         veronica "I took some pics, do you guys want to see it?"
-        marcy "YES!!!"
+        marcy "YES!"
         veronica "Calm down Marcy, it's nothing explicit just pics of the guy in question."
         marcy "AWWW..."
         me "No thanks. No offense, but I don't want to know who you sleep with."
         veronica "Are you jealous [me]? Aww... don't worry, when you and Mia get finally together, do what your heart command, I will be happy to be your second."
         hide img_veronica_bikini with d1
         show npc_portrait_mia_05 at top with d1
-        mia "Veronica!!!"
+        mia "Veronica!"
         veronica "What? You know it's true, you are one of the most beautiful girls in the college Mia, the only reason you are still a virgin is because deep inside you want your big bro to be your first..."
         mia "THAT'S ENOUGH."
         "Wow, I never saw Mia this angry before, Veronica is even more shocked than me, I think she must be a few days ahead of the rest of us in the corruption department. Mia is not even considering the possibility of us doing it yet. Shit I think Veronica is going to cry."
@@ -648,8 +648,8 @@ label lbl_college_locker_room_day1:
     marcus "Did you know that some jocks can be reasonable and no assholes? For a price that is."
     me "What are you talking about?"
     marcus "You see they have a very well guarded secret between themselves, but for the low price of 50 dollar they gave me access to this amazing artifact."
-    me "What???"
-    marcus "Behold!!!"
+    me "What?"
+    marcus "Behold!"
     "He points at a hole in the wall, wait a minute..."
     me "Is that...?"
     marcus "Yes, it the legendary girls shower spy hole!"
@@ -776,24 +776,24 @@ label lbl_college_shower_men_day1:
     "It's empty just as Kyle said, luckyly I have a shirt on my backpack, let's take a quick shower."
     "I take my clothes off an enter the cold, cold water... better this than nothing I guess."
     "Not even a minute in I hear someone enter the shower."
-    show img_bonnie_shower_01 with d3
+    show img_bonnie_shower_01 with d1
     bonnie "Shit, what are you doing here, this place is supposed to be empty."
     me "What am I doing? What are YOU doing in the men's shower!"
     bonnie "Sure that why I'm here, those fucking cheerleaders think they own the girls washroom, so now I have to shower here after the training. All because I said their pompoms were ridiculous."
     me "DO YOU MIND, I'm still naked here."
     bonnie "What's the big deal, you shy or something. Look I have no time, I have to get home in half an hour and I smell like shit, so I will use the last on right over there. You can leave if you want."
-    hide img_bonnie_shower_01 with d3
-    show img_bonnie_shower_02 at top with d3
+    hide img_bonnie_shower_01 with d1
+    show img_bonnie_shower_02 at top with d1
     "Before I can say a word she finishes taking off her clothes and walks in. I'm kind of speechlees now so I just continue to shower without looking at her. It's not as easy as I thought... maybe just a peek."
-    hide img_bonnie_shower_02 with d3
-    show img_bonnie_shower_03 with d3
+    hide img_bonnie_shower_02 with d1
+    show img_bonnie_shower_03 with d1
     "Shit, I get hard almost instantly, hope she doesn't notice."
     bonnie "Woah... you're not bad at all."
     me "What?"
     bonnie "Your dick, I thought you were hidding it because it was small, but it's not bad at all."
     me "I'm leaving now."
-    hide img_bonnie_shower_03 with d3
-    show img_bonnie_shower_04 with d3
+    hide img_bonnie_shower_03 with d1
+    show img_bonnie_shower_04 with d1
     bonnie "Suit yourself, I'm Bonnie by the way."
     me "[me]."
     "I leave as fast as I can, after that awkward exchange, best to forget it. There is still time to eat lunch with everyone."
@@ -844,7 +844,7 @@ label lbl_college_nurse_day2:
             scene loc_college_yard
             pass
 
-    "What did I do? {b}What{/b} did I do??? I need to clear my head... Aunt Lily! She might know something about what is happening. Nina said it was something in my blood, our blood. I have to go there."
+    "What did I do? {b}What{/b} did I do?? I need to clear my head... Aunt Lily! She might know something about what is happening. Nina said it was something in my blood, our blood. I have to go there."
 
     menu:
         "Aunt Lily":

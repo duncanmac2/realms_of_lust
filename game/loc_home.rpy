@@ -99,7 +99,7 @@ label lbl_home_room_mc_day1:
     elif v_time == 1200:
         show loc_home_room_mc_bed at top
         "I feel extremely tired all of a sudden. As soon as my head hits the pillow everything goes dark. That is until..."
-        nina "Wake uuup..."
+        nina "Wake uupp..."
         me "What?"
         nina "Wake uupp..."
         hide loc_home_room_mc_bed
@@ -167,7 +167,7 @@ label lbl_home_room_mc_day2:
         hide npc_portrait_nina_04
         show npc_portrait_lily_08
         "We all stare at each other for a few seconds before Lily breaks the silence."
-        lily "It's you!!! You are the goddess that he was talking about."
+        lily "It's you! You are the goddess that he was talking about."
         hide npc_portrait_lily_08 with d1
         show npc_portrait_nina_05 with d1
         nina "And you! I can feel the blood in you, are you Lilith?"
@@ -194,13 +194,13 @@ label lbl_home_room_mc_day2:
         nina "Okay, okay. So expect a lot of the guys you know to acquire some tits as the week goes. But I really have to go now, mom doesn't like... I mean my time is up. My friends, forces beyond my control pull me back to my dimension. Good night."
         hide npc_portrait_nina_07 with d1
         "She leaves the room in cloud of smoke."
-        lily "[me], this is great, we are going to have so much fun..."
+        lily "[me], this is great, we are going to have so much fun."
         me "Yes we will, but tomorrow, I need to sleep now."
         show vid_lily_kiss_02 at top with d1
         lily "Let me give you a goodnight's kiss then."
         hide vid_lily_kiss_02 with d1
         me "Whoa that was..."
-        lily "Just a taste... goodnight [me]..."
+        lily "Just a taste... goodnight [me]."
 
         $ v_day = 3
         $ v_time = 0
@@ -444,7 +444,7 @@ label lbl_home_bathroom_day1:
             mia "Yesss, sorry bro, it's was your idea, but if you are desperate we could shower together, hihihi."
             "She likes to tease me, but she is not brave enough to actually take a shower with me. But then again, I could use that to my advantage."
             me "Okay let's go!"
-            mia "What??? But... but..."
+            mia "What? But... but..."
             me "You offered it, I don't mind so..."
             "I start to take of my shirt."
             mia "Ok, I'm sorry I was just teasing, please don't take off your shirt."
@@ -464,7 +464,7 @@ label lbl_home_bathroom_day1:
             me "SHIT, sorry, I thought you were already finished..."
             "Why is she here now? But whoa... she is in great shape foor her age... What the fuck am I thinking?"
             me "I'm..."
-            lisa "GET OUT!!!"
+            lisa "GET OUT!"
             "I close the door before doing any more damage by getting hard down there. I'm in so much trouble as is, I think I will no be getting that money I asked yesterday. God damn it."
 
             $ f_day1_lisa_bathroom_incident = True
@@ -477,7 +477,7 @@ label lbl_home_bathroom_day1:
             me "Better idea, why you don't take a shower on Lisa's bathroom? She is most likely finished by now."
             mia "That's... a really good idea, why didn't I think of that earlier."
             me "Well you are a bit of an airhead."
-            mia "Hey!!!"
+            mia "Hey!"
             me "It's true. Go on now, or we will not make it in time."
             mia "Crap, you are right."
             me "Now let's hurry, still have to go to Marcus's house."
@@ -645,7 +645,7 @@ label lbl_home_kitchen_day1:
         mia "Sooooo... I-I'm sorryyyyy."
         hide npc_portrait_mia_02 with d1
         show npc_portrait_mia_03 with d1
-        me "Sorry doesn't cut it Mia, Lisa will eat me alive when we are back from college. You know how she is, she doesn't even own a bikini because it shows too much skin... and I saw her naked !!!"
+        me "Sorry doesn't cut it Mia, Lisa will eat me alive when we are back from college. You know how she is, she doesn't even own a bikini because it shows too much skin... and I saw her naked!"
         mia "I didn't know, I thought she was down here and just forgot to wake us. Please forgive me [me], I-I will... talk to Hikari, I know you have a crush on her so I will set you up on a date, how about that?"
         me "That would be great, except last month I tried to ask her out. All she said is she does not go out with losers and perverts. A pervert, ME?"
         mia "Well, you do hang around Marcus a lot."
@@ -665,7 +665,7 @@ label lbl_home_kitchen_day1:
         me "Hey guys I have great news, aunt Lily is moving into town tomorrow."
         hide npc_portrait_lisa_02 with d1
         show npc_portrait_mia_07 at top with d1
-        mia "Really!!! Awesome, then we can go see her right it's been ages since we last saw her."
+        mia "Really! Awesome, then we can go see her right it's been ages since we last saw her."
         lisa "Yes it has, did she find a job here?"
         me "On the PGP Corporation, don't know what she does there tough."
         hide npc_portrait_mia_07 with d1
@@ -743,7 +743,7 @@ label lbl_home_kitchen_day2:
         show npc_portrait_mia_09 with d3
         mia "Why, it's still too early to leave."
         me "If Lisa..."
-        "That's when I remember what she was wearing when she came to wake me up...I know I asked this before but, what is going on???"
+        "That's when I remember what she was wearing when she came to wake me up... I know I asked this before but, what is going on?"
         mia "Bro?"
         me "Never mind, let's just eat."
         hide npc_portrait_mia_09 with d3

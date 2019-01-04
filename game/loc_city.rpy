@@ -216,7 +216,7 @@ label lbl_city_home_marcus_day1b:
         marcus "Let's go play some g..."
         hide npc_portrait_sarah_02 with d3
         "*Ring* *ring*"
-        "It's my phone, Lisa is calling..."
+        "It's my phone, Lisa is calling."
         lisa "{i}[me], were are you? Doesn't matter, come back home right now! You own me an explanation for what happend this morning.{/i}"
         me "Lisa, I will be right there."
         lisa "{i}You have 20 minutes.{/i}"
@@ -244,20 +244,20 @@ label lbl_city_home_marcus_day1b:
         marcus "Let's go play some g..."
         hide npc_portrait_sarah_02 with d3
         "*Ring* *ring*"
-        "It's my phone, Lisa is calling..."
+        "It's my phone, Lisa is calling."
         lisa "{i}[me], is Mia with you? She isn't aswering her phone.{/i}"
         me "Lisa, no she is with Veronica I think. Do you have her number?"
         lisa "{i}Yes, I will call her right now, she is in so much trouble...{/i}"
         "Poor Mia."
         "After the call Marcus and I spend some hour play some of his old games."
         me "It's getting late man, I will..."
-        show npc_portrait_maria_01 with d3
+        show npc_portrait_maria_01 with d1
         "Just as I start to stand to go home something catches my eyes."
-        hide npc_portrait_maria_01 with d3
-        show npc_portrait_maria_02 with d3
+        hide npc_portrait_maria_01 with d1
+        show npc_portrait_maria_02 with d1
         marcus "Ohhh, [me] we are so lucky, she rarely changes in her room. Let's enjoy this gift from the pervert god."
-        hide npc_portrait_maria_02 with d3
-        show npc_portrait_maria_03 with d3
+        hide npc_portrait_maria_02 with d1
+        show npc_portrait_maria_03 with d1
         me "She is very hot, that's cheerleader for you, but it's time for me to go, see you tomorrow Marcus."
         "He's in a trance, better leave, he has business to attend to."
 
@@ -341,17 +341,17 @@ label lbl_city_home_marcy_day3:
         sarah "Good morning guys, how are you."
         me "We are good Sarah thanks for asking, is Marcy ready?"
         sarah "I will call her just a second."
-        hide npc_portrait_sarah_04 with d3
+        hide npc_portrait_sarah_04 with d1
         mia "That's a nice lingerie don't you think bro, I wish I had something so stylish."
         me "You like it? Maybe you will get a nice gift sometime this week then."
         mia "Thanks bro you are the best."
-        show npc_portrait_marcy_04
+        show npc_portrait_marcy_04 with d1
         marcy "Hey, if you are giving gifts give me one too."
         me "I only give gifts to people who are ready on time, unless you are going to college in that outfit I don't think you fit the criteria."
         marcy "Sorry, I spend the night playing games again, come in I will be ready in no time."
         me "Ok, we have the time, but don't take too long."
         marcy "Don't worry I will be right back."
-        hide npc_portrait_marcy_04 with d3
+        hide npc_portrait_marcy_04 with d1
         mia "Bro, why didn't you and Marcy ever fucked."
         me "Good question, I guess it never came up on our conversations, and she is my friend, maybe it would be weird after we did."
         "A few minutes later..."
@@ -366,7 +366,7 @@ label lbl_city_home_marcy_day3:
 
     elif v_time >= 720 and v_time < 780 and tb_event[3]["city_home_marcy"]["sarah"] == 0:
         "Sarah is eating lunch."
-        show npc_portrait_sarah_01 with d3
+        show npc_portrait_sarah_01 with d1
         sarah "[me], what a surprise want to eat with me?"
         me "No thanks Sarah, I was just passing by."
         sarah "Are you sure I have enough food for the both of us."
@@ -639,7 +639,7 @@ label lbl_city_home_marcy_room_day3:
         marcy "Playing some games, wanna join me?"
         me "Sure, do I have to follow the dress code however?"
         marcy "Dresscode? Oh, you mean get naked? Your choice, [me], but if you don't don't blame me if you get distracted and lose. If you do get naked we will both be equally distracted don't you think."
-        me "That's a fair point. Let me get out of these..."
+        me "That's a fair point. Let me get out of these."
         hide img_marcy_nude_01 with d1
         show img_mc_body_01 at top with d1
         marcy "Shit, I was wrong, I'm at a disadvantage now."
@@ -714,7 +714,7 @@ label lbl_city_home_marcy_room_day3:
         hide npc_portrait_marcy_06 with d1
         "*Knock* *knock*"
         show npc_portrait_sarah_07 at top with d1
-        sarah "Guys, breakfast is ready, come down..."
+        sarah "Guys, breakfast is ready, come down."
         marcy "We will discuss this later, I'm hungry and since you want to go to class we have to hurry."
         hide npc_portrait_sarah_07 with d1
 
@@ -779,28 +779,28 @@ label lbl_city_mall_day1:
     mia "Bro, I think the store closed."
     show loc_city_mall_store at top
     me "It can't be, maybe we came the wrong way here let's ask in here?"
-    hide loc_city_mall_store with d3
-    show npc_portrait_karen_01 with d3
+    hide loc_city_mall_store with d1
+    show npc_portrait_karen_01 with d1
     karen "Hello, welcome to the... [me]!?"
     mia "Karen, you work here?"
     karen "Hey Mia, yeah I started last month when the store opened, the owner is an old friend."
     "She looks embarrassed, she is not even looking at me. Strange, is it because of me?"
-    hide npc_portrait_karen_01 with d3
-    show npc_portrait_mia_06 at top with d3
+    hide npc_portrait_karen_01 with d1
+    show npc_portrait_mia_06 at top with d1
     mia "Bro and I where looking for our favorite ice cream shop, it's been some time since we came here so maybe we made a wrong turn somewhere..."
     karen "What's the name of the place?"
     mia "Snow White."
-    hide npc_portrait_mia_06 with d3
-    show npc_portrait_karen_02 with d3
+    hide npc_portrait_mia_06 with d1
+    show npc_portrait_karen_02 with d1
     karen "Shit, sorry Mia, the shop used to be here, but they moved to the other side of the town."
     mia "No way, what do we do now?"
     me "I guess there is nothing we can do, let's just go home we will look for it some other day."
     mia "Awww... fine, bye Karen it was nice to see you."
-    hide npc_portrait_karen_02 with d3
-    show npc_portrait_karen_03 with d3
+    hide npc_portrait_karen_02 with d1
+    show npc_portrait_karen_03 with d1
     karen "Bye... I-it was nice seeing you [me]."
     me "Likewise, Karen."
-    hide npc_portrait_karen_03 with d3
+    hide npc_portrait_karen_03 with d1
     "Mia breaks the silence after we leave the store."
     show npc_portrait_mia_06 at top with d1
     mia "She is totally into you, you know."
@@ -836,7 +836,7 @@ label lbl_city_mall_day2:
     me "Yes..."
     hide img_karen_couch_02 with d1
     show img_karen_kiss at top with d1
-    "This is amazing, this might be the best moment of this day, I'm kissing a hot girl and don't have to feel guilty about it. But it doesn't last long."
+    "This is amazing, this might be the best moment of this day. I'm kissing a hot girl and don't have to feel guilty about it. But it doesn't last long."
     hide img_karen_kiss
     show npc_portrait_hitomi_01
     hitomi "Karen, why are you here and who is this?"
@@ -1087,7 +1087,7 @@ label lbl_city_home_lily_day2:
     me "Well you see I had a dream were a woman named Nina offered me a way to change this world and I accepted."
     hide npc_portrait_lily_04
     show npc_portrait_lily_05 at top
-    lily "You did!!! Awesome, it finally happened, this horrible world will finally be gone. Life has sucked for so long but now we can finally be happy."
+    lily "You did! Awesome, it finally happened, this horrible world will finally be gone. Life has sucked for so long but now we can finally be happy."
     me "So... something you want to tell me dear aunt."
     hide npc_portrait_lily_05 with d1
     show npc_portrait_lily_06 with d1
@@ -1453,7 +1453,7 @@ label lbl_city_beach_day3:
 ## CHURCH - DAY 2 ##
 label lbl_city_church_day2:
     "This is the local church, maybe they can help me with my crysis..."
-    show npc_portrait_nun_01 with d3
+    show npc_portrait_nun_01 with d1
     nun "Hello, young man, can I help you?"
     me "Hello sister, can I speak with the priest?"
     nun "Sorry he isn't here right now, but maybe I can help?"
@@ -1468,7 +1468,7 @@ label lbl_city_church_day2:
     "Goddess? What is going on here, now that she mentioned it, the figures on the wall are mostly feminine."
     nun "...and that's why you should always wash your hands after touching the doornobs."
     me "Oh, right thanks sister, I should go now, but thanks for the advice."
-    hide npc_portrait_nun_01 with d3
+    hide npc_portrait_nun_01 with d1
     "Let's go home, I think someone owns me anwers, and she should be back in my room later."
 
     menu:
