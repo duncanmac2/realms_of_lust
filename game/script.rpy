@@ -55,7 +55,7 @@
     for i in range(1,8):
         renpy.image("img_bonnie_shower_" + str(i).zfill(2), "images/people/kennedy_leigh/bonnie_shower_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,2):
+    for i in range(1,3):
         renpy.image("npc_portrait_bonnie_" + str(i).zfill(2), "images/people/kennedy_leigh/bonnie_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Dakota
@@ -81,6 +81,12 @@
     # Hitomi
     for i in range(1,7):
         renpy.image("npc_portrait_hitomi_" + str(i).zfill(2), "images/people/hitomi_tanaka/hitomi_portrait_" + str(i).zfill(2) + ".jpg")
+
+    # Jane
+    renpy.image("img_jane_boobs", "images/people/sasha_grey/jane_boobs.jpg")
+
+    for i in range(1,4):
+        renpy.image("npc_portrait_jane_" + str(i).zfill(2), "images/people/sasha_grey/jane_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Karen
     renpy.image("img_karen_blowjob_02", "images/people/jayden_jaymes/karen_blowjob_02.jpg")
@@ -126,7 +132,7 @@
     for i in range(1,4):
         renpy.image("img_marcy_couch_" + str(i).zfill(2), "images/people/brittney_white/marcy_couch_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,3):
+    for i in range(1,4):
         renpy.image("img_marcy_nude_" + str(i).zfill(2), "images/people/brittney_white/marcy_nude_" + str(i).zfill(2) + ".jpg")
 
     for i in range(1,3):
@@ -135,7 +141,7 @@
     for i in range(1,6):
         renpy.image("img_marcy_undress_" + str(i).zfill(2), "images/people/brittney_white/marcy_undress_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,8):
+    for i in range(1,9):
         renpy.image("npc_portrait_marcy_" + str(i).zfill(2), "images/people/brittney_white/marcy_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Maria
@@ -153,14 +159,16 @@
     # Mia
     renpy.image("img_mia_bikini", "images/people/mia_malkova/mia_bikini.jpg")
     renpy.image("img_mia_book", "images/people/mia_malkova/mia_book.jpg")
-    renpy.image("img_mia_handjob", "images/people/mia_malkova/mia_handjob.jpg")
-    renpy.image("img_mia_kiss_01", "images/people/mia_malkova/mia_kiss_01.jpg")
+    renpy.image("img_mia_handjob_01", "images/people/mia_malkova/mia_handjob_01.jpg")
     renpy.image("img_mia_kiss_lisa", "images/people/mia_malkova/mia_kiss_lisa.jpg")
     renpy.image("img_mia_nude", "images/people/mia_malkova/mia_nude.jpg")
     renpy.image("img_mia_pussy", "images/people/mia_malkova/mia_pussy.jpg")
 
     for i in range(1,3):
         renpy.image("img_mia_ass_" + str(i).zfill(2), "images/people/mia_malkova/mia_ass_" + str(i).zfill(2) + ".jpg")
+
+    for i in range(1,4):
+        renpy.image("img_mia_kiss_" + str(i).zfill(2), "images/people/mia_malkova/mia_kiss_" + str(i).zfill(2) + ".jpg")
 
     for i in range(1,4):
         renpy.image("img_mia_shower_" + str(i).zfill(2), "images/people/mia_malkova/mia_shower_" + str(i).zfill(2) + ".jpg")
@@ -368,6 +376,9 @@ image vid_ellie_cuni = Movie(play="images/people/julia_ann/ellie_cuni.webm", siz
 # Hitomi
 image vid_hitomi_boobs = Movie(play="images/people/hitomi_tanaka/hitomi_boobs.webm")
 
+# Jane
+image vid_jane_cuni_marcy = Movie(play="images/people/sasha_grey/jane_cuni_marcy.webm", size=(596,440))
+
 # Karen
 image vid_karen_69 = Movie(play="images/people/jayden_jaymes/karen_69.webm")
 image vid_karen_blowjob_01 = Movie(play="images/people/jayden_jaymes/karen_blowjob_01.webm", size=(1000,560))
@@ -412,9 +423,13 @@ image vid_megan_lesbian = Movie(play="images/people/nikki_benz/megan_lesbian.web
 # Mia
 image vid_mia_ass_03 = Movie(play="images/people/mia_malkova/mia_ass_03.webm", size=(437,791))
 image vid_mia_ass_04 = Movie(play="images/people/mia_malkova/mia_ass_04.webm", size=(800,680))
+image vid_mia_cum_ass = Movie(play="images/people/mia_malkova/mia_cum_ass.webm", size=(1000,668))
 image vid_mia_finger = Movie(play="images/people/mia_malkova/mia_finger.webm", size=(764,610))
+image vid_mia_handjob_02 = Movie(play="images/people/mia_malkova/mia_handjob_02.webm", size=(900,438))
 image vid_mia_handjob_cum = Movie(play="images/people/mia_malkova/mia_handjob_cum.webm", size=(800,418))
 image vid_mia_masturbate = Movie(play="images/people/mia_malkova/mia_masturbate.webm", size=(1000,496))
+image vid_mia_sex_01 = Movie(play="images/people/mia_malkova/mia_sex_01.webm", size=(1000,848))
+image vid_mia_sex_02 = Movie(play="images/people/mia_malkova/mia_sex_02.webm", size=(900,448))
 
 # Rikki
 image vid_rikki_blowjob_01 = Movie(play="images/people/rikki_six/rikki_blowjob_01.webm", size=(650,833))
@@ -436,6 +451,7 @@ image vid_beach_boobs_03 = Movie(play="images/people/beach/beach_boobs_03.webm",
 image vid_church_nun_blowjob = Movie(play="images/people/church/nun_blowjob.webm", size=(840,416))
 
 # College
+image vid_college_masturbate = Movie(play="images/events/college_masturbate.webm")
 image vid_college_run = Movie(play="images/events/college_run.webm")
 image vid_college_shower_01 = Movie(play="images/events/college_shower_01.webm", size=(620,612))
 image vid_college_shower_02 = Movie(play="images/events/college_shower_02.webm", size=(598,736))

@@ -1336,10 +1336,12 @@ label lbl_city_street_1st_day4:
     me "Mia and I just came to an understanding."
     marcy "Meaning..."
     me "We got closer as people, and as a man and a woman."
-    #
+    show npc_portrait_marcy_03 with d1
     marcy "YOU GUYS FUCKED EACH OTHER???"
-    #
+    hide npc_portrait_marcy_03 with d1
+    show npc_portrait_mia_16 with d1
     mia "Marcy, shut up we don't want the whole street to know."
+    hide npc_portrait_mia_16 with d1
     marcy "SO YOU DID???"
     me "Yes now just stop screaming."
     marcy "You guys...I can't believe it. Does Lisa know?"

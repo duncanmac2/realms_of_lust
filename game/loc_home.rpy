@@ -363,22 +363,33 @@ label lbl_home_room_mc_day3:
         menu:
             "Grab her":
                 hide npc_portrait_mia_03 with d1
+                show img_mia_kiss_02 at top with d1
                 "I grab her by the arm and she looses her balance and falls on top of me. We are face to face."
                 me "We can't keep dancing around this forever Mia, you know you want to go all the way with me, just admit it."
                 mia "I... I... we can't, if mom finds out..."
                 me "This is not about Lisa, it's about you and me. Now tell me, do you want to have sex with me?"
                 mia "I do! I wanted this for so long."
-                #
                 me "Then, it's time to forget what other people will think and just follow you heart."
+                hide img_mia_kiss_02 with d1
+                show img_mia_kiss_03 at top with d1
                 mia "Bro..."
-                #
-                #
-                #
-                #
-                #
+                window hide
+                hide img_mia_kiss_03 with d1
+                show vid_mia_handjob_02 at top with d1
+                pause
+                hide vid_mia_handjob_02 at top with d1
+                show vid_mia_sex_01 at top with d1
+                pause
+                hide vid_mia_sex_01 at top with d1
+                show vid_mia_sex_02 at top with d1
+                pause
+                hide vid_mia_sex_02 at top with d1
+                show vid_mia_cum_ass at top with d1
+                pause
+                hide vid_mia_cum_ass at top with d1
                 me "So how was it?"
                 mia "Better than I could have ever hoped for. Am I... your first?"
-                me "You are But I will be honest with you, aunt Lily wanted me to sleep at her house last night, so you almost weren't."
+                me "You are but I will be honest with you, aunt Lily wanted me to sleep at her house last night, so you almost weren't."
                 mia "Auntie... she... she... but she is..."
                 me "Aunt Lily is a certified pervert sis, but that's not a bad thing is it?"
                 mia "I guess not. But does this mean you are going to have sex with her some other time?"
@@ -604,10 +615,10 @@ label lbl_home_bathroom_day3:
     mia "Ok, Veronica showed me how this works."
     me "She did WHAT?"
     hide img_mia_shower_03 with d1
-    show img_mia_handjob at top with d1
+    show img_mia_handjob_01 at top with d1
     mia "Calm down bro, it was on a dildo... let's see."
     "She is inexperienced, if it was not for the fact that she was my sister, and that she is smoking hot, it would take a long time for me to cum. But as things stand..."
-    hide img_mia_handjob with d1
+    hide img_mia_handjob_01 with d1
     show vid_mia_handjob_cum at top with d1
     mia "Wow, so the is what it feels like... it tastes funny."
     hide vid_lisa_handjob_cum with d1
