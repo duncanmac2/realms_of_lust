@@ -38,7 +38,9 @@ label lbl_city_street_1st:
         jump lbl_city_street_1st_day2
     elif v_day == 3 and v_time == 0:
         jump lbl_city_street_1st_day3
-    elif v_day == 3 and v_time > 0:
+    elif v_day == 4 and v_time == 0:
+        jump lbl_city_street_1st_day4
+    else:
         call screen scr_navigation
 
 ## 1ST STREET - MARCY HOME ##
@@ -253,7 +255,7 @@ label lbl_city_home_marcus_day1b:
         "Just as I start to stand to go home something catches my eyes."
         hide npc_portrait_maria_01 with d3
         show npc_portrait_maria_02 with d3
-        marcus "Ohhh, [me] we are soo lucky, she rarely changes in her room. Let's enjoy this gift from the pervert god."
+        marcus "Ohhh, [me] we are so lucky, she rarely changes in her room. Let's enjoy this gift from the pervert god."
         hide npc_portrait_maria_02 with d3
         show npc_portrait_maria_03 with d3
         me "She is very hot, that's cheerleader for you, but it's time for me to go, see you tomorrow Marcus."
@@ -890,7 +892,7 @@ label lbl_city_mall_day3:
         karen "Hito... Miss Tanaka, sorry we..."
 
         if f_day2_mall_karen:
-            hitomi "No need to explain Karen, you are young and full of energy, but do try to keep this activities to the break time. And you, Max."
+            hitomi "No need to explain Karen, you are young and full of energy, but do try to keep this activities to the break time. And you, [me]."
             me "Yes miss?"
         else:
             hitomi "No need to explain Karen, you are young and full of energy, but do try to keep this activities to the break time. And you, what's your name?"
@@ -1109,7 +1111,7 @@ label lbl_city_home_lily_day2:
     show npc_portrait_lily_05 at top
     lily "Really? So you are not enjoying this at all?"
     me "I..."
-    lily "Ha, I know deep inside you have the hearth of a pervert. Look I have to leave now, but Lisa invited me for dinner, we can talk about that later okay, just think about it."
+    lily "Ha, I know deep inside you have the heart of a pervert. Look I have to leave now, but Lisa invited me for dinner, we can talk about that later okay, just think about it."
     me "I-I will, I will be leaving now then, bye Lily."
     hide npc_portrait_lily_05 with d1
     show vid_lily_kiss_01 at top with d1
@@ -1325,6 +1327,30 @@ label lbl_city_street_1st_day3:
     menu:
         "Marcy's house":
             jump lbl_city_home_marcy
+
+## 1ST STREET - DAY 4 ##
+label lbl_city_street_1st_day4:
+    "We leave the house and pick Marcy as usual."
+    marcy "So... why are you both so happy?"
+    me "Mia and I just came to an understanding."
+    marcy "Meaning..."
+    me "We got closer as people, and as a man and a woman."
+    #
+    marcy "YOU GUYS FUCKED EACH OTHER???"
+    #
+    mia "Marcy, shut up we don't want the whole street to know."
+    marcy "SO YOU DID???"
+    me "Yes now just stop screaming."
+    marcy "You guys...I can't believe it. Does Lisa know?"
+    mia "No, and we want to keep it that way."
+    marcy "Oh, I got it, it's like those novel you read, secret and forbidden love between brother and sister."
+    mia "In a way, yes. But we are not related by blood. Not that it would matter to mom. She would not be happy at all. Even though she apparently also wants his body."
+    marcy "She does? Wow, you are getting yourself quite the harem dude, when will it be my turn? Will you add my mother too? Gotta catch them all!"
+    "We all laugh at that joke. If only she knew the truth."
+
+    menu:
+        "Go to class":
+            jump lbl_college_class
 
 ### BEACH ###
 ## BEACH - DAY 2 ##

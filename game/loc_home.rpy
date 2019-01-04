@@ -18,6 +18,8 @@ label lbl_home_kitchen:
         jump lbl_home_kitchen_day2
     elif v_day == 3:
         jump lbl_home_kitchen_day3
+    elif v_day == 4:
+        jump lbl_home_kitchen_day4
 
 label lbl_home_living_room:
     $ v_localisation = "home_living_room"
@@ -355,10 +357,41 @@ label lbl_home_room_mc_day3:
         show npc_portrait_mia_03 with d1
         "She starts looking nervous, she looks like she wants to leave the room, should I let her?"
 
+        $ v_day = 4
+        $ v_time = 0
+
         menu:
             "Grab her":
                 hide npc_portrait_mia_03 with d1
-                "bla"
+                "I grab her by the arm and she looses her balance and falls on top of me. We are face to face."
+                me "We can't keep dancing around this forever Mia, you know you want to go all the way with me, just admit it."
+                mia "I... I... we can't, if mom finds out..."
+                me "This is not about Lisa, it's about you and me. Now tell me, do you want to have sex with me?"
+                mia "I do! I wanted this for so long."
+                #
+                me "Then, it's time to forget what other people will think and just follow you heart."
+                mia "Bro..."
+                #
+                #
+                #
+                #
+                #
+                me "So how was it?"
+                mia "Better than I could have ever hoped for. Am I... your first?"
+                me "You are But I will be honest with you, aunt Lily wanted me to sleep at her house last night, so you almost weren't."
+                mia "Auntie... she... she... but she is..."
+                me "Aunt Lily is a certified pervert sis, but that's not a bad thing is it?"
+                mia "I guess not. But does this mean you are going to have sex with her some other time?"
+                me "Probably, does this bother you?"
+                mia "It should, but it does not. You know I think mom also has the hots for you bro, are we a weird family?"
+                me "Ha, I think we are average."
+                mia "I guess you are right, you have to hear Veronica's family stories sometimes. But that enough chat, we have to leave or we will be late."
+
+                $ tb_event[3]["home_room_mc"]["mia_sex"] = 1
+
+                menu:
+                    "Go to college":
+                        jump lbl_city_street_1st
 
             "Let her run away":
                 hide npc_portrait_mia_03 with d1
@@ -420,7 +453,7 @@ label lbl_home_bathroom_day1:
             "Why is she here now? But whoa... she is in great shape foor her age... What the fuck am I thinking?"
             me "I'm..."
             lisa "GET OUT!!!"
-            "I close the door before doing any more damage by getting hard down there. I'm in soo much trouble as is, I think I will no be getting that money I asked yesterday. God damn it."
+            "I close the door before doing any more damage by getting hard down there. I'm in so much trouble as is, I think I will no be getting that money I asked yesterday. God damn it."
 
             $ f_day1_lisa_bathroom_incident = True
 
@@ -892,6 +925,27 @@ label lbl_home_kitchen_day3:
     menu:
         "Go back":
             jump lbl_home_living_room
+
+## KITCHEN - DAY 4 ##
+label lbl_home_kitchen_day4:
+    if v_time == 0:
+        me "Mia come on, I am sorry ok. I shouldn't have teased you like that."
+        mia "That is not it bro, I have been thinking and, you are right I feel a desire towards you and I can't explain it. Worse I know I'm not the only one. I caught mom more than once touching herself looking at your picture."
+        me "That is a little creepy."
+        mia "I know right, but that is not the point. Both of us have this desire and we have tried to suppress it for a long time, and I can't anymore."
+        me "Are you saying..."
+        mia "That whenever you are ready, so am I... as long as we are alone at home. It might be hypocrisy on her part but I'm 100\% sure she would ground us for life if she caught us having sex."
+        me "We are alone right now."
+        mia "And late for class bro, Marcy is coming to pick us up soon."
+        me "Why,we usually go to her."
+        mia "She said something about breaking the routine or something."
+        "*Knock* *knock*"
+        mia "That's is her, are you ready?"
+        me "Yes let's go."
+
+        menu:
+            "Go to class":
+                jump lbl_college_class
 
 ### LIVING ROOM ###
 ## LIVING ROOM - DAY 1 ##

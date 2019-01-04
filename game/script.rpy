@@ -476,6 +476,7 @@ label start:
         "college_office_ellie": {},
         "home_kitchen": {},
         "home_living_room": {},
+        "home_room_mc": {},
         "home_room_mia": {}
     }
 
@@ -495,6 +496,7 @@ label start:
     $ tb_event[3]["college_office_ellie"] = { "aphrodisiac": 0 }
     $ tb_event[3]["home_kitchen"] = { "mia": 0 }
     $ tb_event[3]["home_living_room"] = { "lisa_hj": 0 }
+    $ tb_event[3]["home_room_mc"] = { "mia_sex": 0 }
     $ tb_event[3]["home_room_mia"] = { "mia_finger": 0 }
 
     # Repeatable
