@@ -550,6 +550,8 @@ label start:
     hide screen main_menu
     scene black onlayer background
 
+    #jump lbl_name_input
+
     "Do you have play previous version and want to jump directly to new content?"
     menu:
         "Jump to new content":

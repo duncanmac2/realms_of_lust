@@ -177,18 +177,18 @@ label lbl_city_home_marcus_day1a:
     "My best friend Marcus lives on the house across the street, we usually go together the three of us so we have to go by his house to pick him up."
     show npc_portrait_sarah_01
     "We ring the bell, but it's his mother that greets us."
-    "Her name is Sarah Williams, she used to be our nany back in the day, I had a crush on her back then, and can you blame me look at her even now she is beautiful."
+    "Her name is Sarah Williams, she used to be our nany back in the day. I had a crush on her back then, and can you blame me look at her even now she is beautiful."
     sarah "Hello guys, a bit late aren't you?"
-    me "Sorry Sara, our alarms just didn't go off today."
+    me "Sorry Sarah, our alarms just didn't go off today."
     sarah "It's ok, Marcus is coming down in a second, he was also late today, he is in the bathroom right now, say he wasn't feeling well."
     me "He is not coming then?"
-    sarah "He is, he said it was just a stomach ache, but he was going to \"take care of it\""
+    sarah "He is, he said it was just a stomach ache, but he was going to \"take care of it\"."
     "Take care of it... that is our code for he is masturbating, shit was he spying on our neighbors again?"
     me "Ok we will wait a bit, I think we can make it if we run."
     hide npc_portrait_sarah_01
     show npc_portrait_marcus at top with d3
     marcus "No need dude I'm right here, sorry for the wait I had to... take care of something..."
-    "Definitely masturbating, he knows that I know, that's why he won't shake my hand... God damn it Marcus."
+    "Definitely masturbating, he knows that I know, that's why he won't shake my hand. God damn it Marcus."
     hide npc_portrait_marcus with d3
     me "Let's go then."
     marcus "Ok bye Mom."
@@ -212,12 +212,12 @@ label lbl_city_home_marcus_day1b:
         sarah "Yes, do you want me to bring you the usual?"
         marcus "Yes, the new edition is out today."
         sarah "I don't know why I buy those for you."
-        "The usual is their codeword for naughty magazines, Marcus is a collector. Sara buys them for him because his father used to give them to him as a gift every month, so after he passed away she kept the tradition, not that she is happy about it."
+        "The usual is their codeword for naughty magazines, Marcus is a collector. Sarah buys them for him because his father used to give them to him as a gift every month, so after he passed away she kept the tradition, not that she is happy about it."
         marcus "Let's go play some g..."
         hide npc_portrait_sarah_02 with d3
         "*Ring* *ring*"
         "It's my phone, Lisa is calling..."
-        lisa "{i}[me], were are you? Doens't matter, come back home right now! You own me an explanation for what happend this morning.{/i}"
+        lisa "{i}[me], were are you? Doesn't matter, come back home right now! You own me an explanation for what happend this morning.{/i}"
         me "Lisa, I will be right there."
         lisa "{i}You have 20 minutes.{/i}"
         "She hung up."
@@ -240,7 +240,7 @@ label lbl_city_home_marcus_day1b:
         sarah "Yes, do you want me to bring you the usual?"
         marcus "Yes, the new edition is out today."
         sarah "I don't know why I buy those for you."
-        "The usual is their codeword for naughty magazines, Marcus is a collector. Sara buys them for him because his father used to give them to him as a gift every month, so after he passed away she kept the tradition, not that she is happy about it."
+        "The usual is their codeword for naughty magazines, Marcus is a collector. Sarah buys them for him because his father used to give them to him as a gift every month, so after he passed away she kept the tradition, not that she is happy about it."
         marcus "Let's go play some g..."
         hide npc_portrait_sarah_02 with d3
         "*Ring* *ring*"
@@ -316,14 +316,14 @@ label lbl_city_home_marcy_day2b:
         "Shit I can almost see her nipples, I always had the hots for Sarah but now isn't the time for looking at her huge and beautiful... no focus."
         me "Hi Sarah, is Marc...y ready?"
         sarah "Oh good morning guys, I will call her, she is just changing."
-        hide npc_portrait_sarah_03
-        show npc_portrait_marcy_01 with d3
+        hide npc_portrait_sarah_03 with d1
+        show npc_portrait_marcy_01 with d1
         "After a few minutes of waiting my worst fears become real."
         marcy "Hey [me]."
         me "I-I... hey... Marcy!?"
-        marcy "Yes, that's my name... are you ok?"
+        marcy "Yes, that's my name. Are you ok?"
         me "Why does everyone keep asking me that it's fine, ok!"
-        marcy "Okaayyy... We should go then..."
+        marcy "Okaayyy... We should go then."
         me "Yes, sure goodbye Sarah."
         sarah "Bye guys, and don't forget to visit."
         hide npc_portrait_marcy_01 with d3
@@ -578,9 +578,9 @@ label lbl_city_home_marcy_room_day2:
     marcy "What do you think?"
     me "Not with me in here you are not!"
     marcy "Why, it's not like you have never seen me naked. This is just the next step on our friendship..."
-    "Shit, there its comes again... that overwhelming lust, I just can't take my eyes off her now."
+    "Shit, there it comes again... that overwhelming lust, I just can't take my eyes off her now."
     marcy "You are bigger than I remember..."
-    "She points at another bulge in my pants... shit not again."
+    "She points at another bulge in my pants. Shit not again."
     me "Yes, this is..."
     hide vid_marcy_masturbate with d1
     show vid_marcy_boobs_bounce_01 at top with d1
@@ -668,7 +668,7 @@ label lbl_city_home_marcy_room_day3:
         $ v_time += 10
 
     elif v_time >= 1140:
-        "I let Lisa know that I will spend the night at Marcy, she acknowledges what I said and I go out. I knock on the door and Marcy lets me in."
+        "I let Lisa know that I will spend the night at Marcy, she acknowledges what I said and I go out. I knock on the door and Marcy let me in."
         marcy "So what brings you here? Maybe you came to fuck me? Hahaha."
         me "Actually, yes."
         marcy "What? You want to... wow, it's happening, it's finally happening! what do I do now? [me] what do we do now?"
@@ -767,7 +767,7 @@ label lbl_city_home_marcy_room_sarah_day3:
 ### MALL ###
 ## MALL - DAY 1 ##
 label lbl_city_mall_day1:
-    me "Sorry man, I have some others plans."
+    me "Sorry man, I got other plans."
     marcus "It's cool [me], come see us when you have some time. I have this new game and it's pretty good."
     me "Will do, see you later."
     marcus "See you."
@@ -778,13 +778,13 @@ label lbl_city_mall_day1:
     "After we enter she mall it's a short way to the \"Snow White\", weird name for a ice cream shop if you ask me but their stuff is divine. Wait were is it?"
     mia "Bro, I think the store closed."
     show loc_city_mall_store at top
-    me "It can't be, maybe we came the wrong way here lets ask in here?"
+    me "It can't be, maybe we came the wrong way here let's ask in here?"
     hide loc_city_mall_store with d3
     show npc_portrait_karen_01 with d3
     karen "Hello, welcome to the... [me]!?"
     mia "Karen, you work here?"
     karen "Hey Mia, yeah I started last month when the store opened, the owner is an old friend."
-    "She looks embarrassed, she is not even looking at me... strange, is it because of me?"
+    "She looks embarrassed, she is not even looking at me. Strange, is it because of me?"
     hide npc_portrait_karen_01 with d3
     show npc_portrait_mia_06 at top with d3
     mia "Bro and I where looking for our favorite ice cream shop, it's been some time since we came here so maybe we made a wrong turn somewhere..."
@@ -816,7 +816,7 @@ label lbl_city_mall_day1:
 
 ## MALL - DAY 2 ##
 label lbl_city_mall_day2:
-    "I should probably look for Karen..."
+    "I should probably look for Karen."
     show npc_portrait_karen_04 at top with d3
     me "Hey Karen."
     karen "[me] is that you you came to buy something?"
@@ -1076,7 +1076,7 @@ label lbl_city_home_lily_day2:
     "Her expression changes instantly from happy to nervous."
     lily "Why do you ask? Did something happened?"
     me "So you know something!"
-    lily "I-I... There is a legend, told by my grandmother, about the time when a god would come back to this world and ascend his descendants, some people took it serious, but your my mother always thought it was bullshit, so your father and I stoped talking about it..."
+    lily "I-I... There is a legend, told by my grandmother, about the time when a god would come back to this world and ascend his descendants. Some people took it serious, but my mother always thought it was bullshit, so your father and I stopped talking about it..."
     me "Well, what if it was true?"
     hide npc_portrait_lily_03
     show npc_portrait_lily_04 at top
@@ -1087,7 +1087,7 @@ label lbl_city_home_lily_day2:
     me "Well you see I had a dream were a woman named Nina offered me a way to change this world and I accepted."
     hide npc_portrait_lily_04
     show npc_portrait_lily_05 at top
-    lily "You did!!! Awesome, it finally happened, this horrible world will finally be gone, life has sucked for so long but now we can finally be happy."
+    lily "You did!!! Awesome, it finally happened, this horrible world will finally be gone. Life has sucked for so long but now we can finally be happy."
     me "So... something you want to tell me dear aunt."
     hide npc_portrait_lily_05 with d1
     show npc_portrait_lily_06 with d1
@@ -1095,28 +1095,28 @@ label lbl_city_home_lily_day2:
     me "It did, do you know what kind of world she wants to make? Sex, sex everywhere, today has been the most strange day in the history of strange days aunt. First Lisa entered my room only on her lingerie..."
     lily "Oh! That is strange, for some reason a part of me thinks that's normal for her, and the other part is incredulous."
     me "And then Marcus became Marcy..."
-    lily "WHAT? The name Marcy rings a bell, but I remember your friend Marcus..."
+    lily "{b}What{/b}? The name Marcy rings a bell, but I remember your friend Marcus..."
     me "That's good because we are the only ones, and then nurse Megan, forget about that."
     hide npc_portrait_lily_06
     show npc_portrait_lily_03 at top
-    lily "I can't believe it, so this is what they were talking about? That's AMAZING!!!"
-    me "It's what now???"
+    lily "I can't believe it, so this is what they were talking about? That's amazing!"
+    me "It's what now?"
     lily "[me] this is great, I always had these urges, I wanted to go out and fuck the first cock in front of me..."
     me "Ok, I don't want to listen to this."
     lily "...I always masturbated a lot..."
     me "Why am I still listening."
     lily "...But everyone told me those were bad things so I suppressed then, but now..."
-    me "OK, that's ENOUGH. Are you even listening to what you are saying? That's crazy."
+    me "OK, that's {b}enough{/b}. Are you even listening to what you are saying? That's crazy."
     hide npc_portrait_lily_03
     show npc_portrait_lily_05 at top
     lily "Really? So you are not enjoying this at all?"
     me "I..."
-    lily "Ha, I know deep inside you have the heart of a pervert. Look I have to leave now, but Lisa invited me for dinner, we can talk about that later okay, just think about it."
+    lily "Ha, I know deep inside you have the heart of a pervert. Look I have to leave now, but Lisa invited me for dinner. We can talk about that later okay, just think about it."
     me "I-I will, I will be leaving now then, bye Lily."
     hide npc_portrait_lily_05 with d1
     show vid_lily_kiss_01 at top with d1
     "She kisses me with passion."
-    hide vid_lily_kiss with d3
+    hide vid_lily_kiss_01 with d3
     lily "See? Not bad at all."
 
     if f_day2_nurse:

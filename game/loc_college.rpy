@@ -125,13 +125,13 @@ label lbl_college_yard_day2:
         marcy "[me] you have been ogling me all the way here."
         me "Oh sorry, I didn't mean to..."
         marcy "I know I'm beautiful but come on man at least buy me dinner first, hahaha."
-        "I can't help but to see my old friend now, even if \"he\" is a \"she\" now it's the same person on the inside... But with some big tits attached..."
+        "I can't help but to see my old friend now, even if \"he\" is a \"she\" now it's the same person on the inside... but with big tits attached."
         mia "I'm going to meet Veronica, see you guys later."
-        "Mia always gives me a kiss on the cheek before we go to our classes so I approach her..."
+        "Mia always gives me a kiss on the cheek before we go to our classes so I approach her."
         show img_mia_kiss_01 at top with d3
-        "That's not what I thought would happen... It's strangely pleasant"
+        "That's not what I thought would happen... it's strangely pleasant."
         hide img_mia_kiss_01 with d3
-        me "W-what... bye Mia..."
+        me "W-what... bye Mia."
         "Mia goes on her way, she just kissed me... what..."
         marcy "[me], are we going?"
         me "Oh right. Wait do you think I should go see the nurse? I'm feeling a bit off today?"
@@ -370,15 +370,15 @@ label lbl_college_garden_day1:
         me "Kyle gave me a key to go take a shower."
         show npc_portrait_veronica_01
         veronica "He is always nice, and handsome, a shame he is gay."
-        "This is Veronica, Mia's best friend, she is kind of a slut, she bedded the whole football team acording to some rumors."
-        "She is not a bad person, she just can't control her urges, also she has this strange respect for me, never ever flirted with me, don't know if that's good or bad."
+        "This is Veronica, Mia's best friend. She is kind of a slut, she bedded the whole football team acording to some rumors."
+        "She is not a bad person, she just can't control her urges. Also she has this strange respect for me, never ever flirted with me, don't know if that's good or bad."
         me "He's what now?"
         veronica "Gay, he has to be, I hit on him more times then I can count and he never even blinked."
         hide npc_portrait_veronica_01
         show npc_portrait_mia_06 at top with d3
         mia "V, not all guys that don't want to be with you are gay."
         veronica "You're so naive Mia, please never change."
-        me "He is? I never knew, does anyone else knows? Doens't matter even if he is gay it's none of my business. Where is Marcus?"
+        me "He is? I never knew, does anyone else knows? Doesn't matter even if he is gay it's none of my business. Where is Marcus?"
         veronica "He came by a while ago, asked us to tell you to meet him..."
         mia "Wait he is coming back here."
         marcus "Hello guys, I'm back."
@@ -386,11 +386,12 @@ label lbl_college_garden_day1:
         marcus "It's a secret between men only."
         hide npc_portrait_mia_06 with d3
         show npc_portrait_veronica_01 with d3
-        veronica "Fine no need to tell us, by the way Mia come here, let me tell you about the incident in the girl's shower last week."
+        veronica "Fine no need to tell us. By the way Mia come here, let me tell you about the incident in the girl's shower last week."
         marcus "What incident?"
         veronica "Sorry, Marcus it's a secret between women only."
+        hide npc_portrait_veronica_01 with d3
         "The curiosity is going to eat him alive now, it's almost too cruel."
-        "After we eat Marcus call me to his house, but I was thinking of going to the mall with Mia, it's been some time since we went there to eat some ice cream. Where do I go?"
+        "After we eat Marcus call me to his house, but I was thinking of going to the mall with Mia. It's been a while since we went there to eat some ice cream. Where do I go?"
 
         menu:
             "Mall with Mia":
@@ -430,6 +431,7 @@ label lbl_college_garden_day1:
         me "But I didn't eat yet..."
         marcus "Trust me this is better than food."
         me "Okay..."
+        hide npc_portrait_marcus with d1
 
         menu:
             "Go with him":
@@ -450,7 +452,7 @@ label lbl_college_garden_day2:
     hide npc_portrait_veronica_02
     show npc_portrait_marcy_02 with vpunch
     marcy "Good for you man."
-    veronica "HOLY SHIT! Where did you came from? One of these days you are going to give someone a heart attack."
+    veronica "{b}Holy shit{/b}! Where did you came from? One of these days you are going to give someone a heart attack."
     marcy "Sorry, I didn't mean to scare you Veronica. But [me], how about we go celebrate, then come with me."
     "Why not, it's probably a good chance to see if Marcy remembers having a penis."
     me "Ok, let's go."
@@ -777,18 +779,18 @@ label lbl_college_shower_men_day1:
     show img_bonnie_shower_01 with d3
     bonnie "Shit, what are you doing here, this place is supposed to be empty."
     me "What am I doing? What are YOU doing in the men's shower!"
-    bonnie "Sure that why I'm here, those fucking cheerleaders think they own the girls washroom, so now I have to shower here after the training. All because I said their ponpon's were ridiculous."
+    bonnie "Sure that why I'm here, those fucking cheerleaders think they own the girls washroom, so now I have to shower here after the training. All because I said their pompoms were ridiculous."
     me "DO YOU MIND, I'm still naked here."
     bonnie "What's the big deal, you shy or something. Look I have no time, I have to get home in half an hour and I smell like shit, so I will use the last on right over there. You can leave if you want."
     hide img_bonnie_shower_01 with d3
     show img_bonnie_shower_02 at top with d3
-    "Before I can say a word she finishes taking off her clothes and walks in, I'm kind of speechlees now so I just continue to shower without looking at her... it's not as easy as I thought... maybe just a peek."
+    "Before I can say a word she finishes taking off her clothes and walks in. I'm kind of speechlees now so I just continue to shower without looking at her. It's not as easy as I thought... maybe just a peek."
     hide img_bonnie_shower_02 with d3
     show img_bonnie_shower_03 with d3
     "Shit, I get hard almost instantly, hope she doesn't notice."
     bonnie "Woah... you're not bad at all."
     me "What?"
-    bonnie "Your dick, I thought you were hidding it because it was small, but its not bad at all."
+    bonnie "Your dick, I thought you were hidding it because it was small, but it's not bad at all."
     me "I'm leaving now."
     hide img_bonnie_shower_03 with d3
     show img_bonnie_shower_04 with d3
@@ -820,8 +822,8 @@ label lbl_college_nurse_day2:
     megan "Oh! I see... well the best advice I can give you is to masturbate frequently and maybe ask a friend for help with finding a girlfriend... or a professional."
     me "Are you really telling me to go look for a prostitute?"
     megan "If it help you what is the problem... I mean you clearly need it."
-    "She looks at my crotch, and I realize there is a bulge... When did this happened?"
-    megan "I don't have any magazines here... But if you need some help..."
+    "She looks at my crotch, and I realize there is a bulge. When did that happened?"
+    megan "I don't have any magazines here. But if you need some help..."
     me "Help, with what exactly?"
     megan "Well you can just leave it like this young man, it could be really bad for your health. Also I could use a sperm sample to see the effects of stress on your body."
     me "You want a-a sample?"
@@ -830,7 +832,7 @@ label lbl_college_nurse_day2:
     show npc_portrait_megan_02 at top with d3
     "She starts taking her top off, I'm mesmerized I can't believe what im about to see. She hands me a cup and..."
     megan "Go on ahead."
-    "You know what, FUCK IT, a hot nurse is telling me to masturbate while showing me her tits, I'm not wasting this opportunity."
+    "You know what, {b}fuck it{/b}, a hot nurse is telling me to masturbate while showing me her tits, I'm not wasting this opportunity."
     "It doesn't take long for my climax... then comes the guilt."
     me "I should go..."
     megan "Wait [me]..."
@@ -842,7 +844,7 @@ label lbl_college_nurse_day2:
             scene loc_college_yard
             pass
 
-    "What did I do? WHAT did I do??? I need to clear my head... Aunt Lily! She might know something about what is happening. Nina said it was something in my blood, our blood. I have to go there."
+    "What did I do? {b}What{/b} did I do??? I need to clear my head... Aunt Lily! She might know something about what is happening. Nina said it was something in my blood, our blood. I have to go there."
 
     menu:
         "Aunt Lily":

@@ -75,21 +75,22 @@ label lbl_home_room_mc_day1:
         "There is a e-mail notification, let's see what it is about."
         "{i}\"Would you like to change your whole life?\"{/i}"
         "I hate spam, next."
-        "\"Hello [me],"
-        "It's aunt Lily here, how are you? I have great news I got a job on the PGP Corporation, right there in Libidine town, so I'm moving back there tomorrow."
-        "I already got a house and everything, it's on Second Street 458, you absolutely must come visit me tomorrow, no excuses. Also tell Lisa and Mia aunt Lily is back in town."
-        "Love you.\""
-        "Lily is back in town? That's great, she is dad's younger sister, after grandma got sick she came to live with mom and dad she was way younger than my father so she could not live alone I think she was just 10 when grandma Kat was sent to the hospital."
-        "She is still there by the way, she had a mysterious disease that has kept her there I go visit her sometimes but she is rarely lucid."
+        "{i}Hello [me],{/i}"
+        "{i}It's aunt Lily here, how are you? I have great news I got a job on the PGP Corporation, right there in Libidine town, so I'm moving back there tomorrow.{/i}"
+        "{i}I already got a house and everything, it's on Second Street 458, you absolutely must come visit me tomorrow, no excuses. Also tell Lisa and Mia aunt Lily is back in town.{/i}"
+        "{i}Love you.{/i}"
+        "Lily is back in town? That's great, she is dad's younger sister. After grandma got sick she came to live with mom and dad. She was way younger than my father so she could not live alone I think she was just 10 when grandma Kat was sent to the hospital."
+        "She is still there by the way, she had a mysterious disease that has kept her there. I go visit her sometimes but she is rarely lucid."
         "After the accident she also came to live with Lisa and Mia, but after two years she decided to travel around the world to find herself."
         "She always kept in contact but I sometimes forget to send her news. She is also aunt Lily to Mia since she is my step sister, they are very close. But enough exposition let's... wait I got a new message."
         show npc_portrait_lily_01 with d1
-        "PS: we haven't seen eachother in a long time here is a picture to see how I've changed. Not so chubby anymore."
+        "PS: we haven't seen each other in a long time here is a picture to see how I've changed. Not so chubby anymore."
         hide npc_portrait_lily_01 with d1
+        "Whoa, she really has changed she used to be... well chubby is very generous. She is actually pretty hot now... what no she is my aunt can't think of her this way."
         show vid_pc_game at top with d1
-        "Whoa, she really has changed she used to be... well chubby is very generous. She is actualy pretty hot now... what no she is my aunt can't think of her this way. Let's kill some time before dinner."
+        "Let's kill some time before dinner."
         hide vid_pc_game with d1
-        "Time to eat some dinner."
+        "Time to eat."
 
         menu:
             "Go eating":
@@ -103,20 +104,20 @@ label lbl_home_room_mc_day1:
         nina "Wake uupp..."
         hide loc_home_room_mc_bed
         show npc_portrait_nina_01 with d3
-        "When I open my eyes a beautiful woman is at the side of my bed, what is she doing in my room..."
-        me "Who are you? What are you doing in my room??"
-        nina "Calm down [me], let me explain everything to you... My name is Nina, Queen of the Realm of Lust, and I have come with an offer."
+        "When I open my eyes a beautiful woman is at the side of my bed. What is she doing in my room?"
+        me "Who are you? What are you doing in my room?"
+        nina "Calm down [me], let me explain everything to you. My name is Nina, Queen of the Realm of Lust, and I have come with an offer."
         me "What? What kind of offer?"
-        hide npc_portrait_nina_01 with d3
-        show npc_portrait_nina_02 with d3
-        nina "You see every four-hundred years our world align and lust can be free in this world for a day... that's today. But unlike my predecessors I want more, and I have the perfect opportunity to reach these goals. And you are the key."
+        hide npc_portrait_nina_01 with d1
+        show npc_portrait_nina_02 with d1
+        nina "You see every four-hundred years our world align and lust can be free in this world for a day. That's today. But unlike my predecessors I want more, and I have the perfect opportunity to reach these goals. And you are the key."
         me "Me?"
-        nina "Yes you my friend, your family is special, long ago my great grandfather impregnated a human, that was your ancestor, the blood of gods run in your veins."
+        nina "Yes you my friend, your family is special. Long ago my great grandfather impregnated a human, that was your ancestor, the blood of gods run in your veins."
         nina "It's been diluted however but there is still some power there, so if you join me we together can bring this earth in a state of paradise. What say you friend?"
-        me "I say this is the strangest dream I've ever had. I mean god, lust... this is weirder than that time I ate those strange brownies. But wait a second if this story is true doesn't that make us cousins or something."
-        nina "I think so, but 30 generations removed I think... but that is not important what matter is that you can finally have a better life than the one you have now, in this new world you will be like royalty, you would be second only to me. So what say you... cousin?"
-        hide npc_portrait_nina_02 with d3
-        show npc_portrait_nina_03 at top with d3
+        me "I say this is the strangest dream I've ever had. I mean god, lust... this is weirder than that time I ate those strange brownies. But wait a second if this story is true doesn't that make us cousins or something?"
+        nina "I think so, but 30 generations removed I think. But that is not important what matter is that you can finally have a better life than the one you have now, in this new world you will be like royalty, you would be second only to me. So what do you say... cousin?"
+        hide npc_portrait_nina_02 with d1
+        show npc_portrait_nina_03 at top with d1
         "It's the strangest dream I've ever had, but why not, it would be a shame if I woke up without banging someone, in my dreams... this sounds so pathetic."
         me "I accept."
         nina "Cool... I mean you have chosen wisely now hold still."
@@ -213,7 +214,7 @@ label lbl_home_room_mc_day2:
         show img_mc_sleep at top with d3
         "You wake up for another day."
         hide img_mc_sleep with d3
-        me "What time is it... It's morning already? Shit hope I'm not late again. But what a strange dream, and I didn't even get to see some boobs, that's my luck for you... Why I'm naked?"
+        me "What time is it... It's morning already? Shit hope I'm not late again. But what a strange dream, and I didn't even get to see some boobs, that's my luck for you. Why I'm naked?"
         "In that moment between me noticing I'm completely nude and before I can put any clothes, Lisa comes through the door and sees me in all my glorious nakedness."
         show npc_portrait_lisa_03 at top with d3
         lisa "[me] are you u... Why are you naked?"
@@ -428,7 +429,7 @@ label lbl_home_bathroom_day1:
     "When I'm about to enter the bathroom, I hear a loud scream."
     show npc_portrait_mia_01
     mia "Waitttt..."
-    "It's my little \"sister\", Mia"
+    "It's my little \"sister\", Mia."
     mia "Please bro, I need to take a shower now or I will be late for my class."
     me "Same here, why are you getting up just now?"
     mia "My alarm stopped working, please bro a lady should never smell bad, you are a guy, no one is going to care."
@@ -440,7 +441,7 @@ label lbl_home_bathroom_day1:
     menu:
         "Play paper":
             me "Damn it!"
-            mia "Yesss, sorry bro, its was your idea, but if you are desperate we could shower together, hihihi."
+            mia "Yesss, sorry bro, it's was your idea, but if you are desperate we could shower together, hihihi."
             "She likes to tease me, but she is not brave enough to actually take a shower with me. But then again, I could use that to my advantage."
             me "Okay let's go!"
             mia "What??? But... but..."
@@ -450,7 +451,7 @@ label lbl_home_bathroom_day1:
             me "What am I supposed to do then?"
             mia "Hey, bro, mom must be finished with her shower by now, I bet she won't mind if you take a shower there."
             me "Good idea sis."
-            "I run to Lisa's room as fast as I can. Its weird tough, Lisa usually wakes both of up every morning... huhhh"
+            "I run to Lisa's room as fast as I can. It's weird tough, Lisa usually wakes both of up every morning."
 
             menu:
                 "Open the door":
@@ -472,14 +473,14 @@ label lbl_home_bathroom_day1:
 
         "Play scissors":
             me "It's a tie."
-            mia "Then lets play again bro!"
+            mia "Then let's play again bro!"
             me "Better idea, why you don't take a shower on Lisa's bathroom? She is most likely finished by now."
             mia "That's... a really good idea, why didn't I think of that earlier."
             me "Well you are a bit of an airhead."
             mia "Hey!!!"
             me "It's true. Go on now, or we will not make it in time."
             mia "Crap, you are right."
-            me "Now lets hurry, still have to go to Marcus's house."
+            me "Now let's hurry, still have to go to Marcus's house."
 
             menu:
                 "Take a shower in a hurry":
@@ -553,13 +554,13 @@ label lbl_home_bathroom_day2:
         "We are both inside, she is red as a tomato, but no signs of backing down. Time to take it to the next level."
         me "What are you waiting for? We don't have all morning."
         "I start to take my clothes off, with a smirk on my face she will never..."
-        show img_mia_shower_01 at top with d3
+        show img_mia_shower_01 at top with d1
         mia "No need to push it."
         "She just started to take her clothes off, and in a moment she is naked in front of me while I have only my underwear."
         mia "I know it's been a while since we took a shower together, but it's all right, we are family after all."
         "It's clear she is trying to convince herself. As for me im trying to hide my massive erection from her... Should I go in or just give up?"
-        hide img_mia_shower_01 with d3
-        show img_mia_shower_02 with d3
+        hide img_mia_shower_01 with d1
+        show img_mia_shower_02 with d1
         "Her body is incredible, I always knew she was beautiful but this! Can you get a hard on on top of a hard on?"
         "That's when she see my \"situation\"."
         mia "What is... ooh that's why you were so desperate to come in... it's, it's ok bro. You are a man after all, cold showers are good to keep you awake."
@@ -569,13 +570,13 @@ label lbl_home_bathroom_day2:
         me "Yeah, you already said that."
         "It's obvious she is not as cool with this situation as she makes herself to be. But I don't have the time to just give up now, so I step inside the shower."
         "Mia does the same and soon we are in this awkward situation, back to back, washing ourselves in silence. That is until she bumps into me. The only thing I can think off is that her ass is soft and smooth, if the water wasn't so cold I would be hard again."
-        hide img_mia_shower_02 with d3
-        show img_mia_shower_03 with d3
+        hide img_mia_shower_02 with d1
+        show img_mia_shower_03 with d1
         mia "Sorry bro. Are you... you know... less excited?"
         me "I think so, yes."
         mia "Ok, you can turn around then, can you wash my back?"
-        hide img_mia_shower_03 with d3
-        show img_mia_ass_01 with d3
+        hide img_mia_shower_03 with d1
+        show img_mia_ass_01 with d1
         "That sight is too much, I can feel my blood flowing to my dick again."
         me "Sorry, I'm done here, need to go see you downstairs."
         mia "But..."
@@ -639,18 +640,18 @@ label lbl_home_bathroom_day3:
 label lbl_home_kitchen_day1:
     if f_day1_lisa_bathroom_incident and v_time == 0:
         me "Well... I will be late, smelly, broke and probably grounded for the rest of the week. But I will not be hungry. There is always a bright side (I feel dead inside)."
-        show npc_portrait_mia_02 at top
+        show npc_portrait_mia_02 at top with d3
         "After a few minutes pondering if I should eat all of Mia's food for sending me to my figurative demise, she comes down the stair."
-        mia "Sooooo... I-I'm sorryyyyy???"
-        hide npc_portrait_mia_02
-        show npc_portrait_mia_03 with d3
-        me "Sorry doesn't cut it Mia, Lisa will eat me alive when we are back from college, you know how she is she doens't even own a bikini because it shows too much skin... And I saw her naked !!!"
+        mia "Sooooo... I-I'm sorryyyyy."
+        hide npc_portrait_mia_02 with d1
+        show npc_portrait_mia_03 with d1
+        me "Sorry doesn't cut it Mia, Lisa will eat me alive when we are back from college. You know how she is, she doesn't even own a bikini because it shows too much skin... and I saw her naked !!!"
         mia "I didn't know, I thought she was down here and just forgot to wake us. Please forgive me [me], I-I will... talk to Hikari, I know you have a crush on her so I will set you up on a date, how about that?"
         me "That would be great, except last month I tried to ask her out. All she said is she does not go out with losers and perverts. A pervert, ME?"
-        mia "Well, you do hang around Markus a lot."
+        mia "Well, you do hang around Marcus a lot."
         me "I know. Let's do this then, you will owe me a favor, whatever I ask, whenever I ask. Deal?"
-        hide npc_portrait_mia_03
-        show npc_portrait_mia_04 at top with d3
+        hide npc_portrait_mia_03 with d1
+        show npc_portrait_mia_04 at top with d1
         mia "Uhhhh... ok deal!"
         me "Good now let's go, we are already late as it is."
 
@@ -662,13 +663,13 @@ label lbl_home_kitchen_day1:
         show npc_portrait_lisa_02 with d3
         "Time to have dinner with my family, they are already on the table waiting for me."
         me "Hey guys I have great news, aunt Lily is moving into town tomorrow."
-        hide npc_portrait_lisa_02 with d3
-        show npc_portrait_mia_07 at top with d3
+        hide npc_portrait_lisa_02 with d1
+        show npc_portrait_mia_07 at top with d1
         mia "Really!!! Awesome, then we can go see her right it's been ages since we last saw her."
         lisa "Yes it has, did she find a job here?"
         me "On the PGP Corporation, don't know what she does there tough."
-        hide npc_portrait_mia_07 with d3
-        show npc_portrait_lisa_01 with d3
+        hide npc_portrait_mia_07 with d1
+        show npc_portrait_lisa_01 with d1
         lisa "That's great, I will call her for the barbecue on Sunday, but since you brought the subject of family, I had some good news about grandma Emma."
         lisa "It looks like there was a new development in her treatment, the doctor says she is much better now and she may even be able to talk to us on a more regular basis now."
         me "That's great, it's the best news I've had all year."
@@ -719,7 +720,7 @@ label lbl_home_kitchen_day2:
         me "You were always shy with nudity an all that, why then you entered my room only on your underwear today?"
         hide npc_portrait_lisa_05 with d1
         show npc_portrait_lisa_06 with d1
-        lisa "I think you are exaggerating a bit [me], I don't usually walk around like that, but it's not like you have never seen me in a bikini right, its almost the same thing. I just forgot to put clothes for some reason."
+        lisa "I think you are exaggerating a bit [me], I don't usually walk around like that, but it's not like you have never seen me in a bikini right, it's almost the same thing. I just forgot to put clothes for some reason."
         "A bikini? Lisa only owns one pieces, she would never wear a bikini, even in our pool. What the fuck."
         hide npc_portrait_lisa_06 with d1
         show npc_portrait_mia_01 with d1
@@ -964,14 +965,14 @@ label lbl_home_living_room_day1:
     "She is here, and waiting for me, it was a good life..."
     lisa "[me], sit down."
     "That's not a request, it's best to do as the lady says."
-    lisa "So, don't you know how to knock? What did you have in your mind to open MY bathroom door when I was showering?"
+    lisa "So, don't you know how to knock? What did you have in your mind to open {b}my{/b} bathroom door when I was showering?"
     me "I'm so sorry, Mia told me that you were done, and I was running late so I didn't think..."
     lisa "Well you should have, you are not a kid anymore. You know you are in trouble right?"
     me "Yes."
     lisa "Good, you will be not be getting any money from me this month, if you want you will be getting a job or taking it from your savings."
     me "I understand."
-    lisa "Look I was very angry most of the day, it's a good thing I had the time to cool down or you would be getting a much harsher punishment. Let's just leave it that and forget this ever happened okay. Now go to your room you left your computer on."
-    me "I did? Okay I will go."
+    lisa "Look, I was very angry most of the day, it's a good thing I had the time to cool down or you would be getting a much harsher punishment. Let's just leave it that way and forget this ever happened okay? Now go to your room, you left your computer on."
+    me "I did? Okay I'm going."
 
     $ v_time = 1140
 
@@ -1079,7 +1080,7 @@ label lbl_home_room_lisa_day2:
 label lbl_home_room_lisa_day3:
     if v_time == 0:
         "That was a great way to start my day, but now what am I supposed to do? I have a boner and it's killing me, maybe Lisa should take responsibility for it..."
-        "Her door is half open lets see what she is doing... she is not here? Oh wait she is in her bathroom I can hear the water running."
+        "Her door is half open let's see what she is doing... she is not here? Oh wait she is in her bathroom I can hear the water running."
         if f_day1_lisa_bathroom_incident:
             "If only I had heard that monday I would have avoided a lot of trouble. But I don't think she would mind if I take a peek now."
         else:
@@ -1206,7 +1207,7 @@ label lbl_home_room_mia_day3:
         show vid_mia_finger at top with d1
         mia "Bro, I-I'm..."
         me "It's ok Mia."
-        "She lets out a loud moan and her legs get weak, so I put her on the bed. She is almost in catatonic state. I will let her rest for now."
+        "She let out a loud moan and her legs get weak, so I put her on the bed. She is almost in catatonic state. I will let her rest for now."
         hide vid_mia_finger with d1
 
         $ tb_event[3]["home_room_mia"]["mia_finger"] = 1
