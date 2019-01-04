@@ -1223,6 +1223,7 @@ label lbl_city_home_lily_day3:
         lily "Awww..."
         hide npc_portrait_lily_01 with d1
 
+        $ tb_event[3]["city_home_lily"]["lily_sex"] = 1
         $ v_day = 4
         $ v_time = 0
 

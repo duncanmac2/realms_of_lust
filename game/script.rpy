@@ -240,6 +240,7 @@ define dakota = Character("Dakota", image = "portrait_dakota", color = clr_gold)
 define ellie = Character("Ellie", image = "portrait_ellie", color = clr_gold)
 define emma = Character("Emma", image = "portrait_emma", color = clr_auburn)
 define hitomi = Character("Hitomi", image = "portrait_hitomi", color = clr_ginger)
+define jane = Character("Jane", image = "portrait_jane", color = clr_gray)
 define karen = Character("Karen", image = "portrait_karen", color = clr_gray)
 define lily = Character("Lily", image = "portrait_lily", color = clr_auburn)
 define lisa = Character("Lisa", image = "portrait_lisa", color = clr_gold)
@@ -258,6 +259,7 @@ image side portrait_dakota = "images/portrait/portrait_dakota.jpg"
 image side portrait_ellie = "images/portrait/portrait_ellie.jpg"
 image side portrait_emma = "images/portrait/portrait_emma.jpg"
 image side portrait_hitomi = "images/portrait/portrait_hitomi.jpg"
+image side portrait_jane = "images/portrait/portrait_jane.jpg"
 image side portrait_karen = "images/portrait/portrait_karen.jpg"
 image side portrait_lily = "images/portrait/portrait_lily.jpg"
 image side portrait_lisa = "images/portrait/portrait_lisa.jpg"
@@ -337,6 +339,7 @@ image loc_city_street_3th = "images/location/loc_city_street_3th.jpg"
 
 # College
 image loc_college_class = "images/location/loc_college_class.jpg"
+image loc_college_corridor = "images/location/loc_college_corridor.jpg"
 image loc_college_garden = "images/location/loc_college_garden.jpg"
 image loc_college_gym = "images/location/loc_college_gym.jpg"
 image loc_college_locker_room = "images/location/loc_college_locker_room.jpg"
@@ -347,6 +350,7 @@ image loc_college_teacher_office = "images/location/loc_college_teacher_office.j
 image loc_college_yard = "images/location/loc_college_yard.jpg"
 
 ## OBJECTS
+image obj_pills = "images/objects/pills.jpg"
 image obj_sarah_playboy_collection = "images/objects/sarah_playboy_collection.jpg"
 
 ## VIDEOS - NPC
@@ -482,7 +486,7 @@ label start:
 
     $ tb_event[3]["city_beach"] = { "nyomi": 0 }
     $ tb_event[3]["city_gym"] = { "lisa": 0, "sarah": 0, "veronica": 0 }
-    $ tb_event[3]["city_home_lily"] = { "lily": 0 }
+    $ tb_event[3]["city_home_lily"] = { "lily": 0, "lily_sex": 0 }
     $ tb_event[3]["city_home_marcy"] = { "marcy": 0 , "sarah": 0}
     $ tb_event[3]["city_home_marcy_pool"] = { "marcy": 0 }
     $ tb_event[3]["city_home_marcy_room"] = { "marcy": 0 }
@@ -518,6 +522,7 @@ label start:
     $ f_day2_shower = False
     $ f_day3_shower = False
     $ f_day3_spy = False
+    $ f_day4_jane_friend = False
 
     # Variables
     $ v_day = 1

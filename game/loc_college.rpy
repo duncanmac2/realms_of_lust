@@ -9,6 +9,15 @@ label lbl_college_class:
         jump lbl_college_class_day2
     elif v_day == 3 and v_time < 720:
         jump lbl_college_class_day3
+    elif v_day == 4:
+        jump lbl_college_class_day4
+
+label lbl_college_corridor:
+    call main_show
+    scene loc_college_corridor
+
+    if v_day == 4:
+        jump lbl_college_corridor_day4
 
 label lbl_college_garden:
     call main_show
@@ -245,6 +254,103 @@ label lbl_college_class_day3:
     menu:
         "College":
             jump lbl_college_yard
+
+## CLASS - DAY 4 ##
+label lbl_college_class_day4:
+    "Well we are here the class is normal except there is a lot more girls now. Maybe Jason is not Jason anymore. What would \"he\" be called now?"
+    "I notice the trend were the names they get as a girl is similar to the names they had as a guy. If this was some sort of story that would be lazy of the writer..."
+    if tb_event[3]["city_home_lily"]["lily_sex"] == 1:
+        "Marcy is already here."
+    me "Hey Marcy."
+    #
+    marcy "Hey [me] what are you thinking about?"
+    me "Nothing... Hey Marcy do you think it's weird this town has so much more women than men?"
+    marcy "Nah, it's always been that way."
+    me "Okay..."
+    marcy "Hey do you want to do something really crazy?"
+    me "Not particulary, no."
+    marcy "Come on it will be fun."
+    me "All right what do you have in mind."
+    show obj_pills at top with d1
+    marcy "Ellie is usually late, we could put these in her coffe."
+    hide obj_pills with d1
+    me "What are those?"
+    marcy "They are some pills I got from my friend Jenny, she said the will make anyone who consumes them instantly horny, and Ellie bottle of water is right there in the table."
+    if tb_event[3]["college_office_ellie"]["aphrodisiac"] == 1:
+        "If those pill are the same as that liquid Ellie showed me yesterday it will work, but if my guess is correct that will react with the water and create a gas that will affect every woman in the room in time."
+    else:
+        "I don't know what those are but they look like they could react with the water and release some gas."
+    me "Are you saying you want to put that in the teacher's water?"
+
+    menu:
+        "Let's do this":
+            "Marcy sneaks to the table and drops a pill in the bottle and leaves it barely closed. Ellie arrives a few seconds later. She starts her class as normal, but then she starts to strugle, like someone lit a fire in her pants."
+            "She then tells the class to read from the books and sits on her table and starts to... you know. On that moment a girl I've never seen comes to talk to me."
+            #
+            jane "Hey [me]."
+            me "Hey... uhh..."
+            jane "Jane."
+            me "Yes, hey Jane."
+            "Jane, could it be Jason?"
+            jane "So did you talk to Mia? Will she be my friend?"
+            "That's him. But what is this friend stuff. Maybe since Jason is a she, she wants to just be friends instead of going out with her."
+            me "Look Jane can we talk when the class is over?"
+            #
+            jane "Sure [me], sorry to bother you... What is that smell?"
+            "The gas from the reaction has finally reached the back of the class, they all start to fell the effects. Soon all girls are touching themselfs shamelessly."
+            #
+            "I take the decision to take Marcy out off the class. Jane follow us."
+            marcy "Why are we leaving all the fun behind [me]?"
+            me "Let's just say I want to just watch this time, what about you Jane, why are you following us?"
+            #
+            jane "I feel funny, I-I need..."
+            "Oh the gas got her, Marcy is also rubbing herself but that could just be Marcy being Marcy."
+            me "Ok, come here both of you."
+            "We enter a closed room."
+            me "I don't feel like participating, so why don't you guys have some fun?"
+            marcy "Great idea!"
+            jane "But I want you!"
+            me "You heard what I said, get on with it Jane."
+            jane "I... yes sir."
+            #
+            "After the fun we leave the room."
+
+            menu:
+                "Leave the room":
+                    jump lbl_college_corridor
+
+        "Let's not do this":
+            "The class goes a usual... if usual included a few handjobs and a blowjob when the teacher isn't looking."
+            "At the end of the class a girl comes to talk to me."
+            #
+            jane "[me] did you talk to Mia, is she going to be my friend?"
+            "That has to be Jason, but what that about friends?"
+            me "Hey... huh..."
+            jane "Jane!"
+            me "Jane, I haven't talked to her yet... sorry."
+            "I thought I was going to see some of Jason atitude from her, but she looks super sad."
+            #
+            jane "I see, when you have the time then..."
+            me "Wait, can I ask you why do you want to be friends with her so bad?"
+            jane "That's... I don't have any friends ok, I don't know why but most people don't like me very much, but you and Mia always were... not mean to me. So I thought..."
+            #
+            "Poor Jane, she inherited Jason's sins, and now because everyone hated him, they also hate her."
+            me "But why don't you ask her directly?"
+            jane "I tried, but I blew it, I said something really stupid, and now I'm scared she hates me too, but if you talked to her..."
+            "Jason was an asshole to her the first time he asked her out. Shit I feel bad for her, she looks like a sweet girl that was dealt a bad hand because of who she was before all this."
+            me "Hey, Jane, I don't know what Mia will say, but if you want I will be your friend from now on."
+            jane "Really? You will?"
+            "She starts tearing up and gives me a hug. Then thanks me again and leaves, crying."
+            me "Marcy, let's... are you crying?"
+            marcy "No, it's just a there is something in my eyes..."
+            me "Oh I believe you, let's go."
+
+            $ f_day4_jane_friend = True
+            $ v_time = 660
+
+            menu:
+                "Outside":
+                    jump lbl_college_corridor
 
 ### GARDEN ###
 ## GARDEN - DAY 1 ##
@@ -945,3 +1051,76 @@ label lbl_college_office_ellie_day3:
     menu:
         "College":
             jump lbl_college_yard
+
+### CORRIDOR ###
+## CORRIDOR - DAY 4 ##
+label lbl_college_corridor_day4:
+    if v_time == 0:
+        jane "What happened to us?"
+        #
+        me "Well if I had to guess, the pill reacted with water and release a gas that affected everyone in the class."
+        jane "What pill?"
+        me "The one's Marcy put in Ellie's water."
+        jane "She did what?"
+        #
+        marcy "Come on guys it was fun wasn't it?"
+        me "Yes!"
+        jane "I...I had never done it with a girl before, and the way you commanded us, it was... arousing."
+        me "You like being ordered around huh."
+        jane "I... maybe..."
+        #
+        me "Well I have a great proposition for you then. I will get Mia to be your friend, in turn we will play master and slave, we can discuss the specifics later after you think hard about what you are about to..."
+        jane "DEAL!"
+        me "Wow, that's it? You don't want to think this over?"
+        jane "After what just happened... the idea of you ordering me, to do naughty things, it's just... I want it. Even if Mia doesn't not agree, I'm yours now Master."
+        me "Okay your eagerness has been noticed (and it is a little creepy). Just out of curiosity, why are you so desperate for Mia to be your friend?"
+        jane "Because I don't have any friends and everyone hates me for some reason, but you and Mia are nice to me sometimes so..."
+        "Poor Jane, she inherited Jason's sins, no one liked him, now they don't like her either."
+        me "I will tell you what, even if Mia refuses, I will be your friend... you know outside the Master play."
+        "She looks like she is about to cry, then she huggs me and kisses me in the cheek. To think that asshole would become such a sweet girl..."
+        marcy "Soooo... you are into BDSM stuff [me]. Good to know."
+        me "Yeah yeah, let's go smartass."
+
+        $ v_time = 660
+
+        menu:
+            "Outside":
+                jump lbl_college_corridor
+
+    elif v_time == 660:
+        if f_day1_lisa_bathroom_incident or tb_event[3]["college_gym"]["bonnie"] == 1:
+            "On the way out, I bump into my Bonnie."
+            #
+            bonnie "Hey [me], going to spy on some innocent girl shower?"
+            me "If I remember correctly you were the one that entered the mens shower while it was in use."
+            bonnie "Details... I'm going to eat my lunch at the gymnasium and read come on by if you want to talk."
+            me "I will, see you later."
+            bonnie "Bye."
+
+        else:
+            "On the way out, I bump into a girl and she drops her books."
+            #
+            me "Sorry I was with my head in the clouds."
+            "I kneel down to help her grab her things."
+            bonnie "It's okay, I was not looking either, I'm Bonnie by the way."
+            me "I'm [me], that is some... ehh... interesting litterature."
+            "Is everyone reading erotica now? And this one has very graphical pictures."
+            bonnie "Yeah, I just love those, they have such passion..."
+            me "I bet."
+            bonnie "Also I masturbate while no one is looking."
+            me "You do huh."
+            #
+            bonnie "No, but I got you didn't I? I will tell you what, why don't you come to the gymnasium before two o'clock, so we can talk?"
+            me "You sure are friendly to a stranger, but sure why not."
+            bonnie "Cool, I will be waiting. Bye."
+            "Huh, people are very friendly today."
+
+        "My phone? I just received a message, I think it's from Jane."
+        "{i}Sorry I ran off, Marcy told me to give you my address so here it is.{/i}"
+        "Oh, nice. It's close to aunt Lily's house."
+
+        $ v_time = 720
+
+        menu:
+            "Outside":
+                jump lbl_college_yard
