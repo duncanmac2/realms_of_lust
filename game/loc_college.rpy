@@ -29,6 +29,8 @@ label lbl_college_garden:
         jump lbl_college_garden_day2
     elif v_day == 3:
         jump lbl_college_garden_day3
+    elif v_day == 4:
+        jump lbl_college_garden_day4
 
 label lbl_college_gym:
     call main_show
@@ -63,6 +65,8 @@ label lbl_college_office_ellie:
 
     if v_day == 3:
         jump lbl_college_office_ellie_day3
+    elif v_day == 4:
+        jump lbl_college_office_ellie_day4
 
 label lbl_college_shower_men:
     call main_show
@@ -76,6 +80,8 @@ label lbl_college_teacher_office:
     scene loc_college_teacher_office
 
     if v_day == 3:
+        jump lbl_college_office_ellie
+    elif v_day == 4:
         jump lbl_college_office_ellie
 
 label lbl_college_yard:
@@ -506,6 +512,181 @@ label lbl_college_garden_day3:
 
     else:
         "There is no one I know here right now."
+
+    menu:
+        "College":
+            jump lbl_college_yard
+
+## GARDEN - DAY 4 ##
+label lbl_college_garden_day4:
+    if v_time == 660:
+        if tb_event[3]["home_room_mc"]["mia_sex"] == 1:
+            me "Hey guys, how was your class?"
+            show npc_portrait_mia_15 with d1
+            mia "It was normal, except when our teacher asked me if I knew of someone who could take her daughter's virginity..."
+            hide npc_portrait_mia_15 with d1
+            show img_veronica_gym_02 with d1
+            veronica "Hey [me], did you tell Marcy already?"
+            me "About?"
+            veronica "That you fucked Mia."
+            hide img_veronica_gym_02 with d1
+            show npc_portrait_marcy_09 with d1
+            marcy "Oh, I know."
+            veronica "It's great right, now we can have him without feeling guilty."
+            marcy "Right?!"
+            hide npc_portrait_marcy_09 with d1
+            me "Guys can we please change the subject, I have something important to talk to Mia."
+            veronica "Do you need some space? There is a room in the sports complex were couples..."
+            me "What? No, we are not going to have sex again."
+            mia "We are not?"
+            me "I mean we will, but not right now. What I want to talk about is Jane."
+            veronica "That girl that keeps stalking Mia..."
+            me "Yeah, that's her, you know she just wants to be your friend right?"
+            mia "I know, but she runs away every time I try talking to her."
+            me "Yeah... she is shy, but give her a chance, she very sweet."
+            mia "Okay, I will try."
+            "The rest of the lunch goes as usual."
+
+        elif tb_event[3]["city_home_marcy_room"]["marcy_sex"] == 1:
+            me "Hey guys."
+            show npc_portrait_mia_15 with d1
+            mia "Is this true [me]?"
+            "[me]? She only calls me by my name when she is really serious about something."
+            me "What is true?"
+            mia "Did you and Marcy had sex?"
+            me "Couldn't keep your mouth shut, could you?"
+            hide npc_portrait_mia_15 with d1
+            show npc_portrait_marcy_09 with d1
+            marcy "Sorry."
+            me "Yes, we did..."
+            "A lot of emotions must be going through her head right now, but I think she is mainly sad..."
+            me "Mia, I..."
+            mia "Then I'm next!"
+            me "Huh?"
+            mia "You and I both know there is something between us, but I always thought we should keep it hidden, but now I have been punished by it, I always thought we would be each other's first partners, but you went ahead. So I will not stand by and watch anymore."
+            hide npc_portrait_marcy_09 with d1
+            show img_veronica_gym_02 with d1
+            veronica "Wow, Mia, you are so bold, hahaha."
+            hide img_veronica_gym_02 with d1
+            show npc_portrait_mia_05 at top with d1
+            "It dawns on her what she just said, and she begins to become red... But she put her heart out I will not let it be in vain."
+            me "Very well Mia, whenever you are ready, I will make your wish become true."
+            mia "Bro..."
+            veronica "That's great Mia. Can I be next?"
+            mia "V... I will accept your request."
+            veronica "YOU WILL?!"
+            mia "I know your heart V, and I know your desires. You have been such a great friend, holding back for my sake, but no more it's time we were honest with ourselves..."
+            veronica "Mia..."
+            hide npc_portrait_mia_05 with d1
+            show img_mia_kiss_veronica at top with d1
+            marcy "Wow. That's hot."
+            me "I can't help but agree..."
+            hide img_mia_kiss_veronica with d3
+
+        elif tb_event[3]["city_home_lily"]["lily_sex"] == 1:
+            show npc_portrait_mia_15 with d1
+            mia "[me], sit down!"
+            "I'm in trouble, she only calls me by my name when she is serious."
+            me "Mia, what is wrong?"
+            mia "Would you care to explain why Lily..."
+            "Oh no!"
+            hide npc_portrait_mia_15 with d1
+            show img_lily_sex_04 at top with d1
+            mia "...send me this picture?"
+            "When did she take that? Not that it matters now. What should be my response aggressive or try to appease her? I'm going with aggressive."
+            hide img_lily_sex_04 with d1
+            me "Because we had sex, do you have a problem with it?"
+            mia "[me], you should have waited for me..."
+            "She looks like she is about to start crying but looks me in the eye and..."
+            show img_mia_kiss_01 at top
+            "That was... not the reaction I was waiting for."
+            hide img_mia_kiss_01 with d3
+            mia "I waited too long, but no more, I'm next, you hear me."
+            me "Next?"
+            mia "Yes, you will bed me next, and then Veronica."
+            show npc_portrait_veronica_01 at top with d1
+            veronica "What? I... I..."
+            mia "We can't wait anymore V, you know you want to. Did you get all that bro?"
+            me "I think I did..."
+            mia "Good now let's eat. When mom is in the gym, come see me. I can't force you but you would be happy to come."
+            me "Got it."
+            hide npc_portrait_veronica_01 with d1
+            show npc_portrait_marcy_10 with vpunch
+            marcy "ALL HAIL THE HAREM KING!"
+            hide npc_portrait_marcy_10 with d3
+            "We all laugh and continue to talk about some subjects."
+
+        else:
+            me "Hey everyone..."
+            show img_veronica_gym_02 with d1
+            veronica "Hey [me], is it true?"
+            me "What is?"
+            veronica "You and Mia decided to stop pretending that you don't want to get into each other's pants?"
+            me "Mia!?"
+            hide img_veronica_gym_02 with d1
+            show npc_portrait_mia_15 with d1
+            mia "Sorry, I just couldn't keep quiet. But I have great new V and I talked and she is going to be next after me."
+            marcy "And me after her... or whoever you decide to go first. It's your dick after all."
+            me "What is this Mia, did you just become a pimp?"
+            mia "We had a talk between us woman and decided that we all should just stop pretending we don't want your dick."
+            hide npc_portrait_mia_15 with d1
+            show npc_portrait_marcy_10 with d1
+            marcy "Who was pretending?"
+            mia "Okay, V and I decided to stop pretending."
+            marcy "So now we all decided to pledge or loyalty to our great Harem King..."
+            veronica "Hahaha..."
+            hide npc_portrait_marcy_10 with d1
+            "This ended up being a great day."
+
+        $ v_time = 730
+
+    elif v_time >= 720 and v_time < 840 and tb_event[4]["college_garden"]["rikki"] == 0:
+        "This is a beautiful place. And there are some beautiful people here."
+        show npc_portrait_rikki_02 with d1
+        rikki "Hello."
+        "Oh, shit did I stare too long?"
+        me "Hi."
+        rikki "Are you Ms. Lilith's nephew right? [me]."
+        me "That's me, you know my aunt?"
+        hide npc_portrait_rikki_02 with d1
+        show img_rikki_nude with d1
+        rikki "Yeah I work in the same place she does, but I'm like a secretary *giggle*."
+        "Well, she looks like a bimbo..."
+        me "So what are you doing in these parts?"
+        rikki "Oh, I study here."
+        me "Oh cool, what do you..."
+        "*Ring*"
+        rikki "Oh, that's my phone, I need to go, sorry. I hope I see you again *giggle*."
+        me "Likewise."
+        hide img_rikki_nude with d3
+
+        $ tb_event[4]["college_garden"]["rikki"] = 1
+        $ v_time += 5
+
+    elif v_time >= 840 and v_time < 960 and tb_event[4]["college_garden"]["jane"] == 0:
+        "The garden, beautiful as always."
+        jane "[me]!"
+        show npc_portrait_jane_04 with d1
+        "Who is calling me? Oh, it's Jane."
+        me "Hey Jane. Taking a walk through the garden too I see."
+        jane "Yeah, this place is so beautiful, every day I can I just come here and read some books. Most days are peaceful, but sometimes the random footballer comes here with some lame pickup lines... goddess, I hate footballers."
+        "The irony, it's almost like someone designed her to be Jason total opposite."
+        jane "Sometimes they just skip all formality and go straight to asking for a blowjob, or to see my ass..."
+        me "Wow, what a bunch of douches."
+        jane "I know right, and they don't even stop at a blowjob if you oblige them."
+        me "What a bunch of... wait how do you know that?"
+        hide npc_portrait_jane_04 with d1
+        show img_jane_panties with d1
+        jane "Well, I was kinda horny one of those days and..."
+        me "OK, I get it. Let's change subjects."
+        hide img_jane_panties with d3
+        "We talk about things and then go on separate paths."
+
+        $ tb_event[4]["college_garden"]["jane"] = 1
+        $ v_time += 5
+
+    else:
+        "A beauthiful but empty place."
 
     menu:
         "College":
@@ -1003,6 +1184,7 @@ label lbl_college_office_ellie_day3:
         hide img_ellie_dakota_01 with d1
 
         $ tb_event[3]["college_office_ellie"]["aphrodisiac"] = 1
+        $ tb_event[3]["college_office_ellie"]["dakota"] = 1
         $ v_time += 10
 
     elif tb_event[3]["college_office_ellie"]["aphrodisiac"] == 0 and v_time >= 780:
@@ -1059,6 +1241,176 @@ label lbl_college_office_ellie_day3:
             "Let Ellie rest."
         else:
             "I can't enter right now."
+
+    menu:
+        "College":
+            jump lbl_college_yard
+
+## ELLIE OFFICE - DAY 4 ##
+label lbl_college_office_ellie_day4:
+    if v_time < 780 and tb_event[4]["college_office_ellie"]["dakota_sex"] == 0:
+        if tb_event[3]["college_office_ellie"]["aphrodisiac"] == 1 and tb_event[3]["college_office_ellie"]["dakota"] == 1:
+            me "Hey, girls."
+            show npc_portrait_ellie_01 with d1
+            ellie "Wow, someone is confident enough to call his teacher and her daughter girls. Maybe he should remember I haven't graded his last exam yet."
+            "For a moment I thought she was serious, but she burst out laughing a few moments later."
+            ellie "It's good to see you too [me]."
+            hide npc_portrait_ellie_01 with d1
+            show npc_portrait_dakota_02 with d1
+            dakota "Hey."
+            ellie "So you decided to accept my offer?"
+            me "Yeah about that, I will have to say no. At least this week."
+            ellie "But why?"
+            me "Like I said, this week is bad for me. If you can't find an assistant until next week, however, I  will be available."
+            ellie "Well, to be honest, you were my only candidate... I guess I can wait a week."
+            me "That's great. Thanks, Ellie. But say, what happened yesterday?"
+            ellie "That..."
+            hide npc_portrait_dakota_02 with d1
+            show npc_portrait_dakota_03 with d1
+            dakota "Mom and I had wild lesbian sex!"
+            ellie "Dakota!"
+            me "So the formula works."
+            dakota "You bet it does, mom never ate my pussy like that before."
+            "Wow Dakota doesn't hold anything back, does she? Ellie, on the other hand, looks like very ashamed."
+            ellie "Dakota, what we do in particular does not concern my..."
+            dakota "Come on mom, you are too uptight, rumor is that all other teachers have fucked their students before, but you don't even want them to talk about sex in front of you."
+            ellie "I-I need to go to the toilet, excuse me."
+            "And just like that, I'm alone with Dakota."
+            hide npc_portrait_dakota_03 with d1
+            show npc_portrait_dakota_04 with d1
+            dakota "So [me], have you fucked any employee of the college?"
+            me "What is it with you? And no."
+
+        elif tb_event[3]["college_office_ellie"]["aphrodisiac"] == 1 and tb_event[3]["college_office_ellie"]["dakota"] == 0:
+            me "Hello, Ellie."
+            show npc_portrait_ellie_01 with d1
+            ellie "Hey, [me], it's good you are here, this is Dakota, my daughter."
+            hide npc_portrait_ellie_01 with d1
+            show npc_portrait_dakota_02 with d1
+            dakota "Hey there."
+            me "Hi."
+            ellie "So you decided to accept my offer?"
+            me "Yeah about that, I will have to say no. At least this week."
+            ellie "But why?"
+            me "Like I said, this week is bad for me. If you can't find an assistant until next week, however, I  will be available."
+            ellie "Well, to be honest, you were my only candidate... I guess I can wait a week."
+            me "That's great. Thanks, Ellie. But say, what happened yesterday?"
+            hide npc_portrait_dakota_02 with d1
+            show npc_portrait_ellie_04 with d1
+            ellie "That... I don't want to talk about that in front of my daughter."
+            hide npc_portrait_ellie_04 with d1
+            show npc_portrait_dakota_03 with d1
+            dakota "Why? Did you finally did something fun? Did you fuck him?"
+            ellie "Dakota!"
+            "Wow Dakota doesn't hold anything back, does she? Ellie, on the other hand, looks like very ashamed."
+            ellie "Dakota, I... I didn't... I would never..."
+            dakota "Come on mom, you are too uptight, rumor is that all other teachers have fucked their students before, but you don't even want them to talk about sex in front of you."
+            ellie "I-I need to go to the toilet, excuse me."
+            "And just like that, I'm alone with Dakota."
+            hide npc_portrait_dakota_03 with d1
+            show npc_portrait_dakota_04 with d1
+            dakota "So [me], did you fuck my mom yesterday?"
+            me "What is it with you? And no."
+
+        elif tb_event[3]["college_office_ellie"]["aphrodisiac"] == 0:
+            me "Hello, Ellie."
+            show npc_portrait_ellie_01 with d1
+            ellie "Hey, [me], it's good you are here, this is Dakota, my daughter."
+            hide npc_portrait_ellie_01 with d1
+            show npc_portrait_dakota_02 with d1
+            dakota "Hey there."
+            me "Hi."
+            ellie "It's good you are here, I have a proposition for you."
+            dakota "Are you going to have sex with him?"
+            "We are both caught off guard by that remark."
+            ellie "Dakota!"
+            dakota "Sorry, we were just talking about you following your peers' example, then this guy comes and you say you have a proposition for him..."
+            ellie "No, just... no! I need a lab assistant."
+            hide npc_portrait_dakota_02 with d1
+            show npc_portrait_dakota_03 with d1
+            dakota "Oh, my bad. But he is a handsome mom, so..."
+            "This is a very amusing conversation, Ellie is completely red out of shame, and her daughter is casually asking her to fuck me."
+            ellie "We will talk about this later. Now [me], are you interested?"
+            me "Well, I can't this week, but next week I will most likely be free."
+            ellie "That works for me, now excuse me I need to go to the toilet."
+            "And just like that, I'm alone with Dakota."
+            hide npc_portrait_dakota_03 with d1
+            show npc_portrait_dakota_04 with d1
+            dakota "So [me], what do you think about fucking my mom?"
+            me "What is it with you?"
+
+        dakota "I just don't like people that are not true to their nature. Mom is so boring, every day I go by the teacher's room, there is something fun happening there. That is why she stopped eating with them, she is just afraid to give in..."
+        dakota "It was so fun yesterday, I wish she would just go for it and be happy like the rest of us."
+        me "Any plans for how to do that?"
+        dakota "I do, she is on the brink of giving in, that's why she left. She is either touching herself in the bathroom or washing her face with cold water. But if when she returned and some steamy actions was happening here..."
+        "I get exactly what she is suggesting, should I go for it?"
+
+        $ v_time += 5
+
+        menu:
+            "Fuck Dakota":
+                "She is cute, why not."
+                me "I would be happy to help you."
+                hide npc_portrait_dakota_04 with d1
+                window hide
+                show vid_marcy_kiss at top with d1
+                pause
+                hide vid_marcy_kiss with d1
+                dakota "Wow, I'm glad it's you, you are one of the cutest guys from the college you know."
+                me "Well thank you, now let's get this show on the road."
+                window hide
+                show vid_dakota_blowjob_01 at top with d1
+                pause
+                hide vid_dakota_blowjob_01 with d1
+                show vid_dakota_anal_01 at top with d1
+                pause
+                hide vid_dakota_anal_01 with d1
+                dakota "Y-you are good... Just make sure to h-hold it until she cooomes back..."
+                window hide
+                show vid_dakota_anal_02 at top with d1
+                pause
+                hide vid_dakota_anal_02
+                show img_ellie_undress_02 with hpunch
+                ellie "I'm sorry, I just needed to... WHAT ARE YOU GUYS DOING?!"
+                dakota "H-hey mom, wanna join in?"
+                "For a second she looks she is either going to leave or break us up by force. But then I can see it in her eyes, lust."
+                ellie "Dakota, we can't do this, he... he is my..."
+                dakota "Come on mom, just pull those panties down and join the fun. No one will know."
+                ellie "I... I..."
+                hide img_ellie_undress_02 with d1
+                "Dakota goes to Ellie and starts pulling her closer to me. She looks conflicted, her hands start to move towards my cock, still covered in Dakota juices..."
+                show vid_ellie_blowjob_01 at top with d1
+                dakota "That's it, now let's do this..."
+                window hide
+                hide vid_ellie_blowjob_01 with d1
+                show vid_ellie_sex_01 at top with d1
+                pause
+                hide vid_ellie_sex_01 with d1
+                show vid_ellie_sex_02 at top with d1
+                pause
+                hide vid_ellie_sex_02 with d1
+                "A few moments later."
+                dakota "So what did you think?"
+                ellie "What can I say, you were right, that was great."
+                me "I'm glad I could help."
+                ellie "You performed adequately sir, but still, I think you deserve a reward. Here, this is our address, come visit us when you have time."
+                dakota "Yes, we will be waiting for you, [me]."
+                me "I will, now if you excuse me I am leaving, see you later, girls."
+                ellie "Bye."
+
+                $ tb_event[4]["college_office_ellie"]["dakota_sex"] = 1
+                $ v_time += 15
+
+            "Sorry, I can't do that":
+                $ tb_event[4]["college_office_ellie"]["dakota_sex"] = 2
+
+                jump lbl_college_yard
+
+    elif v_time < 780 and tb_event[4]["college_office_ellie"]["dakota_sex"] >= 1:
+        "I have nothing to do here now."
+
+    else:
+        "There is a note at the door that says she had to go home early."
 
     menu:
         "College":
@@ -1138,8 +1490,6 @@ label lbl_college_corridor_day4:
         "{i}Sorry I ran off, Marcy told me to give you my address so here it is.{/i}"
         "Oh, nice. It's close to aunt Lily's house."
 
-        $ v_time = 720
-
         menu:
-            "Outside":
-                jump lbl_college_yard
+            "Eat lunch with your friends":
+                jump lbl_college_garden

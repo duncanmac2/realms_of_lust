@@ -59,8 +59,8 @@
         renpy.image("npc_portrait_bonnie_" + str(i).zfill(2), "images/people/kennedy_leigh/bonnie_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Dakota
-    for i in range(1,2):
-        renpy.image("npc_portrait_dakota_" + str(i).zfill(2), "images/people/dakota/dakota_portrait_" + str(i).zfill(2) + ".jpg")
+    for i in range(1,5):
+        renpy.image("npc_portrait_dakota_" + str(i).zfill(2), "images/people/dakota_skye/dakota_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Ellie
     renpy.image("img_ellie_spread", "images/people/julia_ann/ellie_spread.jpg")
@@ -71,7 +71,7 @@
     for i in range(1,5):
         renpy.image("img_ellie_undress_" + str(i).zfill(2), "images/people/julia_ann/ellie_undress_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,4):
+    for i in range(1,5):
         renpy.image("npc_portrait_ellie_" + str(i).zfill(2), "images/people/julia_ann/ellie_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Emma
@@ -84,8 +84,9 @@
 
     # Jane
     renpy.image("img_jane_boobs", "images/people/sasha_grey/jane_boobs.jpg")
+    renpy.image("img_jane_panties", "images/people/sasha_grey/jane_panties.jpg")
 
-    for i in range(1,4):
+    for i in range(1,5):
         renpy.image("npc_portrait_jane_" + str(i).zfill(2), "images/people/sasha_grey/jane_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Karen
@@ -113,6 +114,7 @@
     renpy.image("img_lily_blowjob_01", "images/people/lilith_lust/lily_blowjob_01.jpg")
     renpy.image("img_lily_couch", "images/people/lilith_lust/lily_couch.jpg")
     renpy.image("img_lily_sex_01", "images/people/lilith_lust/lily_sex_01.jpg")
+    renpy.image("img_lily_sex_04", "images/people/lilith_lust/lily_sex_04.jpg")
 
     for i in range(1,3):
         renpy.image("img_lily_nude_" + str(i).zfill(2), "images/people/lilith_lust/lily_nude_" + str(i).zfill(2) + ".jpg")
@@ -141,7 +143,7 @@
     for i in range(1,6):
         renpy.image("img_marcy_undress_" + str(i).zfill(2), "images/people/brittney_white/marcy_undress_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,9):
+    for i in range(1,11):
         renpy.image("npc_portrait_marcy_" + str(i).zfill(2), "images/people/brittney_white/marcy_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Maria
@@ -161,6 +163,7 @@
     renpy.image("img_mia_book", "images/people/mia_malkova/mia_book.jpg")
     renpy.image("img_mia_handjob_01", "images/people/mia_malkova/mia_handjob_01.jpg")
     renpy.image("img_mia_kiss_lisa", "images/people/mia_malkova/mia_kiss_lisa.jpg")
+    renpy.image("img_mia_kiss_veronica", "images/people/mia_malkova/mia_kiss_veronica.jpg")
     renpy.image("img_mia_nude", "images/people/mia_malkova/mia_nude.jpg")
     renpy.image("img_mia_pussy", "images/people/mia_malkova/mia_pussy.jpg")
 
@@ -189,7 +192,9 @@
         renpy.image("img_priya_pool_" + str(i).zfill(2), "images/people/priya_rai/priya_pool_" + str(i).zfill(2) + ".jpg")
 
     # Rikki
-    for i in range(1,2):
+    renpy.image("img_rikki_nude", "images/people/rikki_six/rikki_nude.jpg")
+
+    for i in range(1,3):
         renpy.image("npc_portrait_rikki_" + str(i).zfill(2), "images/people/rikki_six/rikki_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Sarah
@@ -370,8 +375,16 @@ image vid_bonnie_blowjob_01 = Movie(play="images/people/kennedy_leigh/bonnie_blo
 image vid_bonnie_blowjob_02 = Movie(play="images/people/kennedy_leigh/bonnie_blowjob_02.webm", size=(960,540))
 image vid_bonnie_handjob_02 = Movie(play="images/people/kennedy_leigh/bonnie_handjob_02.webm", size=(900,506))
 
+# Dakota
+image vid_dakota_anal_01 = Movie(play="images/people/dakota_skye/dakota_anal_01.webm", size=(1000,562))
+image vid_dakota_anal_02 = Movie(play="images/people/dakota_skye/dakota_anal_02.webm", size=(1000,560))
+image vid_dakota_blowjob_01 = Movie(play="images/people/dakota_skye/dakota_blowjob_01.webm", size=(660,1000))
+
 # Ellie
+image vid_ellie_blowjob_01 = Movie(play="images/people/julia_ann/ellie_blowjob_01.webm", size=(1240,696))
 image vid_ellie_cuni = Movie(play="images/people/julia_ann/ellie_cuni.webm", size=(800,450))
+image vid_ellie_sex_01 = Movie(play="images/people/julia_ann/ellie_sex_01.webm", size=(1038,1008))
+image vid_ellie_sex_02 = Movie(play="images/people/julia_ann/ellie_sex_02.webm", size=(1240,690))
 
 # Hitomi
 image vid_hitomi_boobs = Movie(play="images/people/hitomi_tanaka/hitomi_boobs.webm")
@@ -500,12 +513,17 @@ label start:
         "home_room_mia": {}
     }
 
+    $ tb_event[4] = {
+        "college_garden": {},
+        "college_office_ellie": {}
+    }
+
     $ tb_event[3]["city_beach"] = { "nyomi": 0 }
     $ tb_event[3]["city_gym"] = { "lisa": 0, "sarah": 0, "veronica": 0 }
     $ tb_event[3]["city_home_lily"] = { "lily": 0, "lily_sex": 0 }
     $ tb_event[3]["city_home_marcy"] = { "marcy": 0 , "sarah": 0}
     $ tb_event[3]["city_home_marcy_pool"] = { "marcy": 0 }
-    $ tb_event[3]["city_home_marcy_room"] = { "marcy": 0 }
+    $ tb_event[3]["city_home_marcy_room"] = { "marcy": 0, "marcy_sex": 0 }
     $ tb_event[3]["city_home_marcy_room_sarah"] = { "sarah": 0 }
     $ tb_event[3]["city_home_priya"] = { "priya": 0 }
     $ tb_event[3]["city_mall"] = { "karen": 0 }
@@ -513,11 +531,14 @@ label start:
     $ tb_event[3]["city_pgp_corporation"] = { "lily": 0 }
     $ tb_event[3]["college_garden"] = { "veronica": 0 }
     $ tb_event[3]["college_gym"] = { "bonnie": 0 }
-    $ tb_event[3]["college_office_ellie"] = { "aphrodisiac": 0 }
+    $ tb_event[3]["college_office_ellie"] = { "aphrodisiac": 0, "dakota": 0 }
     $ tb_event[3]["home_kitchen"] = { "mia": 0 }
     $ tb_event[3]["home_living_room"] = { "lisa_hj": 0 }
     $ tb_event[3]["home_room_mc"] = { "mia_sex": 0 }
     $ tb_event[3]["home_room_mia"] = { "mia_finger": 0 }
+
+    $ tb_event[4]["college_garden"] = { "jane": 0, "rikki": 0 }
+    $ tb_event[4]["college_office_ellie"] = { "dakota_sex": 0 }
 
     # Repeatable
     $ tb_repeatable = {3: {}, 4: {}}
@@ -551,6 +572,7 @@ label start:
     scene black onlayer background
 
     #jump lbl_name_input
+    jump lbl_bypass
 
     "Do you have play previous version and want to jump directly to new content?"
     menu:
@@ -594,14 +616,19 @@ label lbl_intro:
 label lbl_bypass:
     $ your_name = "John"
     $ mc_portrait = "new"
-    $ v_day = 3
-    $ v_time = 720
+    $ v_day = 4
+    $ v_time = 730
 
     $ f_day1_lisa_bathroom_incident = True
     $ f_day2_mall_karen = True
     $ f_day2_nurse = True
     $ f_day2_shower = True
     $ f_day3_shower = True
-    $ f_day3_spy = False
 
-    jump lbl_city_map
+    $ tb_event[3]["home_room_mc"]["mia_sex"] = 1
+    #$ tb_event[3]["city_home_marcy_room"]["marcy_sex"] = 1
+    #$ tb_event[3]["city_home_lily"]["lily_sex"] = 1
+    $ tb_event[3]["college_office_ellie"]["aphrodisiac"] = 1
+    $ tb_event[3]["college_office_ellie"]["dakota"] = 1
+
+    jump lbl_college_yard

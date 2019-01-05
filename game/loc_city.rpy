@@ -718,6 +718,7 @@ label lbl_city_home_marcy_room_day3:
         marcy "We will discuss this later, I'm hungry and since you want to go to class we have to hurry."
         hide npc_portrait_sarah_07 with d1
 
+        $ tb_event[3]["city_home_marcy_room"]["marcy_sex"] == 1
         $ v_day = 4
         $ v_time = 0
 
