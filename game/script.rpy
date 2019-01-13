@@ -37,6 +37,7 @@
     clr_sand = "#ffcc66"
     clr_palegold = "#eee8aa"
     clr_blueviolet = "#8a2be2"
+    clr_brown_dark = "#331a00"
 
     ### IMAGES
     ## MC
@@ -47,6 +48,10 @@
     renpy.image("img_mc_sleep", "images/people/MC/mc_sleep.jpg")
 
     ## NPC
+    # Alison
+    for i in range(1,4):
+        renpy.image("npc_portrait_alison_" + str(i).zfill(2), "images/people/briana_banks/alison_portrait_" + str(i).zfill(2) + ".jpg")
+
     # Bonnie
     renpy.image("img_bonnie_ass", "images/people/kennedy_leigh/bonnie_ass.jpg")
     renpy.image("img_bonnie_beach", "images/people/kennedy_leigh/bonnie_beach.jpg")
@@ -157,10 +162,12 @@
 
     # Megan
     renpy.image("img_megan_boobs_02", "images/people/nikki_benz/megan_boobs_02.jpg")
+    renpy.image("img_megan_boobs_03", "images/people/nikki_benz/megan_boobs_03.jpg")
     renpy.image("img_megan_handjob", "images/people/nikki_benz/megan_handjob.jpg")
+    renpy.image("img_megan_nude", "images/people/nikki_benz/megan_nude.jpg")
     renpy.image("img_megan_taste", "images/people/nikki_benz/megan_taste.jpg")
 
-    for i in range(1,5):
+    for i in range(1,6):
         renpy.image("npc_portrait_megan_" + str(i).zfill(2), "images/people/nikki_benz/megan_portrait_" + str(i).zfill(2) + ".jpg")
 
     # Mia
@@ -253,6 +260,7 @@ image side portrait_mc = ConditionSwitch("mc_portrait == 'old'", "images/portrai
 define me = DynamicCharacter("your_name", image="portrait_mc", color = clr_dark_red)
 
 # NPC
+define alison = Character("Alison", image = "portrait_alison", color = clr_sand)
 define bonnie = Character("Bonnie", image = "portrait_bonnie", color = clr_sand)
 define dakota = Character("Dakota", image = "portrait_dakota", color = clr_gold)
 define ellie = Character("Ellie", image = "portrait_ellie", color = clr_gold)
@@ -260,7 +268,7 @@ define emma = Character("Emma", image = "portrait_emma", color = clr_auburn)
 define hitomi = Character("Hitomi", image = "portrait_hitomi", color = clr_ginger)
 define jane = Character("Jane", image = "portrait_jane", color = clr_gray)
 define karen = Character("Karen", image = "portrait_karen", color = clr_gray)
-define kiara = Character("Kiara", image = "portrait_kiara", color = clr_gray)
+define kiara = Character("Kiara", image = "portrait_kiara", color = clr_brown_dark)
 define lily = Character("Lily", image = "portrait_lily", color = clr_auburn)
 define lisa = Character("Lisa", image = "portrait_lisa", color = clr_gold)
 define marcy = Character("Marcy", image = "portrait_marcy", color = clr_chestnut_brown)
@@ -273,6 +281,7 @@ define rikki = Character("Rikki", image = "portrait_rikki", color = clr_palegold
 define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut_brown)
 define veronica = Character("Veronica", image = "portrait_veronica", color = clr_gray)
 
+image side portrait_alison = "images/portrait/portrait_alison.jpg"
 image side portrait_bonnie = "images/portrait/portrait_bonnie.jpg"
 image side portrait_dakota = "images/portrait/portrait_dakota.jpg"
 image side portrait_ellie = "images/portrait/portrait_ellie.jpg"
@@ -377,6 +386,9 @@ image obj_sarah_playboy_collection = "images/objects/sarah_playboy_collection.jp
 # MC
 image vid_mc_erection = Movie(play="images/people/MC/MC_erection.webm")
 
+# Alison
+image vid_alison_blowjob = Movie(play="images/people/briana_banks/alison_blowjob.webm", size=(800,500))
+
 # Bonnie
 image vid_bonnie_blowjob_01 = Movie(play="images/people/kennedy_leigh/bonnie_blowjob_01.webm", size=(800,426))
 image vid_bonnie_blowjob_02 = Movie(play="images/people/kennedy_leigh/bonnie_blowjob_02.webm", size=(960,540))
@@ -436,8 +448,12 @@ image vid_marcy_sex_01 = Movie(play="images/people/brittney_white/marcy_sex_01.w
 image vid_marcy_sex_02 = Movie(play="images/people/brittney_white/marcy_sex_02.webm")
 
 # Megan
+image vid_megan_anal_01 = Movie(play="images/people/nikki_benz/megan_anal_01.webm", size=(1000,570))
+image vid_megan_anal_02 = Movie(play="images/people/nikki_benz/megan_anal_02.webm", size=(1000,550))
 image vid_megan_blowjob = Movie(play="images/people/nikki_benz/megan_blowjob.webm", size=(750,844))
 image vid_megan_boobs_01 = Movie(play="images/people/nikki_benz/megan_boobs_01.webm", size=(800,450))
+image vid_megan_creampie = Movie(play="images/people/nikki_benz/megan_creampie.webm", size=(778,590))
+image vid_megan_facial = Movie(play="images/people/nikki_benz/megan_facial.webm", size=(720,400))
 image vid_megan_lesbian = Movie(play="images/people/nikki_benz/megan_lesbian.webm", size=(1000,450))
 
 # Mia
@@ -526,6 +542,7 @@ label start:
     $ tb_event[4] = {
         "college_garden": {},
         "college_locker_room": {},
+        "college_nurse": {},
         "college_office_ellie": {}
     }
 
@@ -550,6 +567,7 @@ label start:
 
     $ tb_event[4]["college_garden"] = { "jane": 0, "rikki": 0 }
     $ tb_event[4]["college_locker_room"] = { "kiara_sex": 0 }
+    $ tb_event[4]["college_nurse"] = { "alison_bj": 0, "megan": 0 }
     $ tb_event[4]["college_office_ellie"] = { "dakota_sex": 0 }
 
     # Repeatable

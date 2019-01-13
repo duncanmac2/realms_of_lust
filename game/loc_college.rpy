@@ -60,6 +60,8 @@ label lbl_college_nurse:
         jump lbl_college_nurse_day2
     elif v_day == 3:
         jump lbl_college_nurse_day3
+    elif v_day == 4:
+        jump lbl_college_nurse_day4
 
 label lbl_college_office_ellie:
     call main_show
@@ -991,6 +993,7 @@ label lbl_college_locker_room_day4:
             "Go in":
                 pass
 
+        scene loc_college_shower_men
         show img_kiara_shower_03 with d3
         "We are so close, she is trying to avoid looking, but her eyes are fixated on my cock. I can't stand this anymore."
         me "Do you want me to wash your back?"
@@ -1028,11 +1031,15 @@ label lbl_college_locker_room_day4:
         pause
         hide vid_college_shower_04 with d1
 
+        $ v_time += 5
+
     elif v_time >= 1020:
         "Is there someone here?"
         show vid_college_shower_05 at top with d1
         "Oh... let's leave them alone."
         hide vid_college_shower_05 with d1
+
+        $ v_time += 5
 
     else:
         "No one in there."
@@ -1235,6 +1242,216 @@ label lbl_college_nurse_day3:
         hide vid_megan_lesbian with d3
 
     $ v_time += 10
+
+    menu:
+        "College":
+            jump lbl_college_yard
+
+## NURSE - DAY 4 ##
+label lbl_college_nurse_day4:
+    if v_time < 780:
+        "Looks like Megan is not here now, it's closed for lunch."
+
+    elif v_time >= 780 and v_time < 900 and tb_event[4]["college_nurse"]["megan"] == 0:
+        if tb_repeatable[3]["college_nurse"]["bj"] == 1:
+            "I wonder if I should really bother Megan again, she does have an important job... But then again, her boobs are so nice. Okay then I'm doing it, let's enter."
+            show npc_portrait_megan_04 with d3
+            megan "[me], you are here thank the goddess, I have made a great discovery."
+            me "Okay... what is it?"
+            megan "Your cum is delicious, I need more..."
+            me "Woah, calm down!"
+            hide npc_portrait_megan_04 with vpunch
+            "Megan pins me to the ground and and removes my pants. She is not taking no for an aswer but I'm not about to be used as a milk machine. Time to put this new muscles to good use. And with some effort I take her off me and pin her again a wall."
+            megan "[me] please, just let me suck you, you will love... please I need more cum."
+            me "Okay, I'm not opposed to give you what you want, but you have to ask nicely first, now I'm not sure I want to help you."
+            show vid_megan_boobs_01 at top with d1
+            megan "No wait... please. I will do whatever you want!"
+            me "Whatever I want? Okay, then I want..."
+
+            menu:
+                "To fuck you here and now":
+                    hide vid_megan_boobs_01 with d1
+                    megan "That's it? Okay."
+                    "It doesn't take long for her to strip, she is not into much foreplay by the looks of it. Well, I'm not complaining."
+                    window hide
+                    show vid_megan_anal_01 at top with d1
+                    pause
+                    hide vid_megan_anal_01 with d1
+                    show vid_megan_anal_02 at top with d1
+                    pause
+                    megan "That's so good, keep going."
+                    me "Megan, I'm going to cum."
+                    megan "You can cum inside me, it's okay."
+                    hide vid_megan_anal_02 with d1
+                    show vid_megan_creampie at top with d1
+                    me "Megan..."
+                    hide vid_megan_creampie with d1
+                    show vid_megan_blowjob at top with d1
+                    "After I climax inside her, she dutifully cleans my cock with her mouth."
+                    hide vid_megan_blowjob with d1
+                    megan "Please come back again, I don't know if I can live without you anymore."
+                    me "I will... bye."
+                    "That could become a problem, I don't want her to go crazy an do something stupid, I will talk to Nina tonight."
+
+                    $ v_time += 10
+
+                "A future favor":
+                    hide vid_megan_boobs_01 with d1
+                    megan "Okay... can I suck you now?"
+                    me "Go right ahead."
+                    window hide
+                    show vid_megan_blowjob at top with d1
+                    pause
+                    hide vid_megan_blowjob with d1
+                    megan "Thank you, [me], please come again, I can't live without it anymore."
+                    me "Okay... I-I need to go."
+                    "That could become a problem, I don't want her to go crazy an do something stupid, I will talk to Nina tonight."
+
+                    $ v_time += 5
+
+        elif f_day2_nurse and tb_repeatable[3]["college_nurse"]["hj"] == 0:
+            "I wonder if I should really bother Megan again, she does have an important job... But then again, her boobs are so nice. Okay then I'm doing it, let's enter."
+            show npc_portrait_megan_04 with d3
+            megan "[me], I'm glad you are here, you ran away Tuesday, why?"
+            me "Just like you said stress, so I came to apologize."
+            megan "Well if you want to apologize, I could use another sample."
+            "She has this strange look on her face, like a starved dog looking at food, she is almost losing her composure."
+            me "Why do you need more samples?"
+            megan "Because... just... I need it ok! I just happen to try it and it was delicious... please."
+            "That is very strange, she got addicted to my sperm? That's a good opportunity."
+            me "Okay, I will give it to you, but first I want to see your body, all of it."
+            "There is no hesitation on her actions, she strips down in seconds."
+            window hide
+            hide npc_portrait_megan_04 with d1
+            show img_megan_boobs_03 with d1
+            pause
+            hide img_megan_boobs_03 with d1
+            show img_megan_nude with d1
+            me "Wow, you are very sexy Megan."
+            megan "Thanks [me], now can I have it?"
+            "I pull my pants down and reveal my erect member."
+            me "You can, but you will have to work for it."
+            megan "Not a problem."
+            window hide
+            hide img_megan_nude with d1
+            show vid_megan_blowjob at top with d1
+            pause
+            hide vid_megan_blowjob with d1
+            show vid_megan_facial at top with d1
+            pause
+            hide vid_megan_facial with d1
+            me "That was great Megan, if... when you need more just let me know, but you might need to work harder next time."
+            megan "I will, gladly."
+
+            $ v_time += 5
+
+        elif not f_day2_nurse and tb_repeatable[3]["college_nurse"]["hj"] == 1:
+            "I wonder if I should really bother Megan again, she does have an important job... But then again, her boobs are so nice. Okay then I'm doing it, let's enter."
+            show npc_portrait_megan_04 with d3
+            megan "[me], I'm glad you are here, I have news for you."
+            me "News? About the test sample?"
+            megan "Yes, I have determined that it was... tasty, I could use another sample."
+            "She has this strange look on her face, like a starved dog looking at food, she is almost losing her composure."
+            me "Tasty? Did you eat the sample?"
+            hide npc_portrait_megan_04 with d1
+            show npc_portrait_megan_05 at top with d1
+            megan "It... it was an accident okay. But more important I need more... for more testing... Oh, who am I trying to fool, I want to taste more ok? Please."
+            "That is very strange, she got addicted to my sperm? That's a good opportunity."
+            me "Okay, I will give it to you, but first I want to see your body, all of it."
+            "There is no hesitation on her actions, she strips down in seconds."
+            window hide
+            hide npc_portrait_megan_05 with d1
+            show img_megan_boobs_03 with d1
+            pause
+            hide img_megan_boobs_03 with d1
+            show img_megan_nude with d1
+            me "Wow, you are very sexy Megan."
+            megan "Thanks [me], now can I have it?"
+            "I pull my pants down and reveal my erect member."
+            me "You can, but you will have to work for it."
+            megan "Not a problem."
+            window hide
+            hide img_megan_nude with d1
+            show vid_megan_blowjob at top with d1
+            pause
+            hide vid_megan_blowjob with d1
+            show vid_megan_facial at top with d1
+            pause
+            hide vid_megan_facial with d1
+            me "That was great Megan, if... when you need more just let me know, but you might need to work harder next time."
+            megan "I will, gladly."
+
+            $ v_time += 5
+
+        else:
+            "I wonder if I should really bother Megan again, she does have an important job... But then again, her boobs are so nice. Okay then I'm doing it, let's enter."
+            show npc_portrait_megan_04 with d3
+            megan "[me], why are you here?"
+            me "I just wanted to ask you something, can I see your boobs?"
+            megan "Wow, that was the most straight-forward anyone has ever been to me. Okay, you can, but just because it's you."
+            hide npc_portrait_megan_04 with d1
+            show img_megan_boobs_02 at top with d1
+            me "You are very sexy Megan."
+            megan "Thanks, [me], but it looks like I cause some reaction down there."
+            me "It was to be expected."
+            megan "Yeah, but you really just came here to see my breasts?"
+            me "I just wanted to see you, we barely see each other since I stopped coming here regularly."
+            megan "Don't take this the wrong way but I'm glad you don't have to come here every day anymore."
+            me "How could I possibly take that the wrong way?"
+            megan "You know what I mean, it was tough on you that first year, I'm glad you got better."
+            me "So am I, believe me. But we can talk like old times right, you are not busy."
+            megan "Sure, but you know the rule if some needs me you have to leave."
+            hide img_megan_boobs_02 with d1
+            "We talk for a few minutes until one of the football players comes in with a dislocated shoulder. I will talk more with her later."
+
+        $ tb_event[4]["college_nurse"]["megan"] = 1
+        $ v_time += 5
+
+    elif v_time >= 780 and v_time < 900 and tb_event[4]["college_nurse"]["megan"] == 1:
+        "Megan is busy, I will come back later."
+
+    elif v_time >= 900 and tb_event[4]["college_nurse"]["alison_bj"] == 0:
+        show npc_portrait_alison_01 with d1
+        "Uhh... it looks like Megan is out, that is Alison, her replacement. I haven't interacted with her since this all began, I wonder how she has changed. It looks like the corruption works differently depending on the people. Alison was always easygoing and a bit shameless, I wonder..."
+        alison "[me], why are you here, are feeling sick?"
+        me "No Ali, I'm fine, I just wanted to see a beautiful nurse."
+        hide npc_portrait_alison_01 with d1
+        show npc_portrait_alison_02 with d1
+        alison "Awww, then..."
+        me "So where is Megan?"
+        alison "You are just so cruel, you think she is more beautiful than me?"
+        me "I'm just kidding Ali, you are gorgeous."
+        alison "Aww. And you are my favorite patient."
+        me "Thanks, can I ask you for a favor then?"
+        alison "Anything."
+        me "Can you give me a blowjob?"
+        alison "Sure... wait for WHAT?"
+        me "A blowjob, you know, when you use you mouth to..."
+        alison "I know what it is, but you should at least take me out before asking for blowjobs."
+        me "So that's a no then?"
+        hide npc_portrait_alison_02 with d1
+        show npc_portrait_alison_03 with d1
+        alison "Uh... okay, but just because this is you."
+        me "Great."
+        alison "Now let... Wow, you look a lot bigger than I remember. Well, I agree with it. Might as well have some fun too."
+        window hide
+        hide npc_portrait_alison_03 with d1
+        show vid_alison_blowjob at top with d1
+        pause
+        hide vid_alison_blowjob with d1
+        show npc_portrait_alison_03 with d1
+        alison "So what did you think?"
+        me "You are pretty good... ask me if I wanted to do this again."
+        alison "Then you will have to come here tomorrow morning. Megan usually stays here all afternoon. Today was only me returning the favor for Tuesday morning."
+        me "I will remember, thanks, Ali. See you later."
+        alison "Bye [me]."
+        hide npc_portrait_alison_03 with d1
+
+        $ tb_event[4]["college_nurse"]["alison_bj"] = 1
+        $ v_time += 10
+
+    else:
+        "Alison is here, but let's not bother her."
 
     menu:
         "College":
