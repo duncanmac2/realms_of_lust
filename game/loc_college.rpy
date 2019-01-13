@@ -49,6 +49,8 @@ label lbl_college_locker_room:
         jump lbl_college_locker_room_day2
     elif v_day == 3:
         jump lbl_college_locker_room_day3
+    elif v_day == 4:
+        jump lbl_college_locker_room_day4
 
 label lbl_college_nurse:
     call main_show
@@ -946,6 +948,94 @@ label lbl_college_locker_room_day3:
 
     else:
         "This place is empty."
+
+    menu:
+        "College":
+            jump lbl_college_yard
+
+## LOCKER ROOM - DAY 4 ##
+label lbl_college_locker_room_day4:
+    if v_time >= 720 and v_time < 840 and tb_event[4]["college_locker_room"]["kiara_sex"] == 0:
+        "There is someone taking a shower here right now who could it be? There is a bag on the bench, it's Kyle's I'm sure of it, but the sticker with his name says Kiara. So Kyle was the one of the last to fall to the corruption. Let's see how he looks like..."
+        show img_kiara_shower_01 with d3
+        "She is hot, wow..."
+        kiara "[me] is that you there?"
+        me "Shit, hey Ky...Kiara."
+        kiara "Hey, what are you doing here?"
+        me "No, I just came...uhh."
+        "My eyes can't look any other way."
+        hide img_kiara_shower_01 with d1
+        show img_kiara_shower_02 with d1
+        kiara "You know I would say that my eyes are up here, but I can't blame you, I'm naked, hahaha?"
+        me "I... look I'm sorry, you are just so hot..."
+        kiara "Thanks, I can see that you like what you see, a bit too well in fact."
+        me "What do you mean?"
+        hide img_kiara_shower_02 with d1
+        show img_mc_bulge at top with d1
+        "Well, you are so nervous that you didn't notice that there is some water spilling in your pants."
+        hide img_mc_bulge with d1
+        me "Oh crap!"
+        "I try to step back, but end up slipping and falling on a puddle."
+        kiara "Are you ok?"
+        me "I'm fine but I'm all wet now."
+        kiara "You have your gym clothes in your locker don't you, take them off."
+        show img_mc_dick at top with d1
+        "I do just that, forgetting that I had a raging boner."
+        hide img_mc_dick with d1
+        kiara "Oh! Wow..."
+        me "Maybe I can take a shower too, that water was so cold..."
+        kiara "I-if you want you can take it right here... you know because it's already hot..."
+        me "That would be great"
+
+        menu:
+            "Go in":
+                pass
+
+        show img_kiara_shower_03 with d3
+        "We are so close, she is trying to avoid looking, but her eyes are fixated on my cock. I can't stand this anymore."
+        me "Do you want me to wash your back?"
+        kiara "I-I do."
+        hide img_kiara_shower_03 with d1
+        show img_kiara_shower_04 with d1
+        "I start using my hands to put some soap and rub it all over her back. After a while ago closer and start rubbing her tits."
+        kiara "[me]..."
+        hide img_kiara_shower_04 with d1
+        show img_kiara_shower_05 with d1
+        "She is moaning in pleasure, but my hands are not the only thing rubbing her. My hard dick is between her buttcheeks. I want to take this further, but she is faster, she goes down on her knees and starts to suck my cock while rubbing her clit."
+        hide img_kiara_shower_05 with d1
+        show img_kiara_shower_06 at top with d1
+        "We come at the same time, and after a few seconds of silence, Kiara speaks."
+        hide img_kiara_shower_06 with d1
+        kiara "That... you have the best cum I have ever tasted..."
+        me "Uh, that's a weird compliment but thanks. By the way, why are you here and not in the woman's shower?"
+        kiara "Wait this isn't the woman's shower?"
+        me "No..."
+        kiara "Shit, I did it again... But it was worth it, I would love to do it again."
+        me "Would you now?"
+        kiara "I would, you know where to find me? I will at the Saint-Desire church at 4 PM, and this is my address. I hope I will see you later cutie."
+        me "So do I."
+
+        $ tb_event[4]["college_locker_room"]["kiara_sex"] = 1
+        $ v_time += 15
+
+    elif v_time >= 840 and v_time < 1020:
+        "Let's take a look on the girl's shower."
+        window hide
+        show vid_college_shower_03 at top with d1
+        pause
+        hide vid_college_shower_03 with d1
+        show vid_college_shower_04 at top with d1
+        pause
+        hide vid_college_shower_04 with d1
+
+    elif v_time >= 1020:
+        "Is there someone here?"
+        show vid_college_shower_05 at top with d1
+        "Oh... let's leave them alone."
+        hide vid_college_shower_05 with d1
+
+    else:
+        "No one in there."
 
     menu:
         "College":

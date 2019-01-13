@@ -100,6 +100,10 @@
     for i in range(1,10):
         renpy.image("npc_portrait_karen_" + str(i).zfill(2), "images/people/jayden_jaymes/karen_portrait_" + str(i).zfill(2) + ".jpg")
 
+    # Kiara
+    for i in range(1,7):
+        renpy.image("img_kiara_shower_" + str(i).zfill(2), "images/people/aidra_fox/kiara_shower_" + str(i).zfill(2) + ".jpg")
+
     # Lisa
     renpy.image("img_lisa_gym_01", "images/people/brandi_love/lisa_gym_01.jpg")
     renpy.image("img_lisa_kiss_01", "images/people/brandi_love/lisa_kiss_01.jpg")
@@ -256,6 +260,7 @@ define emma = Character("Emma", image = "portrait_emma", color = clr_auburn)
 define hitomi = Character("Hitomi", image = "portrait_hitomi", color = clr_ginger)
 define jane = Character("Jane", image = "portrait_jane", color = clr_gray)
 define karen = Character("Karen", image = "portrait_karen", color = clr_gray)
+define kiara = Character("Kiara", image = "portrait_kiara", color = clr_gray)
 define lily = Character("Lily", image = "portrait_lily", color = clr_auburn)
 define lisa = Character("Lisa", image = "portrait_lisa", color = clr_gold)
 define marcy = Character("Marcy", image = "portrait_marcy", color = clr_chestnut_brown)
@@ -275,6 +280,7 @@ image side portrait_emma = "images/portrait/portrait_emma.jpg"
 image side portrait_hitomi = "images/portrait/portrait_hitomi.jpg"
 image side portrait_jane = "images/portrait/portrait_jane.jpg"
 image side portrait_karen = "images/portrait/portrait_karen.jpg"
+image side portrait_kiara = "images/portrait/portrait_kiara.jpg"
 image side portrait_lily = "images/portrait/portrait_lily.jpg"
 image side portrait_lisa = "images/portrait/portrait_lisa.jpg"
 image side portrait_marcy = "images/portrait/portrait_marcy.jpg"
@@ -469,6 +475,9 @@ image vid_college_masturbate = Movie(play="images/events/college_masturbate.webm
 image vid_college_run = Movie(play="images/events/college_run.webm")
 image vid_college_shower_01 = Movie(play="images/events/college_shower_01.webm", size=(620,612))
 image vid_college_shower_02 = Movie(play="images/events/college_shower_02.webm", size=(598,736))
+image vid_college_shower_03 = Movie(play="images/events/college_shower_03.webm", size=(1000,468))
+image vid_college_shower_04 = Movie(play="images/events/college_shower_04.webm")
+image vid_college_shower_05 = Movie(play="images/events/college_shower_05.webm", size=(750,741))
 image vid_college_spanking = Movie(play="images/events/college_spanking.webm", size=(534,800))
 
 # Gym
@@ -516,6 +525,7 @@ label start:
 
     $ tb_event[4] = {
         "college_garden": {},
+        "college_locker_room": {},
         "college_office_ellie": {}
     }
 
@@ -539,6 +549,7 @@ label start:
     $ tb_event[3]["home_room_mia"] = { "mia_finger": 0 }
 
     $ tb_event[4]["college_garden"] = { "jane": 0, "rikki": 0 }
+    $ tb_event[4]["college_locker_room"] = { "kiara_sex": 0 }
     $ tb_event[4]["college_office_ellie"] = { "dakota_sex": 0 }
 
     # Repeatable
