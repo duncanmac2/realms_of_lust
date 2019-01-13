@@ -11,8 +11,9 @@
         readable_time = divmod(time, 60)
         return str(readable_time[0]).zfill(2) + ":" + str(readable_time[1]).zfill(2)
 
-    s_interface_total_width = 1920
-    s_interface_total_height = 1080
+
+    # Days
+    tb_day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
     # Colors
     clr_black = "#000"

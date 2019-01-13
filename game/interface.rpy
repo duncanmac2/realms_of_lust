@@ -108,7 +108,7 @@ screen scr_main_map:
         text "3th street" color clr_black size 16 xpos -30 ypos 48
         action Jump("lbl_city_street_3th")
 
-# Navigation
+# Navigation & Time
 screen scr_navigation:
     frame:
         xpadding 20
@@ -120,27 +120,30 @@ screen scr_navigation:
     frame:
         xpos 10
         ypos 10
-        xmaximum 120
-        ymaximum 95
+        xmaximum 145
+        ymaximum 114
 
-        text "{b}" + v_time_readable + "{/b}" size 20 xpos 8 ypos 3
+        $ temp_day = v_day % 7
+
+        text "{b}" + tb_day[temp_day] + "{/b}" size 20 xalign 0.5 ypos 3
+        text "{b}" + v_time_readable + "{/b}" size 20 xpos 20 ypos 27
 
         if v_localisation == "city_first_street" or v_localisation == "city_second_street" or v_localisation == "city_third_street" or v_localisation == "college_yard":
             imagebutton:
-                xpos 78
-                ypos 4
+                xpos 89
+                ypos 28
                 idle "images/interface/icon_time_plus.png"
                 action Jump("time_change")
 
         imagebutton:
-            xpos 8
-            ypos 32
+            xpos 20
+            ypos 57
             idle "images/interface/icon_map.png"
             action Jump("lbl_city_map")
 
         imagebutton:
-            xpos 60
-            ypos 32
+            xpos 72
+            ypos 57
             idle "images/interface/icon_phone.png"
             #action [Hide("scr_phone"), Show("scr_phone_gallery"), SetVariable("f_photo_new", False)]
 
