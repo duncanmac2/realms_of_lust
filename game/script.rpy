@@ -11,9 +11,8 @@
         readable_time = divmod(time, 60)
         return str(readable_time[0]).zfill(2) + ":" + str(readable_time[1]).zfill(2)
 
-
     # Days
-    tb_day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    tb_day = ["", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
     # Colors
     clr_black = "#000"
@@ -40,204 +39,26 @@
     clr_brown_dark = "#331a00"
 
     ### IMAGES
-    ## MC
-    renpy.image("img_mc_body_01", "images/people/MC/mc_body_01.jpg")
-    renpy.image("img_mc_body_02", "images/people/MC/mc_body_02.jpg")
-    renpy.image("img_mc_bulge", "images/people/MC/mc_bulge.jpg")
-    renpy.image("img_mc_dick", "images/people/MC/mc_dick.jpg")
-    renpy.image("img_mc_sleep", "images/people/MC/mc_sleep.jpg")
-
     ## NPC
-    # Alison
-    for i in range(1,4):
-        renpy.image("npc_portrait_alison_" + str(i).zfill(2), "images/people/briana_banks/alison_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Bonnie
-    renpy.image("img_bonnie_ass", "images/people/kennedy_leigh/bonnie_ass.jpg")
-    renpy.image("img_bonnie_beach", "images/people/kennedy_leigh/bonnie_beach.jpg")
-    renpy.image("img_bonnie_handjob_01", "images/people/kennedy_leigh/bonnie_handjob_01.jpg")
-    renpy.image("img_bonnie_undress", "images/people/kennedy_leigh/bonnie_undress.jpg")
-
-    for i in range(1,8):
-        renpy.image("img_bonnie_shower_" + str(i).zfill(2), "images/people/kennedy_leigh/bonnie_shower_" + str(i).zfill(2) + ".jpg")
-
+    # Adriana
     for i in range(1,3):
-        renpy.image("npc_portrait_bonnie_" + str(i).zfill(2), "images/people/kennedy_leigh/bonnie_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Dakota
-    for i in range(1,5):
-        renpy.image("npc_portrait_dakota_" + str(i).zfill(2), "images/people/dakota_skye/dakota_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Ellie
-    renpy.image("img_ellie_spread", "images/people/julia_ann/ellie_spread.jpg")
+        renpy.image("img_adriana_portrait_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_portrait_" + str(i).zfill(2) + ".jpg")
 
     for i in range(1,2):
-        renpy.image("img_ellie_dakota_" + str(i).zfill(2), "images/people/julia_ann/ellie_dakota_" + str(i).zfill(2) + ".jpg")
+        renpy.image("img_adriana_lesbian_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_lesbian_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,5):
-        renpy.image("img_ellie_undress_" + str(i).zfill(2), "images/people/julia_ann/ellie_undress_" + str(i).zfill(2) + ".jpg")
+    for i in range(1,2):
+        renpy.image("img_adriana_slut_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_slut_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,5):
-        renpy.image("npc_portrait_ellie_" + str(i).zfill(2), "images/people/julia_ann/ellie_portrait_" + str(i).zfill(2) + ".jpg")
+    # Dakota
+    for i in range(1,2):
+        renpy.image("img_dakota_portrait_" + str(i).zfill(2), "images/people/dakota.skye/dakota_portrait_" + str(i).zfill(2) + ".jpg")
 
-    # Emma
-    for i in range(1,4):
-        renpy.image("img_emma_hospital_" + str(i).zfill(2), "images/people/sophie_dee/emma_hospital_" + str(i).zfill(2) + ".jpg")
-
-    # Hitomi
-    for i in range(1,7):
-        renpy.image("npc_portrait_hitomi_" + str(i).zfill(2), "images/people/hitomi_tanaka/hitomi_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Jane
-    renpy.image("img_jane_boobs", "images/people/sasha_grey/jane_boobs.jpg")
-    renpy.image("img_jane_panties", "images/people/sasha_grey/jane_panties.jpg")
-
-    for i in range(1,5):
-        renpy.image("npc_portrait_jane_" + str(i).zfill(2), "images/people/sasha_grey/jane_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Karen
-    renpy.image("img_karen_blowjob_02", "images/people/jayden_jaymes/karen_blowjob_02.jpg")
-    renpy.image("img_karen_kiss", "images/people/jayden_jaymes/karen_kiss.jpg")
-
-    for i in range(1,3):
-        renpy.image("img_karen_couch_" + str(i).zfill(2), "images/people/jayden_jaymes/karen_couch_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,10):
-        renpy.image("npc_portrait_karen_" + str(i).zfill(2), "images/people/jayden_jaymes/karen_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Kiara
-    for i in range(1,7):
-        renpy.image("img_kiara_shower_" + str(i).zfill(2), "images/people/aidra_fox/kiara_shower_" + str(i).zfill(2) + ".jpg")
-
-    # Lisa
-    renpy.image("img_lisa_gym_01", "images/people/brandi_love/lisa_gym_01.jpg")
-    renpy.image("img_lisa_kiss_01", "images/people/brandi_love/lisa_kiss_01.jpg")
-    renpy.image("img_lisa_pool_01", "images/people/brandi_love/lisa_pool_01.jpg")
-
-    for i in range(1,6):
-        renpy.image("img_lisa_shower_" + str(i).zfill(2), "images/people/brandi_love/lisa_shower_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,8):
-        renpy.image("npc_portrait_lisa_" + str(i).zfill(2), "images/people/brandi_love/lisa_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Lily
-    renpy.image("img_lily_blowjob_01", "images/people/lilith_lust/lily_blowjob_01.jpg")
-    renpy.image("img_lily_couch", "images/people/lilith_lust/lily_couch.jpg")
-    renpy.image("img_lily_sex_01", "images/people/lilith_lust/lily_sex_01.jpg")
-    renpy.image("img_lily_sex_04", "images/people/lilith_lust/lily_sex_04.jpg")
-
-    for i in range(1,3):
-        renpy.image("img_lily_nude_" + str(i).zfill(2), "images/people/lilith_lust/lily_nude_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,3):
-        renpy.image("img_lily_boobs_" + str(i).zfill(2), "images/people/lilith_lust/lily_boobs_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,6):
-        renpy.image("img_lily_shower_" + str(i).zfill(2), "images/people/lilith_lust/lily_portrait_shower_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,13):
-        renpy.image("npc_portrait_lily_" + str(i).zfill(2), "images/people/lilith_lust/lily_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Marcy
-    renpy.image("img_marcy_boobs_01", "images/people/brittney_white/marcy_boobs_01.jpg")
-
-    for i in range(1,4):
-        renpy.image("img_marcy_couch_" + str(i).zfill(2), "images/people/brittney_white/marcy_couch_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,4):
-        renpy.image("img_marcy_nude_" + str(i).zfill(2), "images/people/brittney_white/marcy_nude_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,3):
-        renpy.image("img_marcy_pool_" + str(i).zfill(2), "images/people/brittney_white/marcy_pool_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,6):
-        renpy.image("img_marcy_undress_" + str(i).zfill(2), "images/people/brittney_white/marcy_undress_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,11):
-        renpy.image("npc_portrait_marcy_" + str(i).zfill(2), "images/people/brittney_white/marcy_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Maria
-    for i in range(1,4):
-        renpy.image("npc_portrait_maria_" + str(i).zfill(2), "images/people/ariana_marie/maria_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Megan
-    renpy.image("img_megan_boobs_02", "images/people/nikki_benz/megan_boobs_02.jpg")
-    renpy.image("img_megan_boobs_03", "images/people/nikki_benz/megan_boobs_03.jpg")
-    renpy.image("img_megan_handjob", "images/people/nikki_benz/megan_handjob.jpg")
-    renpy.image("img_megan_nude", "images/people/nikki_benz/megan_nude.jpg")
-    renpy.image("img_megan_taste", "images/people/nikki_benz/megan_taste.jpg")
-
-    for i in range(1,6):
-        renpy.image("npc_portrait_megan_" + str(i).zfill(2), "images/people/nikki_benz/megan_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Mia
-    renpy.image("img_mia_bikini", "images/people/mia_malkova/mia_bikini.jpg")
-    renpy.image("img_mia_book", "images/people/mia_malkova/mia_book.jpg")
-    renpy.image("img_mia_handjob_01", "images/people/mia_malkova/mia_handjob_01.jpg")
-    renpy.image("img_mia_kiss_lisa", "images/people/mia_malkova/mia_kiss_lisa.jpg")
-    renpy.image("img_mia_kiss_veronica", "images/people/mia_malkova/mia_kiss_veronica.jpg")
-    renpy.image("img_mia_nude", "images/people/mia_malkova/mia_nude.jpg")
-    renpy.image("img_mia_pussy", "images/people/mia_malkova/mia_pussy.jpg")
-
-    for i in range(1,3):
-        renpy.image("img_mia_ass_" + str(i).zfill(2), "images/people/mia_malkova/mia_ass_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,4):
-        renpy.image("img_mia_kiss_" + str(i).zfill(2), "images/people/mia_malkova/mia_kiss_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,4):
-        renpy.image("img_mia_shower_" + str(i).zfill(2), "images/people/mia_malkova/mia_shower_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,18):
-        renpy.image("npc_portrait_mia_" + str(i).zfill(2), "images/people/mia_malkova/mia_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Nina
-    for i in range(1,8):
-        renpy.image("npc_portrait_nina_" + str(i).zfill(2), "images/people/alexis_texas/nina_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Nyomi
-    for i in range(1,4):
-        renpy.image("img_nyomi_beach_" + str(i).zfill(2), "images/people/nyomi_bank/nyomi_beach_" + str(i).zfill(2) + ".jpg")
-
-    # Pryia
-    for i in range(1,5):
-        renpy.image("img_priya_pool_" + str(i).zfill(2), "images/people/priya_rai/priya_pool_" + str(i).zfill(2) + ".jpg")
-
-    # Rikki
-    renpy.image("img_rikki_nude", "images/people/rikki_six/rikki_nude.jpg")
-
-    for i in range(1,3):
-        renpy.image("npc_portrait_rikki_" + str(i).zfill(2), "images/people/rikki_six/rikki_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Sarah
-    renpy.image("img_sarah_facial", "images/people/diamond_jackson/sarah_facial.jpg")
-    renpy.image("img_sarah_nude", "images/people/diamond_jackson/sarah_nude.jpg")
-
-    for i in range(1,3):
-        renpy.image("img_sarah_gym_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_gym_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,9):
-        renpy.image("img_sarah_shower_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_shower_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,8):
-        renpy.image("npc_portrait_sarah_" + str(i).zfill(2), "images/people/diamond_jackson/sarah_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Veronica
-    renpy.image("img_veronica_bikini", "images/people/angela_white/veronica_bikini.jpg")
-
-    for i in range(2,5):
-        renpy.image("img_veronica_gym_" + str(i).zfill(2), "images/people/angela_white/veronica_gym_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,3):
-        renpy.image("npc_portrait_veronica_" + str(i).zfill(2), "images/people/angela_white/veronica_portrait_" + str(i).zfill(2) + ".jpg")
+    # Emily
+    for i in range(1,2):
+        renpy.image("img_emily_portrait_" + str(i).zfill(2), "images/people/emily.willis/emily_portrait_" + str(i).zfill(2) + ".jpg")
 
     ## NPC OTHERS
-    renpy.image("npc_portrait_jason_01", "images/people/others/portrait_jason_01.jpg")
-    renpy.image("npc_portrait_jason_02", "images/people/others/portrait_jason_02.jpg")
-    renpy.image("npc_portrait_grandma", "images/people/others/portrait_grandma.jpg")
-    renpy.image("npc_portrait_marcus", "images/people/others/portrait_marcus.jpg")
-    renpy.image("npc_portrait_mr_smith_01", "images/people/others/portrait_mr_smith_01.jpg")
-    renpy.image("npc_portrait_mr_smith_02", "images/people/others/portrait_mr_smith_02.jpg")
 
     ## BEACH
     renpy.image("img_beach_nude_01", "images/people/beach/beach_nude_01.jpg")
@@ -252,71 +73,30 @@
     for i in range(1,4):
         renpy.image("img_park_exhibition_" + str(i).zfill(2), "images/people/park/park_exhibition_" + str(i).zfill(2) + ".jpg")
 
+    ## INTRO
+    renpy.image("img_intro_01", "images/events/intro_01.jpg")
+    renpy.image("img_intro_02", "images/events/intro_02.png")
+    renpy.image("img_intro_03", "images/events/intro_03.jpg")
+
 ## NAMES & PORTRAITS
 # Player
 default your_name = ""
-default mc_portrait = "old"
-image side portrait_mc = ConditionSwitch("mc_portrait == 'old'", "images/portrait/portrait_mc1.jpg", "mc_portrait == 'new'", "images/portrait/portrait_mc2.jpg")
-define me = DynamicCharacter("your_name", image="portrait_mc", color = clr_dark_red)
+define me = DynamicCharacter("your_name", color = clr_dark_red)
 
 # NPC
-define alison = Character("Alison", image = "portrait_alison", color = clr_sand)
-define bonnie = Character("Bonnie", image = "portrait_bonnie", color = clr_sand)
-define dakota = Character("Dakota", image = "portrait_dakota", color = clr_gold)
-define ellie = Character("Ellie", image = "portrait_ellie", color = clr_gold)
-define emma = Character("Emma", image = "portrait_emma", color = clr_auburn)
-define hitomi = Character("Hitomi", image = "portrait_hitomi", color = clr_ginger)
-define jane = Character("Jane", image = "portrait_jane", color = clr_gray)
-define karen = Character("Karen", image = "portrait_karen", color = clr_gray)
-define kiara = Character("Kiara", image = "portrait_kiara", color = clr_brown_dark)
-define lily = Character("Lily", image = "portrait_lily", color = clr_auburn)
-define lisa = Character("Lisa", image = "portrait_lisa", color = clr_gold)
-define marcy = Character("Marcy", image = "portrait_marcy", color = clr_chestnut_brown)
-define megan = Character("Megan", image = "portrait_megan", color = clr_sand)
-define mia = Character("Mia", image = "portrait_mia", color = clr_palegold)
-define nina = Character("Nina", image = "portrait_nina", color = clr_sand)
-define nyomi = Character("Nyomi", image = "portrait_nyomi", color = clr_chestnut_brown)
-define priya = Character("Priya", image = "portrait_priya", color = clr_gray)
-define rikki = Character("Rikki", image = "portrait_rikki", color = clr_palegold)
-define sarah = Character("Sarah", image = "portrait_sarah", color = clr_chestnut_brown)
-define veronica = Character("Veronica", image = "portrait_veronica", color = clr_gray)
+define adriana = Character("Adriana", color = clr_gray)
+define dakota = Character("Dakota", color = clr_gold)
+define emily = Character("Emily", color = clr_gray)
 
-image side portrait_alison = "images/portrait/portrait_alison.jpg"
-image side portrait_bonnie = "images/portrait/portrait_bonnie.jpg"
-image side portrait_dakota = "images/portrait/portrait_dakota.jpg"
-image side portrait_ellie = "images/portrait/portrait_ellie.jpg"
-image side portrait_emma = "images/portrait/portrait_emma.jpg"
-image side portrait_hitomi = "images/portrait/portrait_hitomi.jpg"
-image side portrait_jane = "images/portrait/portrait_jane.jpg"
-image side portrait_karen = "images/portrait/portrait_karen.jpg"
-image side portrait_kiara = "images/portrait/portrait_kiara.jpg"
-image side portrait_lily = "images/portrait/portrait_lily.jpg"
-image side portrait_lisa = "images/portrait/portrait_lisa.jpg"
-image side portrait_marcy = "images/portrait/portrait_marcy.jpg"
-image side portrait_megan = "images/portrait/portrait_megan.jpg"
-image side portrait_mia = "images/portrait/portrait_mia.jpg"
-image side portrait_nina = "images/portrait/portrait_nina.jpg"
-image side portrait_nyomi = "images/portrait/portrait_nyomi.jpg"
-image side portrait_priya = "images/portrait/portrait_priya.jpg"
-image side portrait_rikki = "images/portrait/portrait_rikki.jpg"
-image side portrait_sarah = "images/portrait/portrait_sarah.jpg"
-image side portrait_veronica = "images/portrait/portrait_veronica.jpg"
+define alison = Character("Alison", color = clr_sand)
+define emma = Character("Emma", color = clr_auburn)
+define hitomi = Character("Hitomi", color = clr_ginger)
+define kiara = Character("Kiara", color = clr_brown_dark)
+define marcy = Character("Marcy", color = clr_chestnut_brown)
+define mia = Character("Mia", color = clr_palegold)
 
 # NPC OTHERS
-define figgs = Character("Figgs", color = clr_dark_gray)
-define jason = Character("Jason", image = "portrait_jason", color = clr_dark_gray)
-define kyle = Character("Kyle", image = "portrait_kyle", color = clr_dark_gray)
-define marcus = Character("Marcus", image = "portrait_marcus", color = clr_dark_gray)
-define mr_smith = Character("Mr Smith", image = "portrait_mr_smith", color = clr_dark_gray)
-define nun = Character("Nun", image = "portrait_nun", color = clr_dark_gray)
 define unknown = Character("???", color = clr_dark_gray)
-
-image side portrait_kyle = "images/portrait/portrait_kyle.jpg"
-image side portrait_jason = "images/portrait/portrait_jason.jpg"
-image side portrait_marcus = "images/portrait/portrait_marcus.jpg"
-image side portrait_mr_smith = "images/portrait/portrait_mr_smith_01.jpg"
-image side portrait_mr_smith younger = "images/portrait/portrait_mr_smith_02.jpg"
-image side portrait_nun = "images/portrait/portrait_nun.jpg"
 
 ## EFFECTS
 define d1 = Dissolve(0.2)
@@ -332,15 +112,13 @@ image img_warning = "images/interface/warning.png"
 
 ## LOCATIONS
 # Home
-image loc_home_bathroom1 = "images/location/loc_home_bathroom1.jpg"
-image loc_home_bathroom2 = "images/location/loc_home_bathroom2.jpg"
+image loc_home_bathroom = "images/location/loc_home_bathroom.jpg"
 image loc_home_kitchen = "images/location/loc_home_kitchen.jpg"
 image loc_home_living_room = "images/location/loc_home_living_room.jpg"
 image loc_home_pool = "images/location/loc_home_pool.jpg"
-image loc_home_room_lisa_bed = "images/location/loc_home_room_lisa_bed.jpg"
 image loc_home_room_mc = "images/location/loc_home_room_mc.jpg"
-image loc_home_room_mc_bed = "images/location/loc_home_room_mc_bed.jpg"
-image loc_home_room_mia = "images/location/loc_home_room_mia.jpg"
+image loc_home_room_dakota = "images/location/loc_home_room_emily.jpg"
+image loc_home_room_emily = "images/location/loc_home_room_emily.jpg"
 
 # City
 image loc_city_map = "images/location/loc_city_map.jpg"
@@ -383,99 +161,10 @@ image obj_pills = "images/objects/pills.jpg"
 image obj_sarah_playboy_collection = "images/objects/sarah_playboy_collection.jpg"
 
 ## VIDEOS - NPC
-# MC
-image vid_mc_erection = Movie(play="images/people/MC/MC_erection.webm")
-
-# Alison
-image vid_alison_blowjob = Movie(play="images/people/briana_banks/alison_blowjob.webm", size=(800,500))
-
-# Bonnie
-image vid_bonnie_blowjob_01 = Movie(play="images/people/kennedy_leigh/bonnie_blowjob_01.webm", size=(800,426))
-image vid_bonnie_blowjob_02 = Movie(play="images/people/kennedy_leigh/bonnie_blowjob_02.webm", size=(960,540))
-image vid_bonnie_handjob_02 = Movie(play="images/people/kennedy_leigh/bonnie_handjob_02.webm", size=(900,506))
-
 # Dakota
 image vid_dakota_anal_01 = Movie(play="images/people/dakota_skye/dakota_anal_01.webm", size=(1000,562))
 image vid_dakota_anal_02 = Movie(play="images/people/dakota_skye/dakota_anal_02.webm", size=(1000,560))
 image vid_dakota_blowjob_01 = Movie(play="images/people/dakota_skye/dakota_blowjob_01.webm", size=(660,1000))
-
-# Ellie
-image vid_ellie_blowjob_01 = Movie(play="images/people/julia_ann/ellie_blowjob_01.webm", size=(1240,696))
-image vid_ellie_cuni = Movie(play="images/people/julia_ann/ellie_cuni.webm", size=(800,450))
-image vid_ellie_sex_01 = Movie(play="images/people/julia_ann/ellie_sex_01.webm", size=(1038,1008))
-image vid_ellie_sex_02 = Movie(play="images/people/julia_ann/ellie_sex_02.webm", size=(1240,690))
-
-# Hitomi
-image vid_hitomi_boobs = Movie(play="images/people/hitomi_tanaka/hitomi_boobs.webm")
-
-# Jane
-image vid_jane_cuni_marcy = Movie(play="images/people/sasha_grey/jane_cuni_marcy.webm", size=(596,440))
-
-# Karen
-image vid_karen_69 = Movie(play="images/people/jayden_jaymes/karen_69.webm")
-image vid_karen_blowjob_01 = Movie(play="images/people/jayden_jaymes/karen_blowjob_01.webm", size=(1000,560))
-image vid_karen_blowjob_03 = Movie(play="images/people/jayden_jaymes/karen_blowjob_03.webm", size=(866,406))
-image vid_karen_boobs = Movie(play="images/people/jayden_jaymes/karen_boobs.webm", size=(1000,562))
-image vid_karen_cuni = Movie(play="images/people/jayden_jaymes/karen_cuni.webm", size=(1080,480))
-
-# Lily
-image vid_lily_kiss_01 = Movie(play="images/people/lilith_lust/lily_kiss_01.webm", size=(960,544))
-image vid_lily_kiss_02 = Movie(play="images/people/lilith_lust/lily_kiss_02.webm", size=(1000,460))
-image vid_lily_sex_02 = Movie(play="images/people/lilith_lust/lily_sex_02.webm", size=(1000,576))
-image vid_lily_sex_03 = Movie(play="images/people/lilith_lust/lily_sex_03.webm", size=(1000,502))
-
-# Lisa
-image vid_lisa_bathroom_incident = Movie(play="images/people/brandi_love/lisa_bathroom_incident.webm", size=(590,590))
-image vid_lisa_gym_02 = Movie(play="images/people/brandi_love/lisa_gym_02.webm", size=(1080,606))
-image vid_lisa_handjob_cum = Movie(play="images/people/brandi_love/lisa_handjob_cum.webm", size=(816,460))
-image vid_lisa_kiss_02 = Movie(play="images/people/brandi_love/lisa_kiss_02.webm", size=(1000,540))
-image vid_lisa_kiss_03 = Movie(play="images/people/brandi_love/lisa_kiss_03.webm", size=(800,778))
-image vid_lisa_show_boobs = Movie(play="images/people/brandi_love/lisa_boobs_01.webm")
-image vid_lisa_room_masturbate = Movie(play="images/people/brandi_love/lisa_masturbation.webm")
-image vid_lisa_undress = Movie(play="images/people/brandi_love/lisa_undress.webm", size=(450,652))
-
-# Marcy
-image vid_marcy_blowjob_01 = Movie(play="images/people/brittney_white/marcy_blowjob_01.webm", size=(920,800))
-image vid_marcy_blowjob_02 = Movie(play="images/people/brittney_white/marcy_blowjob_02.webm", size=(738,744))
-image vid_marcy_boobs_02 = Movie(play="images/people/brittney_white/marcy_boobs_02.webm", size=(630,716))
-image vid_marcy_boobs_03 = Movie(play="images/people/brittney_white/marcy_boobs_03.webm", size=(1000,562))
-image vid_marcy_boobs_bounce_01 = Movie(play="images/people/brittney_white/marcy_boobs_bounce_01.webm", size=(552,780))
-image vid_marcy_boobs_bounce_02 = Movie(play="images/people/brittney_white/marcy_boobs_bounce_02.webm", size=(552,780))
-image vid_marcy_facial = Movie(play="images/people/brittney_white/marcy_facial.webm", size=(1000,600))
-image vid_marcy_kiss = Movie(play="images/people/brittney_white/marcy_kiss.webm", size=(1000,560))
-image vid_marcy_masturbate = Movie(play="images/people/brittney_white/marcy_masturbate.webm", size=(704,512))
-image vid_marcy_sex_01 = Movie(play="images/people/brittney_white/marcy_sex_01.webm", size=(365,800))
-image vid_marcy_sex_02 = Movie(play="images/people/brittney_white/marcy_sex_02.webm")
-
-# Megan
-image vid_megan_anal_01 = Movie(play="images/people/nikki_benz/megan_anal_01.webm", size=(1000,570))
-image vid_megan_anal_02 = Movie(play="images/people/nikki_benz/megan_anal_02.webm", size=(1000,550))
-image vid_megan_blowjob = Movie(play="images/people/nikki_benz/megan_blowjob.webm", size=(750,844))
-image vid_megan_boobs_01 = Movie(play="images/people/nikki_benz/megan_boobs_01.webm", size=(800,450))
-image vid_megan_creampie = Movie(play="images/people/nikki_benz/megan_creampie.webm", size=(778,590))
-image vid_megan_facial = Movie(play="images/people/nikki_benz/megan_facial.webm", size=(720,400))
-image vid_megan_lesbian = Movie(play="images/people/nikki_benz/megan_lesbian.webm", size=(1000,450))
-
-# Mia
-image vid_mia_ass_03 = Movie(play="images/people/mia_malkova/mia_ass_03.webm", size=(437,791))
-image vid_mia_ass_04 = Movie(play="images/people/mia_malkova/mia_ass_04.webm", size=(800,680))
-image vid_mia_cum_ass = Movie(play="images/people/mia_malkova/mia_cum_ass.webm", size=(1000,668))
-image vid_mia_finger = Movie(play="images/people/mia_malkova/mia_finger.webm", size=(764,610))
-image vid_mia_handjob_02 = Movie(play="images/people/mia_malkova/mia_handjob_02.webm", size=(900,438))
-image vid_mia_handjob_cum = Movie(play="images/people/mia_malkova/mia_handjob_cum.webm", size=(800,418))
-image vid_mia_masturbate = Movie(play="images/people/mia_malkova/mia_masturbate.webm", size=(1000,496))
-image vid_mia_sex_01 = Movie(play="images/people/mia_malkova/mia_sex_01.webm", size=(1000,848))
-image vid_mia_sex_02 = Movie(play="images/people/mia_malkova/mia_sex_02.webm", size=(900,448))
-
-# Rikki
-image vid_rikki_blowjob_01 = Movie(play="images/people/rikki_six/rikki_blowjob_01.webm", size=(650,833))
-
-# Sarah
-image vid_sarah_titjob = Movie(play="images/people/diamond_jackson/sarah_titjob.webm", size=(720,540))
-
-# Veronica
-image vid_veronica_blowjob = Movie(play="images/people/angela_white/veronica_blowjob.webm", size=(960,540))
-image vid_veronica_gym_01 = Movie(play="images/people/angela_white/veronica_gym_01.webm", size=(735,721))
 
 ## VIDEOS - LOCATION
 # Beach
@@ -514,82 +203,9 @@ label splashscreen:
     call screen scr_warning
 
 label start:
-    ## EVENTS
-    # Normal
-    $ tb_event = {3: {}, 4: {}}
-
-    $ tb_event[3] = {
-        "city_beach": {},
-        "city_gym": {},
-        "city_home_lily": {},
-        "city_home_marcy": {},
-        "city_home_marcy_pool": {},
-        "city_home_marcy_room": {},
-        "city_home_marcy_room_sarah": {},
-        "city_home_priya": {},
-        "city_mall": {},
-        "city_park": {},
-        "city_pgp_corporation": {},
-        "college_garden": {},
-        "college_gym": {},
-        "college_office_ellie": {},
-        "home_kitchen": {},
-        "home_living_room": {},
-        "home_room_mc": {},
-        "home_room_mia": {}
-    }
-
-    $ tb_event[4] = {
-        "college_garden": {},
-        "college_locker_room": {},
-        "college_nurse": {},
-        "college_office_ellie": {}
-    }
-
-    $ tb_event[3]["city_beach"] = { "nyomi": 0 }
-    $ tb_event[3]["city_gym"] = { "lisa": 0, "sarah": 0, "veronica": 0 }
-    $ tb_event[3]["city_home_lily"] = { "lily": 0, "lily_sex": 0 }
-    $ tb_event[3]["city_home_marcy"] = { "marcy": 0 , "sarah": 0}
-    $ tb_event[3]["city_home_marcy_pool"] = { "marcy": 0 }
-    $ tb_event[3]["city_home_marcy_room"] = { "marcy": 0, "marcy_sex": 0 }
-    $ tb_event[3]["city_home_marcy_room_sarah"] = { "sarah": 0 }
-    $ tb_event[3]["city_home_priya"] = { "priya": 0 }
-    $ tb_event[3]["city_mall"] = { "karen": 0 }
-    $ tb_event[3]["city_park"] = { "marcy": 0 }
-    $ tb_event[3]["city_pgp_corporation"] = { "lily": 0 }
-    $ tb_event[3]["college_garden"] = { "veronica": 0 }
-    $ tb_event[3]["college_gym"] = { "bonnie": 0 }
-    $ tb_event[3]["college_office_ellie"] = { "aphrodisiac": 0, "dakota": 0 }
-    $ tb_event[3]["home_kitchen"] = { "mia": 0 }
-    $ tb_event[3]["home_living_room"] = { "lisa_hj": 0 }
-    $ tb_event[3]["home_room_mc"] = { "mia_sex": 0 }
-    $ tb_event[3]["home_room_mia"] = { "mia_finger": 0 }
-
-    $ tb_event[4]["college_garden"] = { "jane": 0, "rikki": 0 }
-    $ tb_event[4]["college_locker_room"] = { "kiara_sex": 0 }
-    $ tb_event[4]["college_nurse"] = { "alison_bj": 0, "megan": 0 }
-    $ tb_event[4]["college_office_ellie"] = { "dakota_sex": 0 }
-
-    # Repeatable
-    $ tb_repeatable = {3: {}, 4: {}}
-
-    $ tb_repeatable[3] = {
-        "college_nurse": {}
-    }
-
-    $ tb_repeatable[3]["college_nurse"] = { "bj": 0, "hj": 0 }
-
-
     # Flags
     $ f_bypass = False
     $ f_name_prompt = True
-    $ f_day1_lisa_bathroom_incident = False
-    $ f_day2_mall_karen = False
-    $ f_day2_nurse = False
-    $ f_day2_shower = False
-    $ f_day3_shower = False
-    $ f_day3_spy = False
-    $ f_day4_jane_friend = False
 
     # Variables
     $ v_day = 1
@@ -601,8 +217,8 @@ label start:
     hide screen main_menu
     scene black onlayer background
 
-    #jump lbl_name_input
-    jump lbl_bypass
+    jump lbl_name_input
+    #jump lbl_bypass
 
     "Do you have play previous version and want to jump directly to new content?"
     menu:
@@ -633,20 +249,29 @@ label lbl_name_input:
             jump lbl_intro
 
 label lbl_intro:
-    scene npc_portrait_lisa_01
-    "You are [me], a 21-year old college student living with Lisa and her daughter, she is an old friend of your family who offered a place for you to stay when your parents suffered a tragic accident when you were only six."
-    "She has raised you ever since, and even so she has been almost your mother during this time it never felt right to call her \"mom\", she understands of course."
-    scene npc_portrait_mia_01
-    "Her daughter is not the same, however, ever since you moved in she has called you brother and insisted that you call her \"sis\", she was always very close to you, ever since you saved her from a ferocious chihuahua. You were five at the time and she was almost four."
-    "Unfortunately they are the only woman you are close to, since you always was a bit of a loner during childhood, and that turned you into an extremely shy individual."
-    "Being friend with the most perverted guy in school didn't help either, but this year you have made up your mind that you would lose this V card, one way or the other, and this is where our story begins."
+    scene img_intro_01 with d3
+    "During World War 3, the world population experienced a significant decline, especially the male population decimated by years of conflict."
+    scene img_adriana_portrait_01
+    "Your wife Adriana has always loved sex, and during the war she turned to female friends to satisfy her needs."
+    scene img_adriana_lesbian_01
+    "She never forget to send you videos of her lovemaking and perhaps it was her love and support that gave you the strength to survive."
+    scene img_intro_02
+    "Your two daughters, conceived before going to war, are now young adults full of life and, above all, of desires."
+    scene img_emily_portrait_01
+    "Emily, the oldest, has lived without you longer than her sister, and seems more attracted to women."
+    scene img_dakota_portrait_01
+    "Dakota, on the other hand, has always been attracted to men, but only knows one in town, you."
+    scene img_adriana_slut_01
+    "After the war, morals became loose. They called it \"the true sexual liberation\". Thanks to leaps in science and technology there were less problems and more time for sex."
+    scene img_intro_03
+    "You and Adriana have taken advantage of this, but since you became a professor at the local university, the opportunities seem to be widening even more..."
+    "You are going to have to satisfy your needs, those of your wife, your daughters and your students. If your wife is not satisfied, she will go elsewhere, and this can be an opportunity to have fun together with her friends."
+    "Your daughters' desire will grow if they see you frolicking at home or at university, becoming closer to their daddy."
 
     jump lbl_home_room_mc
 
 label lbl_bypass:
     $ your_name = "John"
-    $ mc_portrait = "new"
-    $ v_day = 4
     $ v_time = 730
 
     $ f_day1_lisa_bathroom_incident = True
@@ -661,4 +286,4 @@ label lbl_bypass:
     $ tb_event[3]["college_office_ellie"]["aphrodisiac"] = 1
     $ tb_event[3]["college_office_ellie"]["dakota"] = 1
 
-    jump lbl_college_yard
+    jump lbl_home_room_mc
