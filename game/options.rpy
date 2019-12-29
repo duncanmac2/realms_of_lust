@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Realms of Lust")
+define config.name = _("School Values")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "0.4"
+define config.version = "0.1"
 define config.developer = True
 
 
@@ -38,9 +38,9 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "Realms_of_Lust"
-define build.directory_name = "Realms_of_Lust"
-define build.executable_name = "Realms_of_Lust-0.4"
+define build.name = "School_Values"
+define build.directory_name = "School_Values"
+define build.executable_name = "School_Values-0.1"
 define build.include_update = False
 
 ## Sounds and music ############################################################
@@ -149,7 +149,7 @@ default preferences.afm_time = 10
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "realms_of_lust"
+define config.save_directory = "school_values"
 
 
 ## Icon ########################################################################
