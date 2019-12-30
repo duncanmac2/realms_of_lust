@@ -50,6 +50,9 @@
     for i in range(1,2):
         renpy.image("img_adriana_slut_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_slut_" + str(i).zfill(2) + ".jpg")
 
+    for i in range(1,5):
+        renpy.image("img_adriana_bathroom_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_bathroom_s01_" + str(i).zfill(2) + ".jpg")
+
     # Dakota
     for i in range(1,2):
         renpy.image("img_dakota_portrait_" + str(i).zfill(2), "images/people/dakota.skye/dakota_portrait_" + str(i).zfill(2) + ".jpg")
@@ -163,7 +166,7 @@ image obj_sarah_playboy_collection = "images/objects/sarah_playboy_collection.jp
 ### VIDEOS - NPC
 ## Adriana
 # Bathroom
-image vid_adriana_bathroom_s01_hj = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_hj.webm", size=(1280,720))
+image vid_adriana_bathroom_s01_hj = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_hj.webm", size=(1920,1080))
 
 ## Dakota
 image vid_dakota_anal_01 = Movie(play="images/people/dakota_skye/dakota_anal_01.webm", size=(1000,562))
