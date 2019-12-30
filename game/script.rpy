@@ -160,8 +160,12 @@ image loc_college_yard = "images/location/loc_college_yard.jpg"
 image obj_pills = "images/objects/pills.jpg"
 image obj_sarah_playboy_collection = "images/objects/sarah_playboy_collection.jpg"
 
-## VIDEOS - NPC
-# Dakota
+### VIDEOS - NPC
+## Adriana
+# Bathroom
+image vid_adriana_bathroom_s01_hj = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_hj.webm", size=(1280,720))
+
+## Dakota
 image vid_dakota_anal_01 = Movie(play="images/people/dakota_skye/dakota_anal_01.webm", size=(1000,562))
 image vid_dakota_anal_02 = Movie(play="images/people/dakota_skye/dakota_anal_02.webm", size=(1000,560))
 image vid_dakota_blowjob_01 = Movie(play="images/people/dakota_skye/dakota_blowjob_01.webm", size=(660,1000))
@@ -205,19 +209,36 @@ label splashscreen:
 label start:
     # Flags
     $ f_bypass = False
+    $ f_intro = True
     $ f_name_prompt = True
+    $ f_pee = True
 
     # Variables
     $ v_day = 1
-    $ v_time = 0
+    $ v_time = 480
     $ v_time_readable = ""
     $ v_localisation = ""
+
+    # Lust
+    $ tb_stats = {"lust": {}, "lvl": {}}
+    $ tb_stats["lust"] = {
+        "mc": 0,
+        "adriana": 0,
+        "dakota": 0,
+        "emily": 0,
+        "school": 0
+    }
+    $ tb_stats["lvl"] = {
+        "dakota": 0,
+        "emily": 0,
+        "school": 0
+    }
 
     # Start
     hide screen main_menu
     scene black onlayer background
 
-    jump lbl_name_input
+    jump lbl_censorship
     #jump lbl_bypass
 
     "Do you have play previous version and want to jump directly to new content?"
@@ -227,7 +248,7 @@ label start:
             #jump lbl_name_input
             jump lbl_bypass
         "Start from the beginning":
-            jump lbl_name_input
+            jump lbl_censorship
 
 label game_start:
     show screen main_menu
@@ -236,6 +257,16 @@ label game_start:
 label close_renpy:
     $ renpy.quit()
     return
+
+label lbl_censorship:
+    "The game contains some rather \"extreme\" scenes such as water-sports. Do you want to censor them while knowing that you will inevitably miss a little bit of content?"
+    menu:
+        "Yes.":
+            $ f_pee = False
+        "No, I want to see that.":
+            $ f_pee = True
+
+    jump lbl_name_input
 
 label lbl_name_input:
     scene expression "images/interface/bg_input_name.png"
@@ -264,7 +295,7 @@ label lbl_intro:
     scene img_adriana_slut_01
     "After the war, morals became loose. They called it \"the true sexual liberation\". Thanks to leaps in science and technology there were less problems and more time for sex."
     scene img_intro_03
-    "You and Adriana have taken advantage of this, but since you became a professor at the local university, the opportunities seem to be widening even more..."
+    "You and Adriana have taken advantage of this, but since you just became a professor at the local university, the opportunities seem to be widening even more..."
     "You are going to have to satisfy your needs, those of your wife, your daughters and your students. If your wife is not satisfied, she will go elsewhere, and this can be an opportunity to have fun together with her friends."
     "Your daughters' desire will grow if they see you frolicking at home or at university, becoming closer to their daddy."
 
@@ -272,18 +303,6 @@ label lbl_intro:
 
 label lbl_bypass:
     $ your_name = "John"
-    $ v_time = 730
-
-    $ f_day1_lisa_bathroom_incident = True
-    $ f_day2_mall_karen = True
-    $ f_day2_nurse = True
-    $ f_day2_shower = True
-    $ f_day3_shower = True
-
-    $ tb_event[3]["home_room_mc"]["mia_sex"] = 1
-    #$ tb_event[3]["city_home_marcy_room"]["marcy_sex"] = 1
-    #$ tb_event[3]["city_home_lily"]["lily_sex"] = 1
-    $ tb_event[3]["college_office_ellie"]["aphrodisiac"] = 1
-    $ tb_event[3]["college_office_ellie"]["dakota"] = 1
+    $ v_time = 480
 
     jump lbl_home_room_mc
