@@ -74,20 +74,34 @@ label lbl_home_bathroom_adriana_s01_01:
         "Lick my balls my slutty whore.":
             show vid_adriana_bathroom_s01_bj_02 with d1
             pause
+            hide vid_adriana_bathroom_s01_bj_02 with d1
             jump lbl_home_bathroom_adriana_s01_01
 
         "Faster bitch!":
             show vid_adriana_bathroom_s01_bj_03 with d1
             pause
+            hide vid_adriana_bathroom_s01_bj_03 with d1
             jump lbl_home_bathroom_adriana_s01_01
 
         "I want to fuck your perverted face.":
             show vid_adriana_bathroom_s01_bj_04 with d1
             pause
+            hide vid_adriana_bathroom_s01_bj_04 with d1
             jump lbl_home_bathroom_adriana_s01_01
 
         "Let's fuck.":
+            hide vid_adriana_bathroom_s01_bj_01 with d1
             jump lbl_home_bathroom_adriana_s01_02
 
 label lbl_home_bathroom_adriana_s01_02:
     #window show
+
+    show vid_adriana_bathroom_s01_vg_01 with d1
+    pause
+
+    adriana "Grab my tits love, please."
+    me "With pleasure."
+
+    hide vid_adriana_bathroom_s01_vg_01 with d1
+    show vid_adriana_bathroom_s01_vg_02 with d1
+    pause
