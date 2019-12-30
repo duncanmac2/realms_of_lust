@@ -167,6 +167,10 @@ image obj_sarah_playboy_collection = "images/objects/sarah_playboy_collection.jp
 ## Adriana
 # Bathroom
 image vid_adriana_bathroom_s01_hj = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_hj.webm", size=(1920,1080))
+image vid_adriana_bathroom_s01_bj_01 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_bj_01.webm", size=(1920,1080))
+image vid_adriana_bathroom_s01_bj_02 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_bj_02.webm", size=(1920,1080))
+image vid_adriana_bathroom_s01_bj_03 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_bj_03.webm", size=(1920,1080))
+image vid_adriana_bathroom_s01_bj_04 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_bj_04.webm", size=(1920,1080))
 
 ## Dakota
 image vid_dakota_anal_01 = Movie(play="images/people/dakota_skye/dakota_anal_01.webm", size=(1000,562))

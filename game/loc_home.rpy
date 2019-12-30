@@ -54,10 +54,40 @@ label lbl_home_bathroom_events:
         adriana "No but, now because of you I want to fuck. Would you rather satisfy your wife or not be late?"
         menu:
             "It's my first day!":
-                jump lbl_university
+                jump lbl_college_yard
             "They can wait for me for a little.":
-                show vid_adriana_bathroom_s01_hj at top with d1
+                scene img_black
+                show vid_adriana_bathroom_s01_hj with d1
                 adriana "Good answer."
-                pause
+                me "You're the best honey."
+                adriana "Oh I know. And guess who is the best to suck your delicious dick?"
                 hide vid_adriana_bathroom_s01_hj with d1
-                "blalbla"
+                show vid_adriana_bathroom_s01_bj_01 with d3
+                me "Hmm, you as always."
+                window hide
+                pause
+
+                jump lbl_home_bathroom_adriana_s01_01
+
+label lbl_home_bathroom_adriana_s01_01:
+    menu:
+        "Lick my balls my slutty whore.":
+            show vid_adriana_bathroom_s01_bj_02 with d1
+            pause
+            jump lbl_home_bathroom_adriana_s01_01
+
+        "Faster bitch!":
+            show vid_adriana_bathroom_s01_bj_03 with d1
+            pause
+            jump lbl_home_bathroom_adriana_s01_01
+
+        "I want to fuck your perverted face.":
+            show vid_adriana_bathroom_s01_bj_04 with d1
+            pause
+            jump lbl_home_bathroom_adriana_s01_01
+
+        "Let's fuck.":
+            jump lbl_home_bathroom_adriana_s01_02
+
+label lbl_home_bathroom_adriana_s01_02:
+    #window show
