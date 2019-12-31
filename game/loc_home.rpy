@@ -12,7 +12,8 @@ label lbl_home_living_room:
 
     call main_show
     scene loc_home_living_room
-    jump lbl_home_living_room_events
+    call screen scr_navigation
+    #jump lbl_home_living_room_events
 
 label lbl_home_pool:
     scene loc_home_pool
@@ -28,7 +29,11 @@ label lbl_home_room_emily:
 
 label lbl_home_room_mc:
     scene loc_home_room_mc
-    jump lbl_home_room_mc_events
+
+    if f_intro:
+        jump lbl_home_bathroom_adriana_s01_01
+    else:
+        jump lbl_home_room_mc_events
 
 #### EVENTS ####
 ### ROOM MC ###
@@ -42,61 +47,64 @@ label lbl_home_room_mc_events:
 
 ### BATHROOM ###
 label lbl_home_bathroom_events:
-    if f_intro:
-        scene img_adriana_bathroom_s01_01 with d3
-        adriana "Love, you're gonna be late."
-        scene img_adriana_bathroom_s01_02 with d1
-        me "I know, I know, I was just about to take a shower."
-        scene img_adriana_bathroom_s01_03 with d1
-        adriana "You don't have to hide it, you know, it's not like I know it intimately."
-        me "Yes, but..."
-        scene img_adriana_bathroom_s01_04 with d1
-        adriana "No but, now because of you I want to fuck. Would you rather satisfy your wife or not be late?"
-        menu:
-            "It's my first day!":
-                jump lbl_college_yard
-            "They can wait for me for a little.":
-                scene img_black
-                show vid_adriana_bathroom_s01_hj with d1
-                adriana "Good answer."
-                me "You're the best honey."
-                adriana "Oh I know. And guess who is the best to suck your delicious dick?"
-                hide vid_adriana_bathroom_s01_hj with d1
-                show vid_adriana_bathroom_s01_bj_01 with d3
-                me "Hmm, you as always."
-                window hide
-                pause
-
-                jump lbl_home_bathroom_adriana_s01_01
+    jump lbl_home_living_room
 
 label lbl_home_bathroom_adriana_s01_01:
+    scene img_adriana_bathroom_s01_01 with d3
+    adriana "Love, you're gonna be late."
+    scene img_adriana_bathroom_s01_02 with d1
+    me "I know, I know, I was just about to take a shower."
+    scene img_adriana_bathroom_s01_03 with d1
+    adriana "You don't have to hide it, you know, it's not like I know it intimately."
+    me "Yes, but..."
+    scene img_adriana_bathroom_s01_04 with d1
+    adriana "No but, now because of you I want to fuck. Would you rather satisfy your wife or not be late?"
+    menu:
+        "It's my first day!":
+            $ f_intro = False
+            jump lbl_college_yard
+        "They can wait for me for a little.":
+            scene img_black
+            show vid_adriana_bathroom_s01_hj with d1
+            adriana "Good answer."
+            me "You're the best honey."
+            adriana "Oh I know. And guess who is the best to suck your delicious dick?"
+            hide vid_adriana_bathroom_s01_hj with d1
+            show vid_adriana_bathroom_s01_bj_01 with d3
+            me "Hmm, you as always."
+            window hide
+            pause
+
+            jump lbl_home_bathroom_adriana_s01_02
+
+label lbl_home_bathroom_adriana_s01_02:
     menu:
         "Lick my balls my slutty whore.":
             show vid_adriana_bathroom_s01_bj_02 with d1
             me "That's my girl, lick my balls."
             pause
             hide vid_adriana_bathroom_s01_bj_02 with d1
-            jump lbl_home_bathroom_adriana_s01_01
+            jump lbl_home_bathroom_adriana_s01_02
 
         "Faster my lovely bitch.":
             show vid_adriana_bathroom_s01_bj_03 with d1
             me "Hmmm yes like that."
             pause
             hide vid_adriana_bathroom_s01_bj_03 with d1
-            jump lbl_home_bathroom_adriana_s01_01
+            jump lbl_home_bathroom_adriana_s01_02
 
         "I want to fuck your perverted face.":
             show vid_adriana_bathroom_s01_bj_04 with d1
             me "Take the dick you love so much in your filthy mouth."
             pause
             hide vid_adriana_bathroom_s01_bj_04 with d1
-            jump lbl_home_bathroom_adriana_s01_01
+            jump lbl_home_bathroom_adriana_s01_02
 
         "Let's fuck.":
             hide vid_adriana_bathroom_s01_bj_01 with d1
-            jump lbl_home_bathroom_adriana_s01_02
+            jump lbl_home_bathroom_adriana_s01_03
 
-label lbl_home_bathroom_adriana_s01_02:
+label lbl_home_bathroom_adriana_s01_03:
     show vid_adriana_bathroom_s01_vg_01 with d1
     adriana "Grab my tits love, please."
     me "With pleasure."
@@ -189,5 +197,7 @@ label lbl_home_bathroom_adriana_s01_02:
     show img_adriana_bathroom_s01_07 with d1
     emily "{size=-7}*Whisper* Time to go too. I was hoping it would last longer, now I need my girlfriend to make me come.{/size}"
     hide img_adriana_bathroom_s01_07 with d3
+
+    $ f_intro = False
 
     jump lbl_college_yard
