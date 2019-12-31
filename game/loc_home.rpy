@@ -73,18 +73,21 @@ label lbl_home_bathroom_adriana_s01_01:
     menu:
         "Lick my balls my slutty whore.":
             show vid_adriana_bathroom_s01_bj_02 with d1
+            me "That's my girl, lick my balls."
             pause
             hide vid_adriana_bathroom_s01_bj_02 with d1
             jump lbl_home_bathroom_adriana_s01_01
 
         "Faster bitch!":
             show vid_adriana_bathroom_s01_bj_03 with d1
+            me "Hmmm yes like that."
             pause
             hide vid_adriana_bathroom_s01_bj_03 with d1
             jump lbl_home_bathroom_adriana_s01_01
 
         "I want to fuck your perverted face.":
             show vid_adriana_bathroom_s01_bj_04 with d1
+            me "Take the dick you love so much in your filthy mouth."
             pause
             hide vid_adriana_bathroom_s01_bj_04 with d1
             jump lbl_home_bathroom_adriana_s01_01
@@ -94,14 +97,96 @@ label lbl_home_bathroom_adriana_s01_01:
             jump lbl_home_bathroom_adriana_s01_02
 
 label lbl_home_bathroom_adriana_s01_02:
-    #window show
-
     show vid_adriana_bathroom_s01_vg_01 with d1
-    pause
-
     adriana "Grab my tits love, please."
     me "With pleasure."
-
     hide vid_adriana_bathroom_s01_vg_01 with d1
     show vid_adriana_bathroom_s01_vg_02 with d1
-    pause
+    adriana "You love my little tits daddy?"
+    me "Oh yeah, and don't worry, they're gonna grow up when you grow up."
+    adriana "I'm sure if you spray them with your cum they'll grow."
+    me "Coming in your tight pussy work great too."
+    hide vid_adriana_bathroom_s01_vg_02 with d1
+    show vid_adriana_bathroom_s01_vg_03 with d1
+    me "You're moaning so much you're going to alert our daughters."
+    adriana "Maybe that's the point."
+    me "You perverted filthy whore. I love you so much!"
+    hide vid_adriana_bathroom_s01_vg_03 with d1
+    show img_adriana_bathroom_s01_05 with vpunch
+    dakota "Mommy, I need to shower now or I'm gonna be late for school!"
+    adriana "Wait a little, your dad's busy pudding my pussy hard."
+    dakota "As always... use your bedroom for fuck sake!"
+    me "Alright sweetie, we will."
+    hide img_adriana_bathroom_s01_05 with d3
+    show vid_adriana_bathroom_s01_vg_04 with d3
+    adriana "Our lovely little bitch doesn't know what she missing."
+    me "With your help, I'm sure she can learn..."
+    adriana "You have no idea how wet it makes me thinking about it!"
+    me "You'd like that, wouldn't you, watching your daughters get fucked by my big cock?!"
+    hide vid_adriana_bathroom_s01_vg_04 with d1
+    show vid_adriana_bathroom_s01_vg_05 with d1
+    adriana "Fuck yesss daddy, I can't wait!"
+    me "Maybe their kinky mother would like to lick their pussy?"
+    adriana "*Moan* more than ever. Licking their daddy's hot sperm dripping out of their fuck holes, hmmm..."
+    hide vid_adriana_bathroom_s01_vg_05 with d3
+    show vid_adriana_bathroom_s01_emily with d3
+    emily "{size=-7}*Whisper* Daddy and mommy are such perverts...{/size}"
+    adriana "Those filthy thoughts... faster, yesss, I need it faster!"
+    hide vid_adriana_bathroom_s01_emily with d1
+    show vid_adriana_bathroom_s01_vg_06 with d1
+    me "At your command, princess."
+    adriana "Yesss... *moan* yes!"
+    me "You like that don't you, fucking whore?"
+    adriana "*Moan* yes daddy, I like it so much!"
+    me "Didn't you hear a noise?"
+    hide vid_adriana_bathroom_s01_vg_06 with d1
+    show img_adriana_bathroom_s01_06 with vpunch
+    emily "Shit!"
+    adriana "{size=-7}*Whisper* I think we have a little spy...{/size}"
+    adriana "Time for a little game."
+    hide img_adriana_bathroom_s01_06 with d1
+    show img_adriana_bathroom_s01_07
+    emily "{size=-7}*Whisper* What?{/size}"
+    adriana "Please daddy, lick my pussy please."
+    hide img_adriana_bathroom_s01_07 with d1
+    show vid_adriana_bathroom_s01_cun with d1
+    me "Only because you've been a good girl."
+    adriana "And my ass too! Too bad we don't have the time for a good ass fucking."
+    me "We'll have plenty of time when you get back from school."
+    adriana "Speaking of school, hurry up and make me come, sadly I gotta go."
+    hide vid_adriana_bathroom_s01_cun with d1
+    show vid_adriana_bathroom_s01_vg_07 with d1
+    adriana "You're the best dick in town daddy, I want a daughter from you!"
+    me "I've told you a thousand times already sweetheart, daddy can't get you pregnant."
+    adriana "We can always try it, fill my pussy with your hot cum pleassse."
+    me "Daddy can't resist your wishes..."
+    hide vid_adriana_bathroom_s01_vg_07 with d1
+    show img_adriana_bathroom_s01_06 with d1
+    emily "{size=-7}*Whisper* Are they really talking about getting me pregnant? Naah must be their \"little\" game.{/size}"
+    hide img_adriana_bathroom_s01_06 with d1
+    show vid_adriana_bathroom_s01_vg_08 with d1
+    me "Almost here sweetheart!"
+    adriana "Make me a baby daddy, make me a baby!"
+    hide vid_adriana_bathroom_s01_vg_08 with d1
+    show img_white
+    pause .1
+    with hpunch
+    hide img_white
+    pause .2
+    show img_white
+    pause .2
+    hide img_white
+    pause .2
+    with hpunch
+    $ renpy.movie_cutscene("images/people/adriana.chechik/adriana_bathroom_s01_cum.webm")
+    show img_adriana_bathroom_s01_08 with d1
+    adriana "Oh no, it's all slipping away. I guess the baby won't be this time."
+    me "That's a shame. And now time for school sweetheart!"
+    adriana "Yes daddy... Can't wait till evening."
+    me "You're telling me!"
+    hide img_adriana_bathroom_s01_08 with d1
+    show img_adriana_bathroom_s01_07 with d1
+    emily "{size=-7}*Whisper* Time to go too, I need my girlfriend to make me come.{/size}"
+    hide img_adriana_bathroom_s01_07 with d3
+
+    jump lbl_college_yard

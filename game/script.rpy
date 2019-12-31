@@ -50,7 +50,7 @@
     for i in range(1,2):
         renpy.image("img_adriana_slut_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_slut_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,5):
+    for i in range(1,9):
         renpy.image("img_adriana_bathroom_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_bathroom_s01_" + str(i).zfill(2) + ".jpg")
 
     # Dakota
@@ -166,6 +166,7 @@ image obj_sarah_playboy_collection = "images/objects/sarah_playboy_collection.jp
 ### VIDEOS - NPC
 ## Adriana
 # Bathroom S01
+image vid_adriana_bathroom_s01_cun = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_cun.webm", size=(1920,1080))
 image vid_adriana_bathroom_s01_hj = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_hj.webm", size=(1920,1080))
 image vid_adriana_bathroom_s01_bj_01 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_bj_01.webm", size=(1920,1080))
 image vid_adriana_bathroom_s01_bj_02 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_bj_02.webm", size=(1920,1080))
@@ -173,6 +174,13 @@ image vid_adriana_bathroom_s01_bj_03 = Movie(play="images/people/adriana.chechik
 image vid_adriana_bathroom_s01_bj_04 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_bj_04.webm", size=(1920,1080))
 image vid_adriana_bathroom_s01_vg_01 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_01.webm", size=(1920,1080))
 image vid_adriana_bathroom_s01_vg_02 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_02.webm", size=(1920,1080))
+image vid_adriana_bathroom_s01_vg_03 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_03.webm", size=(1920,1080))
+image vid_adriana_bathroom_s01_vg_04 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_04.webm", size=(1920,1080))
+image vid_adriana_bathroom_s01_vg_05 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_05.webm", size=(1920,1080))
+image vid_adriana_bathroom_s01_vg_06 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_06.webm", size=(1920,1080))
+image vid_adriana_bathroom_s01_vg_07 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_07.webm", size=(1920,1080))
+image vid_adriana_bathroom_s01_vg_08 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_08.webm", size=(1920,1080))
+image vid_adriana_bathroom_s01_emily = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_emily.webm")
 
 ## Dakota
 image vid_dakota_anal_01 = Movie(play="images/people/dakota_skye/dakota_anal_01.webm", size=(1000,562))
@@ -298,7 +306,7 @@ label lbl_intro:
     scene img_intro_02
     "Your two daughters, conceived before going to war, are now young adults full of life and, above all, of desires."
     scene img_emily_portrait_01
-    "Emily, the oldest, has lived without you longer than her sister, and seems more attracted to women."
+    "Emily, the oldest, has lived without you longer than her sister, and seems more attracted to women. Oddly enough, she's more naive than her sister."
     scene img_dakota_portrait_01
     "Dakota, on the other hand, has always been attracted to men, but only knows one in town, you."
     scene img_adriana_slut_01
