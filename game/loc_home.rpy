@@ -138,10 +138,10 @@ label lbl_home_bathroom_adriana_s01_03:
     me "Maybe their kinky mother would like to lick their pussy?"
     adriana "*Moan* more than ever. Licking their daddy's hot sperm dripping out of their fuck holes, hmmm..."
     hide vid_adriana_bathroom_s01_vg_05 with d3
-    show vid_adriana_bathroom_s01_emily with d3
+    show vid_emily_bathroom_s01_mas with d3
     emily "{size=-7}*Whisper* Daddy and mommy are such perverts...{/size}"
     adriana "Those filthy thoughts... faster, yesss, I need it faster!"
-    hide vid_adriana_bathroom_s01_emily with d1
+    hide vid_emily_bathroom_s01_mas with d1
     show vid_adriana_bathroom_s01_vg_06 with d1
     me "At your command, princess."
     adriana "Yesss... *moan* yes!"
@@ -149,15 +149,15 @@ label lbl_home_bathroom_adriana_s01_03:
     adriana "*Moan* yes daddy, I like it so much!"
     me "Didn't you hear a noise?"
     hide vid_adriana_bathroom_s01_vg_06 with d1
-    show img_adriana_bathroom_s01_06 with vpunch
+    show img_emily_bathroom_s01_01 with vpunch
     emily "Shit!"
     adriana "{size=-7}*Whisper* I think we have a little spy...{/size}"
     adriana "Time for a little game."
-    hide img_adriana_bathroom_s01_06 with d1
-    show img_adriana_bathroom_s01_07
+    hide img_emily_bathroom_s01_01 with d1
+    show img_emily_bathroom_s01_02
     emily "{size=-7}*Whisper* What?{/size}"
     adriana "Please daddy, lick my pussy please."
-    hide img_adriana_bathroom_s01_07 with d1
+    hide img_emily_bathroom_s01_02 with d1
     show vid_adriana_bathroom_s01_cun with d1
     me "Only because you've been a good girl."
     adriana "And my ass too! Too bad we don't have the time for a good ass fucking."
@@ -170,9 +170,9 @@ label lbl_home_bathroom_adriana_s01_03:
     adriana "We can always try it, fill my pussy with your hot cum pleassse."
     me "Daddy can't resist your wishes..."
     hide vid_adriana_bathroom_s01_vg_07 with d1
-    show img_adriana_bathroom_s01_06 with d1
+    show img_emily_bathroom_s01_01 with d1
     emily "{size=-7}*Whisper* Are they really talking about getting me pregnant? Naah must be their \"little\" game.{/size}"
-    hide img_adriana_bathroom_s01_06 with d1
+    hide img_emily_bathroom_s01_01 with d1
     show vid_adriana_bathroom_s01_vg_08 with d1
     me "Almost here sweetheart!"
     adriana "Make me a baby daddy, make me a baby!"
@@ -188,15 +188,15 @@ label lbl_home_bathroom_adriana_s01_03:
     pause .2
     with hpunch
     $ renpy.movie_cutscene("images/people/adriana.chechik/adriana_bathroom_s01_cum.webm")
-    show img_adriana_bathroom_s01_08 with d1
+    show img_adriana_bathroom_s01_06 with d1
     adriana "Oh no, it's all slipping away. I guess the baby won't be for this time."
     me "That's a shame. And now time for school sweetheart!"
     adriana "Yes daddy... Can't wait till evening."
     me "You're telling me!"
-    hide img_adriana_bathroom_s01_08 with d1
-    show img_adriana_bathroom_s01_07 with d1
+    hide img_adriana_bathroom_s01_06 with d1
+    show img_emily_bathroom_s01_02 with d1
     emily "{size=-7}*Whisper* Time to go too. I was hoping it would last longer, now I need my girlfriend to make me come.{/size}"
-    hide img_adriana_bathroom_s01_07 with d3
+    hide img_emily_bathroom_s01_02 with d3
 
     $ f_intro = False
 
