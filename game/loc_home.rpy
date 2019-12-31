@@ -78,7 +78,7 @@ label lbl_home_bathroom_adriana_s01_01:
             hide vid_adriana_bathroom_s01_bj_02 with d1
             jump lbl_home_bathroom_adriana_s01_01
 
-        "Faster bitch!":
+        "Faster my lovely bitch.":
             show vid_adriana_bathroom_s01_bj_03 with d1
             me "Hmmm yes like that."
             pause
@@ -103,13 +103,14 @@ label lbl_home_bathroom_adriana_s01_02:
     hide vid_adriana_bathroom_s01_vg_01 with d1
     show vid_adriana_bathroom_s01_vg_02 with d1
     adriana "You love my little tits daddy?"
-    me "Oh yeah, and don't worry, they're gonna grow up when you grow up."
+    me "Oh yeah, and don't worry, they're gonna grow up when you're older."
     adriana "I'm sure if you spray them with your cum they'll grow."
     me "Coming in your tight pussy work great too."
     hide vid_adriana_bathroom_s01_vg_02 with d1
     show vid_adriana_bathroom_s01_vg_03 with d1
+    adriana "*Moan* yesss you can come all you want in my pussy, daddy."
     me "You're moaning so much you're going to alert our daughters."
-    adriana "Maybe that's the point."
+    adriana "*Giggle* maybe that's the point."
     me "You perverted filthy whore. I love you so much!"
     hide vid_adriana_bathroom_s01_vg_03 with d1
     show img_adriana_bathroom_s01_05 with vpunch
@@ -120,7 +121,7 @@ label lbl_home_bathroom_adriana_s01_02:
     hide img_adriana_bathroom_s01_05 with d3
     show vid_adriana_bathroom_s01_vg_04 with d3
     adriana "Our lovely little bitch doesn't know what she missing."
-    me "With your help, I'm sure she can learn..."
+    me "With our help, I'm sure she can learn..."
     adriana "You have no idea how wet it makes me thinking about it!"
     me "You'd like that, wouldn't you, watching your daughters get fucked by my big cock?!"
     hide vid_adriana_bathroom_s01_vg_04 with d1
@@ -136,7 +137,7 @@ label lbl_home_bathroom_adriana_s01_02:
     show vid_adriana_bathroom_s01_vg_06 with d1
     me "At your command, princess."
     adriana "Yesss... *moan* yes!"
-    me "You like that don't you, fucking whore?"
+    me "You like that don't you, fucking slut?"
     adriana "*Moan* yes daddy, I like it so much!"
     me "Didn't you hear a noise?"
     hide vid_adriana_bathroom_s01_vg_06 with d1
@@ -153,7 +154,7 @@ label lbl_home_bathroom_adriana_s01_02:
     me "Only because you've been a good girl."
     adriana "And my ass too! Too bad we don't have the time for a good ass fucking."
     me "We'll have plenty of time when you get back from school."
-    adriana "Speaking of school, hurry up and make me come, sadly I gotta go."
+    adriana "Speaking of school, hurry up and make me come, I gotta go."
     hide vid_adriana_bathroom_s01_cun with d1
     show vid_adriana_bathroom_s01_vg_07 with d1
     adriana "You're the best dick in town daddy, I want a daughter from you!"
@@ -180,13 +181,13 @@ label lbl_home_bathroom_adriana_s01_02:
     with hpunch
     $ renpy.movie_cutscene("images/people/adriana.chechik/adriana_bathroom_s01_cum.webm")
     show img_adriana_bathroom_s01_08 with d1
-    adriana "Oh no, it's all slipping away. I guess the baby won't be this time."
+    adriana "Oh no, it's all slipping away. I guess the baby won't be for this time."
     me "That's a shame. And now time for school sweetheart!"
     adriana "Yes daddy... Can't wait till evening."
     me "You're telling me!"
     hide img_adriana_bathroom_s01_08 with d1
     show img_adriana_bathroom_s01_07 with d1
-    emily "{size=-7}*Whisper* Time to go too, I need my girlfriend to make me come.{/size}"
+    emily "{size=-7}*Whisper* Time to go too. I was hoping it would last longer, now I need my girlfriend to make me come.{/size}"
     hide img_adriana_bathroom_s01_07 with d3
 
     jump lbl_college_yard
