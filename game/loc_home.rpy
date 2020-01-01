@@ -1,6 +1,6 @@
 #### LOCATIONS ####
 label lbl_home_bathroom:
-    scene loc_home_bathroom1
+    scene loc_home_bathroom
     jump lbl_home_bathroom_events
 
 label lbl_home_kitchen:
@@ -45,7 +45,13 @@ label lbl_home_room_mc_events:
 
 ### BATHROOM ###
 label lbl_home_bathroom_events:
-    jump lbl_home_living_room
+    $ attendee = func_check_time(v_time, tb_time["home_bathroom"])
+
+    if (attendee == "dakota"):
+        jump lbl_home_bathroom_dakota_s01
+    else:
+        "Nobody here right now."
+        jump lbl_home_living_room
 
 ## Adriana S01 ##
 label lbl_home_bathroom_adriana_s01_01:
@@ -355,4 +361,9 @@ label lbl_home_livingroom_adriana_s01_03:
 
     $ v_time = 1090
     $ f_intro = False
+    jump lbl_home_living_room
+
+label lbl_home_bathroom_dakota_s01:
+    "Test"
+
     jump lbl_home_living_room

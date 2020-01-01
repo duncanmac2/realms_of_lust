@@ -11,6 +11,17 @@
         readable_time = divmod(time, 60)
         return str(readable_time[0]).zfill(2) + ":" + str(readable_time[1]).zfill(2)
 
+    # Check time period
+    def func_check_time(time, tb_time):
+        res = ""
+
+        for t in tb_time:
+            tb_period = t.split("-")
+            if (int(time) < int(tb_period[1]) and int(time) >= int(tb_period[0])):
+                return tb_time[t]
+
+        return res
+
     # Days
     tb_day = ["", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
@@ -37,6 +48,51 @@
     clr_palegold = "#eee8aa"
     clr_blueviolet = "#8a2be2"
     clr_brown_dark = "#331a00"
+
+    # Tables time period
+    tb_time = {"college_yard": {}, "home_backyard": {}, "home_bathroom": {}, "home_kitchen": {}, "home_living_room": {}, "home_pool": {}, "home_room_dakota": {}, "home_room_emily": {}, "home_room_mc": {}}
+    tb_time["college_yard"] = {
+        "480-510": "dakota,emily",
+        "510-1050": "adriana,dakota,emily"
+    }
+    tb_time["home_backyard"] = {
+        "1050-1095": "adriana,dakota,emily"
+    }
+    tb_time["home_bathroom"] = {
+        "420-450": "emily",
+        "450-480": "dakota",
+        "480-510": "adriana",
+        "1170-1200": "emily",
+        "1320-1350": "adriana",
+        "1350-1380": "dakota"
+    }
+    tb_time["home_kitchen"] = {
+        "420-450": "adriana,dakota",
+        "450-480": "adriana,emily",
+        "1125-1140": "adriana",
+        "1140-1170": "adriana,dakota,emily"
+    }
+    tb_time["home_living_room"] = {
+        "1170-1200": "adriana,dakota",
+        "1200-1350": "adriana,dakota,emily",
+        "1350-1380": "emily"
+    }
+    tb_time["home_pool"] = {
+        "1095-1125": "adriana,dakota,emily",
+        "1120-1140": "dakota,emily"
+    }
+    tb_time["home_room_dakota"] = {
+        "0-420": "dakota",
+        "1380-1440": "dakota"
+    }
+    tb_time["home_room_emily"] = {
+        "0-420": "emily",
+        "1380-1440": "emily"
+    }
+    tb_time["home_room_mc"] = {
+        "0-420": "adriana",
+        "1350-1440": "adriana"
+    }
 
     ### IMAGES
     ## NPC
@@ -289,8 +345,8 @@ label start:
     hide screen main_menu
     scene black onlayer background
 
-    jump lbl_censorship
-    #jump lbl_bypass
+    #jump lbl_censorship
+    jump lbl_bypass
 
     "Do you have play previous version and want to jump directly to new content?"
     menu:
@@ -353,7 +409,9 @@ label lbl_intro:
     jump lbl_home_room_mc
 
 label lbl_bypass:
+    $ f_intro = False
+    $ f_pee = True
     $ your_name = "John"
-    $ v_time = 480
+    $ v_time = 1050
 
-    jump lbl_home_room_mc
+    jump lbl_home_living_room
