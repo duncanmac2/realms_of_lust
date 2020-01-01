@@ -100,5 +100,5 @@ label lbl_college_yard:
 label lbl_college_yard_events:
     "The college part will be implemented in the next version."
 
-    $ v_time = 1020
+    $ v_time = 1050
     jump lbl_home_living_room

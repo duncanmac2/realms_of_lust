@@ -355,5 +355,6 @@ label lbl_home_livingroom_adriana_s01_03:
     dakota "Anyway, see you later the old."
     me "The old? Tssss..."
 
+    $ v_time = 1090
     $ f_intro = False
     jump lbl_home_living_room

@@ -207,6 +207,10 @@ image vid_adriana_livingroom_s01_an_03 = Movie(play="images/people/adriana.chech
 image vid_adriana_livingroom_s01_pus = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_pus.webm")
 
 ## Dakota
+# Bathroom S01
+# [InTheCrack] Dakota Skye - Skye Piss Down
+image vid_dakota_bathroom_s01_pee = Movie(play="images/people/dakota.skye/dakota_bathroom_s01_pee.webm")
+
 # Living Room S01
 # [InTheCrack] Dakota Skye - Give Fur the Finger
 image vid_dakota_livingroom_s01_fg_01 = Movie(play="images/people/dakota.skye/dakota_livingroom_s01_fg_01.webm")

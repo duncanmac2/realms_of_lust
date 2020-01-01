@@ -153,7 +153,7 @@ screen scr_navigation:
         xpos 1757
         ypos 10
         xmaximum 153
-        ymaximum 385
+        ymaximum 509
 
         # College
         if v_localisation == "college_yard":
@@ -264,18 +264,30 @@ screen scr_navigation:
 
             imagebutton:
                 ypos 186
+                idle "images/interface/loc_home_bathroom.jpg"
+                hover "images/interface/loc_home_bathroom_hover.jpg"
+                action Jump("lbl_home_room_mc")
+
+            imagebutton:
+                ypos 248
                 idle "images/interface/loc_home_kitchen.jpg"
                 hover "images/interface/loc_home_kitchen_hover.jpg"
                 action Jump("lbl_home_kitchen")
 
             imagebutton:
-                ypos 248
+                ypos 310
+                idle "images/interface/loc_home_backyard.jpg"
+                hover "images/interface/loc_home_backyard_hover.jpg"
+                action Jump("lbl_home_pool")
+
+            imagebutton:
+                ypos 372
                 idle "images/interface/loc_home_pool.jpg"
                 hover "images/interface/loc_home_pool_hover.jpg"
                 action Jump("lbl_home_pool")
 
             imagebutton:
-                ypos 310
+                ypos 434
                 idle "images/interface/loc_city_street_1st.jpg"
                 hover "images/interface/loc_city_street_1st_hover.jpg"
                 action Jump("lbl_city_street_1st")
