@@ -53,14 +53,14 @@
     for i in range(1,7):
         renpy.image("img_adriana_bathroom_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_bathroom_s01_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,2):
+    for i in range(1,5):
         renpy.image("img_adriana_livingroom_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_livingroom_s01_" + str(i).zfill(2) + ".jpg")
 
     # Dakota
     for i in range(1,2):
         renpy.image("img_dakota_portrait_" + str(i).zfill(2), "images/people/dakota.skye/dakota_portrait_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(1,3):
+    for i in range(1,4):
         renpy.image("img_dakota_livingroom_s01_" + str(i).zfill(2), "images/people/dakota.skye/dakota_livingroom_s01_" + str(i).zfill(2) + ".jpg")
 
     # Emily

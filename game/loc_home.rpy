@@ -309,10 +309,51 @@ label lbl_home_livingroom_adriana_s01_03:
     adriana "Don't be silly, now take that dildo and shove it in my ass."
     hide vid_adriana_livingroom_s01_an_02 with d1
     show vid_adriana_livingroom_s01_vg_03 with d1
-    dakota "{size=-7}*Whisper* yes daddy your big thing in my little asshole *moan*."
-    adriana "Yum, two dicks in the same time!"
+    dakota "{size=-7}*Whisper* yes daddy your big thing in my little asshole."
+    adriana "Fuck, two dicks at the same time *moan*{w=0.5} nothing beats it."
     dakota "{size=-7}*Whisper* must be so good..."
     me "Time to switch."
     hide vid_adriana_livingroom_s01_vg_03 with d1
     show vid_adriana_livingroom_s01_an_03 with d1
-    adriana "Even better this way."
+    adriana "*Moan* even better this way."
+    me "You can't live without my dick in your ass, don't you slut?"
+    adriana "I can't *moan*{w=0.5} I can't daddy."
+    dakota "Mommy, you're such a whore!"
+    adriana "Yesss mommy is a filthy whore!"
+    hide vid_adriana_livingroom_s01_an_03 with d1
+    show vid_dakota_livingroom_s01_fg_02 with d1
+    dakota "Watching you two...{w=0.5} sooo good!"
+    me "Daddy is almost here sweetie."
+    adriana "In my mouth, I want it in my mouth!"
+    hide vid_dakota_livingroom_s01_fg_02
+    show img_white
+    pause .1
+    with hpunch
+    hide img_white
+    pause .2
+    show img_white
+    pause .2
+    hide img_white
+    pause .2
+    $ renpy.movie_cutscene("images/people/adriana.chechik/adriana_livingroom_s01_cum_01.webm")
+    show img_adriana_livingroom_s01_02 with d3
+    me "Take that slut!"
+    dakota "*moan* yesss take that mommy you whore!"
+    me "And swallows everything like a good daddy's girl."
+    hide img_adriana_livingroom_s01_02 with d3
+    $ renpy.movie_cutscene("images/people/adriana.chechik/adriana_livingroom_s01_cum_02.webm")
+    show img_adriana_livingroom_s01_03 with d3
+    adriana "Yum, delicious as always daddy."
+    me "I spoil you too much love."
+    adriana "*Giggle*"
+    hide img_adriana_livingroom_s01_03 with d1
+    show img_adriana_livingroom_s01_04 with d1
+    adriana "I know one who enjoyed the show."
+    dakota "Yeaaah maybe."
+    hide img_adriana_livingroom_s01_04 with d1
+    show img_dakota_livingroom_s01_03 with d1
+    dakota "Anyway, see you later the old."
+    me "The old? Tssss..."
+
+    $ f_intro = False
+    jump lbl_home_living_room
