@@ -53,9 +53,15 @@
     for i in range(1,7):
         renpy.image("img_adriana_bathroom_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_bathroom_s01_" + str(i).zfill(2) + ".jpg")
 
+    for i in range(1,2):
+        renpy.image("img_adriana_livingroom_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_livingroom_s01_" + str(i).zfill(2) + ".jpg")
+
     # Dakota
     for i in range(1,2):
         renpy.image("img_dakota_portrait_" + str(i).zfill(2), "images/people/dakota.skye/dakota_portrait_" + str(i).zfill(2) + ".jpg")
+
+    for i in range(1,3):
+        renpy.image("img_dakota_livingroom_s01_" + str(i).zfill(2), "images/people/dakota.skye/dakota_livingroom_s01_" + str(i).zfill(2) + ".jpg")
 
     # Emily
     for i in range(1,2):
@@ -93,6 +99,7 @@ define me = DynamicCharacter("your_name", color = clr_dark_red)
 define adriana = Character("Adriana", color = clr_gray)
 define dakota = Character("Dakota", color = clr_gold)
 define emily = Character("Emily", color = clr_gray)
+define dad_mom = Character("[me] & Adriana", color = clr_dark_red)
 
 define alison = Character("Alison", color = clr_sand)
 define emma = Character("Emma", color = clr_auburn)
@@ -170,7 +177,6 @@ image obj_sarah_playboy_collection = "images/objects/sarah_playboy_collection.jp
 ## Adriana
 # Bathroom S01
 # [RK Prime] Adriana Chechik - Study Break
-
 image vid_adriana_bathroom_s01_cun = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_cun.webm", size=(1920,1080))
 image vid_adriana_bathroom_s01_hj = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_hj.webm", size=(1920,1080))
 image vid_adriana_bathroom_s01_bj_01 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_bj_01.webm", size=(1920,1080))
@@ -186,10 +192,25 @@ image vid_adriana_bathroom_s01_vg_06 = Movie(play="images/people/adriana.chechik
 image vid_adriana_bathroom_s01_vg_07 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_07.webm", size=(1920,1080))
 image vid_adriana_bathroom_s01_vg_08 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_08.webm", size=(1920,1080))
 
+# Living Room S01
+# [EvilAngel] Adriana Chechik - Alien Ass Party 4 - Scene 2
+image vid_adriana_livingroom_s01_bj_01 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_bj_01.webm")
+image vid_adriana_livingroom_s01_bj_02 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_bj_02.webm")
+image vid_adriana_livingroom_s01_bj_03 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_bj_03.webm")
+image vid_adriana_livingroom_s01_bj_04 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_bj_04.webm")
+image vid_adriana_livingroom_s01_vg_01 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_vg_01.webm")
+image vid_adriana_livingroom_s01_vg_02 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_vg_02.webm")
+image vid_adriana_livingroom_s01_vg_03 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_vg_03.webm")
+image vid_adriana_livingroom_s01_an_01 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_an_01.webm")
+image vid_adriana_livingroom_s01_an_02 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_an_02.webm")
+image vid_adriana_livingroom_s01_an_03 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_an_03.webm")
+image vid_adriana_livingroom_s01_pus = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_pus.webm")
+
 ## Dakota
-image vid_dakota_anal_01 = Movie(play="images/people/dakota_skye/dakota_anal_01.webm", size=(1000,562))
-image vid_dakota_anal_02 = Movie(play="images/people/dakota_skye/dakota_anal_02.webm", size=(1000,560))
-image vid_dakota_blowjob_01 = Movie(play="images/people/dakota_skye/dakota_blowjob_01.webm", size=(660,1000))
+# Living Room S01
+# [InTheCrack] Dakota Skye - Give Fur the Finger
+image vid_dakota_livingroom_s01_fg_01 = Movie(play="images/people/dakota.skye/dakota_livingroom_s01_fg_01.webm")
+image vid_dakota_livingroom_s01_fg_02 = Movie(play="images/people/dakota.skye/dakota_livingroom_s01_fg_02.webm")
 
 ## Emily
 # Bathroom S01
