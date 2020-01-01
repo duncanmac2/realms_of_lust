@@ -252,21 +252,21 @@ screen scr_navigation:
 
             imagebutton:
                 ypos 62
-                idle "images/interface/loc_home_room_mia.jpg"
-                hover "images/interface/loc_home_room_mia_hover.jpg"
-                action Jump("lbl_home_room_mia")
+                idle "images/interface/loc_home_room_dakota.jpg"
+                hover "images/interface/loc_home_room_dakota_hover.jpg"
+                action Jump("lbl_home_room_dakota")
 
             imagebutton:
                 ypos 124
-                idle "images/interface/loc_home_room_lisa.jpg"
-                hover "images/interface/loc_home_room_lisa_hover.jpg"
-                action Jump("lbl_home_room_lisa")
+                idle "images/interface/loc_home_room_emily.jpg"
+                hover "images/interface/loc_home_room_emily_hover.jpg"
+                action Jump("lbl_home_room_emily")
 
             imagebutton:
                 ypos 186
                 idle "images/interface/loc_home_bathroom.jpg"
                 hover "images/interface/loc_home_bathroom_hover.jpg"
-                action Jump("lbl_home_room_mc")
+                action Jump("lbl_home_bathroom")
 
             imagebutton:
                 ypos 248
@@ -278,7 +278,7 @@ screen scr_navigation:
                 ypos 310
                 idle "images/interface/loc_home_backyard.jpg"
                 hover "images/interface/loc_home_backyard_hover.jpg"
-                action Jump("lbl_home_pool")
+                action Jump("lbl_home_backyard")
 
             imagebutton:
                 ypos 372

@@ -41,12 +41,7 @@ label lbl_home_room_mc:
 #### EVENTS ####
 ### ROOM MC ###
 label lbl_home_room_mc_events:
-    if f_intro:
-        "The sun is shining through the window."
-        me "What time is it? Shit it's late, the alarm didn't go off. Being late on your first day..."
-        me "I have to take a shower, better hurry."
-
-        jump lbl_home_bathroom
+    jump lbl_home_living_room
 
 ### BATHROOM ###
 label lbl_home_bathroom_events:
@@ -54,6 +49,9 @@ label lbl_home_bathroom_events:
 
 ## Adriana S01 ##
 label lbl_home_bathroom_adriana_s01_01:
+    "The sun is shining through the window."
+    me "What time is it? Shit it's late, the alarm didn't go off. Being late on your first day..."
+    me "I have to take a shower, better hurry."
     scene img_adriana_bathroom_s01_01 with d3
     adriana "Love, you're gonna be late."
     scene img_adriana_bathroom_s01_02 with d1
