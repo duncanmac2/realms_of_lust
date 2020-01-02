@@ -140,6 +140,9 @@
     for i in range(1,3):
         renpy.image("img_emily_bathroom_s01_" + str(i).zfill(2), "images/people/emily.willis/emily_bathroom_s01_" + str(i).zfill(2) + ".jpg")
 
+    for i in range(4,6):
+        renpy.image("img_emily_bathroom_s02_" + str(i).zfill(2), "images/people/emily.willis/emily_bathroom_s02_" + str(i).zfill(2) + ".jpg")
+
     # Kitchen
     # [AmKingdom] 2018.07.03 - Upskirts and Panties
     # [AmKingdom] 2018.06.20 - Coeds
@@ -297,6 +300,15 @@ image vid_dakota_livingroom_s01_fg_02 = Movie(play="images/people/dakota.skye/da
 # [TeensLikeItBig] Emily Willis - Practice Makes A Perfect Slut
 image vid_emily_bathroom_s01_mas = Movie(play="images/people/emily.willis/emily_bathroom_s01_mas.webm")
 
+# Bathroom S02
+# [CherryPimps] 2018.10.18 - Emily Willis - Shower Time Cums so Quick
+image vid_emily_bathroom_s02_01 = Movie(play="images/people/emily.willis/emily_bathroom_s02_01.webm")
+image vid_emily_bathroom_s02_02 = Movie(play="images/people/emily.willis/emily_bathroom_s02_02.webm")
+image vid_emily_bathroom_s02_06 = Movie(play="images/people/emily.willis/emily_bathroom_s02_06.webm")
+image vid_emily_bathroom_s02_fg = Movie(play="images/people/emily.willis/emily_bathroom_s02_fg.webm")
+image vid_emily_bathroom_s02_hj = Movie(play="images/people/emily.willis/emily_bathroom_s02_hj.webm")
+image vid_emily_bathroom_s02_mas = Movie(play="images/people/emily.willis/emily_bathroom_s02_mas.webm")
+
 ## VIDEOS - LOCATION
 # Beach
 image vid_beach_boobs_01 = Movie(play="images/people/beach/beach_boobs_01.webm", size=(1000,742))
@@ -360,6 +372,18 @@ label start:
         "emily": 0,
         "school": 0
     }
+
+    # Events
+    $ tb_events = {"college_yard": {}, "home_backyard": {}, "home_bathroom": {}, "home_kitchen": {}, "home_living_room": {}, "home_pool": {}, "home_room_dakota": {}, "home_room_emily": {}, "home_room_mc": {}}
+    $ tb_events["college_yard"] = { "adriana": False, "dakota": False, "emily": False }
+    $ tb_events["home_backyard"] = { "adriana": False, "dakota": False, "emily": False }
+    $ tb_events["home_bathroom"] = { "adriana": False, "dakota": False, "emily": False }
+    $ tb_events["home_kitchen"] = { "adriana": False, "dakota": False, "emily": False }
+    $ tb_events["home_living_room"] = { "adriana": False, "dakota": False, "emily": False }
+    $ tb_events["home_pool"] = { "adriana": False, "dakota": False, "emily": False }
+    $ tb_events["home_room_dakota"] = { "adriana": False, "dakota": False, "emily": False }
+    $ tb_events["home_room_emily"] = { "adriana": False, "dakota": False, "emily": False }
+    $ tb_events["home_room_mc"] = { "adriana": False, "dakota": False, "emily": False }
 
     # Start
     hide screen main_menu
@@ -436,6 +460,6 @@ label lbl_bypass:
     $ f_intro = False
     $ f_pee = True
     $ your_name = "John"
-    $ v_time = 1050
+    $ v_time = 420
 
     jump lbl_home_living_room

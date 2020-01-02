@@ -50,10 +50,11 @@ label lbl_home_room_mc_events:
 ### BACKYARD ###
 label lbl_home_backyard_events:
     $ attendee = func_check_time(v_time, tb_time["home_backyard"])
-    if (attendee.find("dakota") != -1):
+    if attendee.find("dakota") != -1 and not tb_events["home_backyard"]["dakota"]:
         jump lbl_home_backyard_dakota_s01
-
-    jump lbl_home_living_room
+    else:
+        "Nobody here right now."
+        jump lbl_home_living_room
 
 ## Dakota S01 ##
 label lbl_home_backyard_dakota_s01:
@@ -77,18 +78,6 @@ label lbl_home_backyard_dakota_s01:
             scene img_dakota_backyard_s01_08 with d1
             dakota "Enjoying the show daddy?"
             me "Can't get enough of it sweetie."
-
-            menu:
-                "{color=#858585}-- ??? --{/color}" if tb_stats["lvl"]["dakota"] == 0:
-                    call lbl_not_yet
-                    jump lbl_home_living_room
-
-                "Join her." if tb_stats["lvl"]["dakota"] > 0:
-                    "action"
-                    jump lbl_home_living_room
-
-                "Back inside.":
-                    jump lbl_home_living_room
 
         "Approach her and touch her tight.":
             scene img_dakota_backyard_s01_09 with d3
@@ -121,27 +110,31 @@ label lbl_home_backyard_dakota_s01:
             me "I love you so much sweetie, I might not be able to control myself."
             dakota "Me too daddy."
 
-            menu:
-                "{color=#858585}-- ??? --{/color}" if tb_stats["lvl"]["dakota"] == 0:
-                    call lbl_not_yet
-                    jump lbl_home_living_room
+    $ tb_events["home_backyard"]["dakota"] = True
 
-                "Join her." if tb_stats["lvl"]["dakota"] > 0:
-                    "action"
-                    jump lbl_home_living_room
+    menu:
+        "{color=#858585}-- ??? --{/color}" if tb_stats["lvl"]["dakota"] == 0:
+            call lbl_not_yet
+            jump lbl_home_living_room
 
-                "Back inside.":
-                    jump lbl_home_living_room
+        "Join her." if tb_stats["lvl"]["dakota"] > 0:
+            "action"
+            jump lbl_home_living_room
+
+        "Back inside.":
+            jump lbl_home_living_room
 
 ### BATHROOM ###
 label lbl_home_bathroom_events:
     $ attendee = func_check_time(v_time, tb_time["home_bathroom"])
 
-    if (attendee.find("dakota") != -1):
+    if attendee.find("dakota") != -1 and not tb_events["home_bathroom"]["dakota"]:
         if f_pee:
             jump lbl_home_bathroom_dakota_s01
         else:
             jump lbl_home_living_room
+    elif attendee.find("emily") != -1 and not tb_events["home_bathroom"]["emily"]:
+        jump lbl_home_bathroom_emily_s02_01
     else:
         "Nobody here right now."
         jump lbl_home_living_room
@@ -315,6 +308,8 @@ label lbl_home_bathroom_dakota_s01:
     show img_dakota_bathroom_s01_pee_03
     dakota "Oh, how come you're still here?"
 
+    $ tb_events["home_bathroom"]["dakota"] = True
+
     menu:
         "{color=#858585}-- ??? --{/color}" if tb_stats["lvl"]["dakota"] == 0:
             call lbl_not_yet
@@ -327,10 +322,70 @@ label lbl_home_bathroom_dakota_s01:
         "Go outside.":
             jump lbl_home_living_room
 
+## Emily S02 ##
+label lbl_home_bathroom_emily_s02_01:
+    scene img_black
+    show vid_emily_bathroom_s02_01 with d3
+    window hide
+    pause
+    "Emily is taking a shower."
+
+    $ tb_events["home_bathroom"]["emily"] = True
+
+    menu:
+        "Interrupt her directly.":
+            hide vid_emily_bathroom_s02_01 with d3
+            jump lbl_home_bathroom_emily_s02_02
+
+        "Keep watching silently.":
+            hide vid_emily_bathroom_s02_01 with d3
+            show vid_emily_bathroom_s02_02 with d3
+            pause
+            hide vid_emily_bathroom_s02_02 with d3
+            show vid_emily_bathroom_s02_mas with d3
+            pause
+
+            menu:
+                "{color=#858585}-- ??? --{/color}" if tb_stats["lvl"]["emily"] == 0:
+                    call lbl_not_yet
+                    jump lbl_home_living_room
+
+                "Interrupt her." if tb_stats["lvl"]["emily"] > 0:
+                    hide vid_emily_bathroom_s02_mas with d3
+                    $ renpy.movie_cutscene("images/people/emily.willis/emily_bathroom_s02_03.webm")
+                    show img_emily_bathroom_s02_04 with d1
+                    me "Sweetie?"
+                    hide img_emily_bathroom_s02_04 with d1
+
+                    jump lbl_home_bathroom_emily_s02_02
+
+                "Leave her.":
+                    jump lbl_home_living_room
+
+        "Leave her.":
+            $ tb_events["home_bathroom"]["emily"] = False
+            jump lbl_home_living_room
+
+label lbl_home_bathroom_emily_s02_02:
+    show img_emily_bathroom_s02_05 with d1
+    emily "Daddy! Want to join me?"
+    me "Of course..."
+    hide img_emily_bathroom_s02_05 with d3
+    show vid_emily_bathroom_s02_06 with d3
+    emily "You never miss a chance to play with one of your girls *giggle*."
+    me "Never!"
+    hide img_emily_bathroom_s02_06 with d2
+    show vid_emily_bathroom_s02_fg with d2
+    me "And most of all, I have to make sure my girls are clean."
+    pause
+    hide vid_emily_bathroom_s02_fg with d2
+    show vid_emily_bathroom_s02_hj with d2
+    emily "If it's like that, I'll make sure my daddy's clean too!"
+
 ### KITCHEN ###
 label lbl_home_kitchen_events:
     $ attendee = func_check_time(v_time, tb_time["home_kitchen"])
-    if (attendee.find("emily") != -1):
+    if attendee.find("emily") != -1 and not tb_events["home_kitchen"]["emily"]:
         if v_time < 480:
             jump lbl_home_kitchen_emily_s01
 
@@ -391,6 +446,8 @@ label lbl_home_kitchen_emily_s01:
         emily "Maybe there..."
         scene img_emily_kitchen_s01_21 with d3
         emily "Or maybe in both *giggle*."
+
+    $ tb_events["home_kitchen"]["emily"] = True
 
     menu:
         "{color=#858585}-- ??? --{/color}" if tb_stats["lvl"]["emily"] == 0:
