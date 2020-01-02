@@ -57,9 +57,81 @@ label lbl_home_backyard_events:
 
 ## Dakota S01 ##
 label lbl_home_backyard_dakota_s01:
-    "Test"
+    scene img_dakota_backyard_s01_01 with d3
+    "Dakota is here resting after school."
 
-    jump lbl_home_living_room
+    menu:
+        "You're watching her.":
+            scene img_dakota_backyard_s01_02 with d1
+            "She pretends to be prissy."
+            scene img_dakota_backyard_s01_03 with d1
+            "Only to tease you."
+            scene img_dakota_backyard_s01_04 with d1
+            "With her petite ass."
+            scene img_dakota_backyard_s01_05 with d1
+            "And her tight pussy."
+            scene img_dakota_backyard_s01_06 with d1
+            "And her small tits."
+            scene img_dakota_backyard_s01_07 with d1
+            "And her tight asshole..."
+            scene img_dakota_backyard_s01_08 with d1
+            dakota "Enjoying the show daddy?"
+            me "Can't get enough of it sweetie."
+
+            menu:
+                "{color=#858585}-- ??? --{/color}" if tb_stats["lvl"]["dakota"] == 0:
+                    call lbl_not_yet
+                    jump lbl_home_living_room
+
+                "Join her." if tb_stats["lvl"]["dakota"] > 0:
+                    "action"
+                    jump lbl_home_living_room
+
+                "Back inside.":
+                    jump lbl_home_living_room
+
+        "Approach her and touch her tight.":
+            scene img_dakota_backyard_s01_09 with d3
+            dakota "Daddy?"
+            scene img_dakota_backyard_s01_10 with d3
+            me "Yes sweetie?"
+            dakota "Can I see your muscles?"
+            me "Only if you show me your tits."
+            scene img_dakota_backyard_s01_11 with d3
+            dakota "Who'd like to see my small boobs?"
+            scene img_dakota_backyard_s01_12 with d3
+            me "Your daddy of course. Give me a kiss."
+            scene img_dakota_backyard_s01_13 with d3
+            dakota "*Moan*"
+            scene img_dakota_backyard_s01_14 with d3
+            dakota "*Slurp*"
+            scene img_dakota_backyard_s01_15 with d3
+            dakota "Ahhh daddy."
+            scene img_dakota_backyard_s01_16 with d3
+            dakota "Mmmmh."
+            scene img_dakota_backyard_s01_17 with d3
+            dakota "Do you like them?"
+            scene img_dakota_backyard_s01_18 with d3
+            me "They are so pretty you know."
+            scene img_dakota_backyard_s01_19 with d3
+            dakota "Thamkm."
+            scene img_dakota_backyard_s01_20 with d3
+            dakota "Bad daddy! Just because you just paid me a compliment doesn't mean you should try to go down *giggle*."
+            scene img_dakota_backyard_s01_21 with d3
+            me "I love you so much sweetie, I might not be able to control myself."
+            dakota "Me too daddy."
+
+            menu:
+                "{color=#858585}-- ??? --{/color}" if tb_stats["lvl"]["dakota"] == 0:
+                    call lbl_not_yet
+                    jump lbl_home_living_room
+
+                "Join her." if tb_stats["lvl"]["dakota"] > 0:
+                    "action"
+                    jump lbl_home_living_room
+
+                "Back inside.":
+                    jump lbl_home_living_room
 
 ### BATHROOM ###
 label lbl_home_bathroom_events:

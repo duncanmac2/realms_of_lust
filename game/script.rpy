@@ -121,7 +121,7 @@
 
     # Backyard
     # [SweetSinner.com] Dakota Skye - Solo & Softcore Set for Student Bodies 3 - Scene 4
-    for i in range(1,15):
+    for i in range(1,22):
         renpy.image("img_dakota_backyard_s01_" + str(i).zfill(2), "images/people/dakota.skye/dakota_backyard_s01_" + str(i).zfill(2) + ".jpg")
 
     # Bathroom
