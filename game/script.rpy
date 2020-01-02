@@ -95,8 +95,8 @@
     }
 
     ### IMAGES
-    ## NPC
-    # Adriana
+    ## Adriana ##
+    # Others
     for i in range(1,3):
         renpy.image("img_adriana_portrait_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_portrait_" + str(i).zfill(2) + ".jpg")
 
@@ -106,30 +106,41 @@
     for i in range(1,2):
         renpy.image("img_adriana_slut_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_slut_" + str(i).zfill(2) + ".jpg")
 
+    # Bathroom
     for i in range(1,7):
         renpy.image("img_adriana_bathroom_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_bathroom_s01_" + str(i).zfill(2) + ".jpg")
 
+    # Living Room
     for i in range(1,5):
         renpy.image("img_adriana_livingroom_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_livingroom_s01_" + str(i).zfill(2) + ".jpg")
 
-    # Dakota
+    ## Dakota ##
+    # Others
     for i in range(1,2):
         renpy.image("img_dakota_portrait_" + str(i).zfill(2), "images/people/dakota.skye/dakota_portrait_" + str(i).zfill(2) + ".jpg")
 
+    # Backyard
+    # [SweetSinner.com] Dakota Skye - Solo & Softcore Set for Student Bodies 3 - Scene 4
+    for i in range(1,15):
+        renpy.image("img_dakota_backyard_s01_" + str(i).zfill(2), "images/people/dakota.skye/dakota_backyard_s01_" + str(i).zfill(2) + ".jpg")
+
+    # Bathroom
     renpy.image("img_dakota_bathroom_s01_pee_03", "images/people/dakota.skye/dakota_bathroom_s01_pee_03.jpg")
 
+    # Living Room
     for i in range(1,4):
         renpy.image("img_dakota_livingroom_s01_" + str(i).zfill(2), "images/people/dakota.skye/dakota_livingroom_s01_" + str(i).zfill(2) + ".jpg")
 
-    # Emily
+    ## Emily ##
+    # Others
     for i in range(1,2):
         renpy.image("img_emily_portrait_" + str(i).zfill(2), "images/people/emily.willis/emily_portrait_" + str(i).zfill(2) + ".jpg")
 
+    # Bathroom
     for i in range(1,3):
         renpy.image("img_emily_bathroom_s01_" + str(i).zfill(2), "images/people/emily.willis/emily_bathroom_s01_" + str(i).zfill(2) + ".jpg")
 
-    ## NPC OTHERS
-
+    ## NPC OTHERS ##
     ## BEACH
     renpy.image("img_beach_nude_01", "images/people/beach/beach_nude_01.jpg")
     renpy.image("img_beach_nude_02", "images/people/beach/beach_nude_02.jpg")
@@ -183,6 +194,7 @@ image img_warning = "images/interface/warning.png"
 
 ## LOCATIONS
 # Home
+image loc_home_backyard = "images/location/loc_home_backyard.jpg"
 image loc_home_bathroom = "images/location/loc_home_bathroom.jpg"
 image loc_home_kitchen = "images/location/loc_home_kitchen.jpg"
 image loc_home_living_room = "images/location/loc_home_living_room.jpg"

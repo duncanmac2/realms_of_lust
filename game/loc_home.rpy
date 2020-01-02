@@ -1,4 +1,8 @@
 #### LOCATIONS ####
+label lbl_home_backyard:
+    scene loc_home_backyard
+    jump lbl_home_backyard_events
+
 label lbl_home_bathroom:
     scene loc_home_bathroom
     jump lbl_home_bathroom_events
@@ -43,11 +47,25 @@ label lbl_home_room_mc:
 label lbl_home_room_mc_events:
     jump lbl_home_living_room
 
+### BACKYARD ###
+label lbl_home_backyard_events:
+    $ attendee = func_check_time(v_time, tb_time["home_backyard"])
+    if (attendee.find("dakota") != -1):
+        jump lbl_home_backyard_dakota_s01
+
+    jump lbl_home_living_room
+
+## Dakota S01 ##
+label lbl_home_backyard_dakota_s01:
+    "Test"
+
+    jump lbl_home_living_room
+
 ### BATHROOM ###
 label lbl_home_bathroom_events:
     $ attendee = func_check_time(v_time, tb_time["home_bathroom"])
 
-    if (attendee == "dakota"):
+    if (attendee.find("dakota") != -1):
         if f_pee:
             jump lbl_home_bathroom_dakota_s01
         else:
@@ -211,6 +229,32 @@ label lbl_home_bathroom_adriana_s01_03:
 
     jump lbl_college_yard
 
+## Dakota S01 ##
+label lbl_home_bathroom_dakota_s01:
+    scene img_black
+    show vid_dakota_bathroom_s01_pee_01 with d5
+    me "What are you..."
+    dakota "I'm just peeing in the bathtub, daddy. Don't pretend you don't like it."
+    me "Hehe, I will not."
+    window hide
+    pause
+    hide vid_dakota_bathroom_s01_pee_01 with d3
+    $ renpy.movie_cutscene("images/people/dakota.skye/dakota_bathroom_s01_pee_02.webm")
+    show img_dakota_bathroom_s01_pee_03
+    dakota "Oh, how come you're still here?"
+
+    menu:
+        "{color=#858585}-- ??? --{/color}" if tb_stats["lvl"]["dakota"] == 0:
+            call lbl_not_yet
+            jump lbl_home_living_room
+
+        "Join her." if tb_stats["lvl"]["dakota"] > 0:
+            "action"
+            jump lbl_home_living_room
+
+        "Go outside.":
+            jump lbl_home_living_room
+
 ### LIVING ROOM ###
 ## Adriana S01 ##
 label lbl_home_livingroom_adriana_s01_01:
@@ -365,28 +409,3 @@ label lbl_home_livingroom_adriana_s01_03:
     $ v_time = 1090
     $ f_intro = False
     jump lbl_home_living_room
-
-label lbl_home_bathroom_dakota_s01:
-    scene img_black
-    show vid_dakota_bathroom_s01_pee_01 with d5
-    me "What are you..."
-    dakota "I'm just peeing in the bathtub, daddy. Don't pretend you don't like it."
-    me "Hehe, I will not."
-    window hide
-    pause
-    hide vid_dakota_bathroom_s01_pee_01 with d3
-    $ renpy.movie_cutscene("images/people/dakota.skye/dakota_bathroom_s01_pee_02.webm")
-    show img_dakota_bathroom_s01_pee_03
-    dakota "Oh, how come you're still here?"
-
-    menu:
-        "{color=#858585}-- ??? --{/color}" if tb_stats["lvl"]["dakota"] == 0:
-            call lbl_not_yet
-            jump lbl_home_living_room
-
-        "Join her." if tb_stats["lvl"]["dakota"] > 0:
-            "action"
-            jump lbl_home_living_room
-
-        "Go outside.":
-            jump lbl_home_living_room
