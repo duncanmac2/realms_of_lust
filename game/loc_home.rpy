@@ -327,6 +327,85 @@ label lbl_home_bathroom_dakota_s01:
         "Go outside.":
             jump lbl_home_living_room
 
+### KITCHEN ###
+label lbl_home_kitchen_events:
+    $ attendee = func_check_time(v_time, tb_time["home_kitchen"])
+    if (attendee.find("emily") != -1):
+        if v_time < 480:
+            jump lbl_home_kitchen_emily_s01
+
+    jump lbl_home_living_room
+
+## Emily S01 ##
+label lbl_home_kitchen_emily_s01:
+    $ rand = renpy.random.randint(1,2)
+    if rand == 1:
+        scene img_emily_kitchen_s01_01 with d3
+        emily "You don't look so good, daddy."
+        me "You know I'm not a morning person sweetie, and besides, I have to get to work..."
+        emily "College is fun! But don't worry, I've got something to cheer you up."
+        scene img_emily_kitchen_s01_02 with d3
+        me "Oh, just what I needed."
+        scene img_emily_kitchen_s01_03 with d3
+        emily "Do you like my pussy, daddy?"
+        me "How a father couldn't like her daughter's pussy?"
+        emily "*Giggle* true."
+        scene img_emily_kitchen_s01_04 with d3
+        emily "And my small tits?"
+        me "I love everything about you, sweetheart."
+        scene img_emily_kitchen_s01_05 with d3
+        emily "I love everything about you too, daddy."
+        if tb_stats["lvl"]["emily"] > 0:
+            emily "Especially your big fat dick *moan*."
+        scene img_emily_kitchen_s01_06 with d3
+        me "You know I have to stop myself very hard from taking my dick out and sticking it in your cunt."
+        scene img_emily_kitchen_s01_07 with d3
+        emily "You mean in that cunt *giggle*?"
+        scene img_emily_kitchen_s01_08 with d3
+        emily "Or maybe in my tight asshole?"
+        scene img_emily_kitchen_s01_09 with d3
+        emily "I like to tease you like this."
+        scene img_emily_kitchen_s01_10 with d3
+        emily "Mmmmmh."
+        scene img_emily_kitchen_s01_11 with d3
+        me "You're killing me, sweetie."
+
+    else:
+        scene img_emily_kitchen_s01_12 with d3
+        emily "Daddy, I put on a little show for you before you go to work."
+        scene img_emily_kitchen_s01_13 with d3
+        emily "First my small tits."
+        scene img_emily_kitchen_s01_14 with d3
+        emily "I love groping them."
+        scene img_emily_kitchen_s01_15 with d3
+        emily "Hard *moan*."
+        scene img_emily_kitchen_s01_16 with d3
+        emily "I put those panties especially for you daddy."
+        scene img_emily_kitchen_s01_17 with d3
+        emily "*Moan* I love doing that."
+        scene img_emily_kitchen_s01_18 with d3
+        emily "It feels so good when you look at me with that longing look in your eye."
+        scene img_emily_kitchen_s01_19 with d3
+        emily "I know exactly what you're thinking..."
+        scene img_emily_kitchen_s01_20 with d3
+        emily "Maybe there..."
+        scene img_emily_kitchen_s01_21 with d3
+        emily "Or maybe in both *giggle*."
+
+    menu:
+        "{color=#858585}-- ??? --{/color}" if tb_stats["lvl"]["emily"] == 0:
+            call lbl_not_yet
+            jump lbl_home_living_room
+
+        "Join her." if tb_stats["lvl"]["dakota"] > 0:
+            "action"
+            jump lbl_home_living_room
+
+        "Go outside.":
+            jump lbl_home_living_room
+
+    jump lbl_home_living_room
+
 ### LIVING ROOM ###
 ## Adriana S01 ##
 label lbl_home_livingroom_adriana_s01_01:

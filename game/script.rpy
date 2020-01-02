@@ -140,6 +140,12 @@
     for i in range(1,3):
         renpy.image("img_emily_bathroom_s01_" + str(i).zfill(2), "images/people/emily.willis/emily_bathroom_s01_" + str(i).zfill(2) + ".jpg")
 
+    # Kitchen
+    # [AmKingdom] 2018.07.03 - Upskirts and Panties
+    # [AmKingdom] 2018.06.20 - Coeds
+    for i in range(1,22):
+        renpy.image("img_emily_kitchen_s01_" + str(i).zfill(2), "images/people/emily.willis/emily_kitchen_s01_" + str(i).zfill(2) + ".jpg")
+
     ## NPC OTHERS ##
     ## BEACH
     renpy.image("img_beach_nude_01", "images/people/beach/beach_nude_01.jpg")
