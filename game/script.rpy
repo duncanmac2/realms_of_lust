@@ -140,7 +140,7 @@
     for i in range(1,3):
         renpy.image("img_emily_bathroom_s01_" + str(i).zfill(2), "images/people/emily.willis/emily_bathroom_s01_" + str(i).zfill(2) + ".jpg")
 
-    for i in range(4,6):
+    for i in range(4,9):
         renpy.image("img_emily_bathroom_s02_" + str(i).zfill(2), "images/people/emily.willis/emily_bathroom_s02_" + str(i).zfill(2) + ".jpg")
 
     # Kitchen
@@ -253,7 +253,7 @@ image obj_pills = "images/objects/pills.jpg"
 image obj_sarah_playboy_collection = "images/objects/sarah_playboy_collection.jpg"
 
 ### VIDEOS - NPC
-## Adriana
+## Adriana ##
 # Bathroom S01
 # [RK Prime] Adriana Chechik - Study Break
 image vid_adriana_bathroom_s01_cun = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_cun.webm", size=(1920,1080))
@@ -285,7 +285,7 @@ image vid_adriana_livingroom_s01_an_02 = Movie(play="images/people/adriana.chech
 image vid_adriana_livingroom_s01_an_03 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_an_03.webm")
 image vid_adriana_livingroom_s01_pus = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_pus.webm")
 
-## Dakota
+## Dakota ##
 # Bathroom S01
 # [InTheCrack] Dakota Skye - Skye Piss Down
 image vid_dakota_bathroom_s01_pee_01 = Movie(play="images/people/dakota.skye/dakota_bathroom_s01_pee_01.webm")
@@ -295,7 +295,7 @@ image vid_dakota_bathroom_s01_pee_01 = Movie(play="images/people/dakota.skye/dak
 image vid_dakota_livingroom_s01_fg_01 = Movie(play="images/people/dakota.skye/dakota_livingroom_s01_fg_01.webm")
 image vid_dakota_livingroom_s01_fg_02 = Movie(play="images/people/dakota.skye/dakota_livingroom_s01_fg_02.webm")
 
-## Emily
+## Emily ##
 # Bathroom S01
 # [TeensLikeItBig] Emily Willis - Practice Makes A Perfect Slut
 image vid_emily_bathroom_s01_mas = Movie(play="images/people/emily.willis/emily_bathroom_s01_mas.webm")
@@ -304,10 +304,17 @@ image vid_emily_bathroom_s01_mas = Movie(play="images/people/emily.willis/emily_
 # [CherryPimps] 2018.10.18 - Emily Willis - Shower Time Cums so Quick
 image vid_emily_bathroom_s02_01 = Movie(play="images/people/emily.willis/emily_bathroom_s02_01.webm")
 image vid_emily_bathroom_s02_02 = Movie(play="images/people/emily.willis/emily_bathroom_s02_02.webm")
-image vid_emily_bathroom_s02_06 = Movie(play="images/people/emily.willis/emily_bathroom_s02_06.webm")
+image vid_emily_bathroom_s02_k = Movie(play="images/people/emily.willis/emily_bathroom_s02_k.webm")
+image vid_emily_bathroom_s02_bj_01 = Movie(play="images/people/emily.willis/emily_bathroom_s02_bj_01.webm")
+image vid_emily_bathroom_s02_bj_02 = Movie(play="images/people/emily.willis/emily_bathroom_s02_bj_02.webm")
+image vid_emily_bathroom_s02_bj_03 = Movie(play="images/people/emily.willis/emily_bathroom_s02_bj_03.webm")
+image vid_emily_bathroom_s02_cun = Movie(play="images/people/emily.willis/emily_bathroom_s02_cun.webm")
 image vid_emily_bathroom_s02_fg = Movie(play="images/people/emily.willis/emily_bathroom_s02_fg.webm")
 image vid_emily_bathroom_s02_hj = Movie(play="images/people/emily.willis/emily_bathroom_s02_hj.webm")
 image vid_emily_bathroom_s02_mas = Movie(play="images/people/emily.willis/emily_bathroom_s02_mas.webm")
+image vid_emily_bathroom_s02_vg_01 = Movie(play="images/people/emily.willis/emily_bathroom_s02_vg_01.webm")
+image vid_emily_bathroom_s02_vg_02 = Movie(play="images/people/emily.willis/emily_bathroom_s02_vg_02.webm")
+image vid_emily_bathroom_s02_vg_03 = Movie(play="images/people/emily.willis/emily_bathroom_s02_vg_03.webm")
 
 ## VIDEOS - LOCATION
 # Beach

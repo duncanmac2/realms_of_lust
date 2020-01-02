@@ -333,7 +333,7 @@ label lbl_home_bathroom_emily_s02_01:
     $ tb_events["home_bathroom"]["emily"] = True
 
     menu:
-        "Interrupt her directly.":
+        "Interrupt her directly." if tb_stats["lvl"]["emily"] > 0:
             hide vid_emily_bathroom_s02_01 with d3
             jump lbl_home_bathroom_emily_s02_02
 
@@ -347,6 +347,7 @@ label lbl_home_bathroom_emily_s02_01:
 
             menu:
                 "{color=#858585}-- ??? --{/color}" if tb_stats["lvl"]["emily"] == 0:
+                    hide vid_emily_bathroom_s02_mas with d3
                     call lbl_not_yet
                     jump lbl_home_living_room
 
@@ -371,16 +372,95 @@ label lbl_home_bathroom_emily_s02_02:
     emily "Daddy! Want to join me?"
     me "Of course..."
     hide img_emily_bathroom_s02_05 with d3
-    show vid_emily_bathroom_s02_06 with d3
+    show vid_emily_bathroom_s02_k with d3
     emily "You never miss a chance to play with one of your girls *giggle*."
     me "Never!"
-    hide img_emily_bathroom_s02_06 with d2
+    hide vid_emily_bathroom_s02_k with d2
     show vid_emily_bathroom_s02_fg with d2
     me "And most of all, I have to make sure my girls are clean."
     pause
     hide vid_emily_bathroom_s02_fg with d2
     show vid_emily_bathroom_s02_hj with d2
     emily "If it's like that, I'll make sure my daddy's clean too!"
+    me "I have a better tool at my disposal for this job."
+    hide vid_emily_bathroom_s02_hj with d2
+    show vid_emily_bathroom_s02_bj_01 with d2
+    me "Like that sweetie, clean your father dick with your mouth."
+    hide vid_emily_bathroom_s02_bj_01 with d2
+    show img_emily_bathroom_s02_06 with d2
+    me "Now that we're all clean, daddy can take care of your pussy."
+    hide img_emily_bathroom_s02_06 with d3
+    show vid_emily_bathroom_s02_cun with d3
+    emily "Yesss dadddyy *moan*{w=3.0} eat my neat pussy."
+
+    $ tmp_count = 0
+    jump lbl_home_bathroom_emily_s02_03
+
+
+label lbl_home_bathroom_emily_s02_03:
+    menu:
+        "{color=#858585}-- ??? --{/color}" if tb_stats["lvl"]["emily"] == 1:
+            call lbl_not_yet
+            jump lbl_home_bathroom_emily_s02_03
+
+        "I think my cock's not shiny enough.":
+            show vid_emily_bathroom_s02_bj_02 with d3
+            me "Makes it shine my little whore."
+            hide vid_emily_bathroom_s02_bj_02 with d3
+
+            $ tmp_count += 1
+            jump lbl_home_bathroom_emily_s02_03
+
+        "Not shiny {b}enough{/b}!" if tmp_count >= 1:
+            show vid_emily_bathroom_s02_bj_03 with d3
+            me "You'll have to excuse me, you suck too well to pass it up."
+            emily "*Moan*"
+            hide vid_emily_bathroom_s02_bj_03 with d3
+
+            $ tmp_count += 1
+            jump lbl_home_bathroom_emily_s02_03
+
+        "I gonna have to clean your pussy more thoroughly." if tb_stats["lvl"]["emily"] > 1:
+            show vid_emily_bathroom_s02_vg_01 with d3
+            me "You like it deep don't you slut?"
+            emily "Yesss daddy *moan*{w=0.5} deep and hard."
+            me "Just like your whore mother."
+            emily "Just like mommy!"
+            hide vid_emily_bathroom_s02_vg_01 with d3
+
+            $ tmp_count += 1
+            jump lbl_home_bathroom_emily_s02_03
+
+        "I'll sweep your baby hole." if tb_stats["lvl"]["emily"] > 1:
+            show vid_emily_bathroom_s02_vg_02 with d3
+            me "Do my big tool feels good?"
+            emily "Ahhh *moan* aah...{w=0.5} best tool in the world."
+            pause
+            hide vid_emily_bathroom_s02_vg_02 with d3
+
+            $ tmp_count += 1
+            jump lbl_home_bathroom_emily_s02_03
+
+        "I'm gonna make you come, sweetie." if tb_stats["lvl"]["emily"] > 1:
+            show vid_emily_bathroom_s02_vg_03 with d3
+            emily "Yesss daddy *moan* yesss!"
+            hide vid_emily_bathroom_s02_vg_03 with d3
+
+            $ tmp_count += 1
+            jump lbl_home_bathroom_emily_s02_03
+
+        "Now for the finishing touch." if tmp_count >= 2:
+            hide vid_emily_bathroom_s02_cun
+            $ renpy.movie_cutscene("images/people/emily.willis/emily_bathroom_s02_cum_01.webm")
+            show img_emily_bathroom_s02_07 with d1
+            me "Swallow it all my whore princess."
+            hide img_emily_bathroom_s02_07 with d1
+            $ renpy.movie_cutscene("images/people/emily.willis/emily_bathroom_s02_cum_02.webm")
+            show img_emily_bathroom_s02_08 with d1
+            me "Good girl!"
+            emily "For you always, daddy."
+
+            jump lbl_home_living_room
 
 ### KITCHEN ###
 label lbl_home_kitchen_events:
@@ -454,7 +534,7 @@ label lbl_home_kitchen_emily_s01:
             call lbl_not_yet
             jump lbl_home_living_room
 
-        "Join her." if tb_stats["lvl"]["dakota"] > 0:
+        "Join her." if tb_stats["lvl"]["emily"] > 0:
             "action"
             jump lbl_home_living_room
 
