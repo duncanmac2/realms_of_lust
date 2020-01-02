@@ -116,6 +116,8 @@
     for i in range(1,2):
         renpy.image("img_dakota_portrait_" + str(i).zfill(2), "images/people/dakota.skye/dakota_portrait_" + str(i).zfill(2) + ".jpg")
 
+    renpy.image("img_dakota_bathroom_s01_pee_03", "images/people/dakota.skye/dakota_bathroom_s01_pee_03.jpg")
+
     for i in range(1,4):
         renpy.image("img_dakota_livingroom_s01_" + str(i).zfill(2), "images/people/dakota.skye/dakota_livingroom_s01_" + str(i).zfill(2) + ".jpg")
 
@@ -265,7 +267,7 @@ image vid_adriana_livingroom_s01_pus = Movie(play="images/people/adriana.chechik
 ## Dakota
 # Bathroom S01
 # [InTheCrack] Dakota Skye - Skye Piss Down
-image vid_dakota_bathroom_s01_pee = Movie(play="images/people/dakota.skye/dakota_bathroom_s01_pee.webm")
+image vid_dakota_bathroom_s01_pee_01 = Movie(play="images/people/dakota.skye/dakota_bathroom_s01_pee_01.webm")
 
 # Living Room S01
 # [InTheCrack] Dakota Skye - Give Fur the Finger
@@ -385,6 +387,10 @@ label lbl_name_input:
             jump lbl_bypass
         else:
             jump lbl_intro
+
+label lbl_not_yet:
+    "I have to corrupt her further first."
+    return
 
 label lbl_intro:
     scene img_intro_01 with d3
