@@ -465,9 +465,68 @@ label lbl_home_bathroom_emily_s02_03:
 ### KITCHEN ###
 label lbl_home_kitchen_events:
     $ attendee = func_check_time(v_time, tb_time["home_kitchen"])
-    if attendee.find("emily") != -1 and not tb_events["home_kitchen"]["emily"]:
-        if v_time < 480:
-            jump lbl_home_kitchen_emily_s01
+
+    if attendee.find("emily") != -1 and not tb_events["home_kitchen"]["emily"] and v_time < 480:
+        jump lbl_home_kitchen_emily_s01
+    elif attendee.find("adriana") != -1 and not tb_events["home_kitchen"]["adriana"] and v_time >= 1140:
+        jump lbl_home_kitchen_adriana_s01
+    else:
+        if v_time >= 420 and v_time < 480:
+            "You're having breakfast with your family."
+            $ v_time = 480
+            jump lbl_home_living_room
+        elif v_time >= 1125 and v_time < 1140:
+            "Adriana is making dinner."
+            menu:
+                "Help her.":
+                    "You prepare the meal with your wife, who is very grateful."
+                    $ v_time = 1140
+                    jump lbl_home_kitchen_events
+                "Leave.":
+                    jump lbl_home_living_room
+        elif v_time >= 1140 and v_time < 1170:
+            "You're having dinner with your family."
+            $ v_time = 1170
+            jump lbl_home_living_room
+        else:
+            "Nobody here right now."
+            jump lbl_home_living_room
+
+## Adriana S01 ##
+label lbl_home_kitchen_adriana_s01:
+    scene img_adriana_kitchen_s01_02 with d3
+    me "Love?"
+    adriana "Yes?"
+    me "You seem \"distracted\"."
+    scene img_black
+    show vid_adriana_kitchen_s01_01
+    adriana "Not at all, what makes you think that?"
+    dakota "More like \"in heat\"."
+    emily "*Giggle*"
+    me "Girls..."
+    adriana "Come and join me quickly!"
+    dakota "I know one who's gonna get her pussy destroyed."
+    emily "*Giggle*"
+    me "Two minutes, I finish your delicious meal and I'm all yours."
+    hide vid_adriana_kitchen_s01_01 with d3
+    show vid_adriana_kitchen_s01_mas with d3
+    adriana "Two minutes, they're long his two minutes."
+    window hide
+    pause
+    adriana "Finally?"
+    hide vid_adriana_kitchen_s01_mas with d3
+    show img_adriana_kitchen_s01_03 with d3
+    adriana "Well?"
+    hide img_adriana_kitchen_s01_03 with d3
+    show img_adriana_kitchen_s01_04 with d3
+    me "I'm coming, I'm coming."
+    hide img_adriana_kitchen_s01_04 with d1
+    show img_adriana_kitchen_s01_05 with d1
+    adriana "I'm done waiting."
+    me "You really a bitch in heat."
+    adriana "{b}Your{/b} bitch in heat."
+
+    $ tb_events["home_kitchen"]["adriana"] = True
 
     jump lbl_home_living_room
 

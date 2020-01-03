@@ -95,6 +95,7 @@
     }
 
     ### IMAGES
+    #############
     ## Adriana ##
     # Others
     for i in range(1,3):
@@ -110,10 +111,15 @@
     for i in range(1,7):
         renpy.image("img_adriana_bathroom_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_bathroom_s01_" + str(i).zfill(2) + ".jpg")
 
+    # Kitchen
+    for i in range(2,6):
+        renpy.image("img_adriana_kitchen_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_kitchen_s01_" + str(i).zfill(2) + ".jpg")
+
     # Living Room
     for i in range(1,5):
         renpy.image("img_adriana_livingroom_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_livingroom_s01_" + str(i).zfill(2) + ".jpg")
 
+    ############
     ## Dakota ##
     # Others
     for i in range(1,2):
@@ -131,6 +137,7 @@
     for i in range(1,4):
         renpy.image("img_dakota_livingroom_s01_" + str(i).zfill(2), "images/people/dakota.skye/dakota_livingroom_s01_" + str(i).zfill(2) + ".jpg")
 
+    ###########
     ## Emily ##
     # Others
     for i in range(1,2):
@@ -149,6 +156,7 @@
     for i in range(1,22):
         renpy.image("img_emily_kitchen_s01_" + str(i).zfill(2), "images/people/emily.willis/emily_kitchen_s01_" + str(i).zfill(2) + ".jpg")
 
+    ################
     ## NPC OTHERS ##
     ## BEACH
     renpy.image("img_beach_nude_01", "images/people/beach/beach_nude_01.jpg")
@@ -270,6 +278,11 @@ image vid_adriana_bathroom_s01_vg_05 = Movie(play="images/people/adriana.chechik
 image vid_adriana_bathroom_s01_vg_06 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_06.webm", size=(1920,1080))
 image vid_adriana_bathroom_s01_vg_07 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_07.webm", size=(1920,1080))
 image vid_adriana_bathroom_s01_vg_08 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_08.webm", size=(1920,1080))
+
+# Kitchen
+# [DigitalPlayground] Adriana Chechik - Home From College
+image vid_adriana_kitchen_s01_01 = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_01.webm")
+image vid_adriana_kitchen_s01_mas = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_mas.webm")
 
 # Living Room S01
 # [EvilAngel] Adriana Chechik - Alien Ass Party 4 - Scene 2
