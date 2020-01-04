@@ -112,7 +112,7 @@
         renpy.image("img_adriana_bathroom_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_bathroom_s01_" + str(i).zfill(2) + ".jpg")
 
     # Kitchen
-    for i in range(2,6):
+    for i in range(2,12):
         renpy.image("img_adriana_kitchen_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_kitchen_s01_" + str(i).zfill(2) + ".jpg")
 
     # Living Room
@@ -261,6 +261,7 @@ image obj_pills = "images/objects/pills.jpg"
 image obj_sarah_playboy_collection = "images/objects/sarah_playboy_collection.jpg"
 
 ### VIDEOS - NPC
+#############
 ## Adriana ##
 # Bathroom S01
 # [RK Prime] Adriana Chechik - Study Break
@@ -282,7 +283,14 @@ image vid_adriana_bathroom_s01_vg_08 = Movie(play="images/people/adriana.chechik
 # Kitchen
 # [DigitalPlayground] Adriana Chechik - Home From College
 image vid_adriana_kitchen_s01_01 = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_01.webm")
+image vid_adriana_kitchen_s01_bj = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_bj.webm")
+image vid_adriana_kitchen_s01_cun = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_cun.webm")
+image vid_adriana_kitchen_s01_fg = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_fg.webm")
 image vid_adriana_kitchen_s01_mas = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_mas.webm")
+image vid_adriana_kitchen_s01_vg_01 = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_vg_01.webm")
+image vid_adriana_kitchen_s01_vg_02 = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_vg_02.webm")
+image vid_adriana_kitchen_s01_vg_03 = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_vg_03.webm")
+image vid_adriana_kitchen_s01_vg_04 = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_vg_04.webm")
 
 # Living Room S01
 # [EvilAngel] Adriana Chechik - Alien Ass Party 4 - Scene 2
@@ -298,16 +306,22 @@ image vid_adriana_livingroom_s01_an_02 = Movie(play="images/people/adriana.chech
 image vid_adriana_livingroom_s01_an_03 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_an_03.webm")
 image vid_adriana_livingroom_s01_pus = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_pus.webm")
 
+############
 ## Dakota ##
 # Bathroom S01
 # [InTheCrack] Dakota Skye - Skye Piss Down
 image vid_dakota_bathroom_s01_pee_01 = Movie(play="images/people/dakota.skye/dakota_bathroom_s01_pee_01.webm")
+
+# Kitchen S01
+# [ALSScan] Dakota Skye - Virgin Toy
+image vid_dakota_bathroom_s01_mas = Movie(play="images/people/dakota.skye/dakota_kitchen_s01_mas.webm")
 
 # Living Room S01
 # [InTheCrack] Dakota Skye - Give Fur the Finger
 image vid_dakota_livingroom_s01_fg_01 = Movie(play="images/people/dakota.skye/dakota_livingroom_s01_fg_01.webm")
 image vid_dakota_livingroom_s01_fg_02 = Movie(play="images/people/dakota.skye/dakota_livingroom_s01_fg_02.webm")
 
+###########
 ## Emily ##
 # Bathroom S01
 # [TeensLikeItBig] Emily Willis - Practice Makes A Perfect Slut

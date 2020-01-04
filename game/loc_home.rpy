@@ -290,7 +290,7 @@ label lbl_home_bathroom_adriana_s01_03:
     hide img_adriana_bathroom_s01_06 with d1
     show img_emily_bathroom_s01_02 with d1
     emily "{size=-7}*Whisper* Time to go too. I was hoping it would last longer, now I need my girlfriend to make me come.{/size}"
-    hide img_emily_bathroom_s01_02 with d3
+    hide img_emily_bathroom_s01_02 with d5
 
     jump lbl_college_yard
 
@@ -523,9 +523,70 @@ label lbl_home_kitchen_adriana_s01:
     hide img_adriana_kitchen_s01_04 with d1
     show img_adriana_kitchen_s01_05 with d1
     adriana "I'm done waiting."
+    hide img_adriana_kitchen_s01_05 with d1
+    show vid_adriana_kitchen_s01_fg with d1
     me "You really a bitch in heat."
     adriana "{b}Your{/b} bitch in heat."
+    me "I know something else that's in heat."
+    hide vid_adriana_kitchen_s01_fg with d3
+    show vid_adriana_kitchen_s01_bj with d3
+    me "You fuckingw whore, behaving like that in front of your daughters!"
+    adriana "Mmmm!"
+    me "What a perfect example of parental education. Come here so I can give you your reward."
+    hide vid_adriana_kitchen_s01_bj with d3
+    show vid_adriana_kitchen_s01_cun with d3
+    adriana "I try...{w=0.5} aahhh..."
+    adriana "...to be a role model for them *moan*."
+    hide vid_adriana_kitchen_s01_cun with d3
+    $ renpy.movie_cutscene("images/people/adriana.chechik/adriana_kitchen_s01_in.webm")
+    show img_adriana_kitchen_s01_06 with d1
+    me "And you know how we reward good mothers like you?"
+    hide img_adriana_kitchen_s01_06 with d3
+    show vid_adriana_kitchen_s01_vg_01 with d3
+    adriana "With a big cock!"
+    me "Too bad they're not here to see how well I reward their mother."
+    hide vid_adriana_kitchen_s01_vg_01 with d3
+    show vid_adriana_kitchen_s01_vg_02 with d3
+    adriana "Fuck, fucckk...{w=2.0} {b}fuck{/b}!"
+    me "Daddy want to sit down, come impale yourself on my dick."
+    hide vid_adriana_kitchen_s01_vg_02 with d3
+    show vid_adriana_kitchen_s01_vg_03 with d3
+    me "Oh, look, finally Dakota couldn't resist."
+    adriana "It's too much, I'm going to..."
+    hide vid_adriana_kitchen_s01_vg_03 with d1
+    $ renpy.movie_cutscene("images/people/adriana.chechik/adriana_kitchen_s01_cum_01.webm")
+    show img_adriana_kitchen_s01_07 with d1
+    adriana "Look at mommy sweetie, look how a whore she is!"
+    hide img_adriana_kitchen_s01_07 with d1
+    show vid_dakota_bathroom_s01_mas with d1
+    dakota "A whore, my mother is whore *moan*."
+    adriana "Don't talk to me like that or I..."
+    hide vid_dakota_bathroom_s01_mas with d1
+    $ renpy.movie_cutscene("images/people/adriana.chechik/adriana_kitchen_s01_cum_02.webm")
+    show img_adriana_kitchen_s01_08 with d3
+    adriana "{b}Fuck!{/b} No anal for you tonight, keep pudding my pussy hard!"
+    hide img_adriana_kitchen_s01_08 with d1
+    $ renpy.movie_cutscene("images/people/dakota.skye/dakota_kitchen_s01_cum.webm")
+    show img_adriana_kitchen_s01_09 with d1
+    dakota "*Pant* *pant*"
+    adriana "Good little whore. Now my pussy [me]!"
+    hide img_adriana_kitchen_s01_09 with d1
+    show vid_adriana_kitchen_s01_vg_04 with d1
+    adriana "Baby you're so good to your mommy tonight."
+    me "Hehe it's a son's duty to make his mother scream with pleasure."
+    adriana "*Moan*"
+    me "Fuck! Come here quick!"
+    hide vid_adriana_kitchen_s01_vg_04 with d1
+    $ renpy.movie_cutscene("images/people/adriana.chechik/adriana_kitchen_s01_cum_03.webm")
+    show img_adriana_kitchen_s01_10 with d1
+    me "Good mommy."
+    hide img_adriana_kitchen_s01_10 with d1
+    $ renpy.movie_cutscene("images/people/adriana.chechik/adriana_kitchen_s01_cum_04.webm")
+    show img_adriana_kitchen_s01_11 with d1
+    adriana "And it's a mother's duty to lick her son's hot sperm."
+    hide img_adriana_kitchen_s01_11 with d5
 
+    $ v_time = 1185
     $ tb_events["home_kitchen"]["adriana"] = True
 
     jump lbl_home_living_room
@@ -752,6 +813,7 @@ label lbl_home_livingroom_adriana_s01_03:
     show img_dakota_livingroom_s01_03 with d1
     dakota "Anyway, see you later the old."
     me "The old? Tssss..."
+    hide img_dakota_livingroom_s01_03 with d5
 
     $ v_time = 1090
     $ f_intro = False
