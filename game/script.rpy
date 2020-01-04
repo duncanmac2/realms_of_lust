@@ -343,6 +343,10 @@ image vid_emily_bathroom_s02_vg_01 = Movie(play="images/people/emily.willis/emil
 image vid_emily_bathroom_s02_vg_02 = Movie(play="images/people/emily.willis/emily_bathroom_s02_vg_02.webm")
 image vid_emily_bathroom_s02_vg_03 = Movie(play="images/people/emily.willis/emily_bathroom_s02_vg_03.webm")
 
+# Living Room
+# [Nubiles] 2018.08.14 - Emily Willis - Too Cute
+image vid_emily_livingroom_s02_mas = Movie(play="images/people/emily.willis/emily_livingroom_s01_mas.webm")
+
 ## VIDEOS - LOCATION
 # Beach
 image vid_beach_boobs_01 = Movie(play="images/people/beach/beach_boobs_01.webm", size=(1000,742))

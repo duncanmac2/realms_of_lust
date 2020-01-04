@@ -818,3 +818,7 @@ label lbl_home_livingroom_adriana_s01_03:
     $ v_time = 1090
     $ f_intro = False
     jump lbl_home_living_room
+
+label lbl_home_livingroom_adriana_s02:
+    show vid_emily_livingroom_s02_mas with d3
+    "test"
