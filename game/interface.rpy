@@ -23,7 +23,7 @@ label time_check:
 
     return
 
-label time_change(time):
+label time_change(time, rtn=True):
     $ v_time += time
     call time_check
 
@@ -33,7 +33,19 @@ label time_change(time):
     if tb_stats["lust"]["adriana"] > 100:
         $ tb_stats["lust"]["adriana"] = 100
 
-    return
+    if rtn:
+        return
+    else:
+        if v_localisation == "city_first_street":
+            jump lbl_city_street_1st
+        elif v_localisation == "city_second_street":
+            jump lbl_city_street_2nd
+        elif v_localisation == "city_third_street":
+            jump lbl_city_street_3th
+        elif v_localisation == "college_yard":
+            jump lbl_college_yard
+        elif v_localisation == "home_living_room":
+            jump lbl_home_living_room
 
 label reset_repeatable:
     python:
@@ -141,12 +153,12 @@ screen scr_navigation:
         text "{b}" + tb_day[temp_day] + "{/b}" size 20 xalign 0.5 ypos 3
         text "{b}" + v_time_readable + "{/b}" size 20 xpos 20 ypos 27
 
-        if v_localisation == "city_first_street" or v_localisation == "city_second_street" or v_localisation == "city_third_street" or v_localisation == "college_yard":
+        if v_localisation == "city_first_street" or v_localisation == "city_second_street" or v_localisation == "city_third_street" or v_localisation == "college_yard" or v_localisation == "home_living_room":
             imagebutton:
                 xpos 89
                 ypos 28
                 idle "images/interface/icon_time_plus.png"
-                action Jump("time_change")
+                action Call("time_change", 30, False)
 
         imagebutton:
             xpos 20

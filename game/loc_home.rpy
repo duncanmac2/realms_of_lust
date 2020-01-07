@@ -39,6 +39,8 @@ label lbl_home_room_mc:
 
     if f_intro:
         jump lbl_home_bathroom_adriana_s01_01
+    elif tb_stats["lust"]["adriana"] == 100 and v_time == 420:
+        jump lbl_adriana_lust
     else:
         jump lbl_home_room_mc_events
 
@@ -823,6 +825,60 @@ label lbl_home_livingroom_adriana_s01_03:
     $ f_intro = False
     jump lbl_home_living_room
 
-label lbl_home_livingroom_adriana_s02:
-    show vid_emily_livingroom_s02_mas with d3
-    "test"
+### LUST ###
+label lbl_adriana_lust:
+    scene img_black
+    "Adriana stirred all night, obviously disturbed. Maybe you've been neglecting her too much lately?"
+    "As soon as she gets up, she calls her best friend Megan."
+    show img_adriana_lust_s01_01 with d3
+    adriana "Megan?"
+    megan "Yes love?"
+    adriana "Do you want to come to yoga this morning?"
+    megan "Do we have a new code name to \"I want to get laid\"?"
+    adriana "Pretty much..."
+    megan "I'll be right there!"
+    hide img_adriana_lust_s01_01 with d3
+    show vid_adriana_lust_s01_yog with d3
+    megan "After all, you really wanted to do yoga?"
+    adriana "I'm waiting for [me] to get up."
+    megan "Oh a threesome, love it!"
+    adriana "Not just yet, we have to make him suffer a little first."
+    megan "He hasn't been fucking you lately?"
+    adriana "{b}Not enough!{/b}"
+    megan "I know one who's gonna sleep on the couch tonight *giggle*."
+    adriana "Exactly!"
+    hide vid_adriana_lust_s01_yog with d5
+    show img_adriana_lust_s01_02 with d5
+    me "Adriana, Megan? Ready for a bit of exercise?"
+    adriana "*Tsk* not with you anyway."
+    me "I..."
+    megan "Well, I'm sick of yoga, let's fuck!"
+    hide img_adriana_lust_s01_02
+    $ renpy.movie_cutscene("images/people/adriana.chechik/adriana_lust_s01_cun_01.webm")
+    show vid_adriana_lust_s01_cun_02 with d5
+    megan "That's right you little whore, licks my pussy. I've waited far too long."
+    me "Mayb..."
+    megan "Shut the fuck up! You know how long it's been since your bitch wife licked my pussy?"
+    me "{i}(Well, just shut up and enjoy the show, I guess.){/i}"
+    hide vid_adriana_lust_s01_cun_02 with d5
+    $ renpy.movie_cutscene("images/people/adriana.chechik/adriana_lust_s01_cun_03.webm")
+    show img_adriana_lust_s01_03 with d1
+    megan "Drink this already, you little whore. Don't worry, I've got plenty more where that came from."
+    adriana "You never disappoint."
+    megan "Never."
+    hide img_adriana_lust_s01_03 with d1
+    show vid_adriana_lust_s01_ks with d1
+    adriana "Mmmm..."
+    megan "*Moan*"
+    me "{i}(They want me dead...){/i}"
+    hide vid_adriana_lust_s01_ks with d3
+    show vid_adriana_lust_s01_cun_04 with d3
+    adriana "Yes, yesss lick me good love."
+    hide vid_adriana_lust_s01_cun_04 with d1
+    $ renpy.movie_cutscene("images/people/adriana.chechik/adriana_lust_s01_cun_05.webm")
+    show img_adriana_lust_s01_04 with d1
+    adriana "Fuck, fuck *moan*. I've got some in reserve for you, too."
+
+
+
+    jump lbl_home_living_room

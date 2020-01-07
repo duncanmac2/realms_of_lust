@@ -119,6 +119,10 @@
     for i in range(1,5):
         renpy.image("img_adriana_livingroom_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_livingroom_s01_" + str(i).zfill(2) + ".jpg")
 
+    # Lust
+    for i in range(1,10):
+        renpy.image("img_adriana_lust_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_lust_s01_" + str(i).zfill(2) + ".jpg")
+
     ############
     ## Dakota ##
     # Others
@@ -183,9 +187,10 @@ define me = DynamicCharacter("your_name", color = clr_dark_red)
 
 # NPC
 define adriana = Character("Adriana", color = clr_gray)
+define dad_mom = Character("[me] & Adriana", color = clr_dark_red)
 define dakota = Character("Dakota", color = clr_gold)
 define emily = Character("Emily", color = clr_gray)
-define dad_mom = Character("[me] & Adriana", color = clr_dark_red)
+define megan = Character("Megan", color = clr_gray)
 
 define alison = Character("Alison", color = clr_sand)
 define emma = Character("Emma", color = clr_auburn)
@@ -280,7 +285,7 @@ image vid_adriana_bathroom_s01_vg_06 = Movie(play="images/people/adriana.chechik
 image vid_adriana_bathroom_s01_vg_07 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_07.webm", size=(1920,1080))
 image vid_adriana_bathroom_s01_vg_08 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_08.webm", size=(1920,1080))
 
-# Kitchen
+# Kitchen S01
 # [DigitalPlayground] Adriana Chechik - Home From College
 image vid_adriana_kitchen_s01_01 = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_01.webm")
 image vid_adriana_kitchen_s01_bj = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_bj.webm")
@@ -305,6 +310,13 @@ image vid_adriana_livingroom_s01_an_01 = Movie(play="images/people/adriana.chech
 image vid_adriana_livingroom_s01_an_02 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_an_02.webm")
 image vid_adriana_livingroom_s01_an_03 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_an_03.webm")
 image vid_adriana_livingroom_s01_pus = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_pus.webm")
+
+# Lust S01
+# [Girlsway] Adriana Chechik and Megan Rain Squirting Stories - Part One
+image vid_adriana_lust_s01_cun_02 = Movie(play="images/people/adriana.chechik/adriana_lust_s01_cun_02.webm")
+image vid_adriana_lust_s01_cun_04 = Movie(play="images/people/adriana.chechik/adriana_lust_s01_cun_04.webm")
+image vid_adriana_lust_s01_ks = Movie(play="images/people/adriana.chechik/adriana_lust_s01_ks.webm")
+image vid_adriana_lust_s01_yog = Movie(play="images/people/adriana.chechik/adriana_lust_s01_yog.webm")
 
 ############
 ## Dakota ##
