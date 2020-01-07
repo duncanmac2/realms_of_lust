@@ -79,6 +79,8 @@ label lbl_home_backyard_dakota_s01:
             dakota "Enjoying the show daddy?"
             me "Can't get enough of it sweetie."
 
+            call time_change(5)
+
         "Approach her and touch her tight.":
             scene img_dakota_backyard_s01_09 with d3
             dakota "Daddy?"
@@ -109,6 +111,8 @@ label lbl_home_backyard_dakota_s01:
             scene img_dakota_backyard_s01_21 with d3
             me "I love you so much sweetie, I might not be able to control myself."
             dakota "Me too daddy."
+
+            call time_change(10)
 
     $ tb_events["home_backyard"]["dakota"] = True
 

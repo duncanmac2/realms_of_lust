@@ -9,26 +9,39 @@ label main_show(show_all=0):
     return
 
 label time_check:
-    if v_time >= 1140:
-        if v_day == 3:
-            "It's getting late, let's go home."
-            jump lbl_home_kitchen
+    if v_time >= 1440:
+        "It's getting late, let's go to bed."
+        $ v_time = 420
+
+        if v_day == 7:
+            $ v_day = 1
+        else:
+            $ v_day += 1
+
+        call reset_repeatable
+        jump lbl_home_room_mc
 
     return
 
-label time_change:
-    $ v_time += 30
-
+label time_change(time):
+    $ v_time += time
     call time_check
 
-    if v_localisation == "city_first_street":
-        jump lbl_city_street_1st
-    elif v_localisation == "city_second_street":
-        jump lbl_city_street_2nd
-    elif v_localisation == "city_third_street":
-        jump lbl_city_street_3th
-    elif v_localisation == "college_yard":
-        jump lbl_college_yard
+    if tb_stats["lust"]["adriana"] < 100:
+        $ tb_stats["lust"]["adriana"] += time / 5
+
+    if tb_stats["lust"]["adriana"] > 100:
+        $ tb_stats["lust"]["adriana"] = 100
+
+    return
+
+label reset_repeatable:
+    python:
+        for location in tb_events.keys():
+            for npc in tb_events[location].keys():
+                tb_events[location][npc] = False
+
+    return
 
 ## SCREENS
 # Input name

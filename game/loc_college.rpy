@@ -101,11 +101,5 @@ label lbl_college_yard_events:
     "The college part will be implemented in the next version."
 
     $ v_time = 1050
-    $ tb_events["home_bathroom"]["adriana"] = False
-    $ tb_events["home_bathroom"]["dakota"] = False
-    $ tb_events["home_bathroom"]["emily"] = False
-    $ tb_events["home_kitchen"]["adriana"] = False
-    $ tb_events["home_kitchen"]["dakota"] = False
-    $ tb_events["home_kitchen"]["emily"] = False
-
+    call reset_repeatable
     jump lbl_home_living_room
