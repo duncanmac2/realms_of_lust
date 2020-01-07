@@ -49,7 +49,7 @@ define build.include_update = False
 ## default. Setting one of these to False will hide the appropriate mixer.
 
 # config.has_sound must be at true otherwise videos don't play
-define config.has_sound = True
+define config.has_sound = False
 define config.has_music = False
 define config.has_voice = False
 
