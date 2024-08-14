@@ -6,6 +6,9 @@
     def func_name_input(str):
         store.your_name = str
 
+    def func_surname_input(str):
+        store.your_surname = str
+
     # Time function
     def func_readable_time(time):
         readable_time = divmod(time, 60)
@@ -98,8 +101,8 @@
     #############
     ## Adriana ##
     # Others
-    for i in range(1,3):
-        renpy.image("img_adriana_portrait_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_portrait_" + str(i).zfill(2) + ".jpg")
+    for i in range(1,4):
+        renpy.image("img_adriana_portrait_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_portrait_" + str(i).zfill(2) + ".webp")
 
     for i in range(1,2):
         renpy.image("img_adriana_lesbian_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_lesbian_" + str(i).zfill(2) + ".jpg")
@@ -178,11 +181,12 @@
     ## INTRO
     renpy.image("img_intro_01", "images/events/intro_01.jpg")
     renpy.image("img_intro_02", "images/events/intro_02.png")
-    renpy.image("img_intro_03", "images/events/intro_03.jpg")
+    renpy.image("img_intro_03", "images/events/intro_03.webp")
 
 ## NAMES & PORTRAITS
 # Player
 default your_name = ""
+default your_surname = ""
 define me = DynamicCharacter("your_name", color = clr_dark_red)
 
 # NPC
@@ -190,6 +194,7 @@ define adriana = Character("Adriana", color = clr_gray)
 define dad_mom = Character("[me] & Adriana", color = clr_dark_red)
 define dakota = Character("Dakota", color = clr_gold)
 define emily = Character("Emily", color = clr_gray)
+define lana = Character("Lana", color = clr_gray)
 define megan = Character("Megan", color = clr_gray)
 
 define alison = Character("Alison", color = clr_sand)
@@ -207,6 +212,7 @@ define d1 = Dissolve(0.2)
 define d2 = Dissolve(0.2)
 define d3 = Dissolve(0.3)
 define d5 = Dissolve(0.5)
+define d8 = Dissolve(0.8)
 define sr3 = CropMove(0.3, "slideright")
 
 ## INTERFACE
@@ -271,7 +277,7 @@ image obj_sarah_playboy_collection = "images/objects/sarah_playboy_collection.jp
 # Bathroom S01
 # [RK Prime] Adriana Chechik - Study Break
 image vid_adriana_bathroom_s01_cun = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_cun.webm", size=(1920,1080))
-image vid_adriana_bathroom_s01_hj = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_hj.webm", size=(1920,1080))
+image vid_adriana_bathroom_s01_handjob = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_handjob.webm", size=(1920,1080))
 image vid_adriana_bathroom_s01_bj_01 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_bj_01.webm", size=(1920,1080))
 image vid_adriana_bathroom_s01_bj_02 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_bj_02.webm", size=(1920,1080))
 image vid_adriana_bathroom_s01_bj_03 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_bj_03.webm", size=(1920,1080))
@@ -359,6 +365,14 @@ image vid_emily_bathroom_s02_vg_03 = Movie(play="images/people/emily.willis/emil
 # [Nubiles] 2018.08.14 - Emily Willis - Too Cute
 image vid_emily_livingroom_s02_mas = Movie(play="images/people/emily.willis/emily_livingroom_s01_mas.webm")
 
+###########
+## Lana ##
+# Living Room S01
+image vid_lana_livingroom_s01_intro_01 = Movie(play="images/people/lana.roy/lana_livingroom_s01_intro_01.webm", size=(1920,1080))
+image vid_lana_livingroom_s01_intro_02 = Movie(play="images/people/lana.roy/lana_livingroom_s01_intro_02.webm", size=(1920,1080))
+image vid_lana_livingroom_s01_groping = Movie(play="images/people/lana.roy/lana_livingroom_s01_groping.webm", size=(1920,1080))
+image vid_lana_livingroom_s01_stripping = Movie(play="images/people/lana.roy/lana_livingroom_s01_stripping.webm", size=(1920,1080))
+
 ## VIDEOS - LOCATION
 # Beach
 image vid_beach_boobs_01 = Movie(play="images/people/beach/beach_boobs_01.webm", size=(1000,742))
@@ -400,6 +414,7 @@ label start:
     $ f_bypass = False
     $ f_intro = True
     $ f_name_prompt = True
+    $ f_surname_prompt = True
     $ f_pee = True
 
     # Variables
@@ -439,8 +454,8 @@ label start:
     hide screen main_menu
     scene black onlayer background
 
-    #jump lbl_censorship
-    jump lbl_bypass
+    jump lbl_name_input
+    #jump lbl_bypass
 
     "Do you have play previous version and want to jump directly to new content?"
     menu:
@@ -459,21 +474,22 @@ label close_renpy:
     $ renpy.quit()
     return
 
-label lbl_censorship:
-    "The game contains some rather \"extreme\" scenes such as water-sports. Do you want to censor them while knowing that you will inevitably miss a little bit of content?"
-    menu:
-        "Yes.":
-            $ f_pee = False
-        "No, I want to see that.":
-            $ f_pee = True
-
-    jump lbl_name_input
-
 label lbl_name_input:
     scene expression "images/interface/bg_input_name.png"
 
     if your_name == "" or f_name_prompt == True:
         call screen scr_name_input
+    else:
+        if f_bypass:
+            jump lbl_bypass
+        else:
+            jump lbl_surname_input
+
+label lbl_surname_input:
+    scene expression "images/interface/bg_input_surname.png"
+
+    if your_surname == "" or f_surname_prompt == True:
+        call screen scr_surname_input
     else:
         if f_bypass:
             jump lbl_bypass
@@ -499,17 +515,26 @@ label lbl_intro:
     "Dakota, on the other hand, has always been attracted to men, but only knows one in town, you."
     scene img_adriana_slut_01
     "After the war, morals became loose. They called it \"the true sexual liberation\". Thanks to leaps in science and technology there were less problems and more time for sex."
+    scene img_adriana_portrait_03
+    "I'm still amazed at how she hasn't aged a day since we've been together, I guess sex preserves."
+    scene img_adriana_portrait_02
+    "She always worked at Lilith Corporation, a company whose activities I never really understood. But in any case, she'd sure made her mark there, and we weren't in need at all."
     scene img_intro_03
-    "You and Adriana have taken advantage of this, but since you just became a professor at the local university, the opportunities seem to be widening even more..."
-    "You are going to have to satisfy your needs, those of your wife, your daughters and your students. If your wife is not satisfied, she will go elsewhere, and this can be an opportunity to have fun together with her friends."
-    "Your daughters' desire will grow if they see you frolicking at home or at university, becoming closer to their daddy."
+    "Like many veterans, all the horrors of war left me stunned for months after. I didn't go out, even to see my mother and sisters, I stayed in bed or zoned out in front of my computer."
+    show vid_adriana_bathroom_s01_handjob with d5
+    "My dear wife, always playful, tried her best to arouse some kind of desire in me, but to no avail."
 
-    jump lbl_home_room_mc
+    #"You and Adriana have taken advantage of this, but since you just became a professor at the local university, the opportunities seem to be widening even more..."
+    #"You are going to have to satisfy your needs, those of your wife, your daughters and your students. If your wife is not satisfied, she will go elsewhere, and this can be an opportunity to have fun together with her friends."
+    #"Your daughters' desire will grow if they see you frolicking at home or at university, becoming closer to their daddy."
+
+    jump lbl_home_livingroom_lana_s01_01
 
 label lbl_bypass:
     $ f_intro = False
     $ f_pee = True
     $ your_name = "John"
+    $ your_surname = "Doe"
     $ v_time = 420
 
     jump lbl_home_living_room

@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("School Values")
+define config.name = _("Family is Sacred")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -38,9 +38,9 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "School_Values"
-define build.directory_name = "School_Values"
-define build.executable_name = "School_Values-0.1"
+define build.name = "Family_is_Sacred"
+define build.directory_name = "Family_is_Sacred"
+define build.executable_name = "Family_is_Sacred-0.1"
 define build.include_update = False
 
 ## Sounds and music ############################################################
@@ -149,7 +149,7 @@ default preferences.afm_time = 10
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "school_values"
+define config.save_directory = "family_is_sacred"
 
 
 ## Icon ########################################################################

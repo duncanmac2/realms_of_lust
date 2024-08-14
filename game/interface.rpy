@@ -65,6 +65,16 @@ screen scr_name_input:
     imagebutton:
         idle "images/interface/b_no_idle.png" hover "images/interface/b_no_hover.png" xalign 0.55 yalign 0.65 action MainMenu(confirm = False)
 
+# Input surname
+screen scr_surname_input:
+    input id "input" style "input_text" default your_surname changed func_surname_input xalign 0.5 yalign 0.5 length 10 allow "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+    imagebutton:
+        idle "images/interface/b_yes_idle.png" hover "images/interface/b_yes_hover.png" xalign 0.45 yalign 0.65 action [SetVariable("f_surname_prompt", False), Jump("lbl_surname_input")]
+    imagebutton:
+        idle "images/interface/b_no_idle.png" hover "images/interface/b_no_hover.png" xalign 0.55 yalign 0.65 action MainMenu(confirm = False)
+
+
 # Warning
 screen scr_warning:
     imagebutton xpos 0.25 ypos 0.8:

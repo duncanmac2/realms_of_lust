@@ -817,13 +817,32 @@ label lbl_home_livingroom_adriana_s01_03:
     dakota "Yeaaah maybe."
     hide img_adriana_livingroom_s01_04 with d1
     show img_dakota_livingroom_s01_03 with d1
-    dakota "Anyway, see you later the old."
-    me "The old? Tssss..."
+    dakota "Anyway, see you later old man."
+    me "Old man? Tssss..."
     hide img_dakota_livingroom_s01_03 with d5
 
     $ v_time = 1090
     $ f_intro = False
     jump lbl_home_living_room
+
+## Lana S01 ##
+label lbl_home_livingroom_lana_s01_01:
+    show vid_lana_livingroom_s01_intro_01 with d8
+    "Then this morning, something clicked. Our maid Lana, hired while I was away, was making her round."
+    "I'd never really noticed his behaviour, though it wasn't very subtle."
+    "Not very subtle at all."
+    "What I had refused, or rather forgotten, to do to Adriana for months, I was about to do to a near stranger."
+    show vid_lana_livingroom_s01_intro_02 with d3
+    me "Lana, you've worked with us for years and I've never thanked you."
+    lana "Oh Mr. [your_surname], working at your home is such a privilege these days. Many people would give a lot to be in my shoes. Especially women of course."
+    show vid_lana_livingroom_s01_groping with d3
+    me "I see... but even with my wife..."
+    lana "Oh shut up and finish what you've just started, I've been waiting months for this! Your wife will have her turn."
+    show vid_lana_livingroom_s01_stripping with d3
+    me "What do you want my precious maid, you want me to lick your little pussy?"
+    lana "I don't want foreplay, pound my ass like I'm a worthless whore!"
+
+    "just lick my ass a little and stuff me!"
 
 ### LUST ###
 label lbl_adriana_lust:
