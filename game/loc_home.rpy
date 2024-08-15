@@ -839,7 +839,7 @@ label lbl_home_livingroom_lana_s01_01:
     me "I see... but even with my wife..."
     lana "Oh shut up and finish what you've just started, I've been waiting months for this! Your wife will have her turn."
     show vid_lana_livingroom_s01_stripping with d3
-    me "What do you want my precious maid, you want me to lick your little pussy?"
+    me "What do you want my little needy maid, you want me to lick your little pussy?"
     lana "I don't want foreplay, pound my ass like I'm a worthless whore!"
 
     "just lick my ass a little and stuff me!"
