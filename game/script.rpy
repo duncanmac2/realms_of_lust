@@ -6,28 +6,6 @@
     def func_name_input(str):
         store.your_name = str
 
-    def func_surname_input(str):
-        store.your_surname = str
-
-    # Time function
-    def func_readable_time(time):
-        readable_time = divmod(time, 60)
-        return str(readable_time[0]).zfill(2) + ":" + str(readable_time[1]).zfill(2)
-
-    # Check time period
-    def func_check_time(time, tb_time):
-        res = ""
-
-        for t in tb_time:
-            tb_period = t.split("-")
-            if (int(time) < int(tb_period[1]) and int(time) >= int(tb_period[0])):
-                return tb_time[t]
-
-        return res
-
-    # Days
-    tb_day = ["", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-
     # Colors
     clr_black = "#000"
     clr_red = "#f00"
@@ -52,119 +30,16 @@
     clr_blueviolet = "#8a2be2"
     clr_brown_dark = "#331a00"
 
-    # Tables time period
-    tb_time = {"college_yard": {}, "home_backyard": {}, "home_bathroom": {}, "home_kitchen": {}, "home_living_room": {}, "home_pool": {}, "home_room_dakota": {}, "home_room_emily": {}, "home_room_mc": {}}
-    tb_time["college_yard"] = {
-        "480-510": "dakota,emily",
-        "510-1050": "adriana,dakota,emily"
-    }
-    tb_time["home_backyard"] = {
-        "1050-1095": "adriana,dakota,emily"
-    }
-    tb_time["home_bathroom"] = {
-        "420-450": "emily",
-        "450-480": "dakota",
-        "480-510": "adriana",
-        "1170-1200": "emily",
-        "1320-1350": "adriana",
-        "1350-1380": "dakota"
-    }
-    tb_time["home_kitchen"] = {
-        "420-450": "adriana,dakota",
-        "450-480": "adriana,emily",
-        "1125-1140": "adriana",
-        "1140-1170": "adriana,dakota,emily"
-    }
-    tb_time["home_living_room"] = {
-        "1170-1200": "adriana,dakota",
-        "1200-1350": "adriana,dakota,emily",
-        "1350-1380": "emily"
-    }
-    tb_time["home_pool"] = {
-        "1095-1125": "adriana,dakota,emily",
-        "1120-1140": "dakota,emily"
-    }
-    tb_time["home_room_dakota"] = {
-        "0-420": "dakota",
-        "1380-1440": "dakota"
-    }
-    tb_time["home_room_emily"] = {
-        "0-420": "emily",
-        "1380-1440": "emily"
-    }
-    tb_time["home_room_mc"] = {
-        "0-420": "adriana",
-        "1350-1440": "adriana"
-    }
-
     ### IMAGES
     #############
-    ## Adriana ##
-    # Others
-    for i in range(1,4):
-        renpy.image("img_adriana_portrait_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_portrait_" + str(i).zfill(2) + ".webp")
-
-    for i in range(1,2):
-        renpy.image("img_adriana_lesbian_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_lesbian_" + str(i).zfill(2) + ".jpg")
-
-    for i in range(1,2):
-        renpy.image("img_adriana_slut_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_slut_" + str(i).zfill(2) + ".jpg")
-
-    # Bathroom
-    for i in range(1,7):
-        renpy.image("img_adriana_bathroom_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_bathroom_s01_" + str(i).zfill(2) + ".jpg")
-
-    # Kitchen
-    for i in range(2,12):
-        renpy.image("img_adriana_kitchen_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_kitchen_s01_" + str(i).zfill(2) + ".jpg")
-
-    # Living Room
-    for i in range(1,5):
-        renpy.image("img_adriana_livingroom_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_livingroom_s01_" + str(i).zfill(2) + ".jpg")
-
-    # Lust
-    for i in range(1,10):
-        renpy.image("img_adriana_lust_s01_" + str(i).zfill(2), "images/people/adriana.chechik/adriana_lust_s01_" + str(i).zfill(2) + ".jpg")
-
-    ############
-    ## Dakota ##
-    # Others
-    for i in range(1,2):
-        renpy.image("img_dakota_portrait_" + str(i).zfill(2), "images/people/dakota.skye/dakota_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Backyard
-    # [SweetSinner.com] Dakota Skye - Solo & Softcore Set for Student Bodies 3 - Scene 4
-    for i in range(1,22):
-        renpy.image("img_dakota_backyard_s01_" + str(i).zfill(2), "images/people/dakota.skye/dakota_backyard_s01_" + str(i).zfill(2) + ".jpg")
-
-    # Bathroom
-    renpy.image("img_dakota_bathroom_s01_pee_03", "images/people/dakota.skye/dakota_bathroom_s01_pee_03.jpg")
-
-    # Living Room
-    for i in range(1,4):
-        renpy.image("img_dakota_livingroom_s01_" + str(i).zfill(2), "images/people/dakota.skye/dakota_livingroom_s01_" + str(i).zfill(2) + ".jpg")
-
-    ###########
-    ## Emily ##
-    # Others
-    for i in range(1,2):
-        renpy.image("img_emily_portrait_" + str(i).zfill(2), "images/people/emily.willis/emily_portrait_" + str(i).zfill(2) + ".jpg")
-
-    # Bathroom
+    ## INTRO
     for i in range(1,3):
-        renpy.image("img_emily_bathroom_s01_" + str(i).zfill(2), "images/people/emily.willis/emily_bathroom_s01_" + str(i).zfill(2) + ".jpg")
+        renpy.image("img_intro_" + str(i).zfill(2), "images/intro_" + str(i).zfill(2) + ".webp")
 
-    for i in range(4,9):
-        renpy.image("img_emily_bathroom_s02_" + str(i).zfill(2), "images/people/emily.willis/emily_bathroom_s02_" + str(i).zfill(2) + ".jpg")
+    ## S001 ##
+    for i in range(1,4):
+        renpy.image("s001_" + str(i).zfill(3), "images/s001_" + str(i).zfill(3) + ".webp")
 
-    # Kitchen
-    # [AmKingdom] 2018.07.03 - Upskirts and Panties
-    # [AmKingdom] 2018.06.20 - Coeds
-    for i in range(1,22):
-        renpy.image("img_emily_kitchen_s01_" + str(i).zfill(2), "images/people/emily.willis/emily_kitchen_s01_" + str(i).zfill(2) + ".jpg")
-
-    ################
-    ## NPC OTHERS ##
     ## BEACH
     renpy.image("img_beach_nude_01", "images/people/beach/beach_nude_01.jpg")
     renpy.image("img_beach_nude_02", "images/people/beach/beach_nude_02.jpg")
@@ -178,15 +53,9 @@
     for i in range(1,4):
         renpy.image("img_park_exhibition_" + str(i).zfill(2), "images/people/park/park_exhibition_" + str(i).zfill(2) + ".jpg")
 
-    ## INTRO
-    renpy.image("img_intro_01", "images/events/intro_01.jpg")
-    renpy.image("img_intro_02", "images/events/intro_02.png")
-    renpy.image("img_intro_03", "images/events/intro_03.webp")
-
 ## NAMES & PORTRAITS
 # Player
 default your_name = ""
-default your_surname = ""
 define me = DynamicCharacter("your_name", color = clr_dark_red)
 
 # NPC
@@ -220,190 +89,6 @@ image img_black = Solid(clr_black)
 image img_white = Solid(clr_white)
 image img_warning = "images/interface/warning.png"
 
-## LOCATIONS
-# Home
-image loc_home_backyard = "images/location/loc_home_backyard.jpg"
-image loc_home_bathroom = "images/location/loc_home_bathroom.jpg"
-image loc_home_kitchen = "images/location/loc_home_kitchen.jpg"
-image loc_home_living_room = "images/location/loc_home_living_room.jpg"
-image loc_home_pool = "images/location/loc_home_pool.jpg"
-image loc_home_room_mc = "images/location/loc_home_room_mc.jpg"
-image loc_home_room_dakota = "images/location/loc_home_room_emily.jpg"
-image loc_home_room_emily = "images/location/loc_home_room_emily.jpg"
-
-# City
-image loc_city_map = "images/location/loc_city_map.jpg"
-image loc_city_map_back = "images/location/loc_city_map_back.jpg"
-image loc_city_church = "images/location/loc_city_church.jpg"
-image loc_city_gym = "images/location/loc_city_gym.jpg"
-image loc_city_home_lily = "images/location/loc_city_home_lily.jpg"
-image loc_city_home_marcy = "images/location/loc_city_home_marcy.jpg"
-image loc_city_home_marcy_bathroom = "images/location/loc_city_home_marcy_bathroom.jpg"
-image loc_city_home_marcy_pool = "images/location/loc_city_home_marcy_pool.jpg"
-image loc_city_home_marcy_room = "images/location/loc_city_home_marcy_room.jpg"
-image loc_city_home_marcy_room_sarah = "images/location/loc_city_home_marcy_room_sarah.jpg"
-image loc_city_home_priya = "images/location/loc_city_home_priya.jpg"
-image loc_city_hospital = "images/location/loc_city_hospital.jpg"
-image loc_city_mall = "images/location/loc_city_mall.jpg"
-image loc_city_mall_break = "images/location/loc_city_mall_break.jpg"
-image loc_city_mall_coffee = "images/location/loc_city_mall_coffee.jpg"
-image loc_city_mall_store = "images/location/loc_city_mall_store.jpg"
-image loc_city_park = "images/location/loc_city_park.jpg"
-image loc_city_pgp_corporation = "images/location/loc_city_pgp_corporation.jpg"
-image loc_city_pgp_corporation_office_lily = "images/location/loc_city_pgp_corporation_office_lily.jpg"
-image loc_city_street_1st = "images/location/loc_city_street_1st.jpg"
-image loc_city_street_2nd = "images/location/loc_city_street_2nd.jpg"
-image loc_city_street_3th = "images/location/loc_city_street_3th.jpg"
-
-# College
-image loc_college_class = "images/location/loc_college_class.jpg"
-image loc_college_corridor = "images/location/loc_college_corridor.jpg"
-image loc_college_garden = "images/location/loc_college_garden.jpg"
-image loc_college_gym = "images/location/loc_college_gym.jpg"
-image loc_college_locker_room = "images/location/loc_college_locker_room.jpg"
-image loc_college_nurse = "images/location/loc_college_nurse.jpg"
-image loc_college_office_ellie = "images/location/loc_college_office_ellie.jpg"
-image loc_college_shower_men = "images/location/loc_college_shower_men.jpg"
-image loc_college_teacher_office = "images/location/loc_college_teacher_office.jpg"
-image loc_college_yard = "images/location/loc_college_yard.jpg"
-
-## OBJECTS
-image obj_pills = "images/objects/pills.jpg"
-image obj_sarah_playboy_collection = "images/objects/sarah_playboy_collection.jpg"
-
-### VIDEOS - NPC
-#############
-## Adriana ##
-# Bathroom S01
-# [RK Prime] Adriana Chechik - Study Break
-image vid_adriana_bathroom_s01_cun = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_cun.webm", size=(1920,1080))
-image vid_adriana_bathroom_s01_handjob = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_handjob.webm", size=(1920,1080))
-image vid_adriana_bathroom_s01_bj_01 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_bj_01.webm", size=(1920,1080))
-image vid_adriana_bathroom_s01_bj_02 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_bj_02.webm", size=(1920,1080))
-image vid_adriana_bathroom_s01_bj_03 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_bj_03.webm", size=(1920,1080))
-image vid_adriana_bathroom_s01_bj_04 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_bj_04.webm", size=(1920,1080))
-image vid_adriana_bathroom_s01_vg_01 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_01.webm", size=(1920,1080))
-image vid_adriana_bathroom_s01_vg_02 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_02.webm", size=(1920,1080))
-image vid_adriana_bathroom_s01_vg_03 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_03.webm", size=(1920,1080))
-image vid_adriana_bathroom_s01_vg_04 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_04.webm", size=(1920,1080))
-image vid_adriana_bathroom_s01_vg_05 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_05.webm", size=(1920,1080))
-image vid_adriana_bathroom_s01_vg_06 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_06.webm", size=(1920,1080))
-image vid_adriana_bathroom_s01_vg_07 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_07.webm", size=(1920,1080))
-image vid_adriana_bathroom_s01_vg_08 = Movie(play="images/people/adriana.chechik/adriana_bathroom_s01_vg_08.webm", size=(1920,1080))
-
-# Kitchen S01
-# [DigitalPlayground] Adriana Chechik - Home From College
-image vid_adriana_kitchen_s01_01 = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_01.webm")
-image vid_adriana_kitchen_s01_bj = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_bj.webm")
-image vid_adriana_kitchen_s01_cun = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_cun.webm")
-image vid_adriana_kitchen_s01_fg = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_fg.webm")
-image vid_adriana_kitchen_s01_mas = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_mas.webm")
-image vid_adriana_kitchen_s01_vg_01 = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_vg_01.webm")
-image vid_adriana_kitchen_s01_vg_02 = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_vg_02.webm")
-image vid_adriana_kitchen_s01_vg_03 = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_vg_03.webm")
-image vid_adriana_kitchen_s01_vg_04 = Movie(play="images/people/adriana.chechik/adriana_kitchen_s01_vg_04.webm")
-
-# Living Room S01
-# [EvilAngel] Adriana Chechik - Alien Ass Party 4 - Scene 2
-image vid_adriana_livingroom_s01_bj_01 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_bj_01.webm")
-image vid_adriana_livingroom_s01_bj_02 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_bj_02.webm")
-image vid_adriana_livingroom_s01_bj_03 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_bj_03.webm")
-image vid_adriana_livingroom_s01_bj_04 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_bj_04.webm")
-image vid_adriana_livingroom_s01_vg_01 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_vg_01.webm")
-image vid_adriana_livingroom_s01_vg_02 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_vg_02.webm")
-image vid_adriana_livingroom_s01_vg_03 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_vg_03.webm")
-image vid_adriana_livingroom_s01_an_01 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_an_01.webm")
-image vid_adriana_livingroom_s01_an_02 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_an_02.webm")
-image vid_adriana_livingroom_s01_an_03 = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_an_03.webm")
-image vid_adriana_livingroom_s01_pus = Movie(play="images/people/adriana.chechik/adriana_livingroom_s01_pus.webm")
-
-# Lust S01
-# [Girlsway] Adriana Chechik and Megan Rain Squirting Stories - Part One
-image vid_adriana_lust_s01_cun_02 = Movie(play="images/people/adriana.chechik/adriana_lust_s01_cun_02.webm")
-image vid_adriana_lust_s01_cun_04 = Movie(play="images/people/adriana.chechik/adriana_lust_s01_cun_04.webm")
-image vid_adriana_lust_s01_ks = Movie(play="images/people/adriana.chechik/adriana_lust_s01_ks.webm")
-image vid_adriana_lust_s01_yog = Movie(play="images/people/adriana.chechik/adriana_lust_s01_yog.webm")
-
-############
-## Dakota ##
-# Bathroom S01
-# [InTheCrack] Dakota Skye - Skye Piss Down
-image vid_dakota_bathroom_s01_pee_01 = Movie(play="images/people/dakota.skye/dakota_bathroom_s01_pee_01.webm")
-
-# Kitchen S01
-# [ALSScan] Dakota Skye - Virgin Toy
-image vid_dakota_bathroom_s01_mas = Movie(play="images/people/dakota.skye/dakota_kitchen_s01_mas.webm")
-
-# Living Room S01
-# [InTheCrack] Dakota Skye - Give Fur the Finger
-image vid_dakota_livingroom_s01_fg_01 = Movie(play="images/people/dakota.skye/dakota_livingroom_s01_fg_01.webm")
-image vid_dakota_livingroom_s01_fg_02 = Movie(play="images/people/dakota.skye/dakota_livingroom_s01_fg_02.webm")
-
-###########
-## Emily ##
-# Bathroom S01
-# [TeensLikeItBig] Emily Willis - Practice Makes A Perfect Slut
-image vid_emily_bathroom_s01_mas = Movie(play="images/people/emily.willis/emily_bathroom_s01_mas.webm")
-
-# Bathroom S02
-# [CherryPimps] 2018.10.18 - Emily Willis - Shower Time Cums so Quick
-image vid_emily_bathroom_s02_01 = Movie(play="images/people/emily.willis/emily_bathroom_s02_01.webm")
-image vid_emily_bathroom_s02_02 = Movie(play="images/people/emily.willis/emily_bathroom_s02_02.webm")
-image vid_emily_bathroom_s02_k = Movie(play="images/people/emily.willis/emily_bathroom_s02_k.webm")
-image vid_emily_bathroom_s02_bj_01 = Movie(play="images/people/emily.willis/emily_bathroom_s02_bj_01.webm")
-image vid_emily_bathroom_s02_bj_02 = Movie(play="images/people/emily.willis/emily_bathroom_s02_bj_02.webm")
-image vid_emily_bathroom_s02_bj_03 = Movie(play="images/people/emily.willis/emily_bathroom_s02_bj_03.webm")
-image vid_emily_bathroom_s02_cun = Movie(play="images/people/emily.willis/emily_bathroom_s02_cun.webm")
-image vid_emily_bathroom_s02_fg = Movie(play="images/people/emily.willis/emily_bathroom_s02_fg.webm")
-image vid_emily_bathroom_s02_hj = Movie(play="images/people/emily.willis/emily_bathroom_s02_hj.webm")
-image vid_emily_bathroom_s02_mas = Movie(play="images/people/emily.willis/emily_bathroom_s02_mas.webm")
-image vid_emily_bathroom_s02_vg_01 = Movie(play="images/people/emily.willis/emily_bathroom_s02_vg_01.webm")
-image vid_emily_bathroom_s02_vg_02 = Movie(play="images/people/emily.willis/emily_bathroom_s02_vg_02.webm")
-image vid_emily_bathroom_s02_vg_03 = Movie(play="images/people/emily.willis/emily_bathroom_s02_vg_03.webm")
-
-# Living Room
-# [Nubiles] 2018.08.14 - Emily Willis - Too Cute
-image vid_emily_livingroom_s02_mas = Movie(play="images/people/emily.willis/emily_livingroom_s01_mas.webm")
-
-###########
-## Lana ##
-# Living Room S01
-image vid_lana_livingroom_s01_intro_01 = Movie(play="images/people/lana.roy/lana_livingroom_s01_intro_01.webm", size=(1920,1080))
-image vid_lana_livingroom_s01_intro_02 = Movie(play="images/people/lana.roy/lana_livingroom_s01_intro_02.webm", size=(1920,1080))
-image vid_lana_livingroom_s01_groping = Movie(play="images/people/lana.roy/lana_livingroom_s01_groping.webm", size=(1920,1080))
-image vid_lana_livingroom_s01_stripping = Movie(play="images/people/lana.roy/lana_livingroom_s01_stripping.webm", size=(1920,1080))
-
-## VIDEOS - LOCATION
-# Beach
-image vid_beach_boobs_01 = Movie(play="images/people/beach/beach_boobs_01.webm", size=(1000,742))
-image vid_beach_boobs_02 = Movie(play="images/people/beach/beach_boobs_02.webm", size=(584,440))
-image vid_beach_boobs_03 = Movie(play="images/people/beach/beach_boobs_03.webm", size=(800,660))
-
-# Church
-image vid_church_nun_blowjob = Movie(play="images/people/church/nun_blowjob.webm", size=(840,416))
-
-# College
-image vid_college_masturbate = Movie(play="images/events/college_masturbate.webm")
-image vid_college_run = Movie(play="images/events/college_run.webm")
-image vid_college_shower_01 = Movie(play="images/events/college_shower_01.webm", size=(620,612))
-image vid_college_shower_02 = Movie(play="images/events/college_shower_02.webm", size=(598,736))
-image vid_college_shower_03 = Movie(play="images/events/college_shower_03.webm", size=(1000,468))
-image vid_college_shower_04 = Movie(play="images/events/college_shower_04.webm")
-image vid_college_shower_05 = Movie(play="images/events/college_shower_05.webm", size=(750,741))
-image vid_college_spanking = Movie(play="images/events/college_spanking.webm", size=(534,800))
-
-# Gym
-image vid_gym_01 = Movie(play="images/people/gym/gym_01.webm", size=(998,556))
-image vid_gym_02 = Movie(play="images/people/gym/gym_02.webm", size=(600,592))
-image vid_gym_03 = Movie(play="images/people/gym/gym_03.webm", size=(720,406))
-
-# Home
-image vid_pc_game = Movie(play="images/events/pc_game.webm", size=(996,818))
-image vid_pc_porn_01 = Movie(play="images/events/pc_porn_01.webm", size=(1000,522))
-image vid_pc_porn_02 = Movie(play="images/events/pc_porn_02.webm", size=(1000,514))
-image vid_pc_porn_03 = Movie(play="images/events/pc_porn_03.webm", size=(570,848))
-image vid_pc_porn_04 = Movie(play="images/events/pc_porn_04.webm", size=(1000,560))
-
 ## START
 label splashscreen:
     scene img_warning
@@ -419,42 +104,13 @@ label start:
 
     # Variables
     $ v_day = 1
-    $ v_time = 480
-    $ v_time_readable = ""
-    $ v_localisation = ""
-
-    # Lust
-    $ tb_stats = {"lust": {}, "lvl": {}}
-    $ tb_stats["lust"] = {
-        "mc": 0,
-        "adriana": 0,
-        "dakota": 0,
-        "emily": 0,
-        "school": 0
-    }
-    $ tb_stats["lvl"] = {
-        "dakota": 0,
-        "emily": 0,
-        "school": 0
-    }
-
-    # Events
-    $ tb_events = {"college_yard": {}, "home_backyard": {}, "home_bathroom": {}, "home_kitchen": {}, "home_living_room": {}, "home_pool": {}, "home_room_dakota": {}, "home_room_emily": {}, "home_room_mc": {}}
-    $ tb_events["college_yard"] = { "adriana": False, "dakota": False, "emily": False }
-    $ tb_events["home_backyard"] = { "adriana": False, "dakota": False, "emily": False }
-    $ tb_events["home_bathroom"] = { "adriana": False, "dakota": False, "emily": False }
-    $ tb_events["home_kitchen"] = { "adriana": False, "dakota": False, "emily": False }
-    $ tb_events["home_living_room"] = { "adriana": False, "dakota": False, "emily": False }
-    $ tb_events["home_pool"] = { "adriana": False, "dakota": False, "emily": False }
-    $ tb_events["home_room_dakota"] = { "adriana": False, "dakota": False, "emily": False }
-    $ tb_events["home_room_emily"] = { "adriana": False, "dakota": False, "emily": False }
-    $ tb_events["home_room_mc"] = { "adriana": False, "dakota": False, "emily": False }
 
     # Start
     hide screen main_menu
     scene black onlayer background
 
-    jump lbl_name_input
+    jump lbl_intro
+    #jump lbl_name_input
     #jump lbl_bypass
 
     "Do you have play previous version and want to jump directly to new content?"
@@ -485,56 +141,20 @@ label lbl_name_input:
         else:
             jump lbl_surname_input
 
-label lbl_surname_input:
-    scene expression "images/interface/bg_input_surname.png"
-
-    if your_surname == "" or f_surname_prompt == True:
-        call screen scr_surname_input
-    else:
-        if f_bypass:
-            jump lbl_bypass
-        else:
-            jump lbl_intro
-
-label lbl_not_yet:
-    "I have to corrupt her further first."
-    return
-
 label lbl_intro:
     scene img_intro_01 with d3
     "During World War 3, the world population experienced a significant decline, especially the male population decimated by years of conflict."
-    scene img_adriana_portrait_01
-    "Your wife Adriana has always loved sex, and during the war she turned to female friends to satisfy her needs."
-    scene img_adriana_lesbian_01
-    "She never forget to send you videos of her lovemaking and perhaps it was her love and support that gave you the strength to survive."
-    scene img_intro_02
-    "Your two daughters, conceived before going to war, are now young adults full of life and, above all, of desires."
-    scene img_emily_portrait_01
-    "Emily, the oldest, has lived without you longer than her sister, and seems more attracted to women. Oddly enough, she's more naive than her sister."
-    scene img_dakota_portrait_01
-    "Dakota, on the other hand, has always been attracted to men, but only knows one in town, you."
-    scene img_adriana_slut_01
-    "After the war, morals became loose. They called it \"the true sexual liberation\". Thanks to leaps in science and technology there were less problems and more time for sex."
-    scene img_adriana_portrait_03
-    "I'm still amazed at how she hasn't aged a day since we've been together, I guess sex preserves."
-    scene img_adriana_portrait_02
-    "She always worked at Lilith Corporation, a company whose activities I never really understood. But in any case, she'd sure made her mark there, and we weren't in need at all."
-    scene img_intro_03
-    "Like many veterans, all the horrors of war left me stunned for months after. I didn't go out, even to see my mother and sisters, I stayed in bed or zoned out in front of my computer."
-    show vid_adriana_bathroom_s01_handjob with d5
-    "My dear wife, always playful, tried her best to arouse some kind of desire in me, but to no avail."
+    scene img_intro_02 with d3
+    "Lilith's legions swept across Europe, ruthless and unstoppable. It seems that fighting continues to rage far beyond the borders."
+    "She imposed a merciless matriarchal reign, and men are sent to war as soon as they reach adulthood."
+    "But women do not necessarily have a more enviable fate. The chosen ones are turned, the rejected ones converted, and the less fortunate ones reduced to slavery."
 
-    #"You and Adriana have taken advantage of this, but since you just became a professor at the local university, the opportunities seem to be widening even more..."
-    #"You are going to have to satisfy your needs, those of your wife, your daughters and your students. If your wife is not satisfied, she will go elsewhere, and this can be an opportunity to have fun together with her friends."
-    #"Your daughters' desire will grow if they see you frolicking at home or at university, becoming closer to their daddy."
-
-    jump lbl_home_livingroom_lana_s01_01
+    jump lbl_s001
 
 label lbl_bypass:
     $ f_intro = False
     $ f_pee = True
     $ your_name = "John"
     $ your_surname = "Doe"
-    $ v_time = 420
 
     jump lbl_home_living_room
