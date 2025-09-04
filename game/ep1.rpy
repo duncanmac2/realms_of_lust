@@ -1,8 +1,12 @@
 label lbl_s001a:
-    scene s001_001 with d3
+    scene img_black with d3
+    "Somewhere, in a European Castle."
+    scene s001_001 with d1
     isha "Well, is it done?"
-    molly "No, high priestess, I couldn't do my duty. Even before my husband died, I've been dying to do it, but I couldn't."
-    isha "We gave you until he turned eighteen, only you is compatible."
+    scene s001_002 with d1
+    molly "No, high priestess, I couldn't do my sacred duty. Even before my husband died, I've been dying to do it, but I couldn't."
+    scene s001_003 with d1
+    isha "We gave you until he comes of age, you alone are compatible."
     molly "Yes, but it's so..."
     isha "Taboo?"
     molly "My boy is so innocent, he spends his time studying to follow in his father's footsteps."
@@ -13,13 +17,24 @@ label lbl_s001a:
     jump lbl_name_input
 
 label lbl_s001b:
-    scene s001_001 with d3
+    scene s001_002 with d3
     molly "[me] is... he is my son... not a tool!"
     isha "Oh my godness... and I'm your mother. How many times have you crawled into my bed to beg for a \"cuddle\"? How many times have I made you come?"
     molly "{size=*0.6}*Whispering* It was more often the other way around.{/size}"
+    scene s001_004 with vpunch
     isha "What?"
+    scene s001_005 with d3
     molly "Yes, mother."
     isha "You're a newborn vampire, you'll learn to appreciate these kinds of pleasures with time. The more taboo, the better."
     molly "That's the problem, I'm afraid of getting lost in it. I'm craving for my son body, for his cock, for his sperm!"
-    # Elle se tient la tete
-    molly "No, no, no, I'm stop, that's so wrong!"
+    scene s001_006 with hpunch
+    molly "No, no, no, I must stop, this is so wrong!"
+    isha "Come here sweety, mommy will give you a hug."
+    scene s001_007 with d5
+    molly "Thank you, mom."
+    isha "You're welcome, darling, don't worry, mommy is always here to comfort you."
+    molly "I... I need more mom."
+    isha "Yes my dear, of course you need more. You always need more. Let me look at you."
+    isha "Hmmm, wonderful. But look at how you dress, you're far too modest. How do you expect to seduce him?"
+    molly "Maybe like that."
+    # strip tease

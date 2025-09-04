@@ -37,7 +37,7 @@
         renpy.image("img_intro_" + str(i).zfill(2), "images/intro_" + str(i).zfill(2) + ".webp")
 
     ## S001 ##
-    for i in range(1,4):
+    for i in range(1,20):
         renpy.image("s001_" + str(i).zfill(3), "images/s001_" + str(i).zfill(3) + ".webp")
 
     ## BEACH
@@ -120,7 +120,7 @@ label lbl_intro:
     "During World War 3, the world population experienced a significant decline, especially the male population decimated by years of conflict."
     scene img_intro_02 with d3
     "Lilith's legions swept across Europe, ruthless and unstoppable. It seems that fighting continues to rage far beyond the borders."
-    "She imposed a merciless matriarchal reign, and men are sent to war as soon as they reach adulthood."
+    "She imposed a merciless matriarchal reign, and men are sent to war as soon as possible."
     "But women do not necessarily have a more enviable fate. The chosen ones are turned, the rejected ones converted, and the less fortunate ones reduced to slavery."
 
     jump lbl_s001a
