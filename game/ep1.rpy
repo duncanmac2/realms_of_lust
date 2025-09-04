@@ -27,7 +27,7 @@ label lbl_s001b:
     molly "Yes, mother."
     isha "You're a newborn vampire, you'll learn to appreciate these kinds of pleasures with time. The more taboo, the better."
     molly "That's the problem, I'm afraid of getting lost in it. I'm craving for my son body, for his cock, for his sperm!"
-    scene s001_006 with hpunch
+    scene s001_006 with d1
     molly "No, no, no, I must stop, this is so wrong!"
     isha "Come here sweety, mommy will give you a hug."
     scene s001_007 with d5
