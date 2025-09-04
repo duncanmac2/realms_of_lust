@@ -59,19 +59,10 @@ default your_name = ""
 define me = DynamicCharacter("your_name", color = clr_dark_red)
 
 # NPC
-define adriana = Character("Adriana", color = clr_gray)
-define dad_mom = Character("[me] & Adriana", color = clr_dark_red)
-define dakota = Character("Dakota", color = clr_gold)
-define emily = Character("Emily", color = clr_gray)
-define lana = Character("Lana", color = clr_gray)
-define megan = Character("Megan", color = clr_gray)
+define isha = Character("Isha", color = clr_gold)
+define molly = Character("Molly", color = clr_ginger)
 
-define alison = Character("Alison", color = clr_sand)
-define emma = Character("Emma", color = clr_auburn)
-define hitomi = Character("Hitomi", color = clr_ginger)
-define kiara = Character("Kiara", color = clr_brown_dark)
-define marcy = Character("Marcy", color = clr_chestnut_brown)
-define mia = Character("Mia", color = clr_palegold)
+define mom_me = Character("Mom & [me]", color = clr_dark_red)
 
 # NPC OTHERS
 define unknown = Character("???", color = clr_dark_gray)
@@ -96,10 +87,7 @@ label splashscreen:
 
 label start:
     # Flags
-    $ f_bypass = False
-    $ f_intro = True
     $ f_name_prompt = True
-    $ f_surname_prompt = True
     $ f_pee = True
 
     # Variables
@@ -110,17 +98,6 @@ label start:
     scene black onlayer background
 
     jump lbl_intro
-    #jump lbl_name_input
-    #jump lbl_bypass
-
-    "Do you have play previous version and want to jump directly to new content?"
-    menu:
-        "Jump to new content":
-            $ f_bypass = False
-            #jump lbl_name_input
-            jump lbl_bypass
-        "Start from the beginning":
-            jump lbl_censorship
 
 label game_start:
     show screen main_menu
@@ -136,10 +113,7 @@ label lbl_name_input:
     if your_name == "" or f_name_prompt == True:
         call screen scr_name_input
     else:
-        if f_bypass:
-            jump lbl_bypass
-        else:
-            jump lbl_surname_input
+        jump lbl_s001b
 
 label lbl_intro:
     scene img_intro_01 with d3
@@ -149,12 +123,4 @@ label lbl_intro:
     "She imposed a merciless matriarchal reign, and men are sent to war as soon as they reach adulthood."
     "But women do not necessarily have a more enviable fate. The chosen ones are turned, the rejected ones converted, and the less fortunate ones reduced to slavery."
 
-    jump lbl_s001
-
-label lbl_bypass:
-    $ f_intro = False
-    $ f_pee = True
-    $ your_name = "John"
-    $ your_surname = "Doe"
-
-    jump lbl_home_living_room
+    jump lbl_s001a
