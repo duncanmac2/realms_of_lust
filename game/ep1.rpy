@@ -34,7 +34,33 @@ label lbl_s001b:
     molly "Thank you, mom."
     isha "You're welcome, darling, don't worry, mommy is always here to comfort you."
     molly "I... I need more mom."
-    isha "Yes my dear, of course you need more. You always need more. Let me look at you."
+    isha "Yes my dear, of course you need more. You always need more. Come, let me look at you."
+    scene s001_008 with d5
     isha "Hmmm, wonderful. But look at how you dress, you're far too modest. How do you expect to seduce him?"
     molly "Maybe like that."
-    # strip tease
+    scene s001_009 with d5
+    isha "I love your panties my precious little slut, show them to me."
+    scene img_black with d5
+    scene s001_010 with d5
+    molly "I was sure you would like them."
+    isha "Yes, but I'm sure you didn't expect to escape your punishment just by wearing them. I know exactly what you're truly want."
+    molly "Maybe..."
+    isha "Get into position, I'll be right back."
+    scene img_black with d5
+    scene s001_011 with d5
+    isha "I'm not going to be nice with you, but I know you love it."
+    molly "{size=*0.6}*Whispering* Yes, mother.{/size}"
+    isha "I did not hear you."
+    molly "Yes mother, punish my tight whore hole!"
+
+    isha "As a high priestess, I fuck lots of sluts like you, but you're still my favourite sweety."
+
+    "Don't pretent, I know very well you enjoy our bounding seances little slut. You be always my little slut right?"
+    "Maybe my son can"
+
+label lbl_s002:
+    me "Aware of my privileged status in a city without male citizens, I spent my youth studying to become a general."
+    # camera se deplace sur la bonne en train de le sucer
+    me "Well, a part of my youth."
+
+    molly "Don't be shy, sweetheart, I know very well what goes on with maids."
