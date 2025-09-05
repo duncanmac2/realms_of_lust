@@ -52,6 +52,7 @@ label lbl_s001b:
     molly "{size=*0.6}*Whispering* Yes, mother.{/size}"
     isha "I did not hear you."
     molly "Yes mother, punish my tight whore hole!"
+    isha "It's only tight because you don't use it enough! Especially with your son's cock!"
 
     isha "As a high priestess, I fuck lots of sluts like you, but you're still my favourite sweety."
 
