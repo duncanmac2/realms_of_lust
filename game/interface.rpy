@@ -19,3 +19,13 @@ screen scr_warning:
         idle ("images/interface/b_exit.png")
         hover ("images/interface/b_exit_hover.png")
         action Jump("close_renpy")
+
+## ANIMATIONS
+label animations:
+# S001
+    image ani_s001_01:
+        "s001_013"
+        0.2
+        "s001_014"
+        0.2
+        repeat

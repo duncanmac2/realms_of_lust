@@ -32,7 +32,7 @@
 
     ### IMAGES
     #############
-    ## INTRO
+    ## Intro
     for i in range(1,3):
         renpy.image("img_intro_" + str(i).zfill(2), "images/intro_" + str(i).zfill(2) + ".webp")
 

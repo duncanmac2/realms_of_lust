@@ -51,8 +51,9 @@ label lbl_s001b:
     isha "I'm not going to be nice with you, but I know you love it."
     molly "{size=*0.6}*Whispering* Yes, mother.{/size}"
     isha "I did not hear you."
-    molly "Yes mother, punish my tight whore hole!"
+    molly "Yes mother, punish my tight whore hole ♥"
     isha "It's only tight because you don't use it enough! Especially with your son's cock!"
+    scene ani_s001_01 with d3
 
     isha "As a high priestess, I fuck lots of sluts like you, but you're still my favourite sweety."
 
@@ -64,4 +65,6 @@ label lbl_s002:
     # camera se deplace sur la bonne en train de le sucer
     me "Well, a part of my youth."
 
+    molly "Tu es moins timide avec les maids."
     molly "Don't be shy, sweetheart, I know very well what goes on with maids."
+    molly "It's perfectly natural"
