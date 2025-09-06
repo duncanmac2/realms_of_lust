@@ -29,3 +29,10 @@ label animations:
         "s001_014"
         0.2
         repeat
+
+    image ani_s001_02:
+        "s001_015"
+        0.2
+        "s001_016"
+        0.2
+        repeat

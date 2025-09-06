@@ -56,6 +56,7 @@ label lbl_s001b:
     scene ani_s001_01 with d3
 
     isha "As a high priestess, I fuck lots of sluts like you, but you're still my favourite sweety."
+    scene ani_s001_02 with d3
 
     "Don't pretent, I know very well you enjoy our bounding seances little slut. You be always my little slut right?"
     "Maybe my son can"
