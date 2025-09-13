@@ -36,9 +36,12 @@
     for i in range(1,3):
         renpy.image("img_intro_" + str(i).zfill(2), "images/intro_" + str(i).zfill(2) + ".webp")
 
-    ## S001 ##
+    ## Scenes ##
     for i in range(1,20):
         renpy.image("s001_" + str(i).zfill(3), "images/s001_" + str(i).zfill(3) + ".webp")
+
+    for i in range(1,20):
+        renpy.image("s002_" + str(i).zfill(3), "images/s002_" + str(i).zfill(3) + ".webp")
 
     ## BEACH
     renpy.image("img_beach_nude_01", "images/people/beach/beach_nude_01.jpg")
@@ -61,6 +64,7 @@ define me = DynamicCharacter("your_name", color = clr_dark_red)
 # NPC
 define isha = Character("Isha", color = clr_gold)
 define molly = Character("Molly", color = clr_ginger)
+define letty = Character("Letty", color = clr_light_orange)
 
 define mom_me = Character("Mom & [me]", color = clr_dark_red)
 

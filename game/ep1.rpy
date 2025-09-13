@@ -61,11 +61,31 @@ label lbl_s001b:
     "Don't pretent, I know very well you enjoy our bounding seances little slut. You be always my little slut right?"
     "Maybe my son can"
 
-label lbl_s002:
-    me "Aware of my privileged status in a city without male citizens, I spent my youth studying to become a general."
-    # camera se deplace sur la bonne en train de le sucer
-    me "Well, a part of my youth."
+    jump lbl_s002
 
+label lbl_s002:
+    scene img_black with d8
+    "Hours earlier."
+    me "{i}Aware of my privileged status in a city without male citizens, I spent my youth studying to become a general.{/i}"
+    scene s002_001 with d3
+    me "{i}Well, a part of my youth.{/i}"
+    letty "Master, when are you going to breed me?"
+    me "As soon as my mother allows it. You're my favorite, you know that."
+    me "{i}(I'm sure she'll never allow it. Mixing my blood with that of a maid...){/i}"
+    scene s002_002 with d3
+    letty "I'm sure you say that to all the maids."
+    me "Hmmm, maybe."
+    letty "*Lick* you're terrible, master *lick*. Can you at least fuck me in the ass?"
+    me "The last time we tried, you were so loud that you woke up the whole house."
+    letty "Wasn't it funny to see your sister show up right at the *lick* climax *lick*?"
+    me "At first... less so when she gave me a good kick in the butt."
+    letty "*Sneer* nothing beats a good laugh after cumming like a bitch in heat *lick*. *lick* maybe she needs your cock in her ass too?"
+    me "Ah, if only..."
+
+    me "Est-ce que ma mere a pense a mon anniversaire"
+
+
+label lbl_s003:
     molly "Tu es moins timide avec les maids."
     molly "Don't be shy, sweetheart, I know very well what goes on with maids."
     molly "It's perfectly natural"
