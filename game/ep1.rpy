@@ -75,12 +75,17 @@ label lbl_s002:
     scene s002_002 with d3
     letty "I'm sure you say that to all the maids."
     me "Hmmm, maybe."
+    scene ani_s002_01 with d3
     letty "*Lick* you're terrible, master *lick*. Can you at least fuck me in the ass?"
     me "The last time we tried, you were so loud that you woke up the whole house."
     letty "Wasn't it funny to see your sister show up right at the *lick* climax *lick*?"
     me "At first... less so when she gave me a good kick in the butt."
     letty "*Sneer* nothing beats a good laugh after cumming like a bitch in heat *lick*. *lick* maybe she needs your cock in her ass too?"
-    me "Ah, if only..."
+    me "Ah, if only... and with her smoking hot girlfriend, she doesn't really need me."
+    letty "*lick* eheh *lick*, me at least I licked her delicious pussy, and more than once."
+    me "A slut like you has licked every pussy in this house! My mother's, my sister's, the other maids', my mother's friends', the list goes on and on."
+    letty "*Lick* just doing my job *lick*."
+    me "Yeah, and I'm sure you take great pleasure in doing so conscientiously. Okay, enough talking, suck me off."
 
     me "Est-ce que ma mere a pense a mon anniversaire"
 

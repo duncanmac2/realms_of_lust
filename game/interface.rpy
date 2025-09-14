@@ -36,3 +36,11 @@ label animations:
         "s001_016"
         0.2
         repeat
+
+# S002
+    image ani_s002_01:
+        "s002_003"
+        0.8
+        "s002_004"
+        0.8
+        repeat
