@@ -20,6 +20,11 @@ screen scr_warning:
         hover ("images/interface/b_exit_hover.png")
         action Jump("close_renpy")
 
+# White
+screen scr_white:
+    zorder 3
+    add Solid(clr_white)
+
 ## ANIMATIONS
 label animations:
 # S001
@@ -43,4 +48,11 @@ label animations:
         0.8
         "s002_004"
         0.8
+        repeat
+
+    image ani_s002_02:
+        "s002_005"
+        0.4
+        "s002_006"
+        0.4
         repeat

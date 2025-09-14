@@ -66,7 +66,7 @@ label lbl_s001b:
 label lbl_s002:
     scene img_black with d8
     "Hours earlier."
-    me "{i}Aware of my privileged status in a city without male citizens, I spent my youth studying to become a general.{/i}"
+    me "{i}Aware of my privileged status in a city without male citizens, I spent my youth studying to become general.{/i}"
     scene s002_001 with d3
     me "{i}Well, a part of my youth.{/i}"
     letty "Master, when are you going to breed me?"
@@ -76,19 +76,43 @@ label lbl_s002:
     letty "I'm sure you say that to all the maids."
     me "Hmmm, maybe."
     scene ani_s002_01 with d3
-    letty "*Lick* you're terrible, master *lick*. Can you at least fuck me in the ass?"
+    letty "*Lick* You're terrible, master *lick*.{w=0.8} Can you at least fuck me in the ass?"
     me "The last time we tried, you were so loud that you woke up the whole house."
-    letty "Wasn't it funny to see your sister show up right at the *lick* climax *lick*?"
+    letty "Wasn't it funny to see your sister show up right at the{w=0.5} *lick* climax *lick*?"
     me "At first... less so when she gave me a good kick in the butt."
-    letty "*Sneer* nothing beats a good laugh after cumming like a bitch in heat *lick*. *lick* maybe she needs your cock in her ass too?"
-    me "Ah, if only... and with her smoking hot girlfriend, she doesn't really need me."
+    letty "*Sneer* Nothing beats a good laugh after cumming like a bitch in heat *lick*.{w=0.8} *lick* Maybe she needs your cock in her ass too?"
+    me "Ah, if only...{w=0.5} with her smoking hot girlfriend, she doesn't really need me."
     letty "*lick* eheh *lick*, me at least I licked her delicious pussy, and more than once."
-    me "A slut like you has licked every pussy in this house! My mother's, my sister's, the other maids', my mother's friends', the list goes on and on."
+    me "A slut like you has licked regularly every pussy in this house! My mother's, my mother's friends', my sister's, my sister's friends', the other maids', the list goes on and on."
     letty "*Lick* just doing my job *lick*."
-    me "Yeah, and I'm sure you take great pleasure in doing so conscientiously. Okay, enough talking, suck me off."
-
-    me "Est-ce que ma mere a pense a mon anniversaire"
-
+    me "Yeah, and I'm sure it's a terrible burden. Okay, less talking, more sucking."
+    scene ani_s002_02 with d3
+    me "Good girl."
+    me "I wonder if mom remembered that it's my birthday today, she almost forgot last year."
+    me "{i}(And above all, I hope I won't be sent to war right away, since I'm of age now.){/i}"
+    me "You still suck as good as ever, my favorite slut."
+    letty "Mmmm ♥."
+    me "{i}(I wonder if mom and sis would be as good at giving blowjobs.){/i}"
+    me "{i}(I don't really have any doubts about mom. If only my sister would learn with me...{w=0.5} and only with me.){/i}"
+    me "{i}(Hmmm mom and sis on their knees, sharing my cock.){/i}"
+    me "{i}(Fuck yes, I'm craving to desecrate all their tight holes.){/i}"
+    me "{i}(Coming inside again and again.){/i}"
+    show screen scr_white
+    pause .1
+    scene s002_007 with d3
+    with hpunch
+    hide screen scr_white
+    pause .2
+    show screen scr_white
+    pause .2
+    hide screen scr_white
+    pause .2
+    show screen scr_white
+    pause .2
+    hide screen scr_white
+    pause .2
+    with hpunch
+    me "Fuck, take all my cum, whore!"
 
 label lbl_s003:
     molly "Tu es moins timide avec les maids."
