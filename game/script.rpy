@@ -40,7 +40,7 @@
     for i in range(1,20):
         renpy.image("s001_" + str(i).zfill(3), "images/s001_" + str(i).zfill(3) + ".webp")
 
-    for i in range(1,20):
+    for i in range(1,13):
         renpy.image("s002_" + str(i).zfill(3), "images/s002_" + str(i).zfill(3) + ".webp")
 
     ## BEACH

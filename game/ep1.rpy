@@ -93,10 +93,14 @@ label lbl_s002:
     me "You still suck as good as ever, my favorite slut."
     letty "Mmmm ♥."
     me "{i}(I wonder if mom and sis would be as good at giving blowjobs.){/i}"
-    me "{i}(I don't really have any doubts about mom. If only my sister would learn with me...{w=0.5} and only with me.){/i}"
+    me "{i}(I don't really have any doubts about mom. If only my sister was willing to learn with me...){/i}"
     me "{i}(Hmmm mom and sis on their knees, sharing my cock.){/i}"
+    me "{i}(Sucking my dick like common whores.){/i}"
+    me "*Moan*"
+    me "{i}(Savoring my seed.){/i}"
     me "{i}(Fuck yes, I'm craving to desecrate all their tight holes.){/i}"
     me "{i}(Coming inside again and again.){/i}"
+    me "Breeding them... yessss!"
     show screen scr_white
     pause .1
     scene s002_007 with d3
@@ -113,6 +117,30 @@ label lbl_s002:
     pause .2
     with hpunch
     me "Fuck, take all my cum, whore!"
+    scene img_black with d3
+    scene s002_008 with d3
+    letty "Breeding who? Tsss I have my idea on the matter...{w=0.8} pervert."
+    me "Speaking of that, you didn't even swallow it all."
+    scene img_black with d5
+    scene s002_009 with d5
+    letty "{i}(Hmmm delicious, as always {/i}♥{i}){/i}"
+    scene s002_010 with d3
+    letty "That's not how I'm going to get pregnant!"
+    me "Yeah, yeah, get your little ass out of my bed now, I'm going to wash up."
+    scene img_black with d2
+    scene s002_011 with d2
+    "She jumps out of bed, taking off her dress."
+    letty "Always ready to rub your back, boss."
+    me "{i}(She won't give up. Well, when you consider the social status that comes with being impregnated by a guy from a high-class family like me...){/i}"
+    me "I..."
+    molly "[me]!"
+    scene s002_012 with d3
+    letty "{i}(Shit.){/i}"
+    me "Yes, mom?"
+    molly "Come to my bedroom, I have something to show you."
+    me "{i}Nice, she didn't forget my birthday. Love you mom!{/i}"
+
+    jump lbl_s003
 
 label lbl_s003:
     molly "Tu es moins timide avec les maids."
